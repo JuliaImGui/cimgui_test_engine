@@ -1,0 +1,5 @@
+*~
+Manifest.toml
+*.o
+*.so
+example
