@@ -789,6 +789,7 @@ function generate()
                          "args" => x.args,                                         
                          "defaults" => x.defaults,
                          "isvararg" => x.isvararg,
+                         "funcname" => x.funcname,
                          "cimguiname" => x.cimguiname,
                          "ov_cimguiname" => x.ov_cimguiname,
                          "location" => x.location)
