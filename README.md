@@ -4,7 +4,7 @@ This repo contains a generator to create C bindings for the
 much inspired by [cimgui](https://github.com/cimgui/cimgui) and is designed to
 be used in combination with cimgui.
 
-The output files in this repo were generated for **Dear ImGui 1.91.8**.
+The output files in this repo were generated for **Dear ImGui 1.92.0**.
 
 ## Using the output files
 Unlike ImGui the imgui_test_engine symbols are spread across multiple files, but

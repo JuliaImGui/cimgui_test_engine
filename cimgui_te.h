@@ -38,6 +38,7 @@ typedef struct ImGuiCaptureArgs ImGuiCaptureArgs;
 typedef struct ImGuiCaptureWindowData ImGuiCaptureWindowData;
 typedef struct ImGuiCaptureContext ImGuiCaptureContext;
 typedef struct ImGuiCaptureToolUI ImGuiCaptureToolUI;
+typedef struct ImGuiTestEngineResultSummary ImGuiTestEngineResultSummary;
 typedef struct ImGuiTestEngineIO ImGuiTestEngineIO;
 typedef struct ImGuiTestItemInfo ImGuiTestItemInfo;
 typedef struct ImGuiTestItemList ImGuiTestItemList;
@@ -348,6 +349,12 @@ struct ImGuiCaptureToolUI {
     ImVector_Uint _SelectedWindows;
     char _OutputFileTemplate[256]; //
     int _FileCounter; // Counter which may be appended to file name when saving. By default, counting starts from 1. When done this field holds number of saved files.
+};
+
+struct ImGuiTestEngineResultSummary {
+    int CountTested; // Number of tests executed
+    int CountSuccess; // Number of tests succeeded
+    int CountInQueue; // Number of tests remaining in queue (e.g. aborted, crashed)
 };
 
 struct ImGuiTestEngineIO {
@@ -888,9 +895,10 @@ CIMGUI_TE_API void cImGuiTestEngine_AbortCurrentTest(ImGuiTestEngine* engine);
 CIMGUI_TE_API ImGuiTest * cImGuiTestEngine_FindTestByName(ImGuiTestEngine* engine, const char* category, const char* name);
 CIMGUI_TE_API bool cImGuiTestEngine_IsTestQueueEmpty(ImGuiTestEngine* engine);
 CIMGUI_TE_API bool cImGuiTestEngine_IsUsingSimulatedInputs(ImGuiTestEngine* engine);
-CIMGUI_TE_API void cImGuiTestEngine_GetResult(ImGuiTestEngine* engine, int* count_tested, int* success_count);
+CIMGUI_TE_API void cImGuiTestEngine_GetResultSummary(ImGuiTestEngine* engine, ImGuiTestEngineResultSummary* out_results);
 CIMGUI_TE_API void cImGuiTestEngine_GetTestList(ImGuiTestEngine* engine, ImVector_ImGuiTest_Ptr* out_tests);
 CIMGUI_TE_API void cImGuiTestEngine_GetTestQueue(ImGuiTestEngine* engine, ImVector_ImGuiTestRunTask* out_tests);
+CIMGUI_TE_API void cImGuiTestEngine_GetResult(ImGuiTestEngine* engine, int* out_count_tested, int* out_count_success);
 // Install default crash handler (if you don't have one)
 CIMGUI_TE_API void cImGuiTestEngine_InstallDefaultCrashHandler();
 // Default crash handler, should be called from a custom crash handler if such exists
@@ -985,6 +993,7 @@ CIMGUI_TE_API ImGuiTestGenericItemStatus * ImGuiTestGenericItemStatus_ImGuiTestG
 CIMGUI_TE_API void ImGuiTestGenericItemStatus_Clear(ImGuiTestGenericItemStatus* self);
 CIMGUI_TE_API void ImGuiTestGenericItemStatus_QuerySet(ImGuiTestGenericItemStatus* self, bool ret_val);
 CIMGUI_TE_API void ImGuiTestGenericItemStatus_QueryInc(ImGuiTestGenericItemStatus* self, bool ret_val);
+CIMGUI_TE_API void ImGuiTestGenericItemStatus_Draw(ImGuiTestGenericItemStatus* self);
 
 /* ImGuiTestGenericVars */
 CIMGUI_TE_API ImGuiTestGenericVars * ImGuiTestGenericVars_ImGuiTestGenericVars();

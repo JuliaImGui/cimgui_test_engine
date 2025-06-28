@@ -313,8 +313,9 @@ CIMGUI_TE_API bool cImGuiTestEngine_IsUsingSimulatedInputs(ImGuiTestEngine* engi
     return ImGuiTestEngine_IsUsingSimulatedInputs(engine);
 }
 
-CIMGUI_TE_API void cImGuiTestEngine_GetResult(ImGuiTestEngine* engine, int* count_tested, int* success_count) {
-    ImGuiTestEngine_GetResult(engine, *count_tested, *success_count);
+CIMGUI_TE_API void cImGuiTestEngine_GetResultSummary(ImGuiTestEngine* engine,
+                                                     ImGuiTestEngineResultSummary* out_results) {
+    ImGuiTestEngine_GetResultSummary(engine, out_results);
 }
 
 CIMGUI_TE_API void cImGuiTestEngine_GetTestList(ImGuiTestEngine* engine, ImVector_ImGuiTest_Ptr* out_tests) {
@@ -323,6 +324,10 @@ CIMGUI_TE_API void cImGuiTestEngine_GetTestList(ImGuiTestEngine* engine, ImVecto
 
 CIMGUI_TE_API void cImGuiTestEngine_GetTestQueue(ImGuiTestEngine* engine, ImVector_ImGuiTestRunTask* out_tests) {
     ImGuiTestEngine_GetTestQueue(engine, out_tests);
+}
+
+CIMGUI_TE_API void cImGuiTestEngine_GetResult(ImGuiTestEngine* engine, int* out_count_tested, int* out_count_success) {
+    ImGuiTestEngine_GetResult(engine, *out_count_tested, *out_count_success);
 }
 
 CIMGUI_TE_API void cImGuiTestEngine_InstallDefaultCrashHandler() { ImGuiTestEngine_InstallDefaultCrashHandler(); }
@@ -496,6 +501,8 @@ CIMGUI_TE_API void ImGuiTestGenericItemStatus_QuerySet(ImGuiTestGenericItemStatu
 CIMGUI_TE_API void ImGuiTestGenericItemStatus_QueryInc(ImGuiTestGenericItemStatus* self, bool ret_val) {
     self->QueryInc(ret_val);
 }
+
+CIMGUI_TE_API void ImGuiTestGenericItemStatus_Draw(ImGuiTestGenericItemStatus* self) { self->Draw(); }
 
 CIMGUI_TE_API ImGuiTestGenericVars* ImGuiTestGenericVars_ImGuiTestGenericVars() {
     return IM_NEW(ImGuiTestGenericVars)();
