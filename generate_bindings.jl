@@ -535,7 +535,9 @@ end
 function generate()
     imgui_root = joinpath(@__DIR__, "cimgui", "imgui")
     te_root = joinpath(@__DIR__, "imgui_test_engine", "imgui_test_engine")
-    args = ["-x", "c++", "-I$(imgui_root)", "-I$(te_root)", "-DIMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL"]
+    args = ["-x", "c++", "-I$(imgui_root)", "-I$(te_root)",
+            "-DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1",
+            "-DIMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL=0"]
 
     # Find the system #include directories to avoid missing header warnings
     stderr_pipe = Pipe()

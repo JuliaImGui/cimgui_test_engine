@@ -898,7 +898,6 @@ CIMGUI_TE_API bool cImGuiTestEngine_IsUsingSimulatedInputs(ImGuiTestEngine* engi
 CIMGUI_TE_API void cImGuiTestEngine_GetResultSummary(ImGuiTestEngine* engine, ImGuiTestEngineResultSummary* out_results);
 CIMGUI_TE_API void cImGuiTestEngine_GetTestList(ImGuiTestEngine* engine, ImVector_ImGuiTest_Ptr* out_tests);
 CIMGUI_TE_API void cImGuiTestEngine_GetTestQueue(ImGuiTestEngine* engine, ImVector_ImGuiTestRunTask* out_tests);
-CIMGUI_TE_API void cImGuiTestEngine_GetResult(ImGuiTestEngine* engine, int* out_count_tested, int* out_count_success);
 // Install default crash handler (if you don't have one)
 CIMGUI_TE_API void cImGuiTestEngine_InstallDefaultCrashHandler();
 // Default crash handler, should be called from a custom crash handler if such exists
@@ -906,9 +905,6 @@ CIMGUI_TE_API void cImGuiTestEngine_CrashHandler();
 
 /** Header file: imgui_te_perftool.h **/
 CIMGUI_TE_API void cImGuiTestEngine_PerfToolAppendToCSV(ImGuiPerfTool* perf_log, ImGuiPerfToolEntry* entry, const char* filename);
-
-/** Header file: imgui_te_coroutine.h **/
-CIMGUI_TE_API ImGuiTestCoroutineInterface * cCoroutine_ImplStdThread_GetInterface();
 
 /* ImGuiCaptureImageBuf */
 CIMGUI_TE_API ImGuiCaptureImageBuf * ImGuiCaptureImageBuf_ImGuiCaptureImageBuf();
@@ -1188,16 +1184,6 @@ CIMGUI_TE_API bool ImGuiTestContext_DockIdIsUndockedOrStandalone(ImGuiTestContex
 CIMGUI_TE_API void ImGuiTestContext_DockNodeHideTabBar(ImGuiTestContext* self, ImGuiDockNode* node, bool hidden);
 CIMGUI_TE_API void ImGuiTestContext_PerfCalcRef(ImGuiTestContext* self);
 CIMGUI_TE_API void ImGuiTestContext_PerfCapture(ImGuiTestContext* self, const char* category, const char* test_name, const char* csv_file);
-CIMGUI_TE_API bool ImGuiTestContext_ItemSelectAndReadValue_int(ImGuiTestContext* self, ImGuiTestRef ref, int data_type, void* out_data, int flags);
-CIMGUI_TE_API void ImGuiTestContext_ItemSelectAndReadValue_intPtr(ImGuiTestContext* self, ImGuiTestRef ref, int* out_v);
-CIMGUI_TE_API void ImGuiTestContext_ItemSelectAndReadValue_floatPtr(ImGuiTestContext* self, ImGuiTestRef ref, float* out_v);
-CIMGUI_TE_API void ImGuiTestContext_YieldUntil(ImGuiTestContext* self, int frame_count);
-// Prefer using "$$123"
-CIMGUI_TE_API ImGuiID ImGuiTestContext_GetIDByInt_int(ImGuiTestContext* self, int n);
-CIMGUI_TE_API ImGuiID ImGuiTestContext_GetIDByInt_intTestRef(ImGuiTestContext* self, int n, ImGuiTestRef seed_ref);
-// Prefer using "$$(ptr)0xFFFFFFFF"
-CIMGUI_TE_API ImGuiID ImGuiTestContext_GetIDByPtr_voidPtr(ImGuiTestContext* self, void* p);
-CIMGUI_TE_API ImGuiID ImGuiTestContext_GetIDByPtr_voidPtrTestRef(ImGuiTestContext* self, void* p, ImGuiTestRef seed_ref);
 // Move windows covering 'window' at pos.
 CIMGUI_TE_API void ImGuiTestContext__MakeAimingSpaceOverPos(ImGuiTestContext* self, ImGuiViewport* viewport, ImGuiWindow* over_window, const ImVec2* over_pos);
 // FIXME: Aim to remove this system...

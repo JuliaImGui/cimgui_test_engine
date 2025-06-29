@@ -326,10 +326,6 @@ CIMGUI_TE_API void cImGuiTestEngine_GetTestQueue(ImGuiTestEngine* engine, ImVect
     ImGuiTestEngine_GetTestQueue(engine, out_tests);
 }
 
-CIMGUI_TE_API void cImGuiTestEngine_GetResult(ImGuiTestEngine* engine, int* out_count_tested, int* out_count_success) {
-    ImGuiTestEngine_GetResult(engine, *out_count_tested, *out_count_success);
-}
-
 CIMGUI_TE_API void cImGuiTestEngine_InstallDefaultCrashHandler() { ImGuiTestEngine_InstallDefaultCrashHandler(); }
 
 CIMGUI_TE_API void cImGuiTestEngine_CrashHandler() { ImGuiTestEngine_CrashHandler(); }
@@ -338,11 +334,6 @@ CIMGUI_TE_API void cImGuiTestEngine_CrashHandler() { ImGuiTestEngine_CrashHandle
 CIMGUI_TE_API void cImGuiTestEngine_PerfToolAppendToCSV(ImGuiPerfTool* perf_log, ImGuiPerfToolEntry* entry,
                                                         const char* filename) {
     ImGuiTestEngine_PerfToolAppendToCSV(perf_log, entry, filename);
-}
-
-// imgui_te_coroutine.h
-CIMGUI_TE_API ImGuiTestCoroutineInterface* cCoroutine_ImplStdThread_GetInterface() {
-    return Coroutine_ImplStdThread_GetInterface();
 }
 
 CIMGUI_TE_API ImGuiCaptureImageBuf* ImGuiCaptureImageBuf_ImGuiCaptureImageBuf() {
@@ -1115,40 +1106,6 @@ CIMGUI_TE_API void ImGuiTestContext_PerfCalcRef(ImGuiTestContext* self) { self->
 CIMGUI_TE_API void ImGuiTestContext_PerfCapture(ImGuiTestContext* self, const char* category, const char* test_name,
                                                 const char* csv_file) {
     self->PerfCapture(category, test_name, csv_file);
-}
-
-CIMGUI_TE_API bool ImGuiTestContext_ItemSelectAndReadValue_int(ImGuiTestContext* self, ImGuiTestRef ref, int data_type,
-                                                               void* out_data, int flags) {
-    return self->ItemSelectAndReadValue(ref, data_type, out_data, flags);
-}
-
-CIMGUI_TE_API void ImGuiTestContext_ItemSelectAndReadValue_intPtr(ImGuiTestContext* self, ImGuiTestRef ref,
-                                                                  int* out_v) {
-    self->ItemSelectAndReadValue(ref, out_v);
-}
-
-CIMGUI_TE_API void ImGuiTestContext_ItemSelectAndReadValue_floatPtr(ImGuiTestContext* self, ImGuiTestRef ref,
-                                                                    float* out_v) {
-    self->ItemSelectAndReadValue(ref, out_v);
-}
-
-CIMGUI_TE_API void ImGuiTestContext_YieldUntil(ImGuiTestContext* self, int frame_count) {
-    self->YieldUntil(frame_count);
-}
-
-CIMGUI_TE_API ImGuiID ImGuiTestContext_GetIDByInt_int(ImGuiTestContext* self, int n) { return self->GetIDByInt(n); }
-
-CIMGUI_TE_API ImGuiID ImGuiTestContext_GetIDByInt_intTestRef(ImGuiTestContext* self, int n, ImGuiTestRef seed_ref) {
-    return self->GetIDByInt(n, seed_ref);
-}
-
-CIMGUI_TE_API ImGuiID ImGuiTestContext_GetIDByPtr_voidPtr(ImGuiTestContext* self, void* p) {
-    return self->GetIDByPtr(p);
-}
-
-CIMGUI_TE_API ImGuiID ImGuiTestContext_GetIDByPtr_voidPtrTestRef(ImGuiTestContext* self, void* p,
-                                                                 ImGuiTestRef seed_ref) {
-    return self->GetIDByPtr(p, seed_ref);
 }
 
 CIMGUI_TE_API void ImGuiTestContext__MakeAimingSpaceOverPos(ImGuiTestContext* self, ImGuiViewport* viewport,

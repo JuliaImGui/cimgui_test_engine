@@ -965,59 +965,6 @@
             }
         }
     ],
-    "ImGuiTestContext_GetIDByInt": [
-        {
-            "retref": false,
-            "stname": "ImGuiTestContext",
-            "argsT": [
-                {
-                    "name": "self",
-                    "type": "ImGuiTestContext*"
-                },
-                {
-                    "name": "n",
-                    "type": "int"
-                }
-            ],
-            "location": "imgui_te_context:523",
-            "ov_cimguiname": "ImGuiTestContext_GetIDByInt_int",
-            "args": "(ImGuiTestContext* self, int n)",
-            "comment": "// Prefer using \"$$123\"",
-            "isvararg": false,
-            "funcname": "GetIDByInt",
-            "ret": "ImGuiID",
-            "cimguiname": "ImGuiTestContext_GetIDByInt",
-            "defaults": {
-            }
-        },
-        {
-            "retref": false,
-            "stname": "ImGuiTestContext",
-            "argsT": [
-                {
-                    "name": "self",
-                    "type": "ImGuiTestContext*"
-                },
-                {
-                    "name": "n",
-                    "type": "int"
-                },
-                {
-                    "name": "seed_ref",
-                    "type": "ImGuiTestRef"
-                }
-            ],
-            "location": "imgui_te_context:524",
-            "ov_cimguiname": "ImGuiTestContext_GetIDByInt_intTestRef",
-            "args": "(ImGuiTestContext* self, int n, ImGuiTestRef seed_ref)",
-            "isvararg": false,
-            "funcname": "GetIDByInt",
-            "ret": "ImGuiID",
-            "cimguiname": "ImGuiTestContext_GetIDByInt",
-            "defaults": {
-            }
-        }
-    ],
     "ImGuiTestContext_ScrollVerifyScrollMax": [
         {
             "retref": false,
@@ -1282,35 +1229,6 @@
             "funcname": "EndVideoCapture",
             "ret": "void",
             "cimguiname": "ImGuiCaptureContext_EndVideoCapture",
-            "defaults": {
-            }
-        }
-    ],
-    "cImGuiTestEngine_GetResult": [
-        {
-            "retref": false,
-            "stname": "",
-            "argsT": [
-                {
-                    "name": "engine",
-                    "type": "ImGuiTestEngine*"
-                },
-                {
-                    "name": "out_count_tested",
-                    "type": "int*"
-                },
-                {
-                    "name": "out_count_success",
-                    "type": "int*"
-                }
-            ],
-            "location": "imgui_te_engine:223",
-            "ov_cimguiname": "cImGuiTestEngine_GetResult",
-            "args": "(ImGuiTestEngine* engine, int* out_count_tested, int* out_count_success)",
-            "isvararg": false,
-            "funcname": "ImGuiTestEngine_GetResult",
-            "ret": "void",
-            "cimguiname": "cImGuiTestEngine_GetResult",
             "defaults": {
             }
         }
@@ -2208,23 +2126,6 @@
             }
         }
     ],
-    "cCoroutine_ImplStdThread_GetInterface": [
-        {
-            "retref": false,
-            "stname": "",
-            "argsT": [
-            ],
-            "location": "imgui_te_coroutine:57",
-            "ov_cimguiname": "cCoroutine_ImplStdThread_GetInterface",
-            "args": "()",
-            "isvararg": false,
-            "funcname": "Coroutine_ImplStdThread_GetInterface",
-            "ret": "ImGuiTestCoroutineInterface *",
-            "cimguiname": "cCoroutine_ImplStdThread_GetInterface",
-            "defaults": {
-            }
-        }
-    ],
     "ImGuiTestContext_FindHoveredWindowAtPos": [
         {
             "retref": false,
@@ -2886,59 +2787,6 @@
             }
         }
     ],
-    "ImGuiTestContext_GetIDByPtr": [
-        {
-            "retref": false,
-            "stname": "ImGuiTestContext",
-            "argsT": [
-                {
-                    "name": "self",
-                    "type": "ImGuiTestContext*"
-                },
-                {
-                    "name": "p",
-                    "type": "void*"
-                }
-            ],
-            "location": "imgui_te_context:525",
-            "ov_cimguiname": "ImGuiTestContext_GetIDByPtr_voidPtr",
-            "args": "(ImGuiTestContext* self, void* p)",
-            "comment": "// Prefer using \"$$(ptr)0xFFFFFFFF\"",
-            "isvararg": false,
-            "funcname": "GetIDByPtr",
-            "ret": "ImGuiID",
-            "cimguiname": "ImGuiTestContext_GetIDByPtr",
-            "defaults": {
-            }
-        },
-        {
-            "retref": false,
-            "stname": "ImGuiTestContext",
-            "argsT": [
-                {
-                    "name": "self",
-                    "type": "ImGuiTestContext*"
-                },
-                {
-                    "name": "p",
-                    "type": "void*"
-                },
-                {
-                    "name": "seed_ref",
-                    "type": "ImGuiTestRef"
-                }
-            ],
-            "location": "imgui_te_context:526",
-            "ov_cimguiname": "ImGuiTestContext_GetIDByPtr_voidPtrTestRef",
-            "args": "(ImGuiTestContext* self, void* p, ImGuiTestRef seed_ref)",
-            "isvararg": false,
-            "funcname": "GetIDByPtr",
-            "ret": "ImGuiID",
-            "cimguiname": "ImGuiTestContext_GetIDByPtr",
-            "defaults": {
-            }
-        }
-    ],
     "ImGuiTestContext_GetRef": [
         {
             "retref": false,
@@ -3509,27 +3357,23 @@
             }
         }
     ],
-    "ImGuiTestContext_YieldUntil": [
+    "ImGuiPerfTool__Rebuild": [
         {
             "retref": false,
-            "stname": "ImGuiTestContext",
+            "stname": "ImGuiPerfTool",
             "argsT": [
                 {
                     "name": "self",
-                    "type": "ImGuiTestContext*"
-                },
-                {
-                    "name": "frame_count",
-                    "type": "int"
+                    "type": "ImGuiPerfTool*"
                 }
             ],
-            "location": "imgui_te_context:521",
-            "ov_cimguiname": "ImGuiTestContext_YieldUntil",
-            "args": "(ImGuiTestContext* self, int frame_count)",
+            "location": "imgui_te_perftool:122",
+            "ov_cimguiname": "ImGuiPerfTool__Rebuild",
+            "args": "(ImGuiPerfTool* self)",
             "isvararg": false,
-            "funcname": "YieldUntil",
+            "funcname": "_Rebuild",
             "ret": "void",
-            "cimguiname": "ImGuiTestContext_YieldUntil",
+            "cimguiname": "ImGuiPerfTool__Rebuild",
             "defaults": {
             }
         }
@@ -3582,27 +3426,6 @@
             "funcname": "GetID",
             "ret": "ImGuiID",
             "cimguiname": "ImGuiTestContext_GetID",
-            "defaults": {
-            }
-        }
-    ],
-    "ImGuiPerfTool__Rebuild": [
-        {
-            "retref": false,
-            "stname": "ImGuiPerfTool",
-            "argsT": [
-                {
-                    "name": "self",
-                    "type": "ImGuiPerfTool*"
-                }
-            ],
-            "location": "imgui_te_perftool:122",
-            "ov_cimguiname": "ImGuiPerfTool__Rebuild",
-            "args": "(ImGuiPerfTool* self)",
-            "isvararg": false,
-            "funcname": "_Rebuild",
-            "ret": "void",
-            "cimguiname": "ImGuiPerfTool__Rebuild",
             "defaults": {
             }
         }
@@ -7010,98 +6833,6 @@
             "funcname": "LogInfo",
             "ret": "void",
             "cimguiname": "ImGuiTestContext_LogInfo",
-            "defaults": {
-            }
-        }
-    ],
-    "ImGuiTestContext_ItemSelectAndReadValue": [
-        {
-            "retref": false,
-            "stname": "ImGuiTestContext",
-            "argsT": [
-                {
-                    "name": "self",
-                    "type": "ImGuiTestContext*"
-                },
-                {
-                    "name": "ref",
-                    "type": "ImGuiTestRef"
-                },
-                {
-                    "name": "data_type",
-                    "type": "int"
-                },
-                {
-                    "name": "out_data",
-                    "type": "void*"
-                },
-                {
-                    "name": "flags",
-                    "type": "int"
-                }
-            ],
-            "location": "imgui_te_context:517",
-            "ov_cimguiname": "ImGuiTestContext_ItemSelectAndReadValue_int",
-            "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int data_type, void* out_data, int flags)",
-            "isvararg": false,
-            "funcname": "ItemSelectAndReadValue",
-            "ret": "bool",
-            "cimguiname": "ImGuiTestContext_ItemSelectAndReadValue",
-            "defaults": {
-                "flags": "ImGuiTestOpFlags_None"
-            }
-        },
-        {
-            "retref": false,
-            "stname": "ImGuiTestContext",
-            "argsT": [
-                {
-                    "name": "self",
-                    "type": "ImGuiTestContext*"
-                },
-                {
-                    "name": "ref",
-                    "type": "ImGuiTestRef"
-                },
-                {
-                    "name": "out_v",
-                    "type": "int*"
-                }
-            ],
-            "location": "imgui_te_context:518",
-            "ov_cimguiname": "ImGuiTestContext_ItemSelectAndReadValue_intPtr",
-            "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int* out_v)",
-            "isvararg": false,
-            "funcname": "ItemSelectAndReadValue",
-            "ret": "void",
-            "cimguiname": "ImGuiTestContext_ItemSelectAndReadValue",
-            "defaults": {
-            }
-        },
-        {
-            "retref": false,
-            "stname": "ImGuiTestContext",
-            "argsT": [
-                {
-                    "name": "self",
-                    "type": "ImGuiTestContext*"
-                },
-                {
-                    "name": "ref",
-                    "type": "ImGuiTestRef"
-                },
-                {
-                    "name": "out_v",
-                    "type": "float*"
-                }
-            ],
-            "location": "imgui_te_context:519",
-            "ov_cimguiname": "ImGuiTestContext_ItemSelectAndReadValue_floatPtr",
-            "args": "(ImGuiTestContext* self, ImGuiTestRef ref, float* out_v)",
-            "isvararg": false,
-            "funcname": "ItemSelectAndReadValue",
-            "ret": "void",
-            "cimguiname": "ImGuiTestContext_ItemSelectAndReadValue",
             "defaults": {
             }
         }
