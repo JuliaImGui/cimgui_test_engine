@@ -3366,14 +3366,18 @@
             "retref": false,
             "stname": "ImGuiTestRef",
             "argsT": [
+                {
+                    "name": "pOut",
+                    "type": "ImGuiTestRef*"
+                }
             ],
             "location": "imgui_te_context:83",
-            "ov_cimguiname": "ImGuiTestRef_ImGuiTestRef",
-            "args": "()",
+            "ov_cimguiname": "ImGuiTestRef_ImGuiTestRef_TestRefPtr",
+            "args": "(ImGuiTestRef* pOut)",
             "constructor": true,
             "isvararg": false,
             "funcname": "ImGuiTestRef",
-            "ret": "ImGuiTestRef *",
+            "ret": "void",
             "cimguiname": "ImGuiTestRef_ImGuiTestRef",
             "defaults": {
             }
@@ -3382,18 +3386,22 @@
             "retref": false,
             "stname": "ImGuiTestRef",
             "argsT": [
+                {
+                    "name": "pOut",
+                    "type": "ImGuiTestRef*"
+                },
                 {
                     "name": "id",
                     "type": "unsigned int"
                 }
             ],
             "location": "imgui_te_context:84",
-            "ov_cimguiname": "ImGuiTestRef_ImGuiTestRef_Uint",
-            "args": "(unsigned int id)",
+            "ov_cimguiname": "ImGuiTestRef_ImGuiTestRef_TestRefPtrUint",
+            "args": "(ImGuiTestRef* pOut, unsigned int id)",
             "constructor": true,
             "isvararg": false,
             "funcname": "ImGuiTestRef",
-            "ret": "ImGuiTestRef *",
+            "ret": "void",
             "cimguiname": "ImGuiTestRef_ImGuiTestRef",
             "defaults": {
             }
@@ -3403,17 +3411,21 @@
             "stname": "ImGuiTestRef",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestRef*"
+                },
+                {
                     "name": "path",
                     "type": "const char*"
                 }
             ],
             "location": "imgui_te_context:85",
-            "ov_cimguiname": "ImGuiTestRef_ImGuiTestRef_Str",
-            "args": "(const char* path)",
+            "ov_cimguiname": "ImGuiTestRef_ImGuiTestRef_TestRefPtrStr",
+            "args": "(ImGuiTestRef* pOut, const char* path)",
             "constructor": true,
             "isvararg": false,
             "funcname": "ImGuiTestRef",
-            "ret": "ImGuiTestRef *",
+            "ret": "void",
             "cimguiname": "ImGuiTestRef_ImGuiTestRef",
             "defaults": {
             }
@@ -6752,17 +6764,21 @@
             "stname": "ImGuiTestRefDesc",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestRefDesc*"
+                },
+                {
                     "name": "ref",
                     "type": "const ImGuiTestRef*"
                 }
             ],
             "location": "imgui_te_context:96",
             "ov_cimguiname": "ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtr",
-            "args": "(const ImGuiTestRef* ref)",
+            "args": "(ImGuiTestRefDesc* pOut, const ImGuiTestRef* ref)",
             "constructor": true,
             "isvararg": false,
             "funcname": "ImGuiTestRefDesc",
-            "ret": "ImGuiTestRefDesc *",
+            "ret": "void",
             "cimguiname": "ImGuiTestRefDesc_ImGuiTestRefDesc",
             "defaults": {
             }
@@ -6771,6 +6787,10 @@
             "retref": false,
             "stname": "ImGuiTestRefDesc",
             "argsT": [
+                {
+                    "name": "pOut",
+                    "type": "ImGuiTestRefDesc*"
+                },
                 {
                     "name": "ref",
                     "type": "const ImGuiTestRef*"
@@ -6782,11 +6802,11 @@
             ],
             "location": "imgui_te_context:97",
             "ov_cimguiname": "ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtrconstTestItemInfoPtr",
-            "args": "(const ImGuiTestRef* ref, const ImGuiTestItemInfo* item)",
+            "args": "(ImGuiTestRefDesc* pOut, const ImGuiTestRef* ref, const ImGuiTestItemInfo* item)",
             "constructor": true,
             "isvararg": false,
             "funcname": "ImGuiTestRefDesc",
-            "ret": "ImGuiTestRefDesc *",
+            "ret": "void",
             "cimguiname": "ImGuiTestRefDesc_ImGuiTestRefDesc",
             "defaults": {
             }

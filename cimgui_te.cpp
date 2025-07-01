@@ -463,11 +463,15 @@ CIMGUI_TE_API void ImGuiTest_destroy(ImGuiTest* self) { IM_DELETE(self); }
 
 CIMGUI_TE_API void ImGuiTest_SetOwnedName(ImGuiTest* self, const char* name) { self->SetOwnedName(name); }
 
-CIMGUI_TE_API ImGuiTestRef* ImGuiTestRef_ImGuiTestRef() { return IM_NEW(ImGuiTestRef)(); }
+CIMGUI_TE_API void ImGuiTestRef_ImGuiTestRef_TestRefPtr(ImGuiTestRef* pOut) { *pOut = ImGuiTestRef(); }
 
-CIMGUI_TE_API ImGuiTestRef* ImGuiTestRef_ImGuiTestRef_Uint(unsigned int id) { return IM_NEW(ImGuiTestRef)(id); }
+CIMGUI_TE_API void ImGuiTestRef_ImGuiTestRef_TestRefPtrUint(ImGuiTestRef* pOut, unsigned int id) {
+    *pOut = ImGuiTestRef(id);
+}
 
-CIMGUI_TE_API ImGuiTestRef* ImGuiTestRef_ImGuiTestRef_Str(const char* path) { return IM_NEW(ImGuiTestRef)(path); }
+CIMGUI_TE_API void ImGuiTestRef_ImGuiTestRef_TestRefPtrStr(ImGuiTestRef* pOut, const char* path) {
+    *pOut = ImGuiTestRef(path);
+}
 
 CIMGUI_TE_API bool ImGuiTestRef_IsEmpty(ImGuiTestRef* self) { return self->IsEmpty(); }
 
@@ -475,14 +479,14 @@ CIMGUI_TE_API void ImGuiTestRef_destroy(ImGuiTestRef* self) { IM_DELETE(self); }
 
 CIMGUI_TE_API const char* ImGuiTestRefDesc_c_str(ImGuiTestRefDesc* self) { return self->c_str(); }
 
-CIMGUI_TE_API ImGuiTestRefDesc* ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtr(const ImGuiTestRef* ref) {
-    return IM_NEW(ImGuiTestRefDesc)(*ref);
+CIMGUI_TE_API void ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtr(ImGuiTestRefDesc* pOut, const ImGuiTestRef* ref) {
+    *pOut = ImGuiTestRefDesc(*ref);
 }
 
-CIMGUI_TE_API ImGuiTestRefDesc*
-ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtrconstTestItemInfoPtr(const ImGuiTestRef* ref,
+CIMGUI_TE_API void
+ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtrconstTestItemInfoPtr(ImGuiTestRefDesc* pOut, const ImGuiTestRef* ref,
                                                                       const ImGuiTestItemInfo* item) {
-    return IM_NEW(ImGuiTestRefDesc)(*ref, *item);
+    *pOut = ImGuiTestRefDesc(*ref, *item);
 }
 
 CIMGUI_TE_API void ImGuiTestRefDesc_destroy(ImGuiTestRefDesc* self) { IM_DELETE(self); }

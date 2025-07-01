@@ -33,6 +33,13 @@ const generated_templates = Dict(
     "ImPool<ImGuiTestItemInfo>" => "ImPool_ImGuiTestItemInfo"
 )
 
+# Typically constructors are implemented by allocating on the heap and returning
+# a pointer, but there are some common and small structs that we want to make
+# easier to allocate on the stack. We do this by making their constructors take
+# a pOut pointer to existing memory instead of returning a pointer to heap
+# memory.
+const force_pOut_constructor = ["ImGuiTestRef", "ImGuiTestRefDesc"]
+
 # Dictionary of filename -> list of lines in the file
 const header_files = Dict{String, Vector{String}}()
 
@@ -248,7 +255,8 @@ function wrap_function(cursor, parent_struct=nothing)
 
     # If the function returns a struct/union, then we modify the wrapper to take
     # in a pointer to the record and fill it in.
-    is_pOut = !isnothing(ret_type) && kind(ret_type) == LibClang.CXType_Record
+    is_pOut = ((!isnothing(ret_type) && kind(ret_type) == LibClang.CXType_Record)
+               || (is_constructor && struct_name in force_pOut_constructor))
 
     ret_is_void = if is_pOut
         true
@@ -259,13 +267,13 @@ function wrap_function(cursor, parent_struct=nothing)
     end
     ret_is_ref = isnothing(ret_type) ? false : kind(ret_type) == LibClang.CXType_LValueReference
 
-    ret_type_str = if is_constructor
+    ret_type_str = if is_pOut
+        "void"
+    elseif is_constructor
         "$struct_name *"
     elseif ret_is_ref
         t = Clang.getPointeeType(ret_type)
         "$(spelling(t)) *"
-    elseif is_pOut
-        "void"
     else
         spelling(ret_type)
     end
@@ -277,7 +285,8 @@ function wrap_function(cursor, parent_struct=nothing)
     n_args = Clang.getNumArguments(cursor)
     argsT = ArgInfo[]
     if is_pOut
-        push!(argsT, (; name="pOut", type="$(spelling(ret_type))*"))
+        pointee_type = is_constructor ? struct_name : spelling(ret_type)
+        push!(argsT, (; name="pOut", type="$(pointee_type)*"))
     end
     if is_method && !is_constructor
         push!(argsT, (; name="self", type="$(struct_name)*"))
@@ -307,7 +316,9 @@ function wrap_function(cursor, parent_struct=nothing)
     end
 
     arg_names_str = join([is_ref ? "*$(x)" : x for (is_ref, x) in forwarded_args], ", ")
-    inner_call = if is_constructor
+    inner_call = if is_constructor && is_pOut
+        "*pOut = $funcname($arg_names_str)"
+    elseif is_constructor && !is_pOut
         "IM_NEW($struct_name)($arg_names_str)"
     elseif is_pOut && !is_method
         "*pOut = $funcname($arg_names_str)"

@@ -979,17 +979,17 @@ CIMGUI_TE_API void ImGuiTest_destroy(ImGuiTest* self);
 CIMGUI_TE_API void ImGuiTest_SetOwnedName(ImGuiTest* self, const char* name);
 
 /* ImGuiTestRef */
-CIMGUI_TE_API ImGuiTestRef * ImGuiTestRef_ImGuiTestRef();
-CIMGUI_TE_API ImGuiTestRef * ImGuiTestRef_ImGuiTestRef_Uint(unsigned int id);
-CIMGUI_TE_API ImGuiTestRef * ImGuiTestRef_ImGuiTestRef_Str(const char* path);
+CIMGUI_TE_API void ImGuiTestRef_ImGuiTestRef_TestRefPtr(ImGuiTestRef* pOut);
+CIMGUI_TE_API void ImGuiTestRef_ImGuiTestRef_TestRefPtrUint(ImGuiTestRef* pOut, unsigned int id);
+CIMGUI_TE_API void ImGuiTestRef_ImGuiTestRef_TestRefPtrStr(ImGuiTestRef* pOut, const char* path);
 CIMGUI_TE_API bool ImGuiTestRef_IsEmpty(ImGuiTestRef* self);
 // Automatically generated destructor
 CIMGUI_TE_API void ImGuiTestRef_destroy(ImGuiTestRef* self);
 
 /* ImGuiTestRefDesc */
 CIMGUI_TE_API const char * ImGuiTestRefDesc_c_str(ImGuiTestRefDesc* self);
-CIMGUI_TE_API ImGuiTestRefDesc * ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtr(const ImGuiTestRef* ref);
-CIMGUI_TE_API ImGuiTestRefDesc * ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtrconstTestItemInfoPtr(const ImGuiTestRef* ref, const ImGuiTestItemInfo* item);
+CIMGUI_TE_API void ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtr(ImGuiTestRefDesc* pOut, const ImGuiTestRef* ref);
+CIMGUI_TE_API void ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtrconstTestItemInfoPtr(ImGuiTestRefDesc* pOut, const ImGuiTestRef* ref, const ImGuiTestItemInfo* item);
 // Automatically generated destructor
 CIMGUI_TE_API void ImGuiTestRefDesc_destroy(ImGuiTestRefDesc* self);
 
