@@ -382,6 +382,8 @@ CIMGUI_TE_API bool ImGuiCaptureContext_IsCapturingVideo(ImGuiCaptureContext* sel
 
 CIMGUI_TE_API bool ImGuiCaptureContext_IsCapturing(ImGuiCaptureContext* self) { return self->IsCapturing(); }
 
+CIMGUI_TE_API void ImGuiCaptureContext_destroy(ImGuiCaptureContext* self) { IM_DELETE(self); }
+
 CIMGUI_TE_API ImGuiCaptureToolUI* ImGuiCaptureToolUI_ImGuiCaptureToolUI() { return IM_NEW(ImGuiCaptureToolUI)(); }
 
 CIMGUI_TE_API void ImGuiCaptureToolUI_ShowCaptureToolWindow(ImGuiCaptureToolUI* self, ImGuiCaptureContext* context,
@@ -410,7 +412,11 @@ CIMGUI_TE_API bool ImGuiCaptureToolUI__ShowEncoderConfigFields(ImGuiCaptureToolU
     return self->_ShowEncoderConfigFields(context);
 }
 
+CIMGUI_TE_API void ImGuiCaptureToolUI_destroy(ImGuiCaptureToolUI* self) { IM_DELETE(self); }
+
 CIMGUI_TE_API ImGuiTestItemInfo* ImGuiTestItemInfo_ImGuiTestItemInfo() { return IM_NEW(ImGuiTestItemInfo)(); }
+
+CIMGUI_TE_API void ImGuiTestItemInfo_destroy(ImGuiTestItemInfo* self) { IM_DELETE(self); }
 
 CIMGUI_TE_API void ImGuiTestItemList_Clear(ImGuiTestItemList* self) { self->Clear(); }
 
@@ -449,6 +455,8 @@ CIMGUI_TE_API void ImGuiTestLog_UpdateLineOffsets(ImGuiTestLog* self, ImGuiTestE
     self->UpdateLineOffsets(engine_io, level, start);
 }
 
+CIMGUI_TE_API void ImGuiTestLog_destroy(ImGuiTestLog* self) { IM_DELETE(self); }
+
 CIMGUI_TE_API ImGuiTest* ImGuiTest_ImGuiTest() { return IM_NEW(ImGuiTest)(); }
 
 CIMGUI_TE_API void ImGuiTest_destroy(ImGuiTest* self) { IM_DELETE(self); }
@@ -463,6 +471,8 @@ CIMGUI_TE_API ImGuiTestRef* ImGuiTestRef_ImGuiTestRef_Str(const char* path) { re
 
 CIMGUI_TE_API bool ImGuiTestRef_IsEmpty(ImGuiTestRef* self) { return self->IsEmpty(); }
 
+CIMGUI_TE_API void ImGuiTestRef_destroy(ImGuiTestRef* self) { IM_DELETE(self); }
+
 CIMGUI_TE_API const char* ImGuiTestRefDesc_c_str(ImGuiTestRefDesc* self) { return self->c_str(); }
 
 CIMGUI_TE_API ImGuiTestRefDesc* ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtr(const ImGuiTestRef* ref) {
@@ -475,9 +485,13 @@ ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtrconstTestItemInfoPtr(const ImGu
     return IM_NEW(ImGuiTestRefDesc)(*ref, *item);
 }
 
+CIMGUI_TE_API void ImGuiTestRefDesc_destroy(ImGuiTestRefDesc* self) { IM_DELETE(self); }
+
 CIMGUI_TE_API ImGuiTestActionFilter* ImGuiTestActionFilter_ImGuiTestActionFilter() {
     return IM_NEW(ImGuiTestActionFilter)();
 }
+
+CIMGUI_TE_API void ImGuiTestActionFilter_destroy(ImGuiTestActionFilter* self) { IM_DELETE(self); }
 
 CIMGUI_TE_API ImGuiTestGenericItemStatus* ImGuiTestGenericItemStatus_ImGuiTestGenericItemStatus() {
     return IM_NEW(ImGuiTestGenericItemStatus)();
@@ -495,11 +509,15 @@ CIMGUI_TE_API void ImGuiTestGenericItemStatus_QueryInc(ImGuiTestGenericItemStatu
 
 CIMGUI_TE_API void ImGuiTestGenericItemStatus_Draw(ImGuiTestGenericItemStatus* self) { self->Draw(); }
 
+CIMGUI_TE_API void ImGuiTestGenericItemStatus_destroy(ImGuiTestGenericItemStatus* self) { IM_DELETE(self); }
+
 CIMGUI_TE_API ImGuiTestGenericVars* ImGuiTestGenericVars_ImGuiTestGenericVars() {
     return IM_NEW(ImGuiTestGenericVars)();
 }
 
 CIMGUI_TE_API void ImGuiTestGenericVars_Clear(ImGuiTestGenericVars* self) { self->Clear(); }
+
+CIMGUI_TE_API void ImGuiTestGenericVars_destroy(ImGuiTestGenericVars* self) { IM_DELETE(self); }
 
 CIMGUI_TE_API void ImGuiTestContext_Finish(ImGuiTestContext* self, ImGuiTestStatus status) { self->Finish(status); }
 
@@ -597,11 +615,11 @@ CIMGUI_TE_API void ImGuiTestContext_SetRef_WindowPtr(ImGuiTestContext* self, ImG
     self->SetRef(window);
 }
 
-CIMGUI_TE_API ImGuiTestRef ImGuiTestContext_GetRef(ImGuiTestContext* self) { return self->GetRef(); }
+CIMGUI_TE_API void ImGuiTestContext_GetRef(ImGuiTestRef* pOut, ImGuiTestContext* self) { *pOut = self->GetRef(); }
 
-CIMGUI_TE_API ImGuiTestItemInfo ImGuiTestContext_WindowInfo(ImGuiTestContext* self, ImGuiTestRef window_ref,
-                                                            int flags) {
-    return self->WindowInfo(window_ref, flags);
+CIMGUI_TE_API void ImGuiTestContext_WindowInfo(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef window_ref,
+                                               int flags) {
+    *pOut = self->WindowInfo(window_ref, flags);
 }
 
 CIMGUI_TE_API void ImGuiTestContext_WindowClose(ImGuiTestContext* self, ImGuiTestRef window_ref) {
@@ -655,20 +673,21 @@ CIMGUI_TE_API ImGuiID ImGuiTestContext_GetID_TestRefTestRef(ImGuiTestContext* se
     return self->GetID(ref, seed_ref);
 }
 
-CIMGUI_TE_API ImVec2 ImGuiTestContext_GetPosOnVoid(ImGuiTestContext* self, ImGuiViewport* viewport) {
-    return self->GetPosOnVoid(viewport);
+CIMGUI_TE_API void ImGuiTestContext_GetPosOnVoid(ImVec2* pOut, ImGuiTestContext* self, ImGuiViewport* viewport) {
+    *pOut = self->GetPosOnVoid(viewport);
 }
 
-CIMGUI_TE_API ImVec2 ImGuiTestContext_GetWindowTitlebarPoint(ImGuiTestContext* self, ImGuiTestRef window_ref) {
-    return self->GetWindowTitlebarPoint(window_ref);
+CIMGUI_TE_API void ImGuiTestContext_GetWindowTitlebarPoint(ImVec2* pOut, ImGuiTestContext* self,
+                                                           ImGuiTestRef window_ref) {
+    *pOut = self->GetWindowTitlebarPoint(window_ref);
 }
 
-CIMGUI_TE_API ImVec2 ImGuiTestContext_GetMainMonitorWorkPos(ImGuiTestContext* self) {
-    return self->GetMainMonitorWorkPos();
+CIMGUI_TE_API void ImGuiTestContext_GetMainMonitorWorkPos(ImVec2* pOut, ImGuiTestContext* self) {
+    *pOut = self->GetMainMonitorWorkPos();
 }
 
-CIMGUI_TE_API ImVec2 ImGuiTestContext_GetMainMonitorWorkSize(ImGuiTestContext* self) {
-    return self->GetMainMonitorWorkSize();
+CIMGUI_TE_API void ImGuiTestContext_GetMainMonitorWorkSize(ImVec2* pOut, ImGuiTestContext* self) {
+    *pOut = self->GetMainMonitorWorkSize();
 }
 
 CIMGUI_TE_API void ImGuiTestContext_CaptureReset(ImGuiTestContext* self) { self->CaptureReset(); }
@@ -845,13 +864,14 @@ CIMGUI_TE_API void ImGuiTestContext_ScrollVerifyScrollMax(ImGuiTestContext* self
     self->ScrollVerifyScrollMax(ref);
 }
 
-CIMGUI_TE_API ImGuiTestItemInfo ImGuiTestContext_ItemInfo(ImGuiTestContext* self, ImGuiTestRef ref, int flags) {
-    return self->ItemInfo(ref, flags);
+CIMGUI_TE_API void ImGuiTestContext_ItemInfo(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref,
+                                             int flags) {
+    *pOut = self->ItemInfo(ref, flags);
 }
 
-CIMGUI_TE_API ImGuiTestItemInfo ImGuiTestContext_ItemInfoOpenFullPath(ImGuiTestContext* self, ImGuiTestRef ref,
-                                                                      int flags) {
-    return self->ItemInfoOpenFullPath(ref, flags);
+CIMGUI_TE_API void ImGuiTestContext_ItemInfoOpenFullPath(ImGuiTestItemInfo* pOut, ImGuiTestContext* self,
+                                                         ImGuiTestRef ref, int flags) {
+    *pOut = self->ItemInfoOpenFullPath(ref, flags);
 }
 
 CIMGUI_TE_API ImGuiID ImGuiTestContext_ItemInfoHandleWildcardSearch(ImGuiTestContext* self,
@@ -861,7 +881,9 @@ CIMGUI_TE_API ImGuiID ImGuiTestContext_ItemInfoHandleWildcardSearch(ImGuiTestCon
     return self->ItemInfoHandleWildcardSearch(wildcard_prefix_start, wildcard_prefix_end, wildcard_suffix_start);
 }
 
-CIMGUI_TE_API ImGuiTestItemInfo ImGuiTestContext_ItemInfoNull(ImGuiTestContext* self) { return self->ItemInfoNull(); }
+CIMGUI_TE_API void ImGuiTestContext_ItemInfoNull(ImGuiTestItemInfo* pOut, ImGuiTestContext* self) {
+    *pOut = self->ItemInfoNull();
+}
 
 CIMGUI_TE_API void ImGuiTestContext_GatherItems(ImGuiTestContext* self, ImGuiTestItemList* out_list,
                                                 ImGuiTestRef parent, int depth) {
@@ -1136,28 +1158,32 @@ CIMGUI_TE_API const char* ImGuiCsvParser_GetCell(ImGuiCsvParser* self, int row, 
 
 CIMGUI_TE_API void ImGuiTestGatherTask_Clear(ImGuiTestGatherTask* self) { self->Clear(); }
 
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForKeyChord(ImGuiTestInput* self, int key_chord, bool down) {
-    return self->ForKeyChord(key_chord, down);
+CIMGUI_TE_API void ImGuiTestInput_ForKeyChord(ImGuiTestInput* pOut, ImGuiTestInput* self, int key_chord, bool down) {
+    *pOut = self->ForKeyChord(key_chord, down);
 }
 
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForChar(ImGuiTestInput* self, unsigned short v) { return self->ForChar(v); }
-
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForViewportFocus(ImGuiTestInput* self, unsigned int viewport_id) {
-    return self->ForViewportFocus(viewport_id);
+CIMGUI_TE_API void ImGuiTestInput_ForChar(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned short v) {
+    *pOut = self->ForChar(v);
 }
 
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForViewportSetPos(ImGuiTestInput* self, unsigned int viewport_id,
-                                                              const ImVec2* pos) {
-    return self->ForViewportSetPos(viewport_id, *pos);
+CIMGUI_TE_API void ImGuiTestInput_ForViewportFocus(ImGuiTestInput* pOut, ImGuiTestInput* self,
+                                                   unsigned int viewport_id) {
+    *pOut = self->ForViewportFocus(viewport_id);
 }
 
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForViewportSetSize(ImGuiTestInput* self, unsigned int viewport_id,
-                                                               const ImVec2* size) {
-    return self->ForViewportSetSize(viewport_id, *size);
+CIMGUI_TE_API void ImGuiTestInput_ForViewportSetPos(ImGuiTestInput* pOut, ImGuiTestInput* self,
+                                                    unsigned int viewport_id, const ImVec2* pos) {
+    *pOut = self->ForViewportSetPos(viewport_id, *pos);
 }
 
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForViewportClose(ImGuiTestInput* self, unsigned int viewport_id) {
-    return self->ForViewportClose(viewport_id);
+CIMGUI_TE_API void ImGuiTestInput_ForViewportSetSize(ImGuiTestInput* pOut, ImGuiTestInput* self,
+                                                     unsigned int viewport_id, const ImVec2* size) {
+    *pOut = self->ForViewportSetSize(viewport_id, *size);
+}
+
+CIMGUI_TE_API void ImGuiTestInput_ForViewportClose(ImGuiTestInput* pOut, ImGuiTestInput* self,
+                                                   unsigned int viewport_id) {
+    *pOut = self->ForViewportClose(viewport_id);
 }
 
 CIMGUI_TE_API ImGuiTestEngine* ImGuiTestEngine_ImGuiTestEngine() { return IM_NEW(ImGuiTestEngine)(); }
@@ -1172,6 +1198,8 @@ ImGuiPerfToolEntry_ImGuiPerfToolEntry_constPerfToolEntryPtr(const ImGuiPerfToolE
 }
 
 CIMGUI_TE_API void ImGuiPerfToolEntry_Set(ImGuiPerfToolEntry* self, const ImGuiPerfToolEntry* rhs) { self->Set(*rhs); }
+
+CIMGUI_TE_API void ImGuiPerfToolEntry_destroy(ImGuiPerfToolEntry* self) { IM_DELETE(self); }
 
 CIMGUI_TE_API void ImGuiPerfToolBatch_destroy(ImGuiPerfToolBatch* self) { IM_DELETE(self); }
 

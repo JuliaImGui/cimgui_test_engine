@@ -86,6 +86,10 @@
             "stname": "ImGuiTestInput",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestInput*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestInput*"
                 },
@@ -100,10 +104,10 @@
             ],
             "location": "imgui_te_internal:113",
             "ov_cimguiname": "ImGuiTestInput_ForViewportSetPos",
-            "args": "(ImGuiTestInput* self, unsigned int viewport_id, const ImVec2* pos)",
+            "args": "(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id, const ImVec2* pos)",
             "isvararg": false,
             "funcname": "ForViewportSetPos",
-            "ret": "ImGuiTestInput",
+            "ret": "void",
             "cimguiname": "ImGuiTestInput_ForViewportSetPos",
             "defaults": {
             }
@@ -437,6 +441,10 @@
             "stname": "ImGuiTestInput",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestInput*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestInput*"
                 },
@@ -451,10 +459,10 @@
             ],
             "location": "imgui_te_internal:122",
             "ov_cimguiname": "ImGuiTestInput_ForViewportSetSize",
-            "args": "(ImGuiTestInput* self, unsigned int viewport_id, const ImVec2* size)",
+            "args": "(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id, const ImVec2* size)",
             "isvararg": false,
             "funcname": "ForViewportSetSize",
-            "ret": "ImGuiTestInput",
+            "ret": "void",
             "cimguiname": "ImGuiTestInput_ForViewportSetSize",
             "defaults": {
             }
@@ -816,13 +824,13 @@
                     "type": "ImGuiPerfToolBatch*"
                 }
             ],
-            "location": "imgui_te_perftool:60",
+            "location": "",
             "ov_cimguiname": "ImGuiPerfToolBatch_destroy",
             "args": "(ImGuiPerfToolBatch* self)",
             "destructor": true,
             "comment": "// FIXME: Misleading: nothing to destruct in that struct?",
             "isvararg": false,
-            "funcname": "destroy",
+            "funcname": "~ImGuiPerfToolBatch",
             "ret": "void",
             "cimguiname": "ImGuiPerfToolBatch_destroy",
             "defaults": {
@@ -1542,6 +1550,29 @@
             }
         }
     ],
+    "ImGuiTestGenericVars_destroy": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestGenericVars",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestGenericVars*"
+                }
+            ],
+            "location": "",
+            "ov_cimguiname": "ImGuiTestGenericVars_destroy",
+            "args": "(ImGuiTestGenericVars* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
+            "isvararg": false,
+            "funcname": "~ImGuiTestGenericVars",
+            "ret": "void",
+            "cimguiname": "ImGuiTestGenericVars_destroy",
+            "defaults": {
+            }
+        }
+    ],
     "ImGuiTestItemList_size": [
         {
             "retref": false,
@@ -1795,6 +1826,10 @@
             "stname": "ImGuiTestInput",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestInput*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestInput*"
                 },
@@ -1809,10 +1844,10 @@
             ],
             "location": "imgui_te_internal:88",
             "ov_cimguiname": "ImGuiTestInput_ForKeyChord",
-            "args": "(ImGuiTestInput* self, int key_chord, bool down)",
+            "args": "(ImGuiTestInput* pOut, ImGuiTestInput* self, int key_chord, bool down)",
             "isvararg": false,
             "funcname": "ForKeyChord",
-            "ret": "ImGuiTestInput",
+            "ret": "void",
             "cimguiname": "ImGuiTestInput_ForKeyChord",
             "defaults": {
             }
@@ -2793,16 +2828,20 @@
             "stname": "ImGuiTestContext",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestRef*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestContext*"
                 }
             ],
             "location": "imgui_te_context:310",
             "ov_cimguiname": "ImGuiTestContext_GetRef",
-            "args": "(ImGuiTestContext* self)",
+            "args": "(ImGuiTestRef* pOut, ImGuiTestContext* self)",
             "isvararg": false,
             "funcname": "GetRef",
-            "ret": "ImGuiTestRef",
+            "ret": "void",
             "cimguiname": "ImGuiTestContext_GetRef",
             "defaults": {
             }
@@ -2918,6 +2957,29 @@
             "funcname": "CaptureSetExtension",
             "ret": "void",
             "cimguiname": "ImGuiTestContext_CaptureSetExtension",
+            "defaults": {
+            }
+        }
+    ],
+    "ImGuiTestLog_destroy": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestLog",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestLog*"
+                }
+            ],
+            "location": "",
+            "ov_cimguiname": "ImGuiTestLog_destroy",
+            "args": "(ImGuiTestLog* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
+            "isvararg": false,
+            "funcname": "~ImGuiTestLog",
+            "ret": "void",
+            "cimguiname": "ImGuiTestLog_destroy",
             "defaults": {
             }
         }
@@ -3436,6 +3498,10 @@
             "stname": "ImGuiTestContext",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestItemInfo*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestContext*"
                 },
@@ -3450,10 +3516,10 @@
             ],
             "location": "imgui_te_context:315",
             "ov_cimguiname": "ImGuiTestContext_WindowInfo",
-            "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, int flags)",
+            "args": "(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef window_ref, int flags)",
             "isvararg": false,
             "funcname": "WindowInfo",
-            "ret": "ImGuiTestItemInfo",
+            "ret": "void",
             "cimguiname": "ImGuiTestContext_WindowInfo",
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
@@ -4102,12 +4168,12 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:211",
+            "location": "",
             "ov_cimguiname": "ImGuiTestEngine_destroy",
             "args": "(ImGuiTestEngine* self)",
             "destructor": true,
             "isvararg": false,
-            "funcname": "destroy",
+            "funcname": "~ImGuiTestEngine",
             "ret": "void",
             "cimguiname": "ImGuiTestEngine_destroy",
             "defaults": {
@@ -4124,12 +4190,12 @@
                     "type": "ImGuiPerfTool*"
                 }
             ],
-            "location": "imgui_te_perftool:109",
+            "location": "",
             "ov_cimguiname": "ImGuiPerfTool_destroy",
             "args": "(ImGuiPerfTool* self)",
             "destructor": true,
             "isvararg": false,
-            "funcname": "destroy",
+            "funcname": "~ImGuiPerfTool",
             "ret": "void",
             "cimguiname": "ImGuiPerfTool_destroy",
             "defaults": {
@@ -4221,6 +4287,10 @@
             "stname": "ImGuiTestContext",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImVec2*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestContext*"
                 },
@@ -4231,12 +4301,35 @@
             ],
             "location": "imgui_te_context:337",
             "ov_cimguiname": "ImGuiTestContext_GetWindowTitlebarPoint",
-            "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref)",
+            "args": "(ImVec2* pOut, ImGuiTestContext* self, ImGuiTestRef window_ref)",
             "comment": "// Return a clickable point on window title-bar (window tab for docked windows).",
             "isvararg": false,
             "funcname": "GetWindowTitlebarPoint",
-            "ret": "ImVec2",
+            "ret": "void",
             "cimguiname": "ImGuiTestContext_GetWindowTitlebarPoint",
+            "defaults": {
+            }
+        }
+    ],
+    "ImGuiTestGenericItemStatus_destroy": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestGenericItemStatus",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestGenericItemStatus*"
+                }
+            ],
+            "location": "",
+            "ov_cimguiname": "ImGuiTestGenericItemStatus_destroy",
+            "args": "(ImGuiTestGenericItemStatus* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
+            "isvararg": false,
+            "funcname": "~ImGuiTestGenericItemStatus",
+            "ret": "void",
+            "cimguiname": "ImGuiTestGenericItemStatus_destroy",
             "defaults": {
             }
         }
@@ -4321,6 +4414,10 @@
             "stname": "ImGuiTestInput",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestInput*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestInput*"
                 },
@@ -4331,10 +4428,10 @@
             ],
             "location": "imgui_te_internal:97",
             "ov_cimguiname": "ImGuiTestInput_ForChar",
-            "args": "(ImGuiTestInput* self, unsigned short v)",
+            "args": "(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned short v)",
             "isvararg": false,
             "funcname": "ForChar",
-            "ret": "ImGuiTestInput",
+            "ret": "void",
             "cimguiname": "ImGuiTestInput_ForChar",
             "defaults": {
             }
@@ -4480,6 +4577,29 @@
             }
         }
     ],
+    "ImGuiTestItemInfo_destroy": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestItemInfo",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestItemInfo*"
+                }
+            ],
+            "location": "",
+            "ov_cimguiname": "ImGuiTestItemInfo_destroy",
+            "args": "(ImGuiTestItemInfo* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
+            "isvararg": false,
+            "funcname": "~ImGuiTestItemInfo",
+            "ret": "void",
+            "cimguiname": "ImGuiTestItemInfo_destroy",
+            "defaults": {
+            }
+        }
+    ],
     "ImGuiTestContext_MenuCheckAll": [
         {
             "retref": false,
@@ -4569,6 +4689,10 @@
             "stname": "ImGuiTestContext",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestItemInfo*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestContext*"
                 },
@@ -4583,10 +4707,10 @@
             ],
             "location": "imgui_te_context:414",
             "ov_cimguiname": "ImGuiTestContext_ItemInfoOpenFullPath",
-            "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
+            "args": "(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
             "funcname": "ItemInfoOpenFullPath",
-            "ret": "ImGuiTestItemInfo",
+            "ret": "void",
             "cimguiname": "ImGuiTestContext_ItemInfoOpenFullPath",
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
@@ -4663,6 +4787,29 @@
             "funcname": "ImGuiTestEngine_PrintResultSummary",
             "ret": "void",
             "cimguiname": "cImGuiTestEngine_PrintResultSummary",
+            "defaults": {
+            }
+        }
+    ],
+    "ImGuiCaptureContext_destroy": [
+        {
+            "retref": false,
+            "stname": "ImGuiCaptureContext",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiCaptureContext*"
+                }
+            ],
+            "location": "",
+            "ov_cimguiname": "ImGuiCaptureContext_destroy",
+            "args": "(ImGuiCaptureContext* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
+            "isvararg": false,
+            "funcname": "~ImGuiCaptureContext",
+            "ret": "void",
+            "cimguiname": "ImGuiCaptureContext_destroy",
             "defaults": {
             }
         }
@@ -5000,16 +5147,20 @@
             "stname": "ImGuiTestContext",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestItemInfo*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestContext*"
                 }
             ],
             "location": "imgui_te_context:416",
             "ov_cimguiname": "ImGuiTestContext_ItemInfoNull",
-            "args": "(ImGuiTestContext* self)",
+            "args": "(ImGuiTestItemInfo* pOut, ImGuiTestContext* self)",
             "isvararg": false,
             "funcname": "ItemInfoNull",
-            "ret": "ImGuiTestItemInfo",
+            "ret": "void",
             "cimguiname": "ImGuiTestContext_ItemInfoNull",
             "defaults": {
             }
@@ -5388,14 +5539,37 @@
                     "type": "ImGuiCsvParser*"
                 }
             ],
-            "location": "imgui_te_utils:173",
+            "location": "",
             "ov_cimguiname": "ImGuiCsvParser_destroy",
             "args": "(ImGuiCsvParser* self)",
             "destructor": true,
             "isvararg": false,
-            "funcname": "destroy",
+            "funcname": "~ImGuiCsvParser",
             "ret": "void",
             "cimguiname": "ImGuiCsvParser_destroy",
+            "defaults": {
+            }
+        }
+    ],
+    "ImGuiTestRefDesc_destroy": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestRefDesc",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestRefDesc*"
+                }
+            ],
+            "location": "",
+            "ov_cimguiname": "ImGuiTestRefDesc_destroy",
+            "args": "(ImGuiTestRefDesc* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
+            "isvararg": false,
+            "funcname": "~ImGuiTestRefDesc",
+            "ret": "void",
+            "cimguiname": "ImGuiTestRefDesc_destroy",
             "defaults": {
             }
         }
@@ -5695,12 +5869,12 @@
                     "type": "ImGuiTest*"
                 }
             ],
-            "location": "imgui_te_engine:444",
+            "location": "",
             "ov_cimguiname": "ImGuiTest_destroy",
             "args": "(ImGuiTest* self)",
             "destructor": true,
             "isvararg": false,
-            "funcname": "destroy",
+            "funcname": "~ImGuiTest",
             "ret": "void",
             "cimguiname": "ImGuiTest_destroy",
             "defaults": {
@@ -5781,12 +5955,12 @@
                     "type": "ImGuiCaptureImageBuf*"
                 }
             ],
-            "location": "imgui_capture_tool:41",
+            "location": "",
             "ov_cimguiname": "ImGuiCaptureImageBuf_destroy",
             "args": "(ImGuiCaptureImageBuf* self)",
             "destructor": true,
             "isvararg": false,
-            "funcname": "destroy",
+            "funcname": "~ImGuiCaptureImageBuf",
             "ret": "void",
             "cimguiname": "ImGuiCaptureImageBuf_destroy",
             "defaults": {
@@ -5862,27 +6036,25 @@
             }
         }
     ],
-    "ImGuiTestInput_ForViewportClose": [
+    "ImGuiTestRef_destroy": [
         {
             "retref": false,
-            "stname": "ImGuiTestInput",
+            "stname": "ImGuiTestRef",
             "argsT": [
                 {
                     "name": "self",
-                    "type": "ImGuiTestInput*"
-                },
-                {
-                    "name": "viewport_id",
-                    "type": "unsigned int"
+                    "type": "ImGuiTestRef*"
                 }
             ],
-            "location": "imgui_te_internal:131",
-            "ov_cimguiname": "ImGuiTestInput_ForViewportClose",
-            "args": "(ImGuiTestInput* self, unsigned int viewport_id)",
+            "location": "",
+            "ov_cimguiname": "ImGuiTestRef_destroy",
+            "args": "(ImGuiTestRef* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
             "isvararg": false,
-            "funcname": "ForViewportClose",
-            "ret": "ImGuiTestInput",
-            "cimguiname": "ImGuiTestInput_ForViewportClose",
+            "funcname": "~ImGuiTestRef",
+            "ret": "void",
+            "cimguiname": "ImGuiTestRef_destroy",
             "defaults": {
             }
         }
@@ -5908,6 +6080,35 @@
             "funcname": "NavMoveTo",
             "ret": "void",
             "cimguiname": "ImGuiTestContext_NavMoveTo",
+            "defaults": {
+            }
+        }
+    ],
+    "ImGuiTestInput_ForViewportClose": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestInput",
+            "argsT": [
+                {
+                    "name": "pOut",
+                    "type": "ImGuiTestInput*"
+                },
+                {
+                    "name": "self",
+                    "type": "ImGuiTestInput*"
+                },
+                {
+                    "name": "viewport_id",
+                    "type": "unsigned int"
+                }
+            ],
+            "location": "imgui_te_internal:131",
+            "ov_cimguiname": "ImGuiTestInput_ForViewportClose",
+            "args": "(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id)",
+            "isvararg": false,
+            "funcname": "ForViewportClose",
+            "ret": "void",
+            "cimguiname": "ImGuiTestInput_ForViewportClose",
             "defaults": {
             }
         }
@@ -6273,6 +6474,10 @@
             "stname": "ImGuiTestInput",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestInput*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestInput*"
                 },
@@ -6283,10 +6488,10 @@
             ],
             "location": "imgui_te_internal:105",
             "ov_cimguiname": "ImGuiTestInput_ForViewportFocus",
-            "args": "(ImGuiTestInput* self, unsigned int viewport_id)",
+            "args": "(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id)",
             "isvararg": false,
             "funcname": "ForViewportFocus",
-            "ret": "ImGuiTestInput",
+            "ret": "void",
             "cimguiname": "ImGuiTestInput_ForViewportFocus",
             "defaults": {
             }
@@ -6367,6 +6572,29 @@
             }
         }
     ],
+    "ImGuiPerfToolEntry_destroy": [
+        {
+            "retref": false,
+            "stname": "ImGuiPerfToolEntry",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiPerfToolEntry*"
+                }
+            ],
+            "location": "",
+            "ov_cimguiname": "ImGuiPerfToolEntry_destroy",
+            "args": "(ImGuiPerfToolEntry* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
+            "isvararg": false,
+            "funcname": "~ImGuiPerfToolEntry",
+            "ret": "void",
+            "cimguiname": "ImGuiPerfToolEntry_destroy",
+            "defaults": {
+            }
+        }
+    ],
     "ImGuiTestContext_ScrollToTabItem": [
         {
             "retref": false,
@@ -6431,6 +6659,10 @@
             "stname": "ImGuiTestContext",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImGuiTestItemInfo*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestContext*"
                 },
@@ -6445,10 +6677,10 @@
             ],
             "location": "imgui_te_context:413",
             "ov_cimguiname": "ImGuiTestContext_ItemInfo",
-            "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
+            "args": "(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
             "funcname": "ItemInfo",
-            "ret": "ImGuiTestItemInfo",
+            "ret": "void",
             "cimguiname": "ImGuiTestContext_ItemInfo",
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
@@ -6588,16 +6820,20 @@
             "stname": "ImGuiTestContext",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImVec2*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestContext*"
                 }
             ],
             "location": "imgui_te_context:339",
             "ov_cimguiname": "ImGuiTestContext_GetMainMonitorWorkSize",
-            "args": "(ImGuiTestContext* self)",
+            "args": "(ImVec2* pOut, ImGuiTestContext* self)",
             "isvararg": false,
             "funcname": "GetMainMonitorWorkSize",
-            "ret": "ImVec2",
+            "ret": "void",
             "cimguiname": "ImGuiTestContext_GetMainMonitorWorkSize",
             "defaults": {
             }
@@ -7195,6 +7431,10 @@
             "stname": "ImGuiTestContext",
             "argsT": [
                 {
+                    "name": "pOut",
+                    "type": "ImVec2*"
+                },
+                {
                     "name": "self",
                     "type": "ImGuiTestContext*"
                 },
@@ -7205,11 +7445,11 @@
             ],
             "location": "imgui_te_context:336",
             "ov_cimguiname": "ImGuiTestContext_GetPosOnVoid",
-            "args": "(ImGuiTestContext* self, ImGuiViewport* viewport)",
+            "args": "(ImVec2* pOut, ImGuiTestContext* self, ImGuiViewport* viewport)",
             "comment": "// Find a point that has no windows // FIXME: This needs error return and flag to enable/disable forcefully finding void.",
             "isvararg": false,
             "funcname": "GetPosOnVoid",
-            "ret": "ImVec2",
+            "ret": "void",
             "cimguiname": "ImGuiTestContext_GetPosOnVoid",
             "defaults": {
             }
@@ -8114,11 +8354,38 @@
             }
         }
     ],
+    "ImGuiCaptureToolUI_destroy": [
+        {
+            "retref": false,
+            "stname": "ImGuiCaptureToolUI",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiCaptureToolUI*"
+                }
+            ],
+            "location": "",
+            "ov_cimguiname": "ImGuiCaptureToolUI_destroy",
+            "args": "(ImGuiCaptureToolUI* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
+            "isvararg": false,
+            "funcname": "~ImGuiCaptureToolUI",
+            "ret": "void",
+            "cimguiname": "ImGuiCaptureToolUI_destroy",
+            "defaults": {
+            }
+        }
+    ],
     "ImGuiTestContext_GetMainMonitorWorkPos": [
         {
             "retref": false,
             "stname": "ImGuiTestContext",
             "argsT": [
+                {
+                    "name": "pOut",
+                    "type": "ImVec2*"
+                },
                 {
                     "name": "self",
                     "type": "ImGuiTestContext*"
@@ -8126,11 +8393,11 @@
             ],
             "location": "imgui_te_context:338",
             "ov_cimguiname": "ImGuiTestContext_GetMainMonitorWorkPos",
-            "args": "(ImGuiTestContext* self)",
+            "args": "(ImVec2* pOut, ImGuiTestContext* self)",
             "comment": "// Work pos and size of main viewport when viewports are disabled, or work pos and size of monitor containing main viewport when viewports are enabled.",
             "isvararg": false,
             "funcname": "GetMainMonitorWorkPos",
-            "ret": "ImVec2",
+            "ret": "void",
             "cimguiname": "ImGuiTestContext_GetMainMonitorWorkPos",
             "defaults": {
             }
@@ -8217,6 +8484,29 @@
             "cimguiname": "ImGuiPerfTool_LoadCSV",
             "defaults": {
                 "filename": "nullptr"
+            }
+        }
+    ],
+    "ImGuiTestActionFilter_destroy": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestActionFilter",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestActionFilter*"
+                }
+            ],
+            "location": "",
+            "ov_cimguiname": "ImGuiTestActionFilter_destroy",
+            "args": "(ImGuiTestActionFilter* self)",
+            "destructor": true,
+            "comment": "// Automatically generated destructor",
+            "isvararg": false,
+            "funcname": "~ImGuiTestActionFilter",
+            "ret": "void",
+            "cimguiname": "ImGuiTestActionFilter_destroy",
+            "defaults": {
             }
         }
     ],

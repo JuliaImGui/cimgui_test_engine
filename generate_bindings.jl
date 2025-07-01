@@ -201,6 +201,25 @@ function find_above_comment(header, line_no)
     isempty(all_comments) ? nothing : join(all_comments, "\n")
 end
 
+function create_destructor(struct_name, comment=nothing)
+    CxxFunction(struct_name,
+                "void",
+                false,
+                [(; name="self", type="$(struct_name)*")],
+                "($(struct_name)* self)",
+                Dict(),
+                false,
+                false,
+                true,
+                "~$(struct_name)",
+                "$(struct_name)_destroy",
+                "$(struct_name)_destroy",
+                "",
+                comment,
+                "IM_DELETE(self);"
+                )
+end
+
 # Create a CxxFunction from a function cursor
 function wrap_function(cursor, parent_struct=nothing)
     is_method = !isnothing(parent_struct)
@@ -208,40 +227,58 @@ function wrap_function(cursor, parent_struct=nothing)
     is_destructor = kind(cursor) == LibClang.CXCursor_Destructor
     struct_name = is_method ? spelling(parent_struct) : ""
 
+    filename, line_no, _ = Clang.get_file_line_column(cursor)
+    filename = basename(filename)
+    comment = find_sameline_comment(filename, line_no)
+
+    # Exit early if it's a destructor since those are easy to handle
+    if is_destructor
+        return create_destructor(struct_name, comment)
+    end
+
     # Get the function type, name, and return type
     func_type = Clang.getCursorType(cursor)
-    ret_type = (is_constructor || is_destructor) ? nothing : Clang.getCursorResultType(cursor)
+    # This looks hacky, but Clang doesn't support getting return types of
+    # constructors/destructors.
+    ret_type = is_constructor ? nothing : Clang.getCursorResultType(cursor)
+    if !isnothing(ret_type) && kind(ret_type) == LibClang.CXType_Elaborated
+        # If it's an elaborated type, get the named type
+        ret_type = Clang.getNamedType(ret_type)
+    end
 
-    ret_is_void = if is_destructor
+    # If the function returns a struct/union, then we modify the wrapper to take
+    # in a pointer to the record and fill it in.
+    is_pOut = !isnothing(ret_type) && kind(ret_type) == LibClang.CXType_Record
+
+    ret_is_void = if is_pOut
         true
     elseif is_constructor
         false
     else
         kind(ret_type) == LibClang.CXType_Void
     end
-    ret_is_ref = (is_constructor || is_destructor) ? false : kind(ret_type) == LibClang.CXType_LValueReference
+    ret_is_ref = isnothing(ret_type) ? false : kind(ret_type) == LibClang.CXType_LValueReference
 
     ret_type_str = if is_constructor
         "$struct_name *"
-    elseif is_destructor
-        "void"
     elseif ret_is_ref
         t = Clang.getPointeeType(ret_type)
         "$(spelling(t)) *"
+    elseif is_pOut
+        "void"
     else
         spelling(ret_type)
     end
 
-    funcname = is_destructor ? "destroy" : spelling(cursor)
-    cimguiname = if is_method
-        "$(struct_name)_$(funcname)"
-    else
-        "c$(funcname)"
-    end
-    
+    funcname = spelling(cursor)
+    cimguiname = is_method ? "$(struct_name)_$(funcname)" : "c$(funcname)"
+
     # Get the arguments and their types
     n_args = Clang.getNumArguments(cursor)
     argsT = ArgInfo[]
+    if is_pOut
+        push!(argsT, (; name="pOut", type="$(spelling(ret_type))*"))
+    end
     if is_method && !is_constructor
         push!(argsT, (; name="self", type="$(struct_name)*"))
     end
@@ -272,8 +309,10 @@ function wrap_function(cursor, parent_struct=nothing)
     arg_names_str = join([is_ref ? "*$(x)" : x for (is_ref, x) in forwarded_args], ", ")
     inner_call = if is_constructor
         "IM_NEW($struct_name)($arg_names_str)"
-    elseif is_destructor
-        "IM_DELETE(self)"
+    elseif is_pOut && !is_method
+        "*pOut = $funcname($arg_names_str)"
+    elseif is_pOut && is_method
+        "*pOut = self->$funcname($arg_names_str)"
     elseif is_method
         "self->$funcname($arg_names_str)"
     else
@@ -305,9 +344,6 @@ function wrap_function(cursor, parent_struct=nothing)
     args = join(["$(x.type) $(x.name)" for x in argsT], ", ")
     args = "($args)"
 
-    filename, line_no, _ = Clang.get_file_line_column(cursor)
-    filename = basename(filename)
-    comment = find_sameline_comment(filename, line_no)
     location = "$(filename[1:end-2]):$(line_no)"
 
     CxxFunction(struct_name, ret_type_str, ret_is_ref,
@@ -387,6 +423,12 @@ function wrap_struct(cursor, blacklist)
                 push!(wrapped_methods, wrap_function(c, cursor))
             end
         end
+    end
+
+    # If the struct type has an explicit constructor ensure that there's also a
+    # destructor to free the memory.
+    if any(m -> m.constructor, wrapped_methods) && !any(m -> m.destructor, wrapped_methods)
+        push!(wrapped_methods, create_destructor(struct_name, "// Automatically generated destructor"))
     end
 
     filename, line_no, _ = Clang.get_file_line_column(cursor)

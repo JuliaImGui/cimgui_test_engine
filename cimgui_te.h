@@ -930,6 +930,8 @@ CIMGUI_TE_API void ImGuiCaptureContext_BeginVideoCapture(ImGuiCaptureContext* se
 CIMGUI_TE_API void ImGuiCaptureContext_EndVideoCapture(ImGuiCaptureContext* self);
 CIMGUI_TE_API bool ImGuiCaptureContext_IsCapturingVideo(ImGuiCaptureContext* self);
 CIMGUI_TE_API bool ImGuiCaptureContext_IsCapturing(ImGuiCaptureContext* self);
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiCaptureContext_destroy(ImGuiCaptureContext* self);
 
 /* ImGuiCaptureToolUI */
 CIMGUI_TE_API ImGuiCaptureToolUI * ImGuiCaptureToolUI_ImGuiCaptureToolUI();
@@ -944,9 +946,13 @@ CIMGUI_TE_API void ImGuiCaptureToolUI__SnapWindowsToGrid(ImGuiCaptureToolUI* sel
 // Format output file template into capture args struct and ensure target directory exists.
 CIMGUI_TE_API bool ImGuiCaptureToolUI__InitializeOutputFile(ImGuiCaptureToolUI* self);
 CIMGUI_TE_API bool ImGuiCaptureToolUI__ShowEncoderConfigFields(ImGuiCaptureToolUI* self, ImGuiCaptureContext* context);
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiCaptureToolUI_destroy(ImGuiCaptureToolUI* self);
 
 /* ImGuiTestItemInfo */
 CIMGUI_TE_API ImGuiTestItemInfo * ImGuiTestItemInfo_ImGuiTestItemInfo();
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiTestItemInfo_destroy(ImGuiTestItemInfo* self);
 
 /* ImGuiTestItemList */
 CIMGUI_TE_API void ImGuiTestItemList_Clear(ImGuiTestItemList* self);
@@ -964,6 +970,8 @@ CIMGUI_TE_API bool ImGuiTestLog_IsEmpty(ImGuiTestLog* self);
 CIMGUI_TE_API void ImGuiTestLog_Clear(ImGuiTestLog* self);
 CIMGUI_TE_API int ImGuiTestLog_ExtractLinesForVerboseLevels(ImGuiTestLog* self, ImGuiTestVerboseLevel level_min, ImGuiTestVerboseLevel level_max, ImGuiTextBuffer* out_buffer);
 CIMGUI_TE_API void ImGuiTestLog_UpdateLineOffsets(ImGuiTestLog* self, ImGuiTestEngineIO* engine_io, ImGuiTestVerboseLevel level, const char* start);
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiTestLog_destroy(ImGuiTestLog* self);
 
 /* ImGuiTest */
 CIMGUI_TE_API ImGuiTest * ImGuiTest_ImGuiTest();
@@ -975,14 +983,20 @@ CIMGUI_TE_API ImGuiTestRef * ImGuiTestRef_ImGuiTestRef();
 CIMGUI_TE_API ImGuiTestRef * ImGuiTestRef_ImGuiTestRef_Uint(unsigned int id);
 CIMGUI_TE_API ImGuiTestRef * ImGuiTestRef_ImGuiTestRef_Str(const char* path);
 CIMGUI_TE_API bool ImGuiTestRef_IsEmpty(ImGuiTestRef* self);
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiTestRef_destroy(ImGuiTestRef* self);
 
 /* ImGuiTestRefDesc */
 CIMGUI_TE_API const char * ImGuiTestRefDesc_c_str(ImGuiTestRefDesc* self);
 CIMGUI_TE_API ImGuiTestRefDesc * ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtr(const ImGuiTestRef* ref);
 CIMGUI_TE_API ImGuiTestRefDesc * ImGuiTestRefDesc_ImGuiTestRefDesc_constTestRefPtrconstTestItemInfoPtr(const ImGuiTestRef* ref, const ImGuiTestItemInfo* item);
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiTestRefDesc_destroy(ImGuiTestRefDesc* self);
 
 /* ImGuiTestActionFilter */
 CIMGUI_TE_API ImGuiTestActionFilter * ImGuiTestActionFilter_ImGuiTestActionFilter();
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiTestActionFilter_destroy(ImGuiTestActionFilter* self);
 
 /* ImGuiTestGenericItemStatus */
 CIMGUI_TE_API ImGuiTestGenericItemStatus * ImGuiTestGenericItemStatus_ImGuiTestGenericItemStatus();
@@ -990,10 +1004,14 @@ CIMGUI_TE_API void ImGuiTestGenericItemStatus_Clear(ImGuiTestGenericItemStatus* 
 CIMGUI_TE_API void ImGuiTestGenericItemStatus_QuerySet(ImGuiTestGenericItemStatus* self, bool ret_val);
 CIMGUI_TE_API void ImGuiTestGenericItemStatus_QueryInc(ImGuiTestGenericItemStatus* self, bool ret_val);
 CIMGUI_TE_API void ImGuiTestGenericItemStatus_Draw(ImGuiTestGenericItemStatus* self);
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiTestGenericItemStatus_destroy(ImGuiTestGenericItemStatus* self);
 
 /* ImGuiTestGenericVars */
 CIMGUI_TE_API ImGuiTestGenericVars * ImGuiTestGenericVars_ImGuiTestGenericVars();
 CIMGUI_TE_API void ImGuiTestGenericVars_Clear(ImGuiTestGenericVars* self);
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiTestGenericVars_destroy(ImGuiTestGenericVars* self);
 
 /* ImGuiTestContext */
 // Set test status and stop running. Usually called when running test logic from GuiFunc() only.
@@ -1034,8 +1052,8 @@ CIMGUI_TE_API void ImGuiTestContext_SleepNoSkip(ImGuiTestContext* self, float ti
 CIMGUI_TE_API void ImGuiTestContext_SetRef_TestRef(ImGuiTestContext* self, ImGuiTestRef ref);
 // Shortcut to SetRef(window->Name) which works for ChildWindow (see code)
 CIMGUI_TE_API void ImGuiTestContext_SetRef_WindowPtr(ImGuiTestContext* self, ImGuiWindow* window);
-CIMGUI_TE_API ImGuiTestRef ImGuiTestContext_GetRef(ImGuiTestContext* self);
-CIMGUI_TE_API ImGuiTestItemInfo ImGuiTestContext_WindowInfo(ImGuiTestContext* self, ImGuiTestRef window_ref, int flags);
+CIMGUI_TE_API void ImGuiTestContext_GetRef(ImGuiTestRef* pOut, ImGuiTestContext* self);
+CIMGUI_TE_API void ImGuiTestContext_WindowInfo(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef window_ref, int flags);
 CIMGUI_TE_API void ImGuiTestContext_WindowClose(ImGuiTestContext* self, ImGuiTestRef window_ref);
 CIMGUI_TE_API void ImGuiTestContext_WindowCollapse(ImGuiTestContext* self, ImGuiTestRef window_ref, bool collapsed);
 CIMGUI_TE_API void ImGuiTestContext_WindowFocus(ImGuiTestContext* self, ImGuiTestRef window_ref, int flags);
@@ -1050,12 +1068,12 @@ CIMGUI_TE_API ImGuiID ImGuiTestContext_PopupGetWindowID(ImGuiTestContext* self, 
 CIMGUI_TE_API ImGuiID ImGuiTestContext_GetID_TestRef(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API ImGuiID ImGuiTestContext_GetID_TestRefTestRef(ImGuiTestContext* self, ImGuiTestRef ref, ImGuiTestRef seed_ref);
 // Find a point that has no windows // FIXME: This needs error return and flag to enable/disable forcefully finding void.
-CIMGUI_TE_API ImVec2 ImGuiTestContext_GetPosOnVoid(ImGuiTestContext* self, ImGuiViewport* viewport);
+CIMGUI_TE_API void ImGuiTestContext_GetPosOnVoid(ImVec2* pOut, ImGuiTestContext* self, ImGuiViewport* viewport);
 // Return a clickable point on window title-bar (window tab for docked windows).
-CIMGUI_TE_API ImVec2 ImGuiTestContext_GetWindowTitlebarPoint(ImGuiTestContext* self, ImGuiTestRef window_ref);
+CIMGUI_TE_API void ImGuiTestContext_GetWindowTitlebarPoint(ImVec2* pOut, ImGuiTestContext* self, ImGuiTestRef window_ref);
 // Work pos and size of main viewport when viewports are disabled, or work pos and size of monitor containing main viewport when viewports are enabled.
-CIMGUI_TE_API ImVec2 ImGuiTestContext_GetMainMonitorWorkPos(ImGuiTestContext* self);
-CIMGUI_TE_API ImVec2 ImGuiTestContext_GetMainMonitorWorkSize(ImGuiTestContext* self);
+CIMGUI_TE_API void ImGuiTestContext_GetMainMonitorWorkPos(ImVec2* pOut, ImGuiTestContext* self);
+CIMGUI_TE_API void ImGuiTestContext_GetMainMonitorWorkSize(ImVec2* pOut, ImGuiTestContext* self);
 // Reset state (use when doing multiple captures)
 CIMGUI_TE_API void ImGuiTestContext_CaptureReset(ImGuiTestContext* self);
 // Set capture file format (otherwise for video this default to EngineIO->VideoCaptureExtension)
@@ -1121,10 +1139,10 @@ CIMGUI_TE_API void ImGuiTestContext_ScrollToItemY(ImGuiTestContext* self, ImGuiT
 CIMGUI_TE_API void ImGuiTestContext_ScrollToTabItem(ImGuiTestContext* self, ImGuiTabBar* tab_bar, unsigned int tab_id);
 CIMGUI_TE_API bool ImGuiTestContext_ScrollErrorCheck(ImGuiTestContext* self, ImGuiAxis axis, float expected, float actual, int* remaining_attempts);
 CIMGUI_TE_API void ImGuiTestContext_ScrollVerifyScrollMax(ImGuiTestContext* self, ImGuiTestRef ref);
-CIMGUI_TE_API ImGuiTestItemInfo ImGuiTestContext_ItemInfo(ImGuiTestContext* self, ImGuiTestRef ref, int flags);
-CIMGUI_TE_API ImGuiTestItemInfo ImGuiTestContext_ItemInfoOpenFullPath(ImGuiTestContext* self, ImGuiTestRef ref, int flags);
+CIMGUI_TE_API void ImGuiTestContext_ItemInfo(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref, int flags);
+CIMGUI_TE_API void ImGuiTestContext_ItemInfoOpenFullPath(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref, int flags);
 CIMGUI_TE_API ImGuiID ImGuiTestContext_ItemInfoHandleWildcardSearch(ImGuiTestContext* self, const char* wildcard_prefix_start, const char* wildcard_prefix_end, const char* wildcard_suffix_start);
-CIMGUI_TE_API ImGuiTestItemInfo ImGuiTestContext_ItemInfoNull(ImGuiTestContext* self);
+CIMGUI_TE_API void ImGuiTestContext_ItemInfoNull(ImGuiTestItemInfo* pOut, ImGuiTestContext* self);
 CIMGUI_TE_API void ImGuiTestContext_GatherItems(ImGuiTestContext* self, ImGuiTestItemList* out_list, ImGuiTestRef parent, int depth);
 CIMGUI_TE_API void ImGuiTestContext_ItemAction(ImGuiTestContext* self, ImGuiTestAction action, ImGuiTestRef ref, int flags, void* action_arg);
 CIMGUI_TE_API void ImGuiTestContext_ItemClick(ImGuiTestContext* self, ImGuiTestRef ref, int button, int flags);
@@ -1204,12 +1222,12 @@ CIMGUI_TE_API const char * ImGuiCsvParser_GetCell(ImGuiCsvParser* self, int row,
 CIMGUI_TE_API void ImGuiTestGatherTask_Clear(ImGuiTestGatherTask* self);
 
 /* ImGuiTestInput */
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForKeyChord(ImGuiTestInput* self, int key_chord, bool down);
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForChar(ImGuiTestInput* self, unsigned short v);
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForViewportFocus(ImGuiTestInput* self, unsigned int viewport_id);
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForViewportSetPos(ImGuiTestInput* self, unsigned int viewport_id, const ImVec2* pos);
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForViewportSetSize(ImGuiTestInput* self, unsigned int viewport_id, const ImVec2* size);
-CIMGUI_TE_API ImGuiTestInput ImGuiTestInput_ForViewportClose(ImGuiTestInput* self, unsigned int viewport_id);
+CIMGUI_TE_API void ImGuiTestInput_ForKeyChord(ImGuiTestInput* pOut, ImGuiTestInput* self, int key_chord, bool down);
+CIMGUI_TE_API void ImGuiTestInput_ForChar(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned short v);
+CIMGUI_TE_API void ImGuiTestInput_ForViewportFocus(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id);
+CIMGUI_TE_API void ImGuiTestInput_ForViewportSetPos(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id, const ImVec2* pos);
+CIMGUI_TE_API void ImGuiTestInput_ForViewportSetSize(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id, const ImVec2* size);
+CIMGUI_TE_API void ImGuiTestInput_ForViewportClose(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id);
 
 /* ImGuiTestEngine */
 CIMGUI_TE_API ImGuiTestEngine * ImGuiTestEngine_ImGuiTestEngine();
@@ -1219,6 +1237,8 @@ CIMGUI_TE_API void ImGuiTestEngine_destroy(ImGuiTestEngine* self);
 CIMGUI_TE_API ImGuiPerfToolEntry * ImGuiPerfToolEntry_ImGuiPerfToolEntry();
 CIMGUI_TE_API ImGuiPerfToolEntry * ImGuiPerfToolEntry_ImGuiPerfToolEntry_constPerfToolEntryPtr(const ImGuiPerfToolEntry* rhs);
 CIMGUI_TE_API void ImGuiPerfToolEntry_Set(ImGuiPerfToolEntry* self, const ImGuiPerfToolEntry* rhs);
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiPerfToolEntry_destroy(ImGuiPerfToolEntry* self);
 
 /* ImGuiPerfToolBatch */
 // FIXME: Misleading: nothing to destruct in that struct?
