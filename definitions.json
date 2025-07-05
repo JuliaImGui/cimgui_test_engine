@@ -2161,6 +2161,23 @@
             }
         }
     ],
+    "cCoroutine_ImplStdThread_GetInterface": [
+        {
+            "retref": false,
+            "stname": "",
+            "argsT": [
+            ],
+            "location": "imgui_te_coroutine:57",
+            "ov_cimguiname": "cCoroutine_ImplStdThread_GetInterface",
+            "args": "()",
+            "isvararg": false,
+            "funcname": "Coroutine_ImplStdThread_GetInterface",
+            "ret": "ImGuiTestCoroutineInterface *",
+            "cimguiname": "cCoroutine_ImplStdThread_GetInterface",
+            "defaults": {
+            }
+        }
+    ],
     "ImGuiTestContext_FindHoveredWindowAtPos": [
         {
             "retref": false,

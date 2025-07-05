@@ -906,6 +906,11 @@ CIMGUI_TE_API void cImGuiTestEngine_CrashHandler();
 /** Header file: imgui_te_perftool.h **/
 CIMGUI_TE_API void cImGuiTestEngine_PerfToolAppendToCSV(ImGuiPerfTool* perf_log, ImGuiPerfToolEntry* entry, const char* filename);
 
+/** Header file: imgui_te_coroutine.h **/
+#ifdef IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
+CIMGUI_TE_API ImGuiTestCoroutineInterface * cCoroutine_ImplStdThread_GetInterface();
+#endif // IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
+
 /* ImGuiCaptureImageBuf */
 CIMGUI_TE_API ImGuiCaptureImageBuf * ImGuiCaptureImageBuf_ImGuiCaptureImageBuf();
 CIMGUI_TE_API void ImGuiCaptureImageBuf_destroy(ImGuiCaptureImageBuf* self);

@@ -590,7 +590,7 @@ function generate()
     te_root = joinpath(@__DIR__, "imgui_test_engine", "imgui_test_engine")
     args = ["-x", "c++", "-I$(imgui_root)", "-I$(te_root)",
             "-DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1",
-            "-DIMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL=0"]
+            "-DIMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL=1"]
 
     # Find the system #include directories to avoid missing header warnings
     stderr_pipe = Pipe()
@@ -607,6 +607,8 @@ function generate()
         end
     end
 
+    # These functions need to be wrapped in a #ifdef
+    stdthread_funcs = ["Coroutine_ImplStdThread_GetInterface"]
     headers = [
         "imgui_capture_tool.h",
         "imgui_te_context.h",
@@ -625,9 +627,8 @@ function generate()
 
     blacklist = [
         # Haven't figured out how to wrap these yet
-        r"ImGuiTestEngineUtil_appendf_auto", r"operator=", r"operator\[\]",
-        # ImGuiTestContext::ItemOpenFullPath() is declared, but not implementated for some reason
-        r"ItemOpenFullPath"]
+        r"ImGuiTestEngineUtil_appendf_auto", r"operator=", r"operator\[\]"
+    ]
     global tu = Clang.parse_header(Index(), joinpath(@__DIR__, "all_includes.h"), args)
     root_cursor = Clang.getTranslationUnitCursor(tu)
 
@@ -758,10 +759,18 @@ function generate()
 
             write(f, "/** Header file: $(header) **/\n")
             for x in funcs
+                if x.funcname in stdthread_funcs
+                    write(f, "#ifdef IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL\n")
+                end
+
                 if !isnothing(x.comment)
                     write(f, x.comment, "\n")
                 end
                 write(f, "CIMGUI_TE_API ", signature(x), ";\n")
+
+                if x.funcname in stdthread_funcs
+                    write(f, "#endif // IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL\n")
+                end
             end
             write(f, "\n")
         end
@@ -808,7 +817,15 @@ function generate()
 
             write(f, "// $(header)\n")
             for x in funcs
+                if x.funcname in stdthread_funcs
+                    write(f, "#ifdef IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL\n")
+                end
+
                 write(f, "CIMGUI_TE_API ", implementation(x), "\n")
+
+                if x.funcname in stdthread_funcs
+                    write(f, "#endif // IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL\n\n")
+                end
             end
         end
 

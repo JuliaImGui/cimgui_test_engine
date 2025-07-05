@@ -7,7 +7,7 @@ be used in combination with cimgui.
 The output files in this repo were generated for **Dear ImGui 1.92.0**.
 
 ## Using the output files
-Unlike ImGui the imgui_test_engine symbols are spread across multiple files, but
+Unlike ImGui the `imgui_test_engine` symbols are spread across multiple files, but
 for the sake of simplicity these are all combined into single header and
 source files:
 - `cimgui_te.h`
@@ -16,7 +16,10 @@ source files:
 Have a look at the `Makefile` to see how to compile it into a shared
 library. There is also an `example.c` program that can be built with `make
 example` to show how to compile a binary that uses the C API. As with cimgui,
-define `CIMGUI_DEFINE_ENUMS_AND_STRUCTS` to enable the C API.
+define `CIMGUI_DEFINE_ENUMS_AND_STRUCTS` to enable the C API. The
+`IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL` directive is copied over
+from the upstream headers so you can use that to enable/disable the
+`std::thread` coroutine implementation.
 
 In addition, symbol metadata is saved in files that mirror their counterparts in
 cimgui:
