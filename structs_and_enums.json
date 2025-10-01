@@ -9,7 +9,7 @@
         "ImGuiCaptureWindowData": "imgui_capture_tool:85",
         "ImGuiTestEngineExportFormat": "imgui_te_exporters:49",
         "ImGuiTest": "imgui_te_engine:410",
-        "ImGuiTestGenericVars": "imgui_te_context:179",
+        "ImGuiTestGenericVars": "imgui_te_context:180",
         "ImBuildInfo": "imgui_te_utils:80",
         "ImGuiTestEngineResultSummary": "imgui_te_engine:157",
         "ImGuiTestStatus": "imgui_te_engine:96",
@@ -32,7 +32,7 @@
         "ImGuiTestInputType": "imgui_te_internal:67",
         "ImGuiPerfToolDisplayType": "imgui_te_perftool:63",
         "ImGuiTestGroup": "imgui_te_engine:108",
-        "ImGuiTestContext": "imgui_te_context:217",
+        "ImGuiTestContext": "imgui_te_context:219",
         "ImGuiTestActionFilter": "imgui_te_context:139",
         "ImGuiTestInput": "imgui_te_internal:79",
         "ImGuiTestFindByLabelTask": "imgui_te_internal:53",
@@ -170,6 +170,10 @@
             },
             {
                 "name": "Started",
+                "type": "bool"
+            },
+            {
+                "name": "UiContextHasHooks",
                 "type": "bool"
             },
             {
@@ -1268,6 +1272,10 @@
                 "type": "int"
             },
             {
+                "name": "InputTextFlags",
+                "type": "int"
+            },
+            {
                 "name": "Status",
                 "type": "ImGuiTestGenericItemStatus"
             },
@@ -2190,6 +2198,13 @@
                 "type": "int",
                 "comment": {
                     "sameline": "// result of IsItemHovered()"
+                }
+            },
+            {
+                "name": "HoveredAllowDisabled",
+                "type": "int",
+                "comment": {
+                    "sameline": "// result of IsItemHovered(ImGuiHoveredFlags_AllowWhenDisabled)"
                 }
             },
             {

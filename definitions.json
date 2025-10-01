@@ -67,7 +67,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:421",
+            "location": "imgui_te_context:426",
             "ov_cimguiname": "ImGuiTestContext_ItemClick",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int button, int flags)",
             "isvararg": false,
@@ -212,7 +212,7 @@
                     "type": "int*"
                 }
             ],
-            "location": "imgui_te_context:407",
+            "location": "imgui_te_context:412",
             "ov_cimguiname": "ImGuiTestContext_ScrollErrorCheck",
             "args": "(ImGuiTestContext* self, ImGuiAxis axis, float expected, float actual, int* remaining_attempts)",
             "isvararg": false,
@@ -237,7 +237,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:308",
+            "location": "imgui_te_context:310",
             "ov_cimguiname": "ImGuiTestContext_SetRef_TestRef",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -260,7 +260,7 @@
                     "type": "ImGuiWindow*"
                 }
             ],
-            "location": "imgui_te_context:309",
+            "location": "imgui_te_context:311",
             "ov_cimguiname": "ImGuiTestContext_SetRef_WindowPtr",
             "args": "(ImGuiTestContext* self, ImGuiWindow* window)",
             "comment": "// Shortcut to SetRef(window->Name) which works for ChildWindow (see code)",
@@ -352,7 +352,7 @@
                     "type": ""
                 }
             ],
-            "location": "imgui_te_context:281",
+            "location": "imgui_te_context:283",
             "ov_cimguiname": "ImGuiTestContext_LogEx",
             "args": "(ImGuiTestContext* self, ImGuiTestVerboseLevel level, int flags, const char* fmt,  ...)",
             "isvararg": true,
@@ -377,7 +377,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:358",
+            "location": "imgui_te_context:360",
             "ov_cimguiname": "ImGuiTestContext_MouseUp",
             "args": "(ImGuiTestContext* self, int button)",
             "isvararg": false,
@@ -399,7 +399,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:511",
+            "location": "imgui_te_context:516",
             "ov_cimguiname": "ImGuiTestContext_PerfCalcRef",
             "args": "(ImGuiTestContext* self)",
             "isvararg": false,
@@ -424,7 +424,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:473",
+            "location": "imgui_te_context:478",
             "ov_cimguiname": "ImGuiTestContext_MenuCheck",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -482,7 +482,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:382",
+            "location": "imgui_te_context:384",
             "ov_cimguiname": "ImGuiTestContext_KeyCharsAppend",
             "args": "(ImGuiTestContext* self, const char* chars)",
             "comment": "// Input characters at end of field",
@@ -508,7 +508,7 @@
                     "type": "ImGuiWindow*"
                 }
             ],
-            "location": "imgui_te_context:372",
+            "location": "imgui_te_context:374",
             "ov_cimguiname": "ImGuiTestContext_MouseSetViewport",
             "args": "(ImGuiTestContext* self, ImGuiWindow* window)",
             "isvararg": false,
@@ -559,7 +559,7 @@
                     "type": "ImGuiViewport*"
                 }
             ],
-            "location": "imgui_te_context:495",
+            "location": "imgui_te_context:500",
             "ov_cimguiname": "ImGuiTestContext_ViewportPlatform_SetWindowFocus",
             "args": "(ImGuiTestContext* self, ImGuiViewport* viewport)",
             "isvararg": false,
@@ -580,7 +580,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:228",
+            "location": "imgui_te_internal:229",
             "ov_cimguiname": "cImGuiTestEngine_RebootUiContext",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -672,7 +672,7 @@
                     "type": "ImGuiTestGenericVars*"
                 }
             ],
-            "location": "imgui_te_context:208",
+            "location": "imgui_te_context:210",
             "ov_cimguiname": "ImGuiTestGenericVars_Clear",
             "args": "(ImGuiTestGenericVars* self)",
             "isvararg": false,
@@ -765,7 +765,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_internal:222",
+            "location": "imgui_te_internal:223",
             "ov_cimguiname": "cImGuiTestEngine_PassFilter",
             "args": "(ImGuiTest* test, const char* filter)",
             "isvararg": false,
@@ -872,7 +872,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:480",
+            "location": "imgui_te_context:485",
             "ov_cimguiname": "ImGuiTestContext_ComboClickAll",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -889,7 +889,7 @@
             "stname": "ImGuiTestEngine",
             "argsT": [
             ],
-            "location": "imgui_te_internal:210",
+            "location": "imgui_te_internal:211",
             "ov_cimguiname": "ImGuiTestEngine_ImGuiTestEngine",
             "args": "()",
             "constructor": true,
@@ -907,7 +907,7 @@
             "stname": "ImGuiTestGenericItemStatus",
             "argsT": [
             ],
-            "location": "imgui_te_context:169",
+            "location": "imgui_te_context:170",
             "ov_cimguiname": "ImGuiTestGenericItemStatus_ImGuiTestGenericItemStatus",
             "args": "()",
             "constructor": true,
@@ -987,7 +987,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:408",
+            "location": "imgui_te_context:413",
             "ov_cimguiname": "ImGuiTestContext_ScrollVerifyScrollMax",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -1016,7 +1016,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:423",
+            "location": "imgui_te_context:428",
             "ov_cimguiname": "ImGuiTestContext_ItemCheck",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -1034,7 +1034,7 @@
             "stname": "ImGuiTestGenericVars",
             "argsT": [
             ],
-            "location": "imgui_te_context:207",
+            "location": "imgui_te_context:209",
             "ov_cimguiname": "ImGuiTestGenericVars_ImGuiTestGenericVars",
             "args": "()",
             "constructor": true,
@@ -1060,7 +1060,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:504",
+            "location": "imgui_te_context:509",
             "ov_cimguiname": "ImGuiTestContext_UndockWindow",
             "args": "(ImGuiTestContext* self, const char* window_name)",
             "isvararg": false,
@@ -1081,7 +1081,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:296",
+            "location": "imgui_te_context:298",
             "ov_cimguiname": "ImGuiTestContext_SleepStandard",
             "args": "(ImGuiTestContext* self)",
             "comment": "// Standard regular delay of io.ActionDelayStandard (~0.40f), unless in Fast mode.",
@@ -1107,7 +1107,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:447",
+            "location": "imgui_te_context:452",
             "ov_cimguiname": "ImGuiTestContext_ItemReadAsString_TestRef",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -1138,7 +1138,7 @@
                     "type": "unsigned long"
                 }
             ],
-            "location": "imgui_te_context:448",
+            "location": "imgui_te_context:453",
             "ov_cimguiname": "ImGuiTestContext_ItemReadAsString_TestRefStr",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, char* out_buf, unsigned long out_buf_size)",
             "isvararg": false,
@@ -1209,7 +1209,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:328",
+            "location": "imgui_te_context:330",
             "ov_cimguiname": "ImGuiTestContext_PopupGetWindowID",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -1285,7 +1285,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:486",
+            "location": "imgui_te_context:491",
             "ov_cimguiname": "ImGuiTestContext_TableResizeColumn",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int column_n, float width)",
             "isvararg": false,
@@ -1318,7 +1318,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:283",
+            "location": "imgui_te_context:285",
             "ov_cimguiname": "ImGuiTestContext_LogToTTY",
             "args": "(ImGuiTestContext* self, ImGuiTestVerboseLevel level, const char* message, const char* message_end)",
             "isvararg": false,
@@ -1348,7 +1348,7 @@
                     "type": ""
                 }
             ],
-            "location": "imgui_te_context:285",
+            "location": "imgui_te_context:287",
             "ov_cimguiname": "ImGuiTestContext_LogDebug",
             "args": "(ImGuiTestContext* self, const char* fmt,  ...)",
             "comment": "// ImGuiTestVerboseLevel_Debug or ImGuiTestVerboseLevel_Trace depending on context depth",
@@ -1374,7 +1374,7 @@
                     "type": "ImGuiContext*"
                 }
             ],
-            "location": "imgui_te_internal:225",
+            "location": "imgui_te_internal:226",
             "ov_cimguiname": "cImGuiTestEngine_BindImGuiContext",
             "args": "(ImGuiTestEngine* engine, ImGuiContext* ui_ctx)",
             "isvararg": false,
@@ -1429,7 +1429,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:323",
+            "location": "imgui_te_context:325",
             "ov_cimguiname": "ImGuiTestContext_GetWindowByRef",
             "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref)",
             "isvararg": false,
@@ -1450,7 +1450,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:536",
+            "location": "imgui_te_context:541",
             "ov_cimguiname": "ImGuiTestContext__ForeignWindowsUnhideAll",
             "args": "(ImGuiTestContext* self)",
             "comment": "// FIXME: Aim to remove this system...",
@@ -1513,7 +1513,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:395",
+            "location": "imgui_te_context:397",
             "ov_cimguiname": "ImGuiTestContext_NavInput",
             "args": "(ImGuiTestContext* self)",
             "comment": "// Input into select item: input sliders/drags. Equivalent of pressing Enter on keyboard, ImGuiKey_GamepadFaceDown on a gamepad.",
@@ -1604,7 +1604,7 @@
                     "type": "ImGuiTestRunSpeed"
                 }
             ],
-            "location": "imgui_te_internal:239",
+            "location": "imgui_te_internal:240",
             "ov_cimguiname": "cImGuiTestEngine_GetRunSpeedName",
             "args": "(ImGuiTestRunSpeed v)",
             "isvararg": false,
@@ -1683,7 +1683,7 @@
                     "type": "ImGuiCaptureArgs*"
                 }
             ],
-            "location": "imgui_te_internal:233",
+            "location": "imgui_te_internal:234",
             "ov_cimguiname": "cImGuiTestEngine_CaptureScreenshot",
             "args": "(ImGuiTestEngine* engine, ImGuiCaptureArgs* args)",
             "isvararg": false,
@@ -1712,7 +1712,7 @@
                     "type": "ImGuiWindow **"
                 }
             ],
-            "location": "imgui_te_context:535",
+            "location": "imgui_te_context:540",
             "ov_cimguiname": "ImGuiTestContext__ForeignWindowsHideOverPos",
             "args": "(ImGuiTestContext* self, const ImVec2* pos, ImGuiWindow ** ignore_list)",
             "comment": "// FIXME: Aim to remove this system...",
@@ -1776,7 +1776,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:445",
+            "location": "imgui_te_context:450",
             "ov_cimguiname": "ImGuiTestContext_ItemReadAsFloat",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -1809,7 +1809,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:415",
+            "location": "imgui_te_context:420",
             "ov_cimguiname": "ImGuiTestContext_ItemInfoHandleWildcardSearch",
             "args": "(ImGuiTestContext* self, const char* wildcard_prefix_start, const char* wildcard_prefix_end, const char* wildcard_suffix_start)",
             "isvararg": false,
@@ -1896,7 +1896,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:273",
+            "location": "imgui_te_context:275",
             "ov_cimguiname": "ImGuiTestContext_IsFirstGuiFrame",
             "args": "(ImGuiTestContext* self)",
             "isvararg": false,
@@ -2002,7 +2002,7 @@
                     "type": "ImVec2"
                 }
             ],
-            "location": "imgui_te_context:321",
+            "location": "imgui_te_context:323",
             "ov_cimguiname": "ImGuiTestContext_WindowResize",
             "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, ImVec2 sz)",
             "isvararg": false,
@@ -2031,7 +2031,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:399",
+            "location": "imgui_te_context:401",
             "ov_cimguiname": "ImGuiTestContext_ScrollToX",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, float scroll_x)",
             "isvararg": false,
@@ -2081,7 +2081,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:476",
+            "location": "imgui_te_context:481",
             "ov_cimguiname": "ImGuiTestContext_MenuUncheckAll",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref_parent)",
             "isvararg": false,
@@ -2106,7 +2106,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:383",
+            "location": "imgui_te_context:385",
             "ov_cimguiname": "ImGuiTestContext_KeyCharsAppendEnter",
             "args": "(ImGuiTestContext* self, const char* chars)",
             "comment": "// Input characters at end of field, press Enter",
@@ -2128,7 +2128,7 @@
                     "type": "ImGuiTestStatus"
                 }
             ],
-            "location": "imgui_te_internal:238",
+            "location": "imgui_te_internal:239",
             "ov_cimguiname": "cImGuiTestEngine_GetStatusName",
             "args": "(ImGuiTestStatus v)",
             "isvararg": false,
@@ -2149,7 +2149,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:272",
+            "location": "imgui_te_context:274",
             "ov_cimguiname": "ImGuiTestContext_IsWarmUpGuiFrame",
             "args": "(ImGuiTestContext* self)",
             "comment": "// Unless test->Flags has ImGuiTestFlags_NoGuiWarmUp, we run GuiFunc() twice before running TestFunc(). Those frames are called \"WarmUp\" frames.",
@@ -2192,7 +2192,7 @@
                     "type": "const ImVec2*"
                 }
             ],
-            "location": "imgui_te_context:366",
+            "location": "imgui_te_context:368",
             "ov_cimguiname": "ImGuiTestContext_FindHoveredWindowAtPos",
             "args": "(ImGuiTestContext* self, const ImVec2* pos)",
             "isvararg": false,
@@ -2277,7 +2277,7 @@
                     "type": "ImGuiViewport*"
                 }
             ],
-            "location": "imgui_te_context:496",
+            "location": "imgui_te_context:501",
             "ov_cimguiname": "ImGuiTestContext_ViewportPlatform_CloseWindow",
             "args": "(ImGuiTestContext* self, ImGuiViewport* viewport)",
             "isvararg": false,
@@ -2347,7 +2347,7 @@
                     "type": "va_list"
                 }
             ],
-            "location": "imgui_te_context:282",
+            "location": "imgui_te_context:284",
             "ov_cimguiname": "ImGuiTestContext_LogExV",
             "args": "(ImGuiTestContext* self, ImGuiTestVerboseLevel level, int flags, const char* fmt, va_list args)",
             "isvararg": false,
@@ -2372,7 +2372,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:359",
+            "location": "imgui_te_context:361",
             "ov_cimguiname": "ImGuiTestContext_MouseLiftDragThreshold",
             "args": "(ImGuiTestContext* self, int button)",
             "isvararg": false,
@@ -2398,7 +2398,7 @@
                     "type": "ImGuiTestStatus"
                 }
             ],
-            "location": "imgui_te_context:266",
+            "location": "imgui_te_context:268",
             "ov_cimguiname": "ImGuiTestContext_Finish",
             "args": "(ImGuiTestContext* self, ImGuiTestStatus status)",
             "comment": "// Set test status and stop running. Usually called when running test logic from GuiFunc() only.",
@@ -2425,7 +2425,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:402",
+            "location": "imgui_te_context:404",
             "ov_cimguiname": "ImGuiTestContext_ScrollToBottom",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -2458,7 +2458,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:380",
+            "location": "imgui_te_context:382",
             "ov_cimguiname": "ImGuiTestContext_KeySetEx",
             "args": "(ImGuiTestContext* self, int key_chord, bool is_down, float time)",
             "isvararg": false,
@@ -2504,7 +2504,7 @@
                     "type": "ImGuiWindow*"
                 }
             ],
-            "location": "imgui_te_context:505",
+            "location": "imgui_te_context:510",
             "ov_cimguiname": "ImGuiTestContext_WindowIsUndockedOrStandalone",
             "args": "(ImGuiTestContext* self, ImGuiWindow* window)",
             "isvararg": false,
@@ -2562,7 +2562,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:446",
+            "location": "imgui_te_context:451",
             "ov_cimguiname": "ImGuiTestContext_ItemReadAsScalar",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int data_type, void* out_data, int flags)",
             "isvararg": false,
@@ -2588,7 +2588,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:453",
+            "location": "imgui_te_context:458",
             "ov_cimguiname": "ImGuiTestContext_ItemIsOpened",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -2642,7 +2642,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:433",
+            "location": "imgui_te_context:438",
             "ov_cimguiname": "ImGuiTestContext_ItemCloseAll",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref_parent, int depth, int passes)",
             "isvararg": false,
@@ -2665,7 +2665,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:221",
+            "location": "imgui_te_internal:222",
             "ov_cimguiname": "cImGuiTestEngine_GetFrameCount",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -2780,7 +2780,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:320",
+            "location": "imgui_te_context:322",
             "ov_cimguiname": "ImGuiTestContext_WindowMove",
             "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, ImVec2 pos, ImVec2 pivot, int flags)",
             "isvararg": false,
@@ -2853,7 +2853,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:310",
+            "location": "imgui_te_context:312",
             "ov_cimguiname": "ImGuiTestContext_GetRef",
             "args": "(ImGuiTestRef* pOut, ImGuiTestContext* self)",
             "isvararg": false,
@@ -2882,7 +2882,7 @@
                     "type": "bool"
                 }
             ],
-            "location": "imgui_te_context:317",
+            "location": "imgui_te_context:319",
             "ov_cimguiname": "ImGuiTestContext_WindowCollapse",
             "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, bool collapsed)",
             "isvararg": false,
@@ -2966,7 +2966,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:343",
+            "location": "imgui_te_context:345",
             "ov_cimguiname": "ImGuiTestContext_CaptureSetExtension",
             "args": "(ImGuiTestContext* self, const char* ext)",
             "comment": "// Set capture file format (otherwise for video this default to EngineIO->VideoCaptureExtension)",
@@ -3045,7 +3045,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:398",
+            "location": "imgui_te_context:400",
             "ov_cimguiname": "ImGuiTestContext_ScrollTo",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, ImGuiAxis axis, float scroll_v, int flags)",
             "isvararg": false,
@@ -3079,7 +3079,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:417",
+            "location": "imgui_te_context:422",
             "ov_cimguiname": "ImGuiTestContext_GatherItems",
             "args": "(ImGuiTestContext* self, ImGuiTestItemList* out_list, ImGuiTestRef parent, int depth)",
             "isvararg": false,
@@ -3113,7 +3113,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:403",
+            "location": "imgui_te_context:408",
             "ov_cimguiname": "ImGuiTestContext_ScrollToItem",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, ImGuiAxis axis, int flags)",
             "isvararg": false,
@@ -3143,7 +3143,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:457",
+            "location": "imgui_te_context:462",
             "ov_cimguiname": "ImGuiTestContext_ItemHold",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, float time)",
             "isvararg": false,
@@ -3194,7 +3194,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:512",
+            "location": "imgui_te_context:517",
             "ov_cimguiname": "ImGuiTestContext_PerfCapture",
             "args": "(ImGuiTestContext* self, const char* category, const char* test_name, const char* csv_file)",
             "isvararg": false,
@@ -3247,7 +3247,7 @@
                     "type": "bool"
                 }
             ],
-            "location": "imgui_te_context:507",
+            "location": "imgui_te_context:512",
             "ov_cimguiname": "ImGuiTestContext_DockNodeHideTabBar",
             "args": "(ImGuiTestContext* self, ImGuiDockNode* node, bool hidden)",
             "isvararg": false,
@@ -3268,7 +3268,7 @@
                     "type": "ImGuiTestGenericItemStatus*"
                 }
             ],
-            "location": "imgui_te_context:170",
+            "location": "imgui_te_context:171",
             "ov_cimguiname": "ImGuiTestGenericItemStatus_Clear",
             "args": "(ImGuiTestGenericItemStatus* self)",
             "isvararg": false,
@@ -3297,7 +3297,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:378",
+            "location": "imgui_te_context:380",
             "ov_cimguiname": "ImGuiTestContext_KeyPress",
             "args": "(ImGuiTestContext* self, int key_chord, int count)",
             "isvararg": false,
@@ -3483,7 +3483,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:332",
+            "location": "imgui_te_context:334",
             "ov_cimguiname": "ImGuiTestContext_GetID_TestRef",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -3510,7 +3510,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:333",
+            "location": "imgui_te_context:335",
             "ov_cimguiname": "ImGuiTestContext_GetID_TestRefTestRef",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, ImGuiTestRef seed_ref)",
             "isvararg": false,
@@ -3543,7 +3543,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:315",
+            "location": "imgui_te_context:317",
             "ov_cimguiname": "ImGuiTestContext_WindowInfo",
             "args": "(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef window_ref, int flags)",
             "isvararg": false,
@@ -3679,7 +3679,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:487",
+            "location": "imgui_te_context:492",
             "ov_cimguiname": "ImGuiTestContext_TableGetSortSpecs",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -3768,7 +3768,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:353",
+            "location": "imgui_te_context:355",
             "ov_cimguiname": "ImGuiTestContext_MouseTeleportToPos",
             "args": "(ImGuiTestContext* self, ImVec2 pos, int flags)",
             "isvararg": false,
@@ -3802,7 +3802,7 @@
                     "type": "bool"
                 }
             ],
-            "location": "imgui_te_context:485",
+            "location": "imgui_te_context:490",
             "ov_cimguiname": "ImGuiTestContext_TableSetColumnEnabled",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, const char* label, bool enabled)",
             "isvararg": false,
@@ -3857,7 +3857,7 @@
                     "type": "ImVec2"
                 }
             ],
-            "location": "imgui_te_context:461",
+            "location": "imgui_te_context:466",
             "ov_cimguiname": "ImGuiTestContext_ItemDragWithDelta",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref_src, ImVec2 pos_delta)",
             "isvararg": false,
@@ -3980,7 +3980,7 @@
                     "type": "void*"
                 }
             ],
-            "location": "imgui_te_context:420",
+            "location": "imgui_te_context:425",
             "ov_cimguiname": "ImGuiTestContext_ItemAction",
             "args": "(ImGuiTestContext* self, ImGuiTestAction action, ImGuiTestRef ref, int flags, void* action_arg)",
             "isvararg": false,
@@ -4007,7 +4007,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:451",
+            "location": "imgui_te_context:456",
             "ov_cimguiname": "ImGuiTestContext_ItemExists",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -4082,7 +4082,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:356",
+            "location": "imgui_te_context:358",
             "ov_cimguiname": "ImGuiTestContext_MouseDoubleClick",
             "args": "(ImGuiTestContext* self, int button)",
             "isvararg": false,
@@ -4154,7 +4154,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:271",
+            "location": "imgui_te_context:273",
             "ov_cimguiname": "ImGuiTestContext_IsError",
             "args": "(ImGuiTestContext* self)",
             "isvararg": false,
@@ -4175,7 +4175,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:347",
+            "location": "imgui_te_context:349",
             "ov_cimguiname": "ImGuiTestContext_CaptureBeginVideo",
             "args": "(ImGuiTestContext* self)",
             "comment": "// Start a video capture",
@@ -4328,7 +4328,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:337",
+            "location": "imgui_te_context:339",
             "ov_cimguiname": "ImGuiTestContext_GetWindowTitlebarPoint",
             "args": "(ImVec2* pOut, ImGuiTestContext* self, ImGuiTestRef window_ref)",
             "comment": "// Return a clickable point on window title-bar (window tab for docked windows).",
@@ -4381,7 +4381,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:351",
+            "location": "imgui_te_context:353",
             "ov_cimguiname": "ImGuiTestContext_MouseMove",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -4484,7 +4484,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:319",
+            "location": "imgui_te_context:321",
             "ov_cimguiname": "ImGuiTestContext_WindowBringToFront",
             "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, int flags)",
             "isvararg": false,
@@ -4643,7 +4643,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:475",
+            "location": "imgui_te_context:480",
             "ov_cimguiname": "ImGuiTestContext_MenuCheckAll",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref_parent)",
             "isvararg": false,
@@ -4701,7 +4701,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:297",
+            "location": "imgui_te_context:299",
             "ov_cimguiname": "ImGuiTestContext_SleepNoSkip",
             "args": "(ImGuiTestContext* self, float time_in_second, float framestep_in_second)",
             "isvararg": false,
@@ -4734,7 +4734,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:414",
+            "location": "imgui_te_context:419",
             "ov_cimguiname": "ImGuiTestContext_ItemInfoOpenFullPath",
             "args": "(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -4764,7 +4764,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:345",
+            "location": "imgui_te_context:347",
             "ov_cimguiname": "ImGuiTestContext_CaptureScreenshotWindow",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int capture_flags)",
             "comment": "// Trigger a screen capture of a single window (== CaptureAddWindow() + CaptureScreenshot())",
@@ -4882,7 +4882,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:379",
+            "location": "imgui_te_context:381",
             "ov_cimguiname": "ImGuiTestContext_KeyHold",
             "args": "(ImGuiTestContext* self, int key_chord, float time)",
             "isvararg": false,
@@ -4907,7 +4907,7 @@
                     "type": "ImGuiInputSource"
                 }
             ],
-            "location": "imgui_te_context:392",
+            "location": "imgui_te_context:394",
             "ov_cimguiname": "ImGuiTestContext_SetInputMode",
             "args": "(ImGuiTestContext* self, ImGuiInputSource input_mode)",
             "comment": "// Mouse or Keyboard or Gamepad. In Keyboard or Gamepad mode, actions such as ItemClick or ItemInput are using nav facilities instead of Mouse.",
@@ -5009,7 +5009,7 @@
                     "type": ""
                 }
             ],
-            "location": "imgui_te_context:288",
+            "location": "imgui_te_context:290",
             "ov_cimguiname": "ImGuiTestContext_LogError",
             "args": "(ImGuiTestContext* self, const char* fmt,  ...)",
             "comment": "// ImGuiTestVerboseLevel_Error",
@@ -5035,7 +5035,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:354",
+            "location": "imgui_te_context:356",
             "ov_cimguiname": "ImGuiTestContext_MouseClick",
             "args": "(ImGuiTestContext* self, int button)",
             "isvararg": false,
@@ -5088,7 +5088,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:458",
+            "location": "imgui_te_context:463",
             "ov_cimguiname": "ImGuiTestContext_ItemHoldForFrames",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int frames)",
             "isvararg": false,
@@ -5113,7 +5113,7 @@
                     "type": "ImVec2"
                 }
             ],
-            "location": "imgui_te_context:352",
+            "location": "imgui_te_context:354",
             "ov_cimguiname": "ImGuiTestContext_MouseMoveToPos",
             "args": "(ImGuiTestContext* self, ImVec2 pos)",
             "isvararg": false,
@@ -5138,7 +5138,7 @@
                     "type": "ImGuiCaptureArgs*"
                 }
             ],
-            "location": "imgui_te_internal:235",
+            "location": "imgui_te_internal:236",
             "ov_cimguiname": "cImGuiTestEngine_CaptureEndVideo",
             "args": "(ImGuiTestEngine* engine, ImGuiCaptureArgs* args)",
             "isvararg": false,
@@ -5159,7 +5159,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:289",
+            "location": "imgui_te_context:291",
             "ov_cimguiname": "ImGuiTestContext_LogBasicUiState",
             "args": "(ImGuiTestContext* self)",
             "isvararg": false,
@@ -5184,7 +5184,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:416",
+            "location": "imgui_te_context:421",
             "ov_cimguiname": "ImGuiTestContext_ItemInfoNull",
             "args": "(ImGuiTestItemInfo* pOut, ImGuiTestContext* self)",
             "isvararg": false,
@@ -5205,7 +5205,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:274",
+            "location": "imgui_te_context:276",
             "ov_cimguiname": "ImGuiTestContext_IsFirstTestFrame",
             "args": "(ImGuiTestContext* self)",
             "comment": "// First frame where TestFunc is running (after warm-up frame).",
@@ -5231,7 +5231,7 @@
                     "type": "bool"
                 }
             ],
-            "location": "imgui_te_context:172",
+            "location": "imgui_te_context:173",
             "ov_cimguiname": "ImGuiTestGenericItemStatus_QueryInc",
             "args": "(ImGuiTestGenericItemStatus* self, bool ret_val)",
             "isvararg": false,
@@ -5261,7 +5261,7 @@
                     "type": "ImVec2*"
                 }
             ],
-            "location": "imgui_te_context:367",
+            "location": "imgui_te_context:369",
             "ov_cimguiname": "ImGuiTestContext_FindExistingVoidPosOnViewport",
             "args": "(ImGuiTestContext* self, ImGuiViewport* viewport, ImVec2* out)",
             "isvararg": false,
@@ -5282,7 +5282,7 @@
                     "type": "ImGuiTestVerboseLevel"
                 }
             ],
-            "location": "imgui_te_internal:240",
+            "location": "imgui_te_internal:241",
             "ov_cimguiname": "cImGuiTestEngine_GetVerboseLevelName",
             "args": "(ImGuiTestVerboseLevel v)",
             "isvararg": false,
@@ -5311,7 +5311,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:422",
+            "location": "imgui_te_context:427",
             "ov_cimguiname": "ImGuiTestContext_ItemDoubleClick",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -5337,7 +5337,7 @@
                     "type": "ImGuiViewport*"
                 }
             ],
-            "location": "imgui_te_context:364",
+            "location": "imgui_te_context:366",
             "ov_cimguiname": "ImGuiTestContext_MouseMoveToVoid",
             "args": "(ImGuiTestContext* self, ImGuiViewport* viewport)",
             "isvararg": false,
@@ -5431,7 +5431,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:385",
+            "location": "imgui_te_context:387",
             "ov_cimguiname": "ImGuiTestContext_KeyCharsReplaceEnter",
             "args": "(ImGuiTestContext* self, const char* chars)",
             "comment": "// Delete existing field then input characters, press Enter",
@@ -5461,7 +5461,7 @@
                     "type": "bool"
                 }
             ],
-            "location": "imgui_te_context:454",
+            "location": "imgui_te_context:459",
             "ov_cimguiname": "ImGuiTestContext_ItemVerifyCheckedIfAlive",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, bool checked)",
             "isvararg": false,
@@ -5504,7 +5504,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:384",
+            "location": "imgui_te_context:386",
             "ov_cimguiname": "ImGuiTestContext_KeyCharsReplace",
             "args": "(ImGuiTestContext* self, const char* chars)",
             "comment": "// Delete existing field then input characters",
@@ -5547,7 +5547,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:275",
+            "location": "imgui_te_context:277",
             "ov_cimguiname": "ImGuiTestContext_IsGuiFuncOnly",
             "args": "(ImGuiTestContext* self)",
             "isvararg": false,
@@ -5621,7 +5621,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:483",
+            "location": "imgui_te_context:488",
             "ov_cimguiname": "ImGuiTestContext_TableOpenContextMenu",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int column_n)",
             "isvararg": false,
@@ -5647,7 +5647,7 @@
                     "type": "bool"
                 }
             ],
-            "location": "imgui_te_context:171",
+            "location": "imgui_te_context:172",
             "ov_cimguiname": "ImGuiTestGenericItemStatus_QuerySet",
             "args": "(ImGuiTestGenericItemStatus* self, bool ret_val)",
             "isvararg": false,
@@ -5673,7 +5673,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:474",
+            "location": "imgui_te_context:479",
             "ov_cimguiname": "ImGuiTestContext_MenuUncheck",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -5741,7 +5741,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:381",
+            "location": "imgui_te_context:383",
             "ov_cimguiname": "ImGuiTestContext_KeyChars",
             "args": "(ImGuiTestContext* self, const char* chars)",
             "comment": "// Input characters",
@@ -5767,7 +5767,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_internal:220",
+            "location": "imgui_te_internal:221",
             "ov_cimguiname": "cImGuiTestEngine_SetDeltaTime",
             "args": "(ImGuiTestEngine* engine, float delta_time)",
             "isvararg": false,
@@ -5796,7 +5796,7 @@
                     "type": "const char **"
                 }
             ],
-            "location": "imgui_te_context:465",
+            "location": "imgui_te_context:470",
             "ov_cimguiname": "ImGuiTestContext_TabBarCompareOrder",
             "args": "(ImGuiTestContext* self, ImGuiTabBar* tab_bar, const char ** tab_order)",
             "isvararg": false,
@@ -5854,7 +5854,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:428",
+            "location": "imgui_te_context:433",
             "ov_cimguiname": "ImGuiTestContext_ItemNavActivate",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -5876,7 +5876,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:295",
+            "location": "imgui_te_context:297",
             "ov_cimguiname": "ImGuiTestContext_SleepShort",
             "args": "(ImGuiTestContext* self)",
             "comment": "// Standard short delay of io.ActionDelayShort (~0.15f), unless in Fast mode.",
@@ -5942,7 +5942,7 @@
                     "type": "ImVec2"
                 }
             ],
-            "location": "imgui_te_context:361",
+            "location": "imgui_te_context:363",
             "ov_cimguiname": "ImGuiTestContext_MouseWheel",
             "args": "(ImGuiTestContext* self, ImVec2 delta)",
             "isvararg": false,
@@ -6102,7 +6102,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:393",
+            "location": "imgui_te_context:395",
             "ov_cimguiname": "ImGuiTestContext_NavMoveTo",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -6185,7 +6185,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:400",
+            "location": "imgui_te_context:402",
             "ov_cimguiname": "ImGuiTestContext_ScrollToY",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, float scroll_y)",
             "isvararg": false,
@@ -6210,7 +6210,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:401",
+            "location": "imgui_te_context:403",
             "ov_cimguiname": "ImGuiTestContext_ScrollToTop",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -6260,7 +6260,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:426",
+            "location": "imgui_te_context:431",
             "ov_cimguiname": "ImGuiTestContext_ItemClose",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -6290,7 +6290,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:360",
+            "location": "imgui_te_context:362",
             "ov_cimguiname": "ImGuiTestContext_MouseDragWithDelta",
             "args": "(ImGuiTestContext* self, ImVec2 delta, int button)",
             "isvararg": false,
@@ -6316,7 +6316,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:357",
+            "location": "imgui_te_context:359",
             "ov_cimguiname": "ImGuiTestContext_MouseDown",
             "args": "(ImGuiTestContext* self, int button)",
             "isvararg": false,
@@ -6367,7 +6367,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:267",
+            "location": "imgui_te_context:269",
             "ov_cimguiname": "ImGuiTestContext_RunChildTest",
             "args": "(ImGuiTestContext* self, const char* test_name, int flags)",
             "comment": "// [Experimental] Run another test from the current test.",
@@ -6436,7 +6436,7 @@
                     "type": "ImGuiTestGenericItemStatus*"
                 }
             ],
-            "location": "imgui_te_context:173",
+            "location": "imgui_te_context:174",
             "ov_cimguiname": "ImGuiTestGenericItemStatus_Draw",
             "args": "(ImGuiTestGenericItemStatus* self)",
             "isvararg": false,
@@ -6461,7 +6461,7 @@
                     "type": "unsigned int"
                 }
             ],
-            "location": "imgui_te_context:373",
+            "location": "imgui_te_context:375",
             "ov_cimguiname": "ImGuiTestContext_MouseSetViewportID",
             "args": "(ImGuiTestContext* self, unsigned int viewport_id)",
             "isvararg": false,
@@ -6486,7 +6486,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:376",
+            "location": "imgui_te_context:378",
             "ov_cimguiname": "ImGuiTestContext_KeyDown",
             "args": "(ImGuiTestContext* self, int key_chord)",
             "isvararg": false,
@@ -6540,7 +6540,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:472",
+            "location": "imgui_te_context:477",
             "ov_cimguiname": "ImGuiTestContext_MenuClick",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -6565,7 +6565,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:363",
+            "location": "imgui_te_context:365",
             "ov_cimguiname": "ImGuiTestContext_MouseWheelY",
             "args": "(ImGuiTestContext* self, float dy)",
             "isvararg": false,
@@ -6590,7 +6590,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:377",
+            "location": "imgui_te_context:379",
             "ov_cimguiname": "ImGuiTestContext_KeyUp",
             "args": "(ImGuiTestContext* self, int key_chord)",
             "isvararg": false,
@@ -6598,6 +6598,44 @@
             "ret": "void",
             "cimguiname": "ImGuiTestContext_KeyUp",
             "defaults": {
+            }
+        }
+    ],
+    "ImGuiTestContext_ScrollToPos": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestContext",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestContext*"
+                },
+                {
+                    "name": "window_ref",
+                    "type": "ImGuiTestRef"
+                },
+                {
+                    "name": "pos_v",
+                    "type": "float"
+                },
+                {
+                    "name": "axis",
+                    "type": "ImGuiAxis"
+                },
+                {
+                    "name": "flags",
+                    "type": "int"
+                }
+            ],
+            "location": "imgui_te_context:405",
+            "ov_cimguiname": "ImGuiTestContext_ScrollToPos",
+            "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, float pos_v, ImGuiAxis axis, int flags)",
+            "isvararg": false,
+            "funcname": "ScrollToPos",
+            "ret": "void",
+            "cimguiname": "ImGuiTestContext_ScrollToPos",
+            "defaults": {
+                "flags": "ImGuiTestOpFlags_None"
             }
         }
     ],
@@ -6642,7 +6680,7 @@
                     "type": "unsigned int"
                 }
             ],
-            "location": "imgui_te_context:406",
+            "location": "imgui_te_context:411",
             "ov_cimguiname": "ImGuiTestContext_ScrollToTabItem",
             "args": "(ImGuiTestContext* self, ImGuiTabBar* tab_bar, unsigned int tab_id)",
             "isvararg": false,
@@ -6671,13 +6709,42 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:471",
+            "location": "imgui_te_context:476",
             "ov_cimguiname": "ImGuiTestContext_MenuActionAll",
             "args": "(ImGuiTestContext* self, ImGuiTestAction action, ImGuiTestRef ref_parent)",
             "isvararg": false,
             "funcname": "MenuActionAll",
             "ret": "void",
             "cimguiname": "ImGuiTestContext_MenuActionAll",
+            "defaults": {
+            }
+        }
+    ],
+    "ImGuiTestContext_ScrollToPosX": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestContext",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestContext*"
+                },
+                {
+                    "name": "window_ref",
+                    "type": "ImGuiTestRef"
+                },
+                {
+                    "name": "pos_x",
+                    "type": "float"
+                }
+            ],
+            "location": "imgui_te_context:406",
+            "ov_cimguiname": "ImGuiTestContext_ScrollToPosX",
+            "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, float pos_x)",
+            "isvararg": false,
+            "funcname": "ScrollToPosX",
+            "ret": "void",
+            "cimguiname": "ImGuiTestContext_ScrollToPosX",
             "defaults": {
             }
         }
@@ -6704,7 +6771,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:413",
+            "location": "imgui_te_context:418",
             "ov_cimguiname": "ImGuiTestContext_ItemInfo",
             "args": "(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -6865,7 +6932,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:339",
+            "location": "imgui_te_context:341",
             "ov_cimguiname": "ImGuiTestContext_GetMainMonitorWorkSize",
             "args": "(ImVec2* pOut, ImGuiTestContext* self)",
             "isvararg": false,
@@ -6886,7 +6953,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:394",
+            "location": "imgui_te_context:396",
             "ov_cimguiname": "ImGuiTestContext_NavActivate",
             "args": "(ImGuiTestContext* self)",
             "comment": "// Activate current selected item: activate button, tweak sliders/drags. Equivalent of pressing Space on keyboard, ImGuiKey_GamepadFaceUp on a gamepad.",
@@ -6946,7 +7013,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:502",
+            "location": "imgui_te_context:507",
             "ov_cimguiname": "ImGuiTestContext_DockInto",
             "args": "(ImGuiTestContext* self, ImGuiTestRef src_id, ImGuiTestRef dst_id, ImGuiDir split_dir, bool is_outer_docking, int flags)",
             "isvararg": false,
@@ -7017,7 +7084,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:342",
+            "location": "imgui_te_context:344",
             "ov_cimguiname": "ImGuiTestContext_CaptureReset",
             "args": "(ImGuiTestContext* self)",
             "comment": "// Reset state (use when doing multiple captures)",
@@ -7069,7 +7136,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:362",
+            "location": "imgui_te_context:364",
             "ov_cimguiname": "ImGuiTestContext_MouseWheelX",
             "args": "(ImGuiTestContext* self, float dx)",
             "isvararg": false,
@@ -7098,7 +7165,7 @@
                     "type": ""
                 }
             ],
-            "location": "imgui_te_context:286",
+            "location": "imgui_te_context:288",
             "ov_cimguiname": "ImGuiTestContext_LogInfo",
             "args": "(ImGuiTestContext* self, const char* fmt,  ...)",
             "comment": "// ImGuiTestVerboseLevel_Info",
@@ -7124,7 +7191,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:346",
+            "location": "imgui_te_context:348",
             "ov_cimguiname": "ImGuiTestContext_CaptureScreenshot",
             "args": "(ImGuiTestContext* self, int capture_flags)",
             "comment": "// Trigger a screen capture",
@@ -7180,7 +7247,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:229",
+            "location": "imgui_te_internal:230",
             "ov_cimguiname": "cImGuiTestEngine_GetPerfTool",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -7209,7 +7276,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:459",
+            "location": "imgui_te_context:464",
             "ov_cimguiname": "ImGuiTestContext_ItemDragOverAndHold",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref_src, ImGuiTestRef ref_dst)",
             "isvararg": false,
@@ -7234,7 +7301,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:294",
+            "location": "imgui_te_context:296",
             "ov_cimguiname": "ImGuiTestContext_Sleep",
             "args": "(ImGuiTestContext* self, float time_in_second)",
             "comment": "// Sleep for a given simulation time, unless in Fast mode",
@@ -7256,7 +7323,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:348",
+            "location": "imgui_te_context:350",
             "ov_cimguiname": "ImGuiTestContext_CaptureEndVideo",
             "args": "(ImGuiTestContext* self)",
             "isvararg": false,
@@ -7289,7 +7356,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:484",
+            "location": "imgui_te_context:489",
             "ov_cimguiname": "ImGuiTestContext_TableClickHeader",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, const char* label, int key_mods)",
             "isvararg": false,
@@ -7387,7 +7454,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_internal:223",
+            "location": "imgui_te_internal:224",
             "ov_cimguiname": "cImGuiTestEngine_RunTest",
             "args": "(ImGuiTestEngine* engine, ImGuiTestContext* ctx, ImGuiTest* test, int run_flags)",
             "isvararg": false,
@@ -7480,7 +7547,7 @@
                     "type": "ImGuiViewport*"
                 }
             ],
-            "location": "imgui_te_context:336",
+            "location": "imgui_te_context:338",
             "ov_cimguiname": "ImGuiTestContext_GetPosOnVoid",
             "args": "(ImVec2* pOut, ImGuiTestContext* self, ImGuiViewport* viewport)",
             "comment": "// Find a point that has no windows // FIXME: This needs error return and flag to enable/disable forcefully finding void.",
@@ -7527,7 +7594,7 @@
                     "type": "ImGuiCaptureArgs*"
                 }
             ],
-            "location": "imgui_te_internal:234",
+            "location": "imgui_te_internal:235",
             "ov_cimguiname": "cImGuiTestEngine_CaptureBeginVideo",
             "args": "(ImGuiTestEngine* engine, ImGuiCaptureArgs* args)",
             "isvararg": false,
@@ -7552,7 +7619,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:405",
+            "location": "imgui_te_context:410",
             "ov_cimguiname": "ImGuiTestContext_ScrollToItemY",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -7573,7 +7640,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:326",
+            "location": "imgui_te_context:328",
             "ov_cimguiname": "ImGuiTestContext_PopupCloseOne",
             "args": "(ImGuiTestContext* self)",
             "isvararg": false,
@@ -7623,7 +7690,7 @@
                     "type": "const ImVec2*"
                 }
             ],
-            "location": "imgui_te_context:494",
+            "location": "imgui_te_context:499",
             "ov_cimguiname": "ImGuiTestContext_ViewportPlatform_SetWindowSize",
             "args": "(ImGuiTestContext* self, ImGuiViewport* viewport, const ImVec2* size)",
             "isvararg": false,
@@ -7652,7 +7719,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:424",
+            "location": "imgui_te_context:429",
             "ov_cimguiname": "ImGuiTestContext_ItemUncheck",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -7732,7 +7799,7 @@
                     "type": "unsigned int"
                 }
             ],
-            "location": "imgui_te_context:503",
+            "location": "imgui_te_context:508",
             "ov_cimguiname": "ImGuiTestContext_UndockNode",
             "args": "(ImGuiTestContext* self, unsigned int dock_id)",
             "isvararg": false,
@@ -7800,7 +7867,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:316",
+            "location": "imgui_te_context:318",
             "ov_cimguiname": "ImGuiTestContext_WindowClose",
             "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref)",
             "isvararg": false,
@@ -7833,7 +7900,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:432",
+            "location": "imgui_te_context:437",
             "ov_cimguiname": "ImGuiTestContext_ItemOpenAll",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref_parent, int depth, int passes)",
             "isvararg": false,
@@ -7864,7 +7931,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:318",
+            "location": "imgui_te_context:320",
             "ov_cimguiname": "ImGuiTestContext_WindowFocus",
             "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, int flags)",
             "isvararg": false,
@@ -7894,7 +7961,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:436",
+            "location": "imgui_te_context:441",
             "ov_cimguiname": "ImGuiTestContext_ItemInputValue_int",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int v)",
             "isvararg": false,
@@ -7921,7 +7988,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_context:437",
+            "location": "imgui_te_context:442",
             "ov_cimguiname": "ImGuiTestContext_ItemInputValue_float",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, float f)",
             "isvararg": false,
@@ -7948,7 +8015,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:438",
+            "location": "imgui_te_context:443",
             "ov_cimguiname": "ImGuiTestContext_ItemInputValue_Str",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, const char* str)",
             "isvararg": false,
@@ -7981,7 +8048,7 @@
                     "type": "const ImVec2*"
                 }
             ],
-            "location": "imgui_te_context:534",
+            "location": "imgui_te_context:539",
             "ov_cimguiname": "ImGuiTestContext__MakeAimingSpaceOverPos",
             "args": "(ImGuiTestContext* self, ImGuiViewport* viewport, ImGuiWindow* over_window, const ImVec2* over_pos)",
             "comment": "// Move windows covering 'window' at pos.",
@@ -8007,7 +8074,7 @@
                     "type": "ImGuiContext*"
                 }
             ],
-            "location": "imgui_te_internal:226",
+            "location": "imgui_te_internal:227",
             "ov_cimguiname": "cImGuiTestEngine_UnbindImGuiContext",
             "args": "(ImGuiTestEngine* engine, ImGuiContext* ui_ctx)",
             "isvararg": false,
@@ -8032,7 +8099,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:464",
+            "location": "imgui_te_context:469",
             "ov_cimguiname": "ImGuiTestContext_TabClose",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -8074,7 +8141,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:230",
+            "location": "imgui_te_internal:231",
             "ov_cimguiname": "cImGuiTestEngine_UpdateTestsSourceLines",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -8099,7 +8166,7 @@
                     "type": "ImGuiTestItemList*"
                 }
             ],
-            "location": "imgui_te_context:290",
+            "location": "imgui_te_context:292",
             "ov_cimguiname": "ImGuiTestContext_LogItemList",
             "args": "(ImGuiTestContext* self, ImGuiTestItemList* list)",
             "isvararg": false,
@@ -8120,7 +8187,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:219",
+            "location": "imgui_te_internal:220",
             "ov_cimguiname": "cImGuiTestEngine_Yield",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -8145,7 +8212,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:344",
+            "location": "imgui_te_context:346",
             "ov_cimguiname": "ImGuiTestContext_CaptureAddWindow",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "comment": "// Add window to be captured (default to capture everything)",
@@ -8175,7 +8242,7 @@
                     "type": ""
                 }
             ],
-            "location": "imgui_te_context:501",
+            "location": "imgui_te_context:506",
             "ov_cimguiname": "ImGuiTestContext_DockClear",
             "args": "(ImGuiTestContext* self, const char* window_name,  ...)",
             "isvararg": true,
@@ -8229,7 +8296,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:355",
+            "location": "imgui_te_context:357",
             "ov_cimguiname": "ImGuiTestContext_MouseClickMulti",
             "args": "(ImGuiTestContext* self, int button, int count)",
             "isvararg": false,
@@ -8254,7 +8321,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:479",
+            "location": "imgui_te_context:484",
             "ov_cimguiname": "ImGuiTestContext_ComboClick",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -8283,7 +8350,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_internal:218",
+            "location": "imgui_te_internal:219",
             "ov_cimguiname": "cImGuiTestEngine_FindItemInfo",
             "args": "(ImGuiTestEngine* engine, unsigned int id, const char* debug_id)",
             "isvararg": false,
@@ -8329,7 +8396,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:444",
+            "location": "imgui_te_context:449",
             "ov_cimguiname": "ImGuiTestContext_ItemReadAsInt",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -8350,7 +8417,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:327",
+            "location": "imgui_te_context:329",
             "ov_cimguiname": "ImGuiTestContext_PopupCloseAll",
             "args": "(ImGuiTestContext* self)",
             "isvararg": false,
@@ -8379,7 +8446,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:425",
+            "location": "imgui_te_context:430",
             "ov_cimguiname": "ImGuiTestContext_ItemOpen",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -8428,7 +8495,7 @@
                     "type": "ImGuiTestContext*"
                 }
             ],
-            "location": "imgui_te_context:338",
+            "location": "imgui_te_context:340",
             "ov_cimguiname": "ImGuiTestContext_GetMainMonitorWorkPos",
             "args": "(ImVec2* pOut, ImGuiTestContext* self)",
             "comment": "// Work pos and size of main viewport when viewports are disabled, or work pos and size of monitor containing main viewport when viewports are enabled.",
@@ -8458,7 +8525,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_context:284",
+            "location": "imgui_te_context:286",
             "ov_cimguiname": "ImGuiTestContext_LogToDebugger",
             "args": "(ImGuiTestContext* self, ImGuiTestVerboseLevel level, const char* message)",
             "isvararg": false,
@@ -8487,7 +8554,7 @@
                     "type": "ImVec2"
                 }
             ],
-            "location": "imgui_te_context:322",
+            "location": "imgui_te_context:324",
             "ov_cimguiname": "ImGuiTestContext_WindowTeleportToMakePosVisible",
             "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, ImVec2 pos_in_window)",
             "isvararg": false,
@@ -8619,7 +8686,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:427",
+            "location": "imgui_te_context:432",
             "ov_cimguiname": "ImGuiTestContext_ItemInput",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
             "isvararg": false,
@@ -8675,7 +8742,7 @@
                     "type": "const ImGuiTestActionFilter*"
                 }
             ],
-            "location": "imgui_te_context:431",
+            "location": "imgui_te_context:436",
             "ov_cimguiname": "ImGuiTestContext_ItemActionAll",
             "args": "(ImGuiTestContext* self, ImGuiTestAction action, ImGuiTestRef ref_parent, const ImGuiTestActionFilter* filter)",
             "isvararg": false,
@@ -8684,6 +8751,35 @@
             "cimguiname": "ImGuiTestContext_ItemActionAll",
             "defaults": {
                 "filter": "nullptr"
+            }
+        }
+    ],
+    "ImGuiTestContext_ScrollToPosY": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestContext",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestContext*"
+                },
+                {
+                    "name": "window_ref",
+                    "type": "ImGuiTestRef"
+                },
+                {
+                    "name": "pos_y",
+                    "type": "float"
+                }
+            ],
+            "location": "imgui_te_context:407",
+            "ov_cimguiname": "ImGuiTestContext_ScrollToPosY",
+            "args": "(ImGuiTestContext* self, ImGuiTestRef window_ref, float pos_y)",
+            "isvararg": false,
+            "funcname": "ScrollToPosY",
+            "ret": "void",
+            "cimguiname": "ImGuiTestContext_ScrollToPosY",
+            "defaults": {
             }
         }
     ],
@@ -8701,7 +8797,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:452",
+            "location": "imgui_te_context:457",
             "ov_cimguiname": "ImGuiTestContext_ItemIsChecked",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,
@@ -8734,7 +8830,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:460",
+            "location": "imgui_te_context:465",
             "ov_cimguiname": "ImGuiTestContext_ItemDragAndDrop",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref_src, ImGuiTestRef ref_dst, int button)",
             "isvararg": false,
@@ -8821,7 +8917,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:278",
+            "location": "imgui_te_context:280",
             "ov_cimguiname": "ImGuiTestContext_SuspendTestFunc",
             "args": "(ImGuiTestContext* self, const char* file, int line)",
             "comment": "// [DEBUG] Generally called via IM_SUSPEND_TESTFUNC",
@@ -8853,7 +8949,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:470",
+            "location": "imgui_te_context:475",
             "ov_cimguiname": "ImGuiTestContext_MenuAction",
             "args": "(ImGuiTestContext* self, ImGuiTestAction action, ImGuiTestRef ref)",
             "isvararg": false,
@@ -8882,7 +8978,7 @@
                     "type": ""
                 }
             ],
-            "location": "imgui_te_context:287",
+            "location": "imgui_te_context:289",
             "ov_cimguiname": "ImGuiTestContext_LogWarning",
             "args": "(ImGuiTestContext* self, const char* fmt,  ...)",
             "comment": "// ImGuiTestVerboseLevel_Warning",
@@ -8912,7 +9008,7 @@
                     "type": "ImGuiViewport*"
                 }
             ],
-            "location": "imgui_te_context:365",
+            "location": "imgui_te_context:367",
             "ov_cimguiname": "ImGuiTestContext_MouseClickOnVoid",
             "args": "(ImGuiTestContext* self, int button, ImGuiViewport* viewport)",
             "isvararg": false,
@@ -9032,7 +9128,7 @@
                     "type": "const ImVec2*"
                 }
             ],
-            "location": "imgui_te_context:493",
+            "location": "imgui_te_context:498",
             "ov_cimguiname": "ImGuiTestContext_ViewportPlatform_SetWindowPos",
             "args": "(ImGuiTestContext* self, ImGuiViewport* viewport, const ImVec2* pos)",
             "isvararg": false,
@@ -9057,7 +9153,7 @@
                     "type": "unsigned int"
                 }
             ],
-            "location": "imgui_te_context:506",
+            "location": "imgui_te_context:511",
             "ov_cimguiname": "ImGuiTestContext_DockIdIsUndockedOrStandalone",
             "args": "(ImGuiTestContext* self, unsigned int dock_id)",
             "isvararg": false,
@@ -9082,7 +9178,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_context:293",
+            "location": "imgui_te_context:295",
             "ov_cimguiname": "ImGuiTestContext_Yield",
             "args": "(ImGuiTestContext* self, int count)",
             "isvararg": false,
@@ -9108,7 +9204,7 @@
                     "type": "ImGuiTestRef"
                 }
             ],
-            "location": "imgui_te_context:404",
+            "location": "imgui_te_context:409",
             "ov_cimguiname": "ImGuiTestContext_ScrollToItemX",
             "args": "(ImGuiTestContext* self, ImGuiTestRef ref)",
             "isvararg": false,

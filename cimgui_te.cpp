@@ -851,6 +851,19 @@ CIMGUI_TE_API void ImGuiTestContext_ScrollToBottom(ImGuiTestContext* self, ImGui
     self->ScrollToBottom(ref);
 }
 
+CIMGUI_TE_API void ImGuiTestContext_ScrollToPos(ImGuiTestContext* self, ImGuiTestRef window_ref, float pos_v,
+                                                ImGuiAxis axis, int flags) {
+    self->ScrollToPos(window_ref, pos_v, axis, flags);
+}
+
+CIMGUI_TE_API void ImGuiTestContext_ScrollToPosX(ImGuiTestContext* self, ImGuiTestRef window_ref, float pos_x) {
+    self->ScrollToPosX(window_ref, pos_x);
+}
+
+CIMGUI_TE_API void ImGuiTestContext_ScrollToPosY(ImGuiTestContext* self, ImGuiTestRef window_ref, float pos_y) {
+    self->ScrollToPosY(window_ref, pos_y);
+}
+
 CIMGUI_TE_API void ImGuiTestContext_ScrollToItem(ImGuiTestContext* self, ImGuiTestRef ref, ImGuiAxis axis, int flags) {
     self->ScrollToItem(ref, axis, flags);
 }

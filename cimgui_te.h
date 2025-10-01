@@ -498,6 +498,7 @@ struct ImGuiTestActionFilter {
 struct ImGuiTestGenericItemStatus {
     int RetValue; // return value
     int Hovered; // result of IsItemHovered()
+    int HoveredAllowDisabled; // result of IsItemHovered(ImGuiHoveredFlags_AllowWhenDisabled)
     int Active; // result of IsItemActive()
     int Focused; // result of IsItemFocused()
     int Clicked; // result of IsItemClicked()
@@ -520,6 +521,7 @@ struct ImGuiTestGenericVars {
     int WindowFlags;
     int TableFlags;
     int PopupFlags;
+    int InputTextFlags;
     ImGuiTestGenericItemStatus Status;
     bool ShowWindow1;
     bool ShowWindow2;
@@ -665,6 +667,7 @@ struct ImGuiTestEngine {
     ImGuiContext* UiContextTarget; // imgui context for testing
     ImGuiContext* UiContextActive; // imgui context for testing == UiContextTarget or nullptr
     bool Started;
+    bool UiContextHasHooks;
     unsigned long long BatchStartTime;
     unsigned long long BatchEndTime;
     int FrameCount;
@@ -1138,6 +1141,9 @@ CIMGUI_TE_API void ImGuiTestContext_ScrollToX(ImGuiTestContext* self, ImGuiTestR
 CIMGUI_TE_API void ImGuiTestContext_ScrollToY(ImGuiTestContext* self, ImGuiTestRef ref, float scroll_y);
 CIMGUI_TE_API void ImGuiTestContext_ScrollToTop(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API void ImGuiTestContext_ScrollToBottom(ImGuiTestContext* self, ImGuiTestRef ref);
+CIMGUI_TE_API void ImGuiTestContext_ScrollToPos(ImGuiTestContext* self, ImGuiTestRef window_ref, float pos_v, ImGuiAxis axis, int flags);
+CIMGUI_TE_API void ImGuiTestContext_ScrollToPosX(ImGuiTestContext* self, ImGuiTestRef window_ref, float pos_x);
+CIMGUI_TE_API void ImGuiTestContext_ScrollToPosY(ImGuiTestContext* self, ImGuiTestRef window_ref, float pos_y);
 CIMGUI_TE_API void ImGuiTestContext_ScrollToItem(ImGuiTestContext* self, ImGuiTestRef ref, ImGuiAxis axis, int flags);
 CIMGUI_TE_API void ImGuiTestContext_ScrollToItemX(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API void ImGuiTestContext_ScrollToItemY(ImGuiTestContext* self, ImGuiTestRef ref);
