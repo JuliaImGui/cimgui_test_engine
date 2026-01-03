@@ -721,18 +721,19 @@ function generate()
         end
         write(f, "\n")
 
-        write(f, "// Typedefs\n")
-        for t in wrapped_typedefs
-            write(f, t, ";\n")
-        end
-        write(f, "\n")
-
+        write(f, "// Enums\n")
         for e in wrapped_enums
             if !isnothing(e.comment)
                 write(f, e.comment, "\n")
             end
             write(f, e.implementation, ";\n\n")
         end
+
+        write(f, "// Typedefs\n")
+        for t in wrapped_typedefs
+            write(f, t, ";\n")
+        end
+        write(f, "\n")
 
         for s in wrapped_structs
             if !isnothing(s.comment)

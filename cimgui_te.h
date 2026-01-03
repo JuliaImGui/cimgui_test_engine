@@ -66,39 +66,7 @@ typedef struct ImGuiPerfToolEntry ImGuiPerfToolEntry;
 typedef struct ImGuiPerfToolBatch ImGuiPerfToolBatch;
 typedef struct ImGuiPerfTool ImGuiPerfTool;
 
-// Typedefs
-typedef void Str; // Manual typedef to avoid having to wrap the Str class;
-typedef struct ImVector_Ulonglong { int Size; int Capacity; unsigned long long* Data; } ImVector_Ulonglong;
-typedef struct ImVector_Uint { int Size; int Capacity; unsigned int* Data; } ImVector_Uint;
-typedef struct ImVector_double { int Size; int Capacity; double* Data; } ImVector_double;
-typedef struct ImVector_charPtr { int Size; int Capacity; char ** Data; } ImVector_charPtr;
-typedef struct ImVector_ImGuiTestRunTask { int Size; int Capacity; ImGuiTestRunTask* Data; } ImVector_ImGuiTestRunTask;
-typedef struct ImVector_ImGuiTestLogLineInfo { int Size; int Capacity; ImGuiTestLogLineInfo* Data; } ImVector_ImGuiTestLogLineInfo;
-typedef struct ImVector_ImGuiTestItemInfo { int Size; int Capacity; ImGuiTestItemInfo* Data; } ImVector_ImGuiTestItemInfo;
-typedef struct ImVector_ImGuiTestInput { int Size; int Capacity; ImGuiTestInput* Data; } ImVector_ImGuiTestInput;
-typedef struct ImVector_ImGuiTestInfoTask_Ptr { int Size; int Capacity; ImGuiTestInfoTask ** Data; } ImVector_ImGuiTestInfoTask_Ptr;
-typedef struct ImVector_ImGuiTest_Ptr { int Size; int Capacity; ImGuiTest ** Data; } ImVector_ImGuiTest_Ptr;
-typedef struct ImVector_ImGuiPerfToolEntry { int Size; int Capacity; ImGuiPerfToolEntry* Data; } ImVector_ImGuiPerfToolEntry;
-typedef struct ImVector_ImGuiPerfToolBatch { int Size; int Capacity; ImGuiPerfToolBatch* Data; } ImVector_ImGuiPerfToolBatch;
-typedef struct ImVector_ImGuiCaptureWindowData { int Size; int Capacity; ImGuiCaptureWindowData* Data; } ImVector_ImGuiCaptureWindowData;
-typedef struct ImPool_ImGuiTestItemInfo { ImVector_ImGuiTestItemInfo Buf; ImGuiStorage Map; ImPoolIdx FreeIdx; ImPoolIdx AliveCount; } ImPool_ImGuiTestItemInfo;
-typedef struct ImMovingAverage_double { ImVector_double Samples; double Accum; int Idx; int FillAmount; } ImMovingAverage_double;
-typedef unsigned int ImGuiCaptureFlags;
-typedef bool (ImGuiScreenCaptureFunc)(ImGuiID viewport_id, int x, int y, int w, int h, unsigned int* pixels, void* user_data);
-typedef int ImGuiTestFlags;
-typedef int ImGuiTestCheckFlags;
-typedef int ImGuiTestLogFlags;
-typedef int ImGuiTestRunFlags;
-typedef void (ImGuiTestEngineSrcFileOpenFunc)(const char* filename, int line_no, void* user_data);
-typedef void    (ImGuiTestGuiFunc)(ImGuiTestContext* ctx);
-typedef void    (ImGuiTestTestFunc)(ImGuiTestContext* ctx);
-typedef void    (ImGuiTestVarsConstructor)(void* buffer);
-typedef void    (ImGuiTestVarsPostConstructor)(ImGuiTestContext* ctx, void* ptr, void* fn);
-typedef void    (ImGuiTestVarsDestructor)(void* ptr);
-typedef int ImGuiTestOpFlags;
-typedef void* ImGuiTestCoroutineHandle;
-typedef void (ImGuiTestCoroutineMainFunc)(void* data);
-
+// Enums
 enum ImGuiCaptureFlags_
 {
     ImGuiCaptureFlags_None                      = 0,
@@ -121,8 +89,9 @@ typedef enum ImGuiCaptureStatus
 typedef enum ImGuiTestActiveFunc
 {
     ImGuiTestActiveFunc_None,
-    ImGuiTestActiveFunc_GuiFunc,
-    ImGuiTestActiveFunc_TestFunc
+    ImGuiTestActiveFunc_GuiFunc,            // == GuiFunc() handler
+    ImGuiTestActiveFunc_TestFunc,           // == TestFunc() handler
+    ImGuiTestActiveFunc_TeardownFunc,       // == TeardownFunc() handler
 } ImGuiTestActiveFunc;
 
 typedef enum ImGuiTestRunSpeed
@@ -281,6 +250,40 @@ typedef enum ImGuiTestEngineExportFormat
     ImGuiTestEngineExportFormat_JUnitXml,
 } ImGuiTestEngineExportFormat;
 
+// Typedefs
+typedef void Str; // Manual typedef to avoid having to wrap the Str class;
+typedef struct ImVector_Ulonglong { int Size; int Capacity; unsigned long long* Data; } ImVector_Ulonglong;
+typedef struct ImVector_Uint { int Size; int Capacity; unsigned int* Data; } ImVector_Uint;
+typedef struct ImVector_double { int Size; int Capacity; double* Data; } ImVector_double;
+typedef struct ImVector_charPtr { int Size; int Capacity; char ** Data; } ImVector_charPtr;
+typedef struct ImVector_ImGuiTestRunTask { int Size; int Capacity; ImGuiTestRunTask* Data; } ImVector_ImGuiTestRunTask;
+typedef struct ImVector_ImGuiTestLogLineInfo { int Size; int Capacity; ImGuiTestLogLineInfo* Data; } ImVector_ImGuiTestLogLineInfo;
+typedef struct ImVector_ImGuiTestItemInfo { int Size; int Capacity; ImGuiTestItemInfo* Data; } ImVector_ImGuiTestItemInfo;
+typedef struct ImVector_ImGuiTestInput { int Size; int Capacity; ImGuiTestInput* Data; } ImVector_ImGuiTestInput;
+typedef struct ImVector_ImGuiTestInfoTask_Ptr { int Size; int Capacity; ImGuiTestInfoTask ** Data; } ImVector_ImGuiTestInfoTask_Ptr;
+typedef struct ImVector_ImGuiTest_Ptr { int Size; int Capacity; ImGuiTest ** Data; } ImVector_ImGuiTest_Ptr;
+typedef struct ImVector_ImGuiPerfToolEntry { int Size; int Capacity; ImGuiPerfToolEntry* Data; } ImVector_ImGuiPerfToolEntry;
+typedef struct ImVector_ImGuiPerfToolBatch { int Size; int Capacity; ImGuiPerfToolBatch* Data; } ImVector_ImGuiPerfToolBatch;
+typedef struct ImVector_ImGuiCaptureWindowData { int Size; int Capacity; ImGuiCaptureWindowData* Data; } ImVector_ImGuiCaptureWindowData;
+typedef struct ImPool_ImGuiTestItemInfo { ImVector_ImGuiTestItemInfo Buf; ImGuiStorage Map; ImPoolIdx FreeIdx; ImPoolIdx AliveCount; } ImPool_ImGuiTestItemInfo;
+typedef struct ImMovingAverage_double { ImVector_double Samples; double Accum; int Idx; int FillAmount; } ImMovingAverage_double;
+typedef unsigned int ImGuiCaptureFlags;
+typedef bool (ImGuiScreenCaptureFunc)(ImGuiID viewport_id, int x, int y, int w, int h, unsigned int* pixels, void* user_data);
+typedef int ImGuiTestFlags;
+typedef int ImGuiTestCheckFlags;
+typedef int ImGuiTestLogFlags;
+typedef int ImGuiTestRunFlags;
+typedef void (ImGuiTestEngineLogFunc)(ImGuiTestEngine* engine, ImGuiTestContext* test_ctx, ImGuiTestVerboseLevel level, const char* message, void* user_data);
+typedef void (ImGuiTestEngineSrcFileOpenFunc)(const char* filename, int line_no, void* user_data);
+typedef void    (ImGuiTestGuiFunc)(ImGuiTestContext* ctx);
+typedef void    (ImGuiTestTestFunc)(ImGuiTestContext* ctx);
+typedef void    (ImGuiTestVarsConstructor)(void* buffer);
+typedef void    (ImGuiTestVarsPostConstructor)(ImGuiTestContext* ctx, void* ptr, void* fn);
+typedef void    (ImGuiTestVarsDestructor)(void* ptr);
+typedef int ImGuiTestOpFlags;
+typedef void* ImGuiTestCoroutineHandle;
+typedef void (ImGuiTestCoroutineMainFunc)(void* data);
+
 // [Internal]
 // Helper class for simple bitmap manipulation (not particularly efficient!)
 struct ImGuiCaptureImageBuf {
@@ -368,10 +371,6 @@ struct ImGuiTestEngineIO {
     bool ConfigStopOnError; // Stop queued tests on test error
     bool ConfigBreakOnError; // Break debugger on test error by calling IM_DEBUG_BREAK()
     bool ConfigKeepGuiFunc; // Keep test GUI running at the end of the test
-    ImGuiTestVerboseLevel ConfigVerboseLevel;
-    ImGuiTestVerboseLevel ConfigVerboseLevelOnError;
-    bool ConfigLogToTTY;
-    bool ConfigLogToDebugger;
     bool ConfigRestoreFocusAfterTests; // Restore focus back after running tests
     bool ConfigCaptureEnabled; // Master enable flags for capturing and saving captures. Disable to avoid e.g. lengthy saving of large PNG files.
     bool ConfigCaptureOnError;
@@ -380,6 +379,12 @@ struct ImGuiTestEngineIO {
     float ConfigFixedDeltaTime; // Use fixed delta time instead of calculating it from wall clock
     int PerfStressAmount; // Integer to scale the amount of items submitted in test
     char GitBranchName[64]; // e.g. fill in branch name (e.g. recorded in perf samples .csv)
+    ImGuiTestVerboseLevel ConfigVerboseLevel;
+    ImGuiTestVerboseLevel ConfigVerboseLevelOnError;
+    bool ConfigLogToTTY; // Output log entries to TTY (in addition to Test Engine UI)
+    bool ConfigLogToDebugger; // Output log entries to Debugger (in addition to Test Engine UI)
+    ImFuncPtr(ImGuiTestEngineLogFunc) ConfigLogToFunc; // Hook for logging of full serial log (vs peeking into ImGuiTest->Output.Log for a single test)
+    void* ConfigLogToFuncUserData;
     float MouseSpeed; // Mouse speed (pixel/second) when not running in fast mode
     float MouseWobble; // (0.0f..1.0f) How much wobble to apply to the mouse (pixels per pixel of move distance) when not running in fast mode
     float ScrollSpeed; // Scroll speed (pixel/second) when not running in fast mode
@@ -450,7 +455,8 @@ struct ImGuiTest {
     int ArgVariant; // User parameter. Generally we use it to run variations of a same test by sharing GuiFunc/TestFunc
     int Flags; // See ImGuiTestFlags_
     ImFuncPtr(ImGuiTestGuiFunc)     GuiFunc; // GUI function (optional if your test are running over an existing GUI application)
-    ImFuncPtr(ImGuiTestTestFunc)    TestFunc; // Test function
+    ImFuncPtr(ImGuiTestTestFunc)    TestFunc; // Test driving function
+    ImFuncPtr(ImGuiTestTestFunc)    TeardownFunc; // Teardown driving function, executed after TestFunc _regardless_ of TestFunc failing.
     void* UserData; // General purpose user data (if assigning capturing lambdas on GuiFunc/TestFunc you may not need to use this)
     const char* SourceFile; // __FILE__
     int SourceLine; // __LINE__
@@ -554,7 +560,7 @@ struct ImGuiTestContext {
     ImGuiContext* UiContext; // UI context
     ImGuiTestEngineIO* EngineIO; // Test Engine IO/settings
     ImGuiTest* Test; // Test currently running
-    ImGuiTestOutput* TestOutput; // Test output (generally == &Test->Output)
+    ImGuiTestOutput* TestOutput; // Test output (generally == &Test->Output while executing TestFunc)
     int OpFlags; // Flags affecting all operation (supported: ImGuiTestOpFlags_NoAutoUncollapse)
     int PerfStressAmount; // Convenience copy of engine->IO.PerfStressAmount
     int FrameCount; // Test frame count (restarts from zero every time)
@@ -659,6 +665,7 @@ struct ImGuiTestInputs {
     ImVector_ImGuiTestInput Queue;
     bool HostEscDown;
     float HostEscDownDuration; // Maintain our own DownDuration for host/backend ESC key so we can abort.
+    ImVec2 HostMousePos;
 };
 
 // [Internal] Test Engine Context
@@ -681,6 +688,7 @@ struct ImGuiTestEngine {
     ImGuiTestFindByLabelTask FindByLabelTask;
     void* TestQueueCoroutine; // Coroutine to run the test queue
     bool TestQueueCoroutineShouldExit; // Flag to indicate that we are shutting down and the test queue coroutine should stop
+    ImGuiTextBuffer StringBuilderForChecks;
     ImGuiTestInputs Inputs;
     bool Abort;
     ImGuiTest* UiSelectAndScrollToTest;
@@ -872,7 +880,7 @@ CIMGUI_TE_API void cImGuiTestEngineHook_ItemInfo(ImGuiContext* ui_ctx, unsigned 
 CIMGUI_TE_API void cImGuiTestEngineHook_Log(ImGuiContext* ui_ctx, const char* fmt,  ...);
 CIMGUI_TE_API const char * cImGuiTestEngine_FindItemDebugLabel(ImGuiContext* ui_ctx, unsigned int id);
 CIMGUI_TE_API bool cImGuiTestEngine_Check(const char* file, const char* func, int line, int flags, bool result, const char* expr);
-CIMGUI_TE_API bool cImGuiTestEngine_CheckStrOp(const char* file, const char* func, int line, int flags, const char* op, const char* lhs_var, const char* lhs_value, const char* rhs_var, const char* rhs_value, bool* out_result);
+CIMGUI_TE_API bool cImGuiTestEngine_CheckOpStr(const char* file, const char* func, int line, int flags, const char* op, const char* lhs_desc, const char* lhs_value, const char* rhs_desc, const char* rhs_value, bool* out_result);
 CIMGUI_TE_API bool cImGuiTestEngine_Error(const char* file, const char* func, int line, int flags, const char* fmt,  ...);
 CIMGUI_TE_API void cImGuiTestEngine_AssertLog(const char* expr, const char* file, const char* function, int line);
 CIMGUI_TE_API ImGuiTextBuffer * cImGuiTestEngine_GetTempStringBuilder();
@@ -975,6 +983,8 @@ CIMGUI_TE_API const ImGuiTestItemInfo * ImGuiTestItemList_end(ImGuiTestItemList*
 /* ImGuiTestLog */
 CIMGUI_TE_API ImGuiTestLog * ImGuiTestLog_ImGuiTestLog();
 CIMGUI_TE_API bool ImGuiTestLog_IsEmpty(ImGuiTestLog* self);
+CIMGUI_TE_API const char * ImGuiTestLog_GetText(ImGuiTestLog* self);
+CIMGUI_TE_API int ImGuiTestLog_GetTextLen(ImGuiTestLog* self);
 CIMGUI_TE_API void ImGuiTestLog_Clear(ImGuiTestLog* self);
 CIMGUI_TE_API int ImGuiTestLog_ExtractLinesForVerboseLevels(ImGuiTestLog* self, ImGuiTestVerboseLevel level_min, ImGuiTestVerboseLevel level_max, ImGuiTextBuffer* out_buffer);
 CIMGUI_TE_API void ImGuiTestLog_UpdateLineOffsets(ImGuiTestLog* self, ImGuiTestEngineIO* engine_io, ImGuiTestVerboseLevel level, const char* start);

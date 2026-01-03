@@ -9,7 +9,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_engine:198",
+            "location": "imgui_te_engine:199",
             "ov_cimguiname": "cImGuiTestEngine_GetIO",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -294,7 +294,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_engine:385",
+            "location": "imgui_te_engine:395",
             "ov_cimguiname": "ImGuiTestLog_UpdateLineOffsets",
             "args": "(ImGuiTestLog* self, ImGuiTestEngineIO* engine_io, ImGuiTestVerboseLevel level, const char* start)",
             "isvararg": false,
@@ -315,7 +315,7 @@
                     "type": "ImGuiTestLog*"
                 }
             ],
-            "location": "imgui_te_engine:371",
+            "location": "imgui_te_engine:381",
             "ov_cimguiname": "ImGuiTestLog_Clear",
             "args": "(ImGuiTestLog* self)",
             "isvararg": false,
@@ -580,7 +580,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:229",
+            "location": "imgui_te_internal:231",
             "ov_cimguiname": "cImGuiTestEngine_RebootUiContext",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -622,7 +622,7 @@
                     "type": "ImGuiTestLog*"
                 }
             ],
-            "location": "imgui_te_engine:370",
+            "location": "imgui_te_engine:378",
             "ov_cimguiname": "ImGuiTestLog_IsEmpty",
             "args": "(ImGuiTestLog* self)",
             "isvararg": false,
@@ -718,7 +718,7 @@
                     "type": "ImGuiTestItemList*"
                 }
             ],
-            "location": "imgui_te_engine:341",
+            "location": "imgui_te_engine:349",
             "ov_cimguiname": "ImGuiTestItemList_GetSize",
             "args": "(ImGuiTestItemList* self)",
             "isvararg": false,
@@ -765,7 +765,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_internal:223",
+            "location": "imgui_te_internal:225",
             "ov_cimguiname": "cImGuiTestEngine_PassFilter",
             "args": "(ImGuiTest* test, const char* filter)",
             "isvararg": false,
@@ -847,7 +847,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_engine:209",
+            "location": "imgui_te_engine:210",
             "ov_cimguiname": "cImGuiTestEngine_TryAbortEngine",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -889,7 +889,7 @@
             "stname": "ImGuiTestEngine",
             "argsT": [
             ],
-            "location": "imgui_te_internal:211",
+            "location": "imgui_te_internal:213",
             "ov_cimguiname": "ImGuiTestEngine_ImGuiTestEngine",
             "args": "()",
             "constructor": true,
@@ -941,7 +941,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_engine:176",
+            "location": "imgui_te_engine:177",
             "ov_cimguiname": "cImGuiTestEngineHook_ItemInfo",
             "args": "(ImGuiContext* ui_ctx, unsigned int id, const char* label, int flags)",
             "isvararg": false,
@@ -1163,7 +1163,7 @@
                     "type": "ImGuiTest*"
                 }
             ],
-            "location": "imgui_te_engine:203",
+            "location": "imgui_te_engine:204",
             "ov_cimguiname": "cImGuiTestEngine_UnregisterTest",
             "args": "(ImGuiTestEngine* engine, ImGuiTest* test)",
             "isvararg": false,
@@ -1251,7 +1251,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_engine:194",
+            "location": "imgui_te_engine:195",
             "ov_cimguiname": "cImGuiTestEngine_DestroyContext",
             "args": "(ImGuiTestEngine* engine)",
             "comment": "// Destroy test engine. Call after ImGui::DestroyContext() so test engine specific ini data gets saved.",
@@ -1374,7 +1374,7 @@
                     "type": "ImGuiContext*"
                 }
             ],
-            "location": "imgui_te_internal:226",
+            "location": "imgui_te_internal:228",
             "ov_cimguiname": "cImGuiTestEngine_BindImGuiContext",
             "args": "(ImGuiTestEngine* engine, ImGuiContext* ui_ctx)",
             "isvararg": false,
@@ -1492,7 +1492,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_engine:182",
+            "location": "imgui_te_engine:183",
             "ov_cimguiname": "cImGuiTestEngine_Check",
             "args": "(const char* file, const char* func, int line, int flags, bool result, const char* expr)",
             "isvararg": false,
@@ -1539,7 +1539,7 @@
                     "type": "ImVector_ImGuiTest_Ptr*"
                 }
             ],
-            "location": "imgui_te_engine:218",
+            "location": "imgui_te_engine:219",
             "ov_cimguiname": "cImGuiTestEngine_GetTestList",
             "args": "(ImGuiTestEngine* engine, ImVector_ImGuiTest_Ptr* out_tests)",
             "isvararg": false,
@@ -1583,7 +1583,7 @@
                     "type": "ImGuiTestItemList*"
                 }
             ],
-            "location": "imgui_te_engine:346",
+            "location": "imgui_te_engine:354",
             "ov_cimguiname": "ImGuiTestItemList_size",
             "args": "(ImGuiTestItemList* self)",
             "isvararg": false,
@@ -1604,7 +1604,7 @@
                     "type": "ImGuiTestRunSpeed"
                 }
             ],
-            "location": "imgui_te_internal:240",
+            "location": "imgui_te_internal:242",
             "ov_cimguiname": "cImGuiTestEngine_GetRunSpeedName",
             "args": "(ImGuiTestRunSpeed v)",
             "isvararg": false,
@@ -1637,7 +1637,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_engine:185",
+            "location": "imgui_te_engine:186",
             "ov_cimguiname": "cImGuiTestEngine_AssertLog",
             "args": "(const char* expr, const char* file, const char* function, int line)",
             "isvararg": false,
@@ -1658,7 +1658,7 @@
                     "type": "ImGuiTestItemList*"
                 }
             ],
-            "location": "imgui_te_engine:347",
+            "location": "imgui_te_engine:355",
             "ov_cimguiname": "ImGuiTestItemList_begin",
             "args": "(ImGuiTestItemList* self)",
             "isvararg": false,
@@ -1683,7 +1683,7 @@
                     "type": "ImGuiCaptureArgs*"
                 }
             ],
-            "location": "imgui_te_internal:234",
+            "location": "imgui_te_internal:236",
             "ov_cimguiname": "cImGuiTestEngine_CaptureScreenshot",
             "args": "(ImGuiTestEngine* engine, ImGuiCaptureArgs* args)",
             "isvararg": false,
@@ -1875,7 +1875,7 @@
                     "type": "ImGuiTextBuffer*"
                 }
             ],
-            "location": "imgui_te_engine:382",
+            "location": "imgui_te_engine:392",
             "ov_cimguiname": "ImGuiTestLog_ExtractLinesForVerboseLevels",
             "args": "(ImGuiTestLog* self, ImGuiTestVerboseLevel level_min, ImGuiTestVerboseLevel level_max, ImGuiTextBuffer* out_buffer)",
             "isvararg": false,
@@ -2056,7 +2056,7 @@
                     "type": "unsigned int"
                 }
             ],
-            "location": "imgui_te_engine:179",
+            "location": "imgui_te_engine:180",
             "ov_cimguiname": "cImGuiTestEngine_FindItemDebugLabel",
             "args": "(ImGuiContext* ui_ctx, unsigned int id)",
             "isvararg": false,
@@ -2128,7 +2128,7 @@
                     "type": "ImGuiTestStatus"
                 }
             ],
-            "location": "imgui_te_internal:239",
+            "location": "imgui_te_internal:241",
             "ov_cimguiname": "cImGuiTestEngine_GetStatusName",
             "args": "(ImGuiTestStatus v)",
             "isvararg": false,
@@ -2310,7 +2310,7 @@
                     "type": "const ImGuiLastItemData*"
                 }
             ],
-            "location": "imgui_te_engine:169",
+            "location": "imgui_te_engine:170",
             "ov_cimguiname": "cImGuiTestEngineHook_ItemAdd",
             "args": "(ImGuiContext* ui_ctx, unsigned int id, const ImRect* bb, const ImGuiLastItemData* item_data)",
             "isvararg": false,
@@ -2525,7 +2525,7 @@
                     "type": "ImGuiTestItemList*"
                 }
             ],
-            "location": "imgui_te_engine:348",
+            "location": "imgui_te_engine:356",
             "ov_cimguiname": "ImGuiTestItemList_end",
             "args": "(ImGuiTestItemList* self)",
             "isvararg": false,
@@ -2609,7 +2609,7 @@
                     "type": "ImGuiTestItemList*"
                 }
             ],
-            "location": "imgui_te_engine:339",
+            "location": "imgui_te_engine:347",
             "ov_cimguiname": "ImGuiTestItemList_Clear",
             "args": "(ImGuiTestItemList* self)",
             "isvararg": false,
@@ -2665,7 +2665,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:222",
+            "location": "imgui_te_internal:224",
             "ov_cimguiname": "cImGuiTestEngine_GetFrameCount",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -2740,7 +2740,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_engine:202",
+            "location": "imgui_te_engine:203",
             "ov_cimguiname": "cImGuiTestEngine_RegisterTest",
             "args": "(ImGuiTestEngine* engine, const char* category, const char* name, const char* src_file, int src_line)",
             "comment": "// Prefer calling IM_REGISTER_TEST()",
@@ -2828,7 +2828,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_engine:204",
+            "location": "imgui_te_engine:205",
             "ov_cimguiname": "cImGuiTestEngine_UnregisterAllTests",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -2911,7 +2911,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_engine:207",
+            "location": "imgui_te_engine:208",
             "ov_cimguiname": "cImGuiTestEngine_QueueTest",
             "args": "(ImGuiTestEngine* engine, ImGuiTest* test, int run_flags)",
             "isvararg": false,
@@ -2952,28 +2952,59 @@
             }
         }
     ],
-    "ImGuiTestContext_CaptureSetExtension": [
+    "cImGuiTestEngine_CheckOpStr": [
         {
             "retref": false,
-            "stname": "ImGuiTestContext",
+            "stname": "",
             "argsT": [
                 {
-                    "name": "self",
-                    "type": "ImGuiTestContext*"
+                    "name": "file",
+                    "type": "const char*"
                 },
                 {
-                    "name": "ext",
+                    "name": "func",
                     "type": "const char*"
+                },
+                {
+                    "name": "line",
+                    "type": "int"
+                },
+                {
+                    "name": "flags",
+                    "type": "int"
+                },
+                {
+                    "name": "op",
+                    "type": "const char*"
+                },
+                {
+                    "name": "lhs_desc",
+                    "type": "const char*"
+                },
+                {
+                    "name": "lhs_value",
+                    "type": "const char*"
+                },
+                {
+                    "name": "rhs_desc",
+                    "type": "const char*"
+                },
+                {
+                    "name": "rhs_value",
+                    "type": "const char*"
+                },
+                {
+                    "name": "out_result",
+                    "type": "bool*"
                 }
             ],
-            "location": "imgui_te_context:345",
-            "ov_cimguiname": "ImGuiTestContext_CaptureSetExtension",
-            "args": "(ImGuiTestContext* self, const char* ext)",
-            "comment": "// Set capture file format (otherwise for video this default to EngineIO->VideoCaptureExtension)",
+            "location": "imgui_te_engine:184",
+            "ov_cimguiname": "cImGuiTestEngine_CheckOpStr",
+            "args": "(const char* file, const char* func, int line, int flags, const char* op, const char* lhs_desc, const char* lhs_value, const char* rhs_desc, const char* rhs_value, bool* out_result)",
             "isvararg": false,
-            "funcname": "CaptureSetExtension",
-            "ret": "void",
-            "cimguiname": "ImGuiTestContext_CaptureSetExtension",
+            "funcname": "ImGuiTestEngine_CheckOpStr",
+            "ret": "bool",
+            "cimguiname": "cImGuiTestEngine_CheckOpStr",
             "defaults": {
             }
         }
@@ -3015,6 +3046,32 @@
             "funcname": "ImGuiTestActionFilter",
             "ret": "ImGuiTestActionFilter *",
             "cimguiname": "ImGuiTestActionFilter_ImGuiTestActionFilter",
+            "defaults": {
+            }
+        }
+    ],
+    "ImGuiTestContext_CaptureSetExtension": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestContext",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestContext*"
+                },
+                {
+                    "name": "ext",
+                    "type": "const char*"
+                }
+            ],
+            "location": "imgui_te_context:345",
+            "ov_cimguiname": "ImGuiTestContext_CaptureSetExtension",
+            "args": "(ImGuiTestContext* self, const char* ext)",
+            "comment": "// Set capture file format (otherwise for video this default to EngineIO->VideoCaptureExtension)",
+            "isvararg": false,
+            "funcname": "CaptureSetExtension",
+            "ret": "void",
+            "cimguiname": "ImGuiTestContext_CaptureSetExtension",
             "defaults": {
             }
         }
@@ -3218,7 +3275,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_engine:210",
+            "location": "imgui_te_engine:211",
             "ov_cimguiname": "cImGuiTestEngine_AbortCurrentTest",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -3627,6 +3684,27 @@
             }
         }
     ],
+    "ImGuiTestLog_GetText": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestLog",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestLog*"
+                }
+            ],
+            "location": "imgui_te_engine:379",
+            "ov_cimguiname": "ImGuiTestLog_GetText",
+            "args": "(ImGuiTestLog* self)",
+            "isvararg": false,
+            "funcname": "GetText",
+            "ret": "const char *",
+            "cimguiname": "ImGuiTestLog_GetText",
+            "defaults": {
+            }
+        }
+    ],
     "cImOsIsDebuggerPresent": [
         {
             "retref": false,
@@ -3893,63 +3971,6 @@
             "funcname": "GetCell",
             "ret": "const char *",
             "cimguiname": "ImGuiCsvParser_GetCell",
-            "defaults": {
-            }
-        }
-    ],
-    "cImGuiTestEngine_CheckStrOp": [
-        {
-            "retref": false,
-            "stname": "",
-            "argsT": [
-                {
-                    "name": "file",
-                    "type": "const char*"
-                },
-                {
-                    "name": "func",
-                    "type": "const char*"
-                },
-                {
-                    "name": "line",
-                    "type": "int"
-                },
-                {
-                    "name": "flags",
-                    "type": "int"
-                },
-                {
-                    "name": "op",
-                    "type": "const char*"
-                },
-                {
-                    "name": "lhs_var",
-                    "type": "const char*"
-                },
-                {
-                    "name": "lhs_value",
-                    "type": "const char*"
-                },
-                {
-                    "name": "rhs_var",
-                    "type": "const char*"
-                },
-                {
-                    "name": "rhs_value",
-                    "type": "const char*"
-                },
-                {
-                    "name": "out_result",
-                    "type": "bool*"
-                }
-            ],
-            "location": "imgui_te_engine:183",
-            "ov_cimguiname": "cImGuiTestEngine_CheckStrOp",
-            "args": "(const char* file, const char* func, int line, int flags, const char* op, const char* lhs_var, const char* lhs_value, const char* rhs_var, const char* rhs_value, bool* out_result)",
-            "isvararg": false,
-            "funcname": "ImGuiTestEngine_CheckStrOp",
-            "ret": "bool",
-            "cimguiname": "cImGuiTestEngine_CheckStrOp",
             "defaults": {
             }
         }
@@ -4399,7 +4420,7 @@
             "stname": "",
             "argsT": [
             ],
-            "location": "imgui_te_engine:229",
+            "location": "imgui_te_engine:230",
             "ov_cimguiname": "cImGuiTestEngine_CrashHandler",
             "args": "()",
             "comment": "// Default crash handler, should be called from a custom crash handler if such exists",
@@ -4547,7 +4568,7 @@
                     "type": ""
                 }
             ],
-            "location": "imgui_te_engine:184",
+            "location": "imgui_te_engine:185",
             "ov_cimguiname": "cImGuiTestEngine_Error",
             "args": "(const char* file, const char* func, int line, int flags, const char* fmt,  ...)",
             "isvararg": true,
@@ -4595,7 +4616,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_engine:340",
+            "location": "imgui_te_engine:348",
             "ov_cimguiname": "ImGuiTestItemList_Reserve",
             "args": "(ImGuiTestItemList* self, int capacity)",
             "isvararg": false,
@@ -4787,7 +4808,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_engine:197",
+            "location": "imgui_te_engine:198",
             "ov_cimguiname": "cImGuiTestEngine_PostSwap",
             "args": "(ImGuiTestEngine* engine)",
             "comment": "// Call every frame after framebuffer swap, will process screen capture and call test_io.ScreenCaptureFunc()",
@@ -4958,7 +4979,7 @@
                     "type": "ImVector_ImGuiTestRunTask*"
                 }
             ],
-            "location": "imgui_te_engine:219",
+            "location": "imgui_te_engine:220",
             "ov_cimguiname": "cImGuiTestEngine_GetTestQueue",
             "args": "(ImGuiTestEngine* engine, ImVector_ImGuiTestRunTask* out_tests)",
             "isvararg": false,
@@ -5138,7 +5159,7 @@
                     "type": "ImGuiCaptureArgs*"
                 }
             ],
-            "location": "imgui_te_internal:236",
+            "location": "imgui_te_internal:238",
             "ov_cimguiname": "cImGuiTestEngine_CaptureEndVideo",
             "args": "(ImGuiTestEngine* engine, ImGuiCaptureArgs* args)",
             "isvararg": false,
@@ -5282,7 +5303,7 @@
                     "type": "ImGuiTestVerboseLevel"
                 }
             ],
-            "location": "imgui_te_internal:241",
+            "location": "imgui_te_internal:243",
             "ov_cimguiname": "cImGuiTestEngine_GetVerboseLevelName",
             "args": "(ImGuiTestVerboseLevel v)",
             "isvararg": false,
@@ -5363,7 +5384,7 @@
                     "type": "ImGuiTestEngineResultSummary*"
                 }
             ],
-            "location": "imgui_te_engine:217",
+            "location": "imgui_te_engine:218",
             "ov_cimguiname": "cImGuiTestEngine_GetResultSummary",
             "args": "(ImGuiTestEngine* engine, ImGuiTestEngineResultSummary* out_results)",
             "isvararg": false,
@@ -5380,7 +5401,7 @@
             "stname": "ImGuiTestItemInfo",
             "argsT": [
             ],
-            "location": "imgui_te_engine:331",
+            "location": "imgui_te_engine:339",
             "ov_cimguiname": "ImGuiTestItemInfo_ImGuiTestItemInfo",
             "args": "()",
             "constructor": true,
@@ -5478,7 +5499,7 @@
             "stname": "",
             "argsT": [
             ],
-            "location": "imgui_te_engine:228",
+            "location": "imgui_te_engine:229",
             "ov_cimguiname": "cImGuiTestEngine_InstallDefaultCrashHandler",
             "args": "()",
             "comment": "// Install default crash handler (if you don't have one)",
@@ -5690,7 +5711,7 @@
             "stname": "",
             "argsT": [
             ],
-            "location": "imgui_te_engine:186",
+            "location": "imgui_te_engine:187",
             "ov_cimguiname": "cImGuiTestEngine_GetTempStringBuilder",
             "args": "()",
             "isvararg": false,
@@ -5767,7 +5788,7 @@
                     "type": "float"
                 }
             ],
-            "location": "imgui_te_internal:221",
+            "location": "imgui_te_internal:223",
             "ov_cimguiname": "cImGuiTestEngine_SetDeltaTime",
             "args": "(ImGuiTestEngine* engine, float delta_time)",
             "isvararg": false,
@@ -5825,7 +5846,7 @@
                     "type": ""
                 }
             ],
-            "location": "imgui_te_engine:178",
+            "location": "imgui_te_engine:179",
             "ov_cimguiname": "cImGuiTestEngineHook_Log",
             "args": "(ImGuiContext* ui_ctx, const char* fmt,  ...)",
             "isvararg": true,
@@ -6394,7 +6415,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_engine:446",
+            "location": "imgui_te_engine:457",
             "ov_cimguiname": "ImGuiTest_SetOwnedName",
             "args": "(ImGuiTest* self, const char* name)",
             "isvararg": false,
@@ -6906,7 +6927,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_engine:196",
+            "location": "imgui_te_engine:197",
             "ov_cimguiname": "cImGuiTestEngine_Stop",
             "args": "(ImGuiTestEngine* engine)",
             "comment": "// Stop coroutine and export if any. (Unbind will lazily happen on context shutdown)",
@@ -6971,7 +6992,7 @@
             "stname": "",
             "argsT": [
             ],
-            "location": "imgui_te_engine:193",
+            "location": "imgui_te_engine:194",
             "ov_cimguiname": "cImGuiTestEngine_CreateContext",
             "args": "()",
             "comment": "// Create test engine",
@@ -7063,7 +7084,7 @@
                     "type": "unsigned int"
                 }
             ],
-            "location": "imgui_te_engine:343",
+            "location": "imgui_te_engine:351",
             "ov_cimguiname": "ImGuiTestItemList_GetByID",
             "args": "(ImGuiTestItemList* self, unsigned int id)",
             "isvararg": false,
@@ -7247,7 +7268,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:230",
+            "location": "imgui_te_internal:232",
             "ov_cimguiname": "cImGuiTestEngine_GetPerfTool",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -7419,7 +7440,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_engine:208",
+            "location": "imgui_te_engine:209",
             "ov_cimguiname": "cImGuiTestEngine_QueueTests",
             "args": "(ImGuiTestEngine* engine, ImGuiTestGroup group, const char* filter, int run_flags)",
             "isvararg": false,
@@ -7454,7 +7475,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_internal:224",
+            "location": "imgui_te_internal:226",
             "ov_cimguiname": "cImGuiTestEngine_RunTest",
             "args": "(ImGuiTestEngine* engine, ImGuiTestContext* ctx, ImGuiTest* test, int run_flags)",
             "isvararg": false,
@@ -7518,7 +7539,7 @@
                     "type": "int"
                 }
             ],
-            "location": "imgui_te_engine:342",
+            "location": "imgui_te_engine:350",
             "ov_cimguiname": "ImGuiTestItemList_GetByIndex",
             "args": "(ImGuiTestItemList* self, int n)",
             "isvararg": false,
@@ -7594,7 +7615,7 @@
                     "type": "ImGuiCaptureArgs*"
                 }
             ],
-            "location": "imgui_te_internal:235",
+            "location": "imgui_te_internal:237",
             "ov_cimguiname": "cImGuiTestEngine_CaptureBeginVideo",
             "args": "(ImGuiTestEngine* engine, ImGuiCaptureArgs* args)",
             "isvararg": false,
@@ -7816,7 +7837,7 @@
             "stname": "ImGuiTest",
             "argsT": [
             ],
-            "location": "imgui_te_engine:443",
+            "location": "imgui_te_engine:454",
             "ov_cimguiname": "ImGuiTest_ImGuiTest",
             "args": "()",
             "constructor": true,
@@ -8074,7 +8095,7 @@
                     "type": "ImGuiContext*"
                 }
             ],
-            "location": "imgui_te_internal:227",
+            "location": "imgui_te_internal:229",
             "ov_cimguiname": "cImGuiTestEngine_UnbindImGuiContext",
             "args": "(ImGuiTestEngine* engine, ImGuiContext* ui_ctx)",
             "isvararg": false,
@@ -8141,7 +8162,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:231",
+            "location": "imgui_te_internal:233",
             "ov_cimguiname": "cImGuiTestEngine_UpdateTestsSourceLines",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -8187,7 +8208,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_internal:220",
+            "location": "imgui_te_internal:222",
             "ov_cimguiname": "cImGuiTestEngine_Yield",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -8249,6 +8270,27 @@
             "funcname": "DockClear",
             "ret": "void",
             "cimguiname": "ImGuiTestContext_DockClear",
+            "defaults": {
+            }
+        }
+    ],
+    "ImGuiTestLog_GetTextLen": [
+        {
+            "retref": false,
+            "stname": "ImGuiTestLog",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestLog*"
+                }
+            ],
+            "location": "imgui_te_engine:380",
+            "ov_cimguiname": "ImGuiTestLog_GetTextLen",
+            "args": "(ImGuiTestLog* self)",
+            "isvararg": false,
+            "funcname": "GetTextLen",
+            "ret": "int",
+            "cimguiname": "ImGuiTestLog_GetTextLen",
             "defaults": {
             }
         }
@@ -8350,7 +8392,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_internal:219",
+            "location": "imgui_te_internal:221",
             "ov_cimguiname": "cImGuiTestEngine_FindItemInfo",
             "args": "(ImGuiTestEngine* engine, unsigned int id, const char* debug_id)",
             "isvararg": false,
@@ -8371,7 +8413,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_engine:216",
+            "location": "imgui_te_engine:217",
             "ov_cimguiname": "cImGuiTestEngine_IsUsingSimulatedInputs",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,
@@ -8632,7 +8674,7 @@
                     "type": "const char*"
                 }
             ],
-            "location": "imgui_te_engine:211",
+            "location": "imgui_te_engine:212",
             "ov_cimguiname": "cImGuiTestEngine_FindTestByName",
             "args": "(ImGuiTestEngine* engine, const char* category, const char* name)",
             "isvararg": false,
@@ -8887,7 +8929,7 @@
                     "type": "ImGuiContext*"
                 }
             ],
-            "location": "imgui_te_engine:195",
+            "location": "imgui_te_engine:196",
             "ov_cimguiname": "cImGuiTestEngine_Start",
             "args": "(ImGuiTestEngine* engine, ImGuiContext* ui_ctx)",
             "comment": "// Bind to a dear imgui context. Start coroutine.",
@@ -9069,7 +9111,7 @@
             "stname": "ImGuiTestLog",
             "argsT": [
             ],
-            "location": "imgui_te_engine:369",
+            "location": "imgui_te_engine:377",
             "ov_cimguiname": "ImGuiTestLog_ImGuiTestLog",
             "args": "()",
             "constructor": true,
@@ -9256,7 +9298,7 @@
                     "type": "ImGuiTestEngine*"
                 }
             ],
-            "location": "imgui_te_engine:215",
+            "location": "imgui_te_engine:216",
             "ov_cimguiname": "cImGuiTestEngine_IsTestQueueEmpty",
             "args": "(ImGuiTestEngine* engine)",
             "isvararg": false,

@@ -4,50 +4,50 @@
         "ImGuiTestOpFlags_": "imgui_te_context:122",
         "ImGuiCaptureToolUI": "imgui_capture_tool:156",
         "ImGuiTestRef": "imgui_te_context:78",
-        "ImGuiTestCheckFlags_": "imgui_te_engine:127",
+        "ImGuiTestCheckFlags_": "imgui_te_engine:128",
         "ImGuiCaptureArgs": "imgui_capture_tool:62",
         "ImGuiCaptureWindowData": "imgui_capture_tool:85",
         "ImGuiTestEngineExportFormat": "imgui_te_exporters:49",
-        "ImGuiTest": "imgui_te_engine:410",
+        "ImGuiTest": "imgui_te_engine:420",
         "ImGuiTestGenericVars": "imgui_te_context:180",
         "ImBuildInfo": "imgui_te_utils:80",
-        "ImGuiTestEngineResultSummary": "imgui_te_engine:157",
-        "ImGuiTestStatus": "imgui_te_engine:96",
+        "ImGuiTestEngineResultSummary": "imgui_te_engine:158",
+        "ImGuiTestStatus": "imgui_te_engine:97",
         "ImOsConsoleStream": "imgui_te_utils:97",
         "ImGuiCaptureFlags_": "imgui_capture_tool:49",
         "ImGuiCaptureImageBuf": "imgui_capture_tool:34",
         "ImGuiTestInfoTask": "imgui_te_internal:25",
-        "ImGuiTestRunTask": "imgui_te_engine:463",
-        "ImGuiTestOutput": "imgui_te_engine:401",
-        "ImGuiTestItemList": "imgui_te_engine:335",
-        "ImGuiTestItemInfo": "imgui_te_engine:315",
-        "ImGuiTestVerboseLevel": "imgui_te_engine:84",
-        "ImGuiTestLogFlags_": "imgui_te_engine:134",
+        "ImGuiTestRunTask": "imgui_te_engine:474",
+        "ImGuiTestOutput": "imgui_te_engine:411",
+        "ImGuiTestItemList": "imgui_te_engine:343",
+        "ImGuiTestItemInfo": "imgui_te_engine:323",
+        "ImGuiTestVerboseLevel": "imgui_te_engine:85",
+        "ImGuiTestLogFlags_": "imgui_te_engine:135",
         "ImGuiPerfToolEntry": "imgui_te_perftool:27",
         "ImGuiTestGatherTask": "imgui_te_internal:37",
         "ImGuiCaptureStatus": "imgui_capture_tool:78",
-        "ImGuiTestLog": "imgui_te_engine:362",
-        "ImGuiTestEngineIO": "imgui_te_engine:240",
+        "ImGuiTestLog": "imgui_te_engine:370",
+        "ImGuiTestEngineIO": "imgui_te_engine:244",
         "ImGuiPerfToolBatch": "imgui_te_perftool:54",
         "ImGuiTestInputType": "imgui_te_internal:67",
         "ImGuiPerfToolDisplayType": "imgui_te_perftool:63",
-        "ImGuiTestGroup": "imgui_te_engine:108",
+        "ImGuiTestGroup": "imgui_te_engine:109",
         "ImGuiTestContext": "imgui_te_context:219",
         "ImGuiTestActionFilter": "imgui_te_context:139",
         "ImGuiTestInput": "imgui_te_internal:79",
         "ImGuiTestFindByLabelTask": "imgui_te_internal:53",
-        "ImGuiTestFlags_": "imgui_te_engine:117",
+        "ImGuiTestFlags_": "imgui_te_engine:118",
         "ImGuiCsvParser": "imgui_te_utils:161",
-        "ImGuiTestEngine": "imgui_te_internal:152",
+        "ImGuiTestEngine": "imgui_te_internal:153",
         "ImOsConsoleTextColor": "imgui_te_utils:103",
         "ImGuiCaptureContext": "imgui_capture_tool:93",
         "ImGuiTestInputs": "imgui_te_internal:140",
         "ImGuiPerfTool": "imgui_te_perftool:71",
         "ImGuiTestActiveFunc": "imgui_te_engine:69",
-        "ImGuiTestRunSpeed": "imgui_te_engine:76",
-        "ImGuiTestRunFlags_": "imgui_te_engine:140",
+        "ImGuiTestRunSpeed": "imgui_te_engine:77",
+        "ImGuiTestRunFlags_": "imgui_te_engine:141",
         "ImGuiTestRefDesc": "imgui_te_context:91",
-        "ImGuiTestLogLineInfo": "imgui_te_engine:356",
+        "ImGuiTestLogLineInfo": "imgui_te_engine:364",
         "ImGuiTestCoroutineInterface": "imgui_te_coroutine:34",
         "ImGuiTestGenericItemStatus": "imgui_te_context:156"
     },
@@ -239,6 +239,10 @@
                 "comment": {
                     "sameline": "// Flag to indicate that we are shutting down and the test queue coroutine should stop"
                 }
+            },
+            {
+                "name": "StringBuilderForChecks",
+                "type": "ImGuiTextBuffer"
             },
             {
                 "name": "Inputs",
@@ -661,6 +665,10 @@
                 "comment": {
                     "sameline": "// Maintain our own DownDuration for host/backend ESC key so we can abort."
                 }
+            },
+            {
+                "name": "HostMousePos",
+                "type": "ImVec2"
             }
         ],
         "ImGuiTestRef": [
@@ -1179,7 +1187,14 @@
                 "name": "TestFunc",
                 "type": "ImGuiTestTestFunc *",
                 "comment": {
-                    "sameline": "// Test function"
+                    "sameline": "// Test driving function"
+                }
+            },
+            {
+                "name": "TeardownFunc",
+                "type": "ImGuiTestTestFunc *",
+                "comment": {
+                    "sameline": "// Teardown driving function, executed after TestFunc _regardless_ of TestFunc failing."
                 }
             },
             {
@@ -1450,22 +1465,6 @@
                 }
             },
             {
-                "name": "ConfigVerboseLevel",
-                "type": "ImGuiTestVerboseLevel"
-            },
-            {
-                "name": "ConfigVerboseLevelOnError",
-                "type": "ImGuiTestVerboseLevel"
-            },
-            {
-                "name": "ConfigLogToTTY",
-                "type": "bool"
-            },
-            {
-                "name": "ConfigLogToDebugger",
-                "type": "bool"
-            },
-            {
                 "name": "ConfigRestoreFocusAfterTests",
                 "type": "bool",
                 "comment": {
@@ -1518,6 +1517,39 @@
                 "comment": {
                     "sameline": "// e.g. fill in branch name (e.g. recorded in perf samples .csv)"
                 }
+            },
+            {
+                "name": "ConfigVerboseLevel",
+                "type": "ImGuiTestVerboseLevel"
+            },
+            {
+                "name": "ConfigVerboseLevelOnError",
+                "type": "ImGuiTestVerboseLevel"
+            },
+            {
+                "name": "ConfigLogToTTY",
+                "type": "bool",
+                "comment": {
+                    "sameline": "// Output log entries to TTY (in addition to Test Engine UI)"
+                }
+            },
+            {
+                "name": "ConfigLogToDebugger",
+                "type": "bool",
+                "comment": {
+                    "sameline": "// Output log entries to Debugger (in addition to Test Engine UI)"
+                }
+            },
+            {
+                "name": "ConfigLogToFunc",
+                "type": "ImGuiTestEngineLogFunc *",
+                "comment": {
+                    "sameline": "// Hook for logging of full serial log (vs peeking into ImGuiTest->Output.Log for a single test)"
+                }
+            },
+            {
+                "name": "ConfigLogToFuncUserData",
+                "type": "void*"
             },
             {
                 "name": "MouseSpeed",
@@ -1748,7 +1780,7 @@
                 "name": "TestOutput",
                 "type": "ImGuiTestOutput*",
                 "comment": {
-                    "sameline": "// Test output (generally == &Test->Output)"
+                    "sameline": "// Test output (generally == &Test->Output while executing TestFunc)"
                 }
             },
             {
@@ -2558,12 +2590,20 @@
             {
                 "name": "ImGuiTestActiveFunc_GuiFunc",
                 "value": "",
-                "calc_value": 1
+                "calc_value": 1,
+                "comment": "// == GuiFunc() handler"
             },
             {
                 "name": "ImGuiTestActiveFunc_TestFunc",
                 "value": "",
-                "calc_value": 2
+                "calc_value": 2,
+                "comment": "// == TestFunc() handler"
+            },
+            {
+                "name": "ImGuiTestActiveFunc_TeardownFunc",
+                "value": "",
+                "calc_value": 3,
+                "comment": "// == TeardownFunc() handler"
             }
         ],
         "ImGuiTestRunSpeed": [

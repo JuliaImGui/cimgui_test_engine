@@ -231,10 +231,11 @@ CIMGUI_TE_API bool cImGuiTestEngine_Check(const char* file, const char* func, in
     return ImGuiTestEngine_Check(file, func, line, flags, result, expr);
 }
 
-CIMGUI_TE_API bool cImGuiTestEngine_CheckStrOp(const char* file, const char* func, int line, int flags, const char* op,
-                                               const char* lhs_var, const char* lhs_value, const char* rhs_var,
+CIMGUI_TE_API bool cImGuiTestEngine_CheckOpStr(const char* file, const char* func, int line, int flags, const char* op,
+                                               const char* lhs_desc, const char* lhs_value, const char* rhs_desc,
                                                const char* rhs_value, bool* out_result) {
-    return ImGuiTestEngine_CheckStrOp(file, func, line, flags, op, lhs_var, lhs_value, rhs_var, rhs_value, out_result);
+    return ImGuiTestEngine_CheckOpStr(file, func, line, flags, op, lhs_desc, lhs_value, rhs_desc, rhs_value,
+                                      out_result);
 }
 
 CIMGUI_TE_API bool cImGuiTestEngine_Error(const char* file, const char* func, int line, int flags, const char* fmt,
@@ -449,6 +450,10 @@ CIMGUI_TE_API const ImGuiTestItemInfo* ImGuiTestItemList_end(ImGuiTestItemList* 
 CIMGUI_TE_API ImGuiTestLog* ImGuiTestLog_ImGuiTestLog() { return IM_NEW(ImGuiTestLog)(); }
 
 CIMGUI_TE_API bool ImGuiTestLog_IsEmpty(ImGuiTestLog* self) { return self->IsEmpty(); }
+
+CIMGUI_TE_API const char* ImGuiTestLog_GetText(ImGuiTestLog* self) { return self->GetText(); }
+
+CIMGUI_TE_API int ImGuiTestLog_GetTextLen(ImGuiTestLog* self) { return self->GetTextLen(); }
 
 CIMGUI_TE_API void ImGuiTestLog_Clear(ImGuiTestLog* self) { self->Clear(); }
 
