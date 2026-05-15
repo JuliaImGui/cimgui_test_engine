@@ -8,38 +8,38 @@
         "ImGuiCaptureArgs": "imgui_capture_tool:62",
         "ImGuiCaptureWindowData": "imgui_capture_tool:85",
         "ImGuiTestEngineExportFormat": "imgui_te_exporters:49",
-        "ImGuiTest": "imgui_te_engine:420",
-        "ImGuiTestGenericVars": "imgui_te_context:180",
-        "ImBuildInfo": "imgui_te_utils:80",
+        "ImGuiTest": "imgui_te_engine:425",
+        "ImGuiTestGenericVars": "imgui_te_context:181",
+        "ImBuildInfo": "imgui_te_utils:81",
         "ImGuiTestEngineResultSummary": "imgui_te_engine:158",
         "ImGuiTestStatus": "imgui_te_engine:97",
-        "ImOsConsoleStream": "imgui_te_utils:97",
+        "ImOsConsoleStream": "imgui_te_utils:98",
         "ImGuiCaptureFlags_": "imgui_capture_tool:49",
         "ImGuiCaptureImageBuf": "imgui_capture_tool:34",
         "ImGuiTestInfoTask": "imgui_te_internal:25",
-        "ImGuiTestRunTask": "imgui_te_engine:474",
-        "ImGuiTestOutput": "imgui_te_engine:411",
-        "ImGuiTestItemList": "imgui_te_engine:343",
-        "ImGuiTestItemInfo": "imgui_te_engine:323",
+        "ImGuiTestRunTask": "imgui_te_engine:479",
+        "ImGuiTestOutput": "imgui_te_engine:416",
+        "ImGuiTestItemList": "imgui_te_engine:348",
+        "ImGuiTestItemInfo": "imgui_te_engine:328",
         "ImGuiTestVerboseLevel": "imgui_te_engine:85",
         "ImGuiTestLogFlags_": "imgui_te_engine:135",
         "ImGuiPerfToolEntry": "imgui_te_perftool:27",
         "ImGuiTestGatherTask": "imgui_te_internal:37",
         "ImGuiCaptureStatus": "imgui_capture_tool:78",
-        "ImGuiTestLog": "imgui_te_engine:370",
-        "ImGuiTestEngineIO": "imgui_te_engine:244",
+        "ImGuiTestLog": "imgui_te_engine:375",
+        "ImGuiTestEngineIO": "imgui_te_engine:249",
         "ImGuiPerfToolBatch": "imgui_te_perftool:54",
         "ImGuiTestInputType": "imgui_te_internal:67",
         "ImGuiPerfToolDisplayType": "imgui_te_perftool:63",
         "ImGuiTestGroup": "imgui_te_engine:109",
-        "ImGuiTestContext": "imgui_te_context:219",
-        "ImGuiTestActionFilter": "imgui_te_context:139",
+        "ImGuiTestContext": "imgui_te_context:220",
+        "ImGuiTestActionFilter": "imgui_te_context:140",
         "ImGuiTestInput": "imgui_te_internal:79",
         "ImGuiTestFindByLabelTask": "imgui_te_internal:53",
         "ImGuiTestFlags_": "imgui_te_engine:118",
-        "ImGuiCsvParser": "imgui_te_utils:161",
+        "ImGuiCsvParser": "imgui_te_utils:162",
         "ImGuiTestEngine": "imgui_te_internal:153",
-        "ImOsConsoleTextColor": "imgui_te_utils:103",
+        "ImOsConsoleTextColor": "imgui_te_utils:104",
         "ImGuiCaptureContext": "imgui_capture_tool:93",
         "ImGuiTestInputs": "imgui_te_internal:140",
         "ImGuiPerfTool": "imgui_te_perftool:71",
@@ -47,9 +47,9 @@
         "ImGuiTestRunSpeed": "imgui_te_engine:77",
         "ImGuiTestRunFlags_": "imgui_te_engine:141",
         "ImGuiTestRefDesc": "imgui_te_context:91",
-        "ImGuiTestLogLineInfo": "imgui_te_engine:364",
+        "ImGuiTestLogLineInfo": "imgui_te_engine:369",
         "ImGuiTestCoroutineInterface": "imgui_te_coroutine:34",
-        "ImGuiTestGenericItemStatus": "imgui_te_context:156"
+        "ImGuiTestGenericItemStatus": "imgui_te_context:157"
     },
     "enum_comments": {
         "ImGuiTestStatus": {
@@ -1029,7 +1029,7 @@
                 "name": "InPadding",
                 "type": "float",
                 "comment": {
-                    "sameline": "// Extra padding at the edges of the screenshot. Ensure that there is available space around capture rect horizontally, also vertically if ImGuiCaptureFlags_StitchFullContents is not used."
+                    "sameline": "// Extra padding at the edges of the screenshot. Ensure that there is available space around capture rect horizontally, also vertically if ImGuiCaptureFlags_StitchAll is not used."
                 }
             },
             {
@@ -2472,7 +2472,7 @@
                 "name": "ImGuiTestOpFlags_NoCheckHoveredId",
                 "value": "1 << 1",
                 "calc_value": 2,
-                "comment": "// Don't check for HoveredId after aiming for a widget. A few situations may want this: while e.g. dragging or another items prevents hovering, or for items that don't use ItemHoverable()"
+                "comment": "// Don't check for HoveredId after aiming for a widget. This is automatic when there's an active item, typically in drag and drop operation. Otherwise, a few situations may want this e.g. for items that don't use ItemHoverable(), or when intently aiming for an item behind a popup/modal inhibition layer."
             },
             {
                 "name": "ImGuiTestOpFlags_NoError",
@@ -2530,6 +2530,12 @@
                 "name": "ImGuiTestOpFlags_MoveToEdgeD",
                 "value": "1 << 11",
                 "calc_value": 2048
+            },
+            {
+                "name": "ImGuiTestOpFlags_NoScroll",
+                "value": "1 << 12",
+                "calc_value": 4096,
+                "comment": "// Disable automatically scrolling to reach an item."
             }
         ],
         "ImOsConsoleTextColor": [
