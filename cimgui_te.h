@@ -196,7 +196,7 @@ typedef enum ImGuiTestAction
 enum ImGuiTestOpFlags_
 {
     ImGuiTestOpFlags_None               = 0,
-    ImGuiTestOpFlags_NoCheckHoveredId   = 1 << 1,   // Don't check for HoveredId after aiming for a widget. A few situations may want this: while e.g. dragging or another items prevents hovering, or for items that don't use ItemHoverable()
+    ImGuiTestOpFlags_NoCheckHoveredId   = 1 << 1,   // Don't check for HoveredId after aiming for a widget. This is automatic when there's an active item, typically in drag and drop operation. Otherwise, a few situations may want this e.g. for items that don't use ItemHoverable(), or when intently aiming for an item behind a popup/modal inhibition layer.
     ImGuiTestOpFlags_NoError            = 1 << 2,   // Don't abort/error e.g. if the item cannot be found or the operation doesn't succeed.
     ImGuiTestOpFlags_NoFocusWindow      = 1 << 3,   // Don't focus window when aiming at an item
     ImGuiTestOpFlags_NoAutoUncollapse   = 1 << 4,   // Disable automatically uncollapsing windows (useful when specifically testing Collapsing behaviors)
@@ -207,6 +207,7 @@ enum ImGuiTestOpFlags_
     ImGuiTestOpFlags_MoveToEdgeR        = 1 << 9,
     ImGuiTestOpFlags_MoveToEdgeU        = 1 << 10,
     ImGuiTestOpFlags_MoveToEdgeD        = 1 << 11,
+    ImGuiTestOpFlags_NoScroll           = 1 << 12,  // Disable automatically scrolling to reach an item.
 };
 
 typedef enum ImOsConsoleStream
@@ -298,7 +299,7 @@ struct ImGuiCaptureArgs {
     unsigned int InFlags; // Flags for customizing behavior of screenshot tool.
     ImVector_ImGuiWindowPtr InCaptureWindows; // Windows to capture. All other windows will be hidden. May be used with InCaptureRect to capture only some windows in specified rect.
     ImRect InCaptureRect; // Screen rect to capture. Does not include padding.
-    float InPadding; // Extra padding at the edges of the screenshot. Ensure that there is available space around capture rect horizontally, also vertically if ImGuiCaptureFlags_StitchFullContents is not used.
+    float InPadding; // Extra padding at the edges of the screenshot. Ensure that there is available space around capture rect horizontally, also vertically if ImGuiCaptureFlags_StitchAll is not used.
     char InOutputFile[256]; // Output will be saved to a file if InOutputImageBuf is nullptr.
     ImGuiCaptureImageBuf* InOutputImageBuf; // _OR_ Output will be saved to image buffer if specified.
     int InRecordFPSTarget; // FPS target for recording videos.
@@ -845,10 +846,11 @@ CIMGUI_TE_API void cImStrReplace(Str* s, const char* find, const char* repl);
 CIMGUI_TE_API const char * cImStrchrRangeWithEscaping(const char* str, const char* str_end, char find_c);
 CIMGUI_TE_API void cImStrXmlEscape(Str* s);
 CIMGUI_TE_API int cImStrBase64Encode(const unsigned char* src, char* dst, int length);
+CIMGUI_TE_API void cImStrTrimTrailingZeroesFromFloat(char* buf, char* buf_end);
 CIMGUI_TE_API void cImParseExtractArgcArgvFromCommandLine(int* out_argc, const char *** out_argv, const char* cmd_line);
 CIMGUI_TE_API bool cImParseFindIniSection(const char* ini_config, const char* header, ImVector_char* result);
 CIMGUI_TE_API uint64_t cImTimeGetInMicroseconds();
-CIMGUI_TE_API void cImTimestampToISO8601(unsigned long timestamp, Str* out_date);
+CIMGUI_TE_API void cImTimestampToISO8601(unsigned long long timestamp, Str* out_date);
 CIMGUI_TE_API void cImThreadSleepInMilliseconds(int ms);
 CIMGUI_TE_API void cImThreadSetCurrentThreadDescription(const char* description);
 CIMGUI_TE_API const ImBuildInfo * cImBuildGetCompilationInfo();
@@ -1087,7 +1089,7 @@ CIMGUI_TE_API ImGuiID ImGuiTestContext_GetID_TestRef(ImGuiTestContext* self, ImG
 CIMGUI_TE_API ImGuiID ImGuiTestContext_GetID_TestRefTestRef(ImGuiTestContext* self, ImGuiTestRef ref, ImGuiTestRef seed_ref);
 // Find a point that has no windows // FIXME: This needs error return and flag to enable/disable forcefully finding void.
 CIMGUI_TE_API void ImGuiTestContext_GetPosOnVoid(ImVec2* pOut, ImGuiTestContext* self, ImGuiViewport* viewport);
-// Return a clickable point on window title-bar (window tab for docked windows).
+// Return a clickable point on window title-bar (window tab for docked windows) that will e.g. move this single window.
 CIMGUI_TE_API void ImGuiTestContext_GetWindowTitlebarPoint(ImVec2* pOut, ImGuiTestContext* self, ImGuiTestRef window_ref);
 // Work pos and size of main viewport when viewports are disabled, or work pos and size of monitor containing main viewport when viewports are enabled.
 CIMGUI_TE_API void ImGuiTestContext_GetMainMonitorWorkPos(ImVec2* pOut, ImGuiTestContext* self);
@@ -1117,6 +1119,7 @@ CIMGUI_TE_API void ImGuiTestContext_MouseLiftDragThreshold(ImGuiTestContext* sel
 CIMGUI_TE_API void ImGuiTestContext_MouseDragWithDelta(ImGuiTestContext* self, ImVec2 delta, int button);
 CIMGUI_TE_API void ImGuiTestContext_MouseWheel(ImGuiTestContext* self, ImVec2 delta);
 CIMGUI_TE_API void ImGuiTestContext_MouseWheelX(ImGuiTestContext* self, float dx);
+// +1: up, -1: down
 CIMGUI_TE_API void ImGuiTestContext_MouseWheelY(ImGuiTestContext* self, float dy);
 CIMGUI_TE_API void ImGuiTestContext_MouseMoveToVoid(ImGuiTestContext* self, ImGuiViewport* viewport);
 CIMGUI_TE_API void ImGuiTestContext_MouseClickOnVoid(ImGuiTestContext* self, int button, ImGuiViewport* viewport);
@@ -1158,8 +1161,6 @@ CIMGUI_TE_API void ImGuiTestContext_ScrollToItem(ImGuiTestContext* self, ImGuiTe
 CIMGUI_TE_API void ImGuiTestContext_ScrollToItemX(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API void ImGuiTestContext_ScrollToItemY(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API void ImGuiTestContext_ScrollToTabItem(ImGuiTestContext* self, ImGuiTabBar* tab_bar, unsigned int tab_id);
-CIMGUI_TE_API bool ImGuiTestContext_ScrollErrorCheck(ImGuiTestContext* self, ImGuiAxis axis, float expected, float actual, int* remaining_attempts);
-CIMGUI_TE_API void ImGuiTestContext_ScrollVerifyScrollMax(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API void ImGuiTestContext_ItemInfo(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref, int flags);
 CIMGUI_TE_API void ImGuiTestContext_ItemInfoOpenFullPath(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref, int flags);
 CIMGUI_TE_API ImGuiID ImGuiTestContext_ItemInfoHandleWildcardSearch(ImGuiTestContext* self, const char* wildcard_prefix_start, const char* wildcard_prefix_end, const char* wildcard_suffix_start);
@@ -1188,6 +1189,7 @@ CIMGUI_TE_API size_t ImGuiTestContext_ItemReadAsString_TestRefStr(ImGuiTestConte
 CIMGUI_TE_API bool ImGuiTestContext_ItemExists(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API bool ImGuiTestContext_ItemIsChecked(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API bool ImGuiTestContext_ItemIsOpened(ImGuiTestContext* self, ImGuiTestRef ref);
+CIMGUI_TE_API bool ImGuiTestContext_ItemIsVisible(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API void ImGuiTestContext_ItemVerifyCheckedIfAlive(ImGuiTestContext* self, ImGuiTestRef ref, bool checked);
 CIMGUI_TE_API void ImGuiTestContext_ItemHold(ImGuiTestContext* self, ImGuiTestRef ref, float time);
 CIMGUI_TE_API void ImGuiTestContext_ItemHoldForFrames(ImGuiTestContext* self, ImGuiTestRef ref, int frames);
@@ -1207,7 +1209,8 @@ CIMGUI_TE_API void ImGuiTestContext_ComboClick(ImGuiTestContext* self, ImGuiTest
 CIMGUI_TE_API void ImGuiTestContext_ComboClickAll(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API void ImGuiTestContext_TableOpenContextMenu(ImGuiTestContext* self, ImGuiTestRef ref, int column_n);
 CIMGUI_TE_API ImGuiSortDirection ImGuiTestContext_TableClickHeader(ImGuiTestContext* self, ImGuiTestRef ref, const char* label, int key_mods);
-CIMGUI_TE_API void ImGuiTestContext_TableSetColumnEnabled(ImGuiTestContext* self, ImGuiTestRef ref, const char* label, bool enabled);
+CIMGUI_TE_API void ImGuiTestContext_TableSetColumnEnabled_int(ImGuiTestContext* self, ImGuiTestRef ref, int column_n, bool enabled);
+CIMGUI_TE_API void ImGuiTestContext_TableSetColumnEnabled_Str(ImGuiTestContext* self, ImGuiTestRef ref, const char* label, bool enabled);
 CIMGUI_TE_API void ImGuiTestContext_TableResizeColumn(ImGuiTestContext* self, ImGuiTestRef ref, int column_n, float width);
 CIMGUI_TE_API const ImGuiTableSortSpecs * ImGuiTestContext_TableGetSortSpecs(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API void ImGuiTestContext_ViewportPlatform_SetWindowPos(ImGuiTestContext* self, ImGuiViewport* viewport, const ImVec2* pos);
@@ -1223,6 +1226,7 @@ CIMGUI_TE_API bool ImGuiTestContext_DockIdIsUndockedOrStandalone(ImGuiTestContex
 CIMGUI_TE_API void ImGuiTestContext_DockNodeHideTabBar(ImGuiTestContext* self, ImGuiDockNode* node, bool hidden);
 CIMGUI_TE_API void ImGuiTestContext_PerfCalcRef(ImGuiTestContext* self);
 CIMGUI_TE_API void ImGuiTestContext_PerfCapture(ImGuiTestContext* self, const char* category, const char* test_name, const char* csv_file);
+CIMGUI_TE_API void ImGuiTestContext__ScrollVerifyScrollMax(ImGuiTestContext* self, ImGuiTestRef ref);
 // Move windows covering 'window' at pos.
 CIMGUI_TE_API void ImGuiTestContext__MakeAimingSpaceOverPos(ImGuiTestContext* self, ImGuiViewport* viewport, ImGuiWindow* over_window, const ImVec2* over_pos);
 // FIXME: Aim to remove this system...

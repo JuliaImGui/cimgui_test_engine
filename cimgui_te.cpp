@@ -125,6 +125,10 @@ CIMGUI_TE_API int cImStrBase64Encode(const unsigned char* src, char* dst, int le
     return ImStrBase64Encode(src, dst, length);
 }
 
+CIMGUI_TE_API void cImStrTrimTrailingZeroesFromFloat(char* buf, char* buf_end) {
+    ImStrTrimTrailingZeroesFromFloat(buf, buf_end);
+}
+
 CIMGUI_TE_API void cImParseExtractArgcArgvFromCommandLine(int* out_argc, const char*** out_argv, const char* cmd_line) {
     ImParseExtractArgcArgvFromCommandLine(out_argc, out_argv, cmd_line);
 }
@@ -135,7 +139,7 @@ CIMGUI_TE_API bool cImParseFindIniSection(const char* ini_config, const char* he
 
 CIMGUI_TE_API uint64_t cImTimeGetInMicroseconds() { return ImTimeGetInMicroseconds(); }
 
-CIMGUI_TE_API void cImTimestampToISO8601(unsigned long timestamp, Str* out_date) {
+CIMGUI_TE_API void cImTimestampToISO8601(unsigned long long timestamp, Str* out_date) {
     ImTimestampToISO8601(timestamp, out_date);
 }
 
@@ -885,15 +889,6 @@ CIMGUI_TE_API void ImGuiTestContext_ScrollToTabItem(ImGuiTestContext* self, ImGu
     self->ScrollToTabItem(tab_bar, tab_id);
 }
 
-CIMGUI_TE_API bool ImGuiTestContext_ScrollErrorCheck(ImGuiTestContext* self, ImGuiAxis axis, float expected,
-                                                     float actual, int* remaining_attempts) {
-    return self->ScrollErrorCheck(axis, expected, actual, remaining_attempts);
-}
-
-CIMGUI_TE_API void ImGuiTestContext_ScrollVerifyScrollMax(ImGuiTestContext* self, ImGuiTestRef ref) {
-    self->ScrollVerifyScrollMax(ref);
-}
-
 CIMGUI_TE_API void ImGuiTestContext_ItemInfo(ImGuiTestItemInfo* pOut, ImGuiTestContext* self, ImGuiTestRef ref,
                                              int flags) {
     *pOut = self->ItemInfo(ref, flags);
@@ -1018,6 +1013,10 @@ CIMGUI_TE_API bool ImGuiTestContext_ItemIsOpened(ImGuiTestContext* self, ImGuiTe
     return self->ItemIsOpened(ref);
 }
 
+CIMGUI_TE_API bool ImGuiTestContext_ItemIsVisible(ImGuiTestContext* self, ImGuiTestRef ref) {
+    return self->ItemIsVisible(ref);
+}
+
 CIMGUI_TE_API void ImGuiTestContext_ItemVerifyCheckedIfAlive(ImGuiTestContext* self, ImGuiTestRef ref, bool checked) {
     self->ItemVerifyCheckedIfAlive(ref, checked);
 }
@@ -1089,8 +1088,13 @@ CIMGUI_TE_API ImGuiSortDirection ImGuiTestContext_TableClickHeader(ImGuiTestCont
     return self->TableClickHeader(ref, label, key_mods);
 }
 
-CIMGUI_TE_API void ImGuiTestContext_TableSetColumnEnabled(ImGuiTestContext* self, ImGuiTestRef ref, const char* label,
-                                                          bool enabled) {
+CIMGUI_TE_API void ImGuiTestContext_TableSetColumnEnabled_int(ImGuiTestContext* self, ImGuiTestRef ref, int column_n,
+                                                              bool enabled) {
+    self->TableSetColumnEnabled(ref, column_n, enabled);
+}
+
+CIMGUI_TE_API void ImGuiTestContext_TableSetColumnEnabled_Str(ImGuiTestContext* self, ImGuiTestRef ref,
+                                                              const char* label, bool enabled) {
     self->TableSetColumnEnabled(ref, label, enabled);
 }
 
@@ -1158,6 +1162,10 @@ CIMGUI_TE_API void ImGuiTestContext_PerfCalcRef(ImGuiTestContext* self) { self->
 CIMGUI_TE_API void ImGuiTestContext_PerfCapture(ImGuiTestContext* self, const char* category, const char* test_name,
                                                 const char* csv_file) {
     self->PerfCapture(category, test_name, csv_file);
+}
+
+CIMGUI_TE_API void ImGuiTestContext__ScrollVerifyScrollMax(ImGuiTestContext* self, ImGuiTestRef ref) {
+    self->_ScrollVerifyScrollMax(ref);
 }
 
 CIMGUI_TE_API void ImGuiTestContext__MakeAimingSpaceOverPos(ImGuiTestContext* self, ImGuiViewport* viewport,

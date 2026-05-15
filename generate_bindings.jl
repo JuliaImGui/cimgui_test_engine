@@ -110,6 +110,18 @@ function get_c_type(cursor)
         return false, spelling(cursor)
     end
 
+    # Match libc typedefs (va_list, FILE) by their source-level name so
+    # canonicalization doesn't surface platform-specific spellings (glibc:
+    # __va_list_tag, _IO_FILE; macOS: char*/__sFILE) in the generated ABI.
+    pre_spelling = spelling(cursor)
+    if pre_spelling == "va_list"
+        # Special case for ImGuiTestContext_LogExV
+        return false, "va_list"
+    elseif pre_spelling == "FILE *"
+        # Special case for ImGuiCaptureContext::_VideoEncoderPipe
+        return false, "FILE*"
+    end
+
     type = Clang.getCanonicalType(cursor)
 
     # Another quick check: if this is a *function* rather than a *function
@@ -133,14 +145,6 @@ function get_c_type(cursor)
         else
             error("Unsupported template type: $(type_spelling)")
         end
-    end
-
-    if type_spelling == "__va_list_tag[1]"
-        # Special case for ImGuiTestContext_LogExV
-        type_spelling = "va_list"
-    elseif type_spelling == "_IO_FILE"
-        # Special case for ImGuiCaptureContext::_VideoEncoderPipe
-        type_spelling = "FILE"
     end
 
     type_spelling = is_pointer ? "$(type_spelling)*" : type_spelling
