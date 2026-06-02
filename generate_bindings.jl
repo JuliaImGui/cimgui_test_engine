@@ -1,7 +1,7 @@
 import JSON3
 using Clang
 import Clang.LibClang as LibClang
-import Clang_jll
+import Clang_unified_jll
 
 
 # These types are implemented by cimgui
@@ -596,20 +596,9 @@ function generate()
             "-DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1",
             "-DIMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL=1"]
 
-    # Find the system #include directories to avoid missing header warnings
-    stderr_pipe = Pipe()
-    run(pipeline(`$(Clang_jll.clang()) -v -c -x c++ /dev/null`; stderr=stderr_pipe))
-    close(stderr_pipe.in)
-    record = false
-    for l in eachline(stderr_pipe)
-        if startswith(l, "#include <...> search starts here")
-            record = true
-        elseif startswith(l, "End of search list")
-            break
-        elseif record
-            push!(args, "-I$(strip(l))")
-        end
-    end
+    # System includes from the JLL sysroot for the host, plus Clang's own builtin-header dir.
+    append!(args, Clang.Generators.get_default_args())
+    push!(args, "-isystem" * Clang.CLANG_INCLUDE)
 
     # These functions need to be wrapped in a #ifdef
     stdthread_funcs = ["Coroutine_ImplStdThread_GetInterface"]
@@ -842,11 +831,8 @@ function generate()
     end
 
     # Format source file
-    clang_format = joinpath(Clang_jll.artifact_dir, "tools", "clang-format")
     style = "{BasedOnStyle: llvm, IndentWidth: 4, PointerAlignment: Left, ColumnLimit: 120, SortIncludes: false}"
-    Clang_jll.clang() do _
-        run(`$(clang_format) --style=$(style) -i $(out_source)`)
-    end
+    run(`$(Clang_unified_jll.clang_format()) --style=$style -i $out_source`)
 
     # Write definitions.json
     definitions = Dict()
