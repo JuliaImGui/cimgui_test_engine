@@ -412,8 +412,8 @@ struct ImGuiTestItemInfo {
     unsigned int ID; // Item ID
     char DebugLabel[32]; // Shortened/truncated label for debugging and convenience purpose
     ImGuiWindow* Window; // Item Window
-    unsigned int NavLayer; // Nav layer of the item (ImGuiNavLayer)
-    int Depth; // Depth from requested parent id. 0 == ID is immediate child of requested parent id.
+    unsigned int NavLayer : 1; // Nav layer of the item (ImGuiNavLayer)
+    int Depth : 16; // Depth from requested parent id. 0 == ID is immediate child of requested parent id.
     int TimestampMain; // Timestamp of main result (all fields)
     int TimestampStatus; // Timestamp of StatusFlags
     unsigned int ParentID; // Item Parent ID (value at top of the ID stack)
