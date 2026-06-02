@@ -2077,6 +2077,7 @@
             },
             {
                 "name": "NavLayer",
+                "bitfield": "1",
                 "type": "unsigned int",
                 "comment": {
                     "sameline": "// Nav layer of the item (ImGuiNavLayer)"
@@ -2084,6 +2085,7 @@
             },
             {
                 "name": "Depth",
+                "bitfield": "16",
                 "type": "int",
                 "comment": {
                     "sameline": "// Depth from requested parent id. 0 == ID is immediate child of requested parent id."

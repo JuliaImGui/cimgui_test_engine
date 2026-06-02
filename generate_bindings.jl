@@ -381,6 +381,8 @@ function wrap_struct(cursor, blacklist)
     for c in field_cursors
         type = Clang.getCursorType(c)
         is_array = kind(type) == LibClang.CXType_ConstantArray
+        is_bitfield = LibClang.clang_Cursor_isBitField(c) != 0
+        bit_width = is_bitfield ? LibClang.clang_getFieldDeclBitWidth(c) : 0
 
         is_ref, type_str = get_c_type(type)
         if is_ref
@@ -403,6 +405,9 @@ function wrap_struct(cursor, blacklist)
         if is_array
             d["size"] = Clang.getNumElements(type)
         end
+        if is_bitfield
+            d["bitfield"] = string(bit_width)
+        end
         if !isnothing(comment)
             d["comment"] = Dict("sameline" => comment)
         end
@@ -414,6 +419,8 @@ function wrap_struct(cursor, blacklist)
             # just return the source code stripped of any default value.
             source = Clang.getSourceCode(c)
             contains(source, "=") ? match(r"(.*\w+)\s*=.+", source).captures[1] : source
+        elseif is_bitfield
+            "$(type_str) $(name) : $(bit_width)"
         else
             "$(type_str) $(name)"
         end
