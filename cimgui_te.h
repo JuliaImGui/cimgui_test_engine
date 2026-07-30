@@ -61,6 +61,7 @@ typedef struct ImGuiTestGatherTask ImGuiTestGatherTask;
 typedef struct ImGuiTestFindByLabelTask ImGuiTestFindByLabelTask;
 typedef struct ImGuiTestInput ImGuiTestInput;
 typedef struct ImGuiTestInputs ImGuiTestInputs;
+typedef struct ImGuiTestEnginePerfRecord ImGuiTestEnginePerfRecord;
 typedef struct ImGuiTestEngine ImGuiTestEngine;
 typedef struct ImGuiPerfToolEntry ImGuiPerfToolEntry;
 typedef struct ImGuiPerfToolBatch ImGuiPerfToolBatch;
@@ -244,6 +245,12 @@ typedef enum ImGuiPerfToolDisplayType
     ImGuiPerfToolDisplayType_PerBranchColors,                   // Use one bar color per branch.
     ImGuiPerfToolDisplayType_CombineByBuildInfo,                // Entries with same build information will be averaged.
 } ImGuiPerfToolDisplayType;
+
+typedef enum ImGuiPerfToolReportType
+{
+    ImGuiPerfToolReportType_Details,                            // Show tests and batches as rows, details in columns.
+    ImGuiPerfToolReportType_Batches,                            // Show test as rows, batches in columns.
+} ImGuiPerfToolReportType;
 
 typedef enum ImGuiTestEngineExportFormat
 {
@@ -669,6 +676,12 @@ struct ImGuiTestInputs {
     ImVec2 HostMousePos;
 };
 
+struct ImGuiTestEnginePerfRecord {
+    double RawValueMs; // For current frame
+    ImMovingAverage_double Average100;
+    ImMovingAverage_double Average500;
+};
+
 // [Internal] Test Engine Context
 struct ImGuiTestEngine {
     ImGuiTestEngineIO IO;
@@ -703,13 +716,20 @@ struct ImGuiTestEngine {
     bool UiStackToolOpen;
     bool UiPerfToolOpen;
     float UiLogHeight;
-    double PerfRefDeltaTime;
-    ImMovingAverage_double PerfDeltaTime100;
-    ImMovingAverage_double PerfDeltaTime500;
+    unsigned long long PerfTimestampPreNewFrame;
+    unsigned long long PerfTimestampPreRender;
+    unsigned long long PerfTimestampPreSwap;
+    unsigned long long PerfTimestampPostSwap;
+    ImGuiTestEnginePerfRecord PerfDtApp;
+    ImGuiTestEnginePerfRecord PerfDtPreNewFrameToPreRender;
+    ImGuiTestEnginePerfRecord PerfDtPreRenderToPreSwap;
+    ImGuiTestEnginePerfRecord PerfDtPreNewFrameToPreSwap;
+    ImGuiTestEnginePerfRecord PerfDtPreSwapToPostSwap;
     ImGuiPerfTool* PerfTool;
     ImGuiCaptureToolUI CaptureTool; // Capture tool UI
     ImGuiCaptureContext CaptureContext; // Capture context used in tests
     ImGuiCaptureArgs* CaptureCurrentArgs;
+    bool PreSwapCalled;
     bool PostSwapCalled;
     bool ToolDebugRebootUiContext; // Completely shutdown and recreate the dear imgui context in place
     bool ToolSlowDown;
@@ -726,19 +746,19 @@ struct ImGuiTestEngine {
 // As a result our solution also doesn't make many allocations.
 struct ImGuiPerfToolEntry {
     unsigned long long Timestamp; // Title of a particular batch of perftool entries.
-    const char* Category; // Name of category perf test is in.
-    const char* TestName; // Name of perf test.
+    const char* Category; // Name of category the test is in.
+    const char* TestName; // Name of test.
     double DtDeltaMs; // Result of perf test.
+    int PerfStressAmount; //
+    const char* GitBranchName; // e.g. "master"
+    const char* BuildType; // e.g. "Debug"
+    const char* Cpu; // e.g. "X64"
+    const char* OS; // e.g. "Windows"
+    const char* Compiler; // e.g. "MSVC"
+    const char* Date; // e.g. "2026-01-01". Date of this entry or min date of combined entries.
     double DtDeltaMsMin; // May be used by perftool.
     double DtDeltaMsMax; // May be used by perftool.
     int NumSamples; // Number aggregated samples.
-    int PerfStressAmount; //
-    const char* GitBranchName; // Build information.
-    const char* BuildType; //
-    const char* Cpu; //
-    const char* OS; //
-    const char* Compiler; //
-    const char* Date; // Date of this entry or min date of combined entries.
     double VsBaseline; // Percent difference vs baseline.
     int LabelIndex; // Index of TestName in ImGuiPerfTool::_LabelsVisible.
 };
@@ -760,9 +780,12 @@ struct ImGuiPerfTool {
     int _NumVisibleBuilds; // Cached number of visible builds.
     int _NumUniqueBuilds; // Cached number of unique builds.
     ImGuiPerfToolDisplayType _DisplayType;
+    ImGuiPerfToolReportType _ReportType;
     int _BaselineBatchIndex; // Index of baseline build.
+    int _BaselineTestIndex; // Index of baseline test.
     unsigned long long _BaselineTimestamp;
     unsigned long long _BaselineBuildId;
+    char _BaselineTestName[128];
     char _Filter[128]; // Context menu filtering substring.
     char _FilterDateFrom[11];
     char _FilterDateTo[11];
@@ -792,42 +815,27 @@ struct ImGuiPerfTool {
 
 #ifndef CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
-typedef ImVector<ImGuiPerfToolEntry> ImVector_ImGuiPerfToolEntry;
-typedef ImVector<unsigned int> ImVector_Uint;
-typedef ImVector<ImGuiCaptureWindowData> ImVector_ImGuiCaptureWindowData;
-typedef ImVector<ImGuiTestItemInfo> ImVector_ImGuiTestItemInfo;
-typedef ImVector<unsigned long long> ImVector_Ulonglong;
-typedef ImMovingAverage<double> ImMovingAverage_double;
 typedef ImVector<ImGuiPerfToolBatch> ImVector_ImGuiPerfToolBatch;
+typedef ImVector<ImGuiCaptureWindowData> ImVector_ImGuiCaptureWindowData;
+typedef ImVector<ImGuiTestRunTask> ImVector_ImGuiTestRunTask;
 typedef ImVector<ImGuiTestInfoTask *> ImVector_ImGuiTestInfoTask_Ptr;
-typedef ImVector<char *> ImVector_charPtr;
-typedef ImPool<ImGuiTestItemInfo> ImPool_ImGuiTestItemInfo;
+typedef ImVector<ImGuiTest *> ImVector_ImGuiTest_Ptr;
 typedef ImVector<ImGuiTestLogLineInfo> ImVector_ImGuiTestLogLineInfo;
 typedef ImVector<double> ImVector_double;
-typedef ImVector<ImGuiTest *> ImVector_ImGuiTest_Ptr;
+typedef ImVector<unsigned int> ImVector_Uint;
+typedef ImVector<char *> ImVector_charPtr;
+typedef ImMovingAverage<double> ImMovingAverage_double;
 typedef ImVector<ImGuiTestInput> ImVector_ImGuiTestInput;
-typedef ImVector<ImGuiTestRunTask> ImVector_ImGuiTestRunTask;
+typedef ImVector<ImGuiTestItemInfo> ImVector_ImGuiTestItemInfo;
+typedef ImVector<ImGuiPerfToolEntry> ImVector_ImGuiPerfToolEntry;
+typedef ImVector<unsigned long long> ImVector_Ulonglong;
+typedef ImPool<ImGuiTestItemInfo> ImPool_ImGuiTestItemInfo;
 
 #endif // CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 
-/** Header file: imgui_te_internal.h **/
-CIMGUI_TE_API ImGuiTestItemInfo * cImGuiTestEngine_FindItemInfo(ImGuiTestEngine* engine, unsigned int id, const char* debug_id);
-CIMGUI_TE_API void cImGuiTestEngine_Yield(ImGuiTestEngine* engine);
-CIMGUI_TE_API void cImGuiTestEngine_SetDeltaTime(ImGuiTestEngine* engine, float delta_time);
-CIMGUI_TE_API int cImGuiTestEngine_GetFrameCount(ImGuiTestEngine* engine);
-CIMGUI_TE_API bool cImGuiTestEngine_PassFilter(ImGuiTest* test, const char* filter);
-CIMGUI_TE_API void cImGuiTestEngine_RunTest(ImGuiTestEngine* engine, ImGuiTestContext* ctx, ImGuiTest* test, int run_flags);
-CIMGUI_TE_API void cImGuiTestEngine_BindImGuiContext(ImGuiTestEngine* engine, ImGuiContext* ui_ctx);
-CIMGUI_TE_API void cImGuiTestEngine_UnbindImGuiContext(ImGuiTestEngine* engine, ImGuiContext* ui_ctx);
-CIMGUI_TE_API void cImGuiTestEngine_RebootUiContext(ImGuiTestEngine* engine);
-CIMGUI_TE_API ImGuiPerfTool * cImGuiTestEngine_GetPerfTool(ImGuiTestEngine* engine);
-CIMGUI_TE_API void cImGuiTestEngine_UpdateTestsSourceLines(ImGuiTestEngine* engine);
-CIMGUI_TE_API bool cImGuiTestEngine_CaptureScreenshot(ImGuiTestEngine* engine, ImGuiCaptureArgs* args);
-CIMGUI_TE_API bool cImGuiTestEngine_CaptureBeginVideo(ImGuiTestEngine* engine, ImGuiCaptureArgs* args);
-CIMGUI_TE_API bool cImGuiTestEngine_CaptureEndVideo(ImGuiTestEngine* engine, ImGuiCaptureArgs* args);
-CIMGUI_TE_API const char * cImGuiTestEngine_GetStatusName(ImGuiTestStatus v);
-CIMGUI_TE_API const char * cImGuiTestEngine_GetRunSpeedName(ImGuiTestRunSpeed v);
-CIMGUI_TE_API const char * cImGuiTestEngine_GetVerboseLevelName(ImGuiTestVerboseLevel v);
+/** Header file: imgui_te_ui.h **/
+CIMGUI_TE_API void cImGuiTestEngine_ShowTestEngineWindows(ImGuiTestEngine* engine, bool* p_open);
+CIMGUI_TE_API void cImGuiTestEngine_OpenSourceFile(ImGuiTestEngine* engine, const char* source_filename, int source_line_no);
 
 /** Header file: imgui_te_utils.h **/
 CIMGUI_TE_API ImGuiID cImHashDecoratedPath(const char* str, const char* str_end, unsigned int seed);
@@ -850,7 +858,7 @@ CIMGUI_TE_API void cImStrTrimTrailingZeroesFromFloat(char* buf, char* buf_end);
 CIMGUI_TE_API void cImParseExtractArgcArgvFromCommandLine(int* out_argc, const char *** out_argv, const char* cmd_line);
 CIMGUI_TE_API bool cImParseFindIniSection(const char* ini_config, const char* header, ImVector_char* result);
 CIMGUI_TE_API uint64_t cImTimeGetInMicroseconds();
-CIMGUI_TE_API void cImTimestampToISO8601(unsigned long long timestamp, Str* out_date);
+CIMGUI_TE_API void cImTimestampToISO8601(unsigned long timestamp_us, Str* out_date);
 CIMGUI_TE_API void cImThreadSleepInMilliseconds(int ms);
 CIMGUI_TE_API void cImThreadSetCurrentThreadDescription(const char* description);
 CIMGUI_TE_API const ImBuildInfo * cImBuildGetCompilationInfo();
@@ -864,17 +872,35 @@ CIMGUI_TE_API void cImOsOutputDebugString(const char* message);
 CIMGUI_TE_API void cImOsConsoleSetTextColor(ImOsConsoleStream stream, ImOsConsoleTextColor color);
 CIMGUI_TE_API ImGuiID cTableGetHeaderID_Str(ImGuiTable* table, const char* column, int instance_no);
 CIMGUI_TE_API ImGuiID cTableGetHeaderID_int(ImGuiTable* table, int column_n, int instance_no);
+CIMGUI_TE_API void cTableDiscardInstance(unsigned int table_id);
+CIMGUI_TE_API void cTableDiscardSettings(unsigned int table_id);
 CIMGUI_TE_API void cTableDiscardInstanceAndSettings(unsigned int table_id);
+CIMGUI_TE_API void cSaveIniSettingsToVector(ImVector_char* out);
 CIMGUI_TE_API void cDrawDataVerifyMatchingBufferCount(ImDrawData* draw_data);
 
-/** Header file: imgui_te_exporters.h **/
-CIMGUI_TE_API void cImGuiTestEngine_PrintResultSummary(ImGuiTestEngine* engine);
-CIMGUI_TE_API void cImGuiTestEngine_Export(ImGuiTestEngine* engine);
-CIMGUI_TE_API void cImGuiTestEngine_ExportEx(ImGuiTestEngine* engine, ImGuiTestEngineExportFormat format, const char* filename);
+/** Header file: imgui_te_coroutine.h **/
+#ifdef IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
+CIMGUI_TE_API ImGuiTestCoroutineInterface * cCoroutine_ImplStdThread_GetInterface();
+#endif // IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
 
-/** Header file: imgui_te_ui.h **/
-CIMGUI_TE_API void cImGuiTestEngine_ShowTestEngineWindows(ImGuiTestEngine* engine, bool* p_open);
-CIMGUI_TE_API void cImGuiTestEngine_OpenSourceFile(ImGuiTestEngine* engine, const char* source_filename, int source_line_no);
+/** Header file: imgui_te_internal.h **/
+CIMGUI_TE_API ImGuiTestItemInfo * cImGuiTestEngine_FindItemInfo(ImGuiTestEngine* engine, unsigned int id, const char* debug_id);
+CIMGUI_TE_API void cImGuiTestEngine_Yield(ImGuiTestEngine* engine);
+CIMGUI_TE_API void cImGuiTestEngine_SetDeltaTime(ImGuiTestEngine* engine, float delta_time);
+CIMGUI_TE_API int cImGuiTestEngine_GetFrameCount(ImGuiTestEngine* engine);
+CIMGUI_TE_API bool cImGuiTestEngine_PassFilter(ImGuiTest* test, const char* filter);
+CIMGUI_TE_API void cImGuiTestEngine_RunTest(ImGuiTestEngine* engine, ImGuiTestContext* ctx, ImGuiTest* test, int run_flags);
+CIMGUI_TE_API void cImGuiTestEngine_BindImGuiContext(ImGuiTestEngine* engine, ImGuiContext* ui_ctx);
+CIMGUI_TE_API void cImGuiTestEngine_UnbindImGuiContext(ImGuiTestEngine* engine, ImGuiContext* ui_ctx);
+CIMGUI_TE_API void cImGuiTestEngine_RebootUiContext(ImGuiTestEngine* engine);
+CIMGUI_TE_API ImGuiPerfTool * cImGuiTestEngine_GetPerfTool(ImGuiTestEngine* engine);
+CIMGUI_TE_API void cImGuiTestEngine_UpdateTestsSourceLines(ImGuiTestEngine* engine);
+CIMGUI_TE_API bool cImGuiTestEngine_CaptureScreenshot(ImGuiTestEngine* engine, ImGuiCaptureArgs* args);
+CIMGUI_TE_API bool cImGuiTestEngine_CaptureBeginVideo(ImGuiTestEngine* engine, ImGuiCaptureArgs* args);
+CIMGUI_TE_API bool cImGuiTestEngine_CaptureEndVideo(ImGuiTestEngine* engine, ImGuiCaptureArgs* args);
+CIMGUI_TE_API const char * cImGuiTestEngine_GetStatusName(ImGuiTestStatus v);
+CIMGUI_TE_API const char * cImGuiTestEngine_GetRunSpeedName(ImGuiTestRunSpeed v);
+CIMGUI_TE_API const char * cImGuiTestEngine_GetVerboseLevelName(ImGuiTestVerboseLevel v);
 
 /** Header file: imgui_te_engine.h **/
 CIMGUI_TE_API void cImGuiTestEngineHook_ItemAdd(ImGuiContext* ui_ctx, unsigned int id, const ImRect* bb, const ImGuiLastItemData* item_data);
@@ -894,7 +920,9 @@ CIMGUI_TE_API void cImGuiTestEngine_DestroyContext(ImGuiTestEngine* engine);
 CIMGUI_TE_API void cImGuiTestEngine_Start(ImGuiTestEngine* engine, ImGuiContext* ui_ctx);
 // Stop coroutine and export if any. (Unbind will lazily happen on context shutdown)
 CIMGUI_TE_API void cImGuiTestEngine_Stop(ImGuiTestEngine* engine);
-// Call every frame after framebuffer swap, will process screen capture and call test_io.ScreenCaptureFunc()
+// Call every frame before framebuffer present/swap (used for time measurement)
+CIMGUI_TE_API void cImGuiTestEngine_PreSwap(ImGuiTestEngine* engine);
+// Call every frame after framebuffer present/swap, will process screen capture and call test_io.ScreenCaptureFunc()
 CIMGUI_TE_API void cImGuiTestEngine_PostSwap(ImGuiTestEngine* engine);
 CIMGUI_TE_API ImGuiTestEngineIO * cImGuiTestEngine_GetIO(ImGuiTestEngine* engine);
 // Prefer calling IM_REGISTER_TEST()
@@ -916,13 +944,13 @@ CIMGUI_TE_API void cImGuiTestEngine_InstallDefaultCrashHandler();
 // Default crash handler, should be called from a custom crash handler if such exists
 CIMGUI_TE_API void cImGuiTestEngine_CrashHandler();
 
-/** Header file: imgui_te_perftool.h **/
-CIMGUI_TE_API void cImGuiTestEngine_PerfToolAppendToCSV(ImGuiPerfTool* perf_log, ImGuiPerfToolEntry* entry, const char* filename);
+/** Header file: imgui_te_exporters.h **/
+CIMGUI_TE_API void cImGuiTestEngine_PrintResultSummary(ImGuiTestEngine* engine);
+CIMGUI_TE_API void cImGuiTestEngine_Export(ImGuiTestEngine* engine);
+CIMGUI_TE_API void cImGuiTestEngine_ExportEx(ImGuiTestEngine* engine, ImGuiTestEngineExportFormat format, const char* filename);
 
-/** Header file: imgui_te_coroutine.h **/
-#ifdef IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
-CIMGUI_TE_API ImGuiTestCoroutineInterface * cCoroutine_ImplStdThread_GetInterface();
-#endif // IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
+/** Header file: imgui_te_perftool.h **/
+CIMGUI_TE_API void cImGuiTestEngine_PerfToolAppendToCSV(ImGuiPerfToolEntry* entry, const char* filename);
 
 /* ImGuiCaptureImageBuf */
 CIMGUI_TE_API ImGuiCaptureImageBuf * ImGuiCaptureImageBuf_ImGuiCaptureImageBuf();
@@ -1211,7 +1239,8 @@ CIMGUI_TE_API void ImGuiTestContext_TableOpenContextMenu(ImGuiTestContext* self,
 CIMGUI_TE_API ImGuiSortDirection ImGuiTestContext_TableClickHeader(ImGuiTestContext* self, ImGuiTestRef ref, const char* label, int key_mods);
 CIMGUI_TE_API void ImGuiTestContext_TableSetColumnEnabled_int(ImGuiTestContext* self, ImGuiTestRef ref, int column_n, bool enabled);
 CIMGUI_TE_API void ImGuiTestContext_TableSetColumnEnabled_Str(ImGuiTestContext* self, ImGuiTestRef ref, const char* label, bool enabled);
-CIMGUI_TE_API void ImGuiTestContext_TableResizeColumn(ImGuiTestContext* self, ImGuiTestRef ref, int column_n, float width);
+CIMGUI_TE_API void ImGuiTestContext_TableResizeColumn_int(ImGuiTestContext* self, ImGuiTestRef ref, int column_n, float width);
+CIMGUI_TE_API void ImGuiTestContext_TableResizeColumn_Str(ImGuiTestContext* self, ImGuiTestRef ref, const char* label, float width);
 CIMGUI_TE_API const ImGuiTableSortSpecs * ImGuiTestContext_TableGetSortSpecs(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API void ImGuiTestContext_ViewportPlatform_SetWindowPos(ImGuiTestContext* self, ImGuiViewport* viewport, const ImVec2* pos);
 CIMGUI_TE_API void ImGuiTestContext_ViewportPlatform_SetWindowSize(ImGuiTestContext* self, ImGuiViewport* viewport, const ImVec2* size);
@@ -1254,6 +1283,12 @@ CIMGUI_TE_API void ImGuiTestInput_ForViewportSetPos(ImGuiTestInput* pOut, ImGuiT
 CIMGUI_TE_API void ImGuiTestInput_ForViewportSetSize(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id, const ImVec2* size);
 CIMGUI_TE_API void ImGuiTestInput_ForViewportClose(ImGuiTestInput* pOut, ImGuiTestInput* self, unsigned int viewport_id);
 
+/* ImGuiTestEnginePerfRecord */
+CIMGUI_TE_API ImGuiTestEnginePerfRecord * ImGuiTestEnginePerfRecord_ImGuiTestEnginePerfRecord();
+CIMGUI_TE_API void ImGuiTestEnginePerfRecord_UpdateValueForCurrentFrame(ImGuiTestEnginePerfRecord* self, double v_ms);
+// Automatically generated destructor
+CIMGUI_TE_API void ImGuiTestEnginePerfRecord_destroy(ImGuiTestEnginePerfRecord* self);
+
 /* ImGuiTestEngine */
 CIMGUI_TE_API ImGuiTestEngine * ImGuiTestEngine_ImGuiTestEngine();
 CIMGUI_TE_API void ImGuiTestEngine_destroy(ImGuiTestEngine* self);
@@ -1288,7 +1323,8 @@ CIMGUI_TE_API bool ImGuiPerfTool__IsVisibleTest(ImGuiPerfTool* self, const char*
 CIMGUI_TE_API void ImGuiPerfTool__CalculateLegendAlignment(ImGuiPerfTool* self);
 CIMGUI_TE_API void ImGuiPerfTool__ShowEntriesPlot(ImGuiPerfTool* self);
 CIMGUI_TE_API void ImGuiPerfTool__ShowEntriesTable(ImGuiPerfTool* self);
-CIMGUI_TE_API void ImGuiPerfTool__SetBaseline(ImGuiPerfTool* self, int batch_index);
+CIMGUI_TE_API void ImGuiPerfTool__ShowEntriesTableBatches(ImGuiPerfTool* self);
+CIMGUI_TE_API void ImGuiPerfTool__SetBaseline(ImGuiPerfTool* self, int batch_index, int test_index);
 CIMGUI_TE_API void ImGuiPerfTool__AddSettingsHandler(ImGuiPerfTool* self);
 CIMGUI_TE_API void ImGuiPerfTool__UnpackSortedKey(ImGuiPerfTool* self, unsigned long long key, int* batch_index, int* entry_index, int* monotonic_index);
 

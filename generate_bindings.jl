@@ -604,8 +604,8 @@ function generate()
             "-DIMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL=1"]
 
     # System includes from the JLL sysroot for the host, plus Clang's own builtin-header dir.
-    append!(args, Clang.Generators.get_default_args())
     push!(args, "-isystem" * Clang.CLANG_INCLUDE)
+    append!(args, Clang.Generators.get_default_args())
 
     # These functions need to be wrapped in a #ifdef
     stdthread_funcs = ["Coroutine_ImplStdThread_GetInterface"]
