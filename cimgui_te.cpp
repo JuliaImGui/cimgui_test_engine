@@ -10,6 +10,140 @@
 
 #include "cimgui_te.h"
 
+// imgui_te_ui.h
+CIMGUI_TE_API void cImGuiTestEngine_ShowTestEngineWindows(ImGuiTestEngine* engine, bool* p_open) {
+    ImGuiTestEngine_ShowTestEngineWindows(engine, p_open);
+}
+
+CIMGUI_TE_API void cImGuiTestEngine_OpenSourceFile(ImGuiTestEngine* engine, const char* source_filename,
+                                                   int source_line_no) {
+    ImGuiTestEngine_OpenSourceFile(engine, source_filename, source_line_no);
+}
+
+// imgui_te_utils.h
+CIMGUI_TE_API ImGuiID cImHashDecoratedPath(const char* str, const char* str_end, unsigned int seed) {
+    return ImHashDecoratedPath(str, str_end, seed);
+}
+
+CIMGUI_TE_API const char* cImFindNextDecoratedPartInPath(const char* str, const char* str_end) {
+    return ImFindNextDecoratedPartInPath(str, str_end);
+}
+
+CIMGUI_TE_API bool cImFileExist(const char* filename) { return ImFileExist(filename); }
+
+CIMGUI_TE_API bool cImFileDelete(const char* filename) { return ImFileDelete(filename); }
+
+CIMGUI_TE_API bool cImFileCreateDirectoryChain(const char* path, const char* path_end) {
+    return ImFileCreateDirectoryChain(path, path_end);
+}
+
+CIMGUI_TE_API bool cImFileFindInParents(const char* sub_path, int max_parent_count, Str* output) {
+    return ImFileFindInParents(sub_path, max_parent_count, output);
+}
+
+CIMGUI_TE_API bool cImFileLoadSourceBlurb(const char* filename, int line_no_start, int line_no_end,
+                                          ImGuiTextBuffer* out_buf) {
+    return ImFileLoadSourceBlurb(filename, line_no_start, line_no_end, out_buf);
+}
+
+CIMGUI_TE_API const char* cImPathFindFilename(const char* path, const char* path_end) {
+    return ImPathFindFilename(path, path_end);
+}
+
+CIMGUI_TE_API const char* cImPathFindExtension(const char* path, const char* path_end) {
+    return ImPathFindExtension(path, path_end);
+}
+
+CIMGUI_TE_API void cImPathFixSeparatorsForCurrentOS(char* buf) { ImPathFixSeparatorsForCurrentOS(buf); }
+
+CIMGUI_TE_API void cImStrReplace(Str* s, const char* find, const char* repl) { ImStrReplace(s, find, repl); }
+
+CIMGUI_TE_API const char* cImStrchrRangeWithEscaping(const char* str, const char* str_end, char find_c) {
+    return ImStrchrRangeWithEscaping(str, str_end, find_c);
+}
+
+CIMGUI_TE_API void cImStrXmlEscape(Str* s) { ImStrXmlEscape(s); }
+
+CIMGUI_TE_API int cImStrBase64Encode(const unsigned char* src, char* dst, int length) {
+    return ImStrBase64Encode(src, dst, length);
+}
+
+CIMGUI_TE_API void cImStrTrimTrailingZeroesFromFloat(char* buf, char* buf_end) {
+    ImStrTrimTrailingZeroesFromFloat(buf, buf_end);
+}
+
+CIMGUI_TE_API void cImParseExtractArgcArgvFromCommandLine(int* out_argc, const char*** out_argv, const char* cmd_line) {
+    ImParseExtractArgcArgvFromCommandLine(out_argc, out_argv, cmd_line);
+}
+
+CIMGUI_TE_API bool cImParseFindIniSection(const char* ini_config, const char* header, ImVector_char* result) {
+    return ImParseFindIniSection(ini_config, header, result);
+}
+
+CIMGUI_TE_API uint64_t cImTimeGetInMicroseconds() { return ImTimeGetInMicroseconds(); }
+
+CIMGUI_TE_API void cImTimestampToISO8601(unsigned long timestamp_us, Str* out_date) {
+    ImTimestampToISO8601(timestamp_us, out_date);
+}
+
+CIMGUI_TE_API void cImThreadSleepInMilliseconds(int ms) { ImThreadSleepInMilliseconds(ms); }
+
+CIMGUI_TE_API void cImThreadSetCurrentThreadDescription(const char* description) {
+    ImThreadSetCurrentThreadDescription(description);
+}
+
+CIMGUI_TE_API const ImBuildInfo* cImBuildGetCompilationInfo() { return ImBuildGetCompilationInfo(); }
+
+CIMGUI_TE_API bool cImBuildFindGitBranchName(const char* git_repo_path, Str* branch_name) {
+    return ImBuildFindGitBranchName(git_repo_path, branch_name);
+}
+
+CIMGUI_TE_API bool cImOsCreateProcess(const char* cmd_line) { return ImOsCreateProcess(cmd_line); }
+
+CIMGUI_TE_API FILE* cImOsPOpen(const char* cmd_line, const char* mode) { return ImOsPOpen(cmd_line, mode); }
+
+CIMGUI_TE_API void cImOsPClose(FILE* fp) { ImOsPClose(fp); }
+
+CIMGUI_TE_API void cImOsOpenInShell(const char* path) { ImOsOpenInShell(path); }
+
+CIMGUI_TE_API bool cImOsIsDebuggerPresent() { return ImOsIsDebuggerPresent(); }
+
+CIMGUI_TE_API void cImOsOutputDebugString(const char* message) { ImOsOutputDebugString(message); }
+
+CIMGUI_TE_API void cImOsConsoleSetTextColor(ImOsConsoleStream stream, ImOsConsoleTextColor color) {
+    ImOsConsoleSetTextColor(stream, color);
+}
+
+CIMGUI_TE_API ImGuiID cTableGetHeaderID_Str(ImGuiTable* table, const char* column, int instance_no) {
+    return TableGetHeaderID(table, column, instance_no);
+}
+
+CIMGUI_TE_API ImGuiID cTableGetHeaderID_int(ImGuiTable* table, int column_n, int instance_no) {
+    return TableGetHeaderID(table, column_n, instance_no);
+}
+
+CIMGUI_TE_API void cTableDiscardInstance(unsigned int table_id) { TableDiscardInstance(table_id); }
+
+CIMGUI_TE_API void cTableDiscardSettings(unsigned int table_id) { TableDiscardSettings(table_id); }
+
+CIMGUI_TE_API void cTableDiscardInstanceAndSettings(unsigned int table_id) {
+    TableDiscardInstanceAndSettings(table_id);
+}
+
+CIMGUI_TE_API void cSaveIniSettingsToVector(ImVector_char* out) { SaveIniSettingsToVector(out); }
+
+CIMGUI_TE_API void cDrawDataVerifyMatchingBufferCount(ImDrawData* draw_data) {
+    DrawDataVerifyMatchingBufferCount(draw_data);
+}
+
+// imgui_te_coroutine.h
+#ifdef IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
+CIMGUI_TE_API ImGuiTestCoroutineInterface* cCoroutine_ImplStdThread_GetInterface() {
+    return Coroutine_ImplStdThread_GetInterface();
+}
+
+#endif // IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
+
 // imgui_te_internal.h
 CIMGUI_TE_API ImGuiTestItemInfo* cImGuiTestEngine_FindItemInfo(ImGuiTestEngine* engine, unsigned int id,
                                                                const char* debug_id) {
@@ -77,138 +211,6 @@ CIMGUI_TE_API const char* cImGuiTestEngine_GetVerboseLevelName(ImGuiTestVerboseL
     return ImGuiTestEngine_GetVerboseLevelName(v);
 }
 
-// imgui_te_utils.h
-CIMGUI_TE_API ImGuiID cImHashDecoratedPath(const char* str, const char* str_end, unsigned int seed) {
-    return ImHashDecoratedPath(str, str_end, seed);
-}
-
-CIMGUI_TE_API const char* cImFindNextDecoratedPartInPath(const char* str, const char* str_end) {
-    return ImFindNextDecoratedPartInPath(str, str_end);
-}
-
-CIMGUI_TE_API bool cImFileExist(const char* filename) { return ImFileExist(filename); }
-
-CIMGUI_TE_API bool cImFileDelete(const char* filename) { return ImFileDelete(filename); }
-
-CIMGUI_TE_API bool cImFileCreateDirectoryChain(const char* path, const char* path_end) {
-    return ImFileCreateDirectoryChain(path, path_end);
-}
-
-CIMGUI_TE_API bool cImFileFindInParents(const char* sub_path, int max_parent_count, Str* output) {
-    return ImFileFindInParents(sub_path, max_parent_count, output);
-}
-
-CIMGUI_TE_API bool cImFileLoadSourceBlurb(const char* filename, int line_no_start, int line_no_end,
-                                          ImGuiTextBuffer* out_buf) {
-    return ImFileLoadSourceBlurb(filename, line_no_start, line_no_end, out_buf);
-}
-
-CIMGUI_TE_API const char* cImPathFindFilename(const char* path, const char* path_end) {
-    return ImPathFindFilename(path, path_end);
-}
-
-CIMGUI_TE_API const char* cImPathFindExtension(const char* path, const char* path_end) {
-    return ImPathFindExtension(path, path_end);
-}
-
-CIMGUI_TE_API void cImPathFixSeparatorsForCurrentOS(char* buf) { ImPathFixSeparatorsForCurrentOS(buf); }
-
-CIMGUI_TE_API void cImStrReplace(Str* s, const char* find, const char* repl) { ImStrReplace(s, find, repl); }
-
-CIMGUI_TE_API const char* cImStrchrRangeWithEscaping(const char* str, const char* str_end, char find_c) {
-    return ImStrchrRangeWithEscaping(str, str_end, find_c);
-}
-
-CIMGUI_TE_API void cImStrXmlEscape(Str* s) { ImStrXmlEscape(s); }
-
-CIMGUI_TE_API int cImStrBase64Encode(const unsigned char* src, char* dst, int length) {
-    return ImStrBase64Encode(src, dst, length);
-}
-
-CIMGUI_TE_API void cImStrTrimTrailingZeroesFromFloat(char* buf, char* buf_end) {
-    ImStrTrimTrailingZeroesFromFloat(buf, buf_end);
-}
-
-CIMGUI_TE_API void cImParseExtractArgcArgvFromCommandLine(int* out_argc, const char*** out_argv, const char* cmd_line) {
-    ImParseExtractArgcArgvFromCommandLine(out_argc, out_argv, cmd_line);
-}
-
-CIMGUI_TE_API bool cImParseFindIniSection(const char* ini_config, const char* header, ImVector_char* result) {
-    return ImParseFindIniSection(ini_config, header, result);
-}
-
-CIMGUI_TE_API uint64_t cImTimeGetInMicroseconds() { return ImTimeGetInMicroseconds(); }
-
-CIMGUI_TE_API void cImTimestampToISO8601(unsigned long long timestamp, Str* out_date) {
-    ImTimestampToISO8601(timestamp, out_date);
-}
-
-CIMGUI_TE_API void cImThreadSleepInMilliseconds(int ms) { ImThreadSleepInMilliseconds(ms); }
-
-CIMGUI_TE_API void cImThreadSetCurrentThreadDescription(const char* description) {
-    ImThreadSetCurrentThreadDescription(description);
-}
-
-CIMGUI_TE_API const ImBuildInfo* cImBuildGetCompilationInfo() { return ImBuildGetCompilationInfo(); }
-
-CIMGUI_TE_API bool cImBuildFindGitBranchName(const char* git_repo_path, Str* branch_name) {
-    return ImBuildFindGitBranchName(git_repo_path, branch_name);
-}
-
-CIMGUI_TE_API bool cImOsCreateProcess(const char* cmd_line) { return ImOsCreateProcess(cmd_line); }
-
-CIMGUI_TE_API FILE* cImOsPOpen(const char* cmd_line, const char* mode) { return ImOsPOpen(cmd_line, mode); }
-
-CIMGUI_TE_API void cImOsPClose(FILE* fp) { ImOsPClose(fp); }
-
-CIMGUI_TE_API void cImOsOpenInShell(const char* path) { ImOsOpenInShell(path); }
-
-CIMGUI_TE_API bool cImOsIsDebuggerPresent() { return ImOsIsDebuggerPresent(); }
-
-CIMGUI_TE_API void cImOsOutputDebugString(const char* message) { ImOsOutputDebugString(message); }
-
-CIMGUI_TE_API void cImOsConsoleSetTextColor(ImOsConsoleStream stream, ImOsConsoleTextColor color) {
-    ImOsConsoleSetTextColor(stream, color);
-}
-
-CIMGUI_TE_API ImGuiID cTableGetHeaderID_Str(ImGuiTable* table, const char* column, int instance_no) {
-    return TableGetHeaderID(table, column, instance_no);
-}
-
-CIMGUI_TE_API ImGuiID cTableGetHeaderID_int(ImGuiTable* table, int column_n, int instance_no) {
-    return TableGetHeaderID(table, column_n, instance_no);
-}
-
-CIMGUI_TE_API void cTableDiscardInstanceAndSettings(unsigned int table_id) {
-    TableDiscardInstanceAndSettings(table_id);
-}
-
-CIMGUI_TE_API void cDrawDataVerifyMatchingBufferCount(ImDrawData* draw_data) {
-    DrawDataVerifyMatchingBufferCount(draw_data);
-}
-
-// imgui_te_exporters.h
-CIMGUI_TE_API void cImGuiTestEngine_PrintResultSummary(ImGuiTestEngine* engine) {
-    ImGuiTestEngine_PrintResultSummary(engine);
-}
-
-CIMGUI_TE_API void cImGuiTestEngine_Export(ImGuiTestEngine* engine) { ImGuiTestEngine_Export(engine); }
-
-CIMGUI_TE_API void cImGuiTestEngine_ExportEx(ImGuiTestEngine* engine, ImGuiTestEngineExportFormat format,
-                                             const char* filename) {
-    ImGuiTestEngine_ExportEx(engine, format, filename);
-}
-
-// imgui_te_ui.h
-CIMGUI_TE_API void cImGuiTestEngine_ShowTestEngineWindows(ImGuiTestEngine* engine, bool* p_open) {
-    ImGuiTestEngine_ShowTestEngineWindows(engine, p_open);
-}
-
-CIMGUI_TE_API void cImGuiTestEngine_OpenSourceFile(ImGuiTestEngine* engine, const char* source_filename,
-                                                   int source_line_no) {
-    ImGuiTestEngine_OpenSourceFile(engine, source_filename, source_line_no);
-}
-
 // imgui_te_engine.h
 CIMGUI_TE_API void cImGuiTestEngineHook_ItemAdd(ImGuiContext* ui_ctx, unsigned int id, const ImRect* bb,
                                                 const ImGuiLastItemData* item_data) {
@@ -268,6 +270,8 @@ CIMGUI_TE_API void cImGuiTestEngine_Start(ImGuiTestEngine* engine, ImGuiContext*
 }
 
 CIMGUI_TE_API void cImGuiTestEngine_Stop(ImGuiTestEngine* engine) { ImGuiTestEngine_Stop(engine); }
+
+CIMGUI_TE_API void cImGuiTestEngine_PreSwap(ImGuiTestEngine* engine) { ImGuiTestEngine_PreSwap(engine); }
 
 CIMGUI_TE_API void cImGuiTestEngine_PostSwap(ImGuiTestEngine* engine) { ImGuiTestEngine_PostSwap(engine); }
 
@@ -335,19 +339,22 @@ CIMGUI_TE_API void cImGuiTestEngine_InstallDefaultCrashHandler() { ImGuiTestEngi
 
 CIMGUI_TE_API void cImGuiTestEngine_CrashHandler() { ImGuiTestEngine_CrashHandler(); }
 
+// imgui_te_exporters.h
+CIMGUI_TE_API void cImGuiTestEngine_PrintResultSummary(ImGuiTestEngine* engine) {
+    ImGuiTestEngine_PrintResultSummary(engine);
+}
+
+CIMGUI_TE_API void cImGuiTestEngine_Export(ImGuiTestEngine* engine) { ImGuiTestEngine_Export(engine); }
+
+CIMGUI_TE_API void cImGuiTestEngine_ExportEx(ImGuiTestEngine* engine, ImGuiTestEngineExportFormat format,
+                                             const char* filename) {
+    ImGuiTestEngine_ExportEx(engine, format, filename);
+}
+
 // imgui_te_perftool.h
-CIMGUI_TE_API void cImGuiTestEngine_PerfToolAppendToCSV(ImGuiPerfTool* perf_log, ImGuiPerfToolEntry* entry,
-                                                        const char* filename) {
-    ImGuiTestEngine_PerfToolAppendToCSV(perf_log, entry, filename);
+CIMGUI_TE_API void cImGuiTestEngine_PerfToolAppendToCSV(ImGuiPerfToolEntry* entry, const char* filename) {
+    ImGuiTestEngine_PerfToolAppendToCSV(entry, filename);
 }
-
-// imgui_te_coroutine.h
-#ifdef IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
-CIMGUI_TE_API ImGuiTestCoroutineInterface* cCoroutine_ImplStdThread_GetInterface() {
-    return Coroutine_ImplStdThread_GetInterface();
-}
-
-#endif // IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL
 
 CIMGUI_TE_API ImGuiCaptureImageBuf* ImGuiCaptureImageBuf_ImGuiCaptureImageBuf() {
     return IM_NEW(ImGuiCaptureImageBuf)();
@@ -1098,9 +1105,14 @@ CIMGUI_TE_API void ImGuiTestContext_TableSetColumnEnabled_Str(ImGuiTestContext* 
     self->TableSetColumnEnabled(ref, label, enabled);
 }
 
-CIMGUI_TE_API void ImGuiTestContext_TableResizeColumn(ImGuiTestContext* self, ImGuiTestRef ref, int column_n,
-                                                      float width) {
+CIMGUI_TE_API void ImGuiTestContext_TableResizeColumn_int(ImGuiTestContext* self, ImGuiTestRef ref, int column_n,
+                                                          float width) {
     self->TableResizeColumn(ref, column_n, width);
+}
+
+CIMGUI_TE_API void ImGuiTestContext_TableResizeColumn_Str(ImGuiTestContext* self, ImGuiTestRef ref, const char* label,
+                                                          float width) {
+    self->TableResizeColumn(ref, label, width);
 }
 
 CIMGUI_TE_API const ImGuiTableSortSpecs* ImGuiTestContext_TableGetSortSpecs(ImGuiTestContext* self, ImGuiTestRef ref) {
@@ -1224,6 +1236,16 @@ CIMGUI_TE_API void ImGuiTestInput_ForViewportClose(ImGuiTestInput* pOut, ImGuiTe
     *pOut = self->ForViewportClose(viewport_id);
 }
 
+CIMGUI_TE_API ImGuiTestEnginePerfRecord* ImGuiTestEnginePerfRecord_ImGuiTestEnginePerfRecord() {
+    return IM_NEW(ImGuiTestEnginePerfRecord)();
+}
+
+CIMGUI_TE_API void ImGuiTestEnginePerfRecord_UpdateValueForCurrentFrame(ImGuiTestEnginePerfRecord* self, double v_ms) {
+    self->UpdateValueForCurrentFrame(v_ms);
+}
+
+CIMGUI_TE_API void ImGuiTestEnginePerfRecord_destroy(ImGuiTestEnginePerfRecord* self) { IM_DELETE(self); }
+
 CIMGUI_TE_API ImGuiTestEngine* ImGuiTestEngine_ImGuiTestEngine() { return IM_NEW(ImGuiTestEngine)(); }
 
 CIMGUI_TE_API void ImGuiTestEngine_destroy(ImGuiTestEngine* self) { IM_DELETE(self); }
@@ -1292,7 +1314,11 @@ CIMGUI_TE_API void ImGuiPerfTool__ShowEntriesPlot(ImGuiPerfTool* self) { self->_
 
 CIMGUI_TE_API void ImGuiPerfTool__ShowEntriesTable(ImGuiPerfTool* self) { self->_ShowEntriesTable(); }
 
-CIMGUI_TE_API void ImGuiPerfTool__SetBaseline(ImGuiPerfTool* self, int batch_index) { self->_SetBaseline(batch_index); }
+CIMGUI_TE_API void ImGuiPerfTool__ShowEntriesTableBatches(ImGuiPerfTool* self) { self->_ShowEntriesTableBatches(); }
+
+CIMGUI_TE_API void ImGuiPerfTool__SetBaseline(ImGuiPerfTool* self, int batch_index, int test_index) {
+    self->_SetBaseline(batch_index, test_index);
+}
 
 CIMGUI_TE_API void ImGuiPerfTool__AddSettingsHandler(ImGuiPerfTool* self) { self->_AddSettingsHandler(); }
 

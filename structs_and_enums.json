@@ -1,127 +1,660 @@
 {
     "locations": {
-        "ImGuiTestAction": "imgui_te_context:105",
-        "ImGuiTestOpFlags_": "imgui_te_context:122",
-        "ImGuiCaptureToolUI": "imgui_capture_tool:156",
-        "ImGuiTestRef": "imgui_te_context:78",
-        "ImGuiTestCheckFlags_": "imgui_te_engine:128",
-        "ImGuiCaptureArgs": "imgui_capture_tool:62",
-        "ImGuiCaptureWindowData": "imgui_capture_tool:85",
-        "ImGuiTestEngineExportFormat": "imgui_te_exporters:49",
-        "ImGuiTest": "imgui_te_engine:425",
-        "ImGuiTestGenericVars": "imgui_te_context:181",
-        "ImBuildInfo": "imgui_te_utils:81",
-        "ImGuiTestEngineResultSummary": "imgui_te_engine:158",
-        "ImGuiTestStatus": "imgui_te_engine:97",
-        "ImOsConsoleStream": "imgui_te_utils:98",
-        "ImGuiCaptureFlags_": "imgui_capture_tool:49",
-        "ImGuiCaptureImageBuf": "imgui_capture_tool:34",
-        "ImGuiTestInfoTask": "imgui_te_internal:25",
-        "ImGuiTestRunTask": "imgui_te_engine:479",
-        "ImGuiTestOutput": "imgui_te_engine:416",
-        "ImGuiTestItemList": "imgui_te_engine:348",
-        "ImGuiTestItemInfo": "imgui_te_engine:328",
-        "ImGuiTestVerboseLevel": "imgui_te_engine:85",
-        "ImGuiTestLogFlags_": "imgui_te_engine:135",
-        "ImGuiPerfToolEntry": "imgui_te_perftool:27",
-        "ImGuiTestGatherTask": "imgui_te_internal:37",
+        "ImGuiTestOutput": "imgui_te_engine:417",
         "ImGuiCaptureStatus": "imgui_capture_tool:78",
-        "ImGuiTestLog": "imgui_te_engine:375",
-        "ImGuiTestEngineIO": "imgui_te_engine:249",
-        "ImGuiPerfToolBatch": "imgui_te_perftool:54",
-        "ImGuiTestInputType": "imgui_te_internal:67",
-        "ImGuiPerfToolDisplayType": "imgui_te_perftool:63",
-        "ImGuiTestGroup": "imgui_te_engine:109",
-        "ImGuiTestContext": "imgui_te_context:220",
-        "ImGuiTestActionFilter": "imgui_te_context:140",
-        "ImGuiTestInput": "imgui_te_internal:79",
-        "ImGuiTestFindByLabelTask": "imgui_te_internal:53",
-        "ImGuiTestFlags_": "imgui_te_engine:118",
-        "ImGuiCsvParser": "imgui_te_utils:162",
-        "ImGuiTestEngine": "imgui_te_internal:153",
-        "ImOsConsoleTextColor": "imgui_te_utils:104",
-        "ImGuiCaptureContext": "imgui_capture_tool:93",
-        "ImGuiTestInputs": "imgui_te_internal:140",
-        "ImGuiPerfTool": "imgui_te_perftool:71",
+        "ImGuiTestAction": "imgui_te_context:105",
+        "ImGuiPerfToolBatch": "imgui_te_perftool:57",
+        "ImOsConsoleStream": "imgui_te_utils:98",
+        "ImGuiTestItemList": "imgui_te_engine:349",
+        "ImGuiCsvParser": "imgui_te_utils:167",
         "ImGuiTestActiveFunc": "imgui_te_engine:69",
-        "ImGuiTestRunSpeed": "imgui_te_engine:77",
-        "ImGuiTestRunFlags_": "imgui_te_engine:141",
+        "ImGuiCaptureFlags_": "imgui_capture_tool:49",
+        "ImGuiCaptureArgs": "imgui_capture_tool:62",
+        "ImGuiTestFindByLabelTask": "imgui_te_internal:53",
+        "ImGuiTestEnginePerfRecord": "imgui_te_internal:152",
+        "ImGuiPerfTool": "imgui_te_perftool:80",
+        "ImGuiTestRunTask": "imgui_te_engine:480",
+        "ImGuiCaptureContext": "imgui_capture_tool:93",
+        "ImBuildInfo": "imgui_te_utils:81",
         "ImGuiTestRefDesc": "imgui_te_context:91",
-        "ImGuiTestLogLineInfo": "imgui_te_engine:369",
+        "ImGuiTestLogLineInfo": "imgui_te_engine:370",
+        "ImGuiTestInput": "imgui_te_internal:79",
+        "ImGuiTestItemInfo": "imgui_te_engine:329",
+        "ImGuiTestGenericItemStatus": "imgui_te_context:157",
+        "ImGuiPerfToolEntry": "imgui_te_perftool:27",
+        "ImGuiTestEngineExportFormat": "imgui_te_exporters:49",
+        "ImGuiTestCheckFlags_": "imgui_te_engine:128",
+        "ImGuiPerfToolDisplayType": "imgui_te_perftool:66",
+        "ImGuiTest": "imgui_te_engine:426",
+        "ImGuiTestRunSpeed": "imgui_te_engine:77",
+        "ImGuiTestGenericVars": "imgui_te_context:181",
+        "ImGuiCaptureWindowData": "imgui_capture_tool:85",
+        "ImGuiTestEngineIO": "imgui_te_engine:250",
+        "ImGuiTestEngine": "imgui_te_internal:172",
+        "ImGuiTestGatherTask": "imgui_te_internal:37",
+        "ImGuiTestEngineResultSummary": "imgui_te_engine:158",
+        "ImGuiTestInputs": "imgui_te_internal:140",
+        "ImGuiTestLogFlags_": "imgui_te_engine:135",
+        "ImGuiTestActionFilter": "imgui_te_context:140",
+        "ImGuiTestFlags_": "imgui_te_engine:118",
+        "ImGuiTestContext": "imgui_te_context:220",
+        "ImGuiTestGroup": "imgui_te_engine:109",
+        "ImGuiTestInfoTask": "imgui_te_internal:25",
+        "ImGuiPerfToolReportType": "imgui_te_perftool:73",
+        "ImGuiCaptureImageBuf": "imgui_capture_tool:34",
+        "ImGuiCaptureToolUI": "imgui_capture_tool:156",
+        "ImGuiTestLog": "imgui_te_engine:376",
+        "ImGuiTestInputType": "imgui_te_internal:67",
+        "ImGuiTestRef": "imgui_te_context:78",
+        "ImGuiTestStatus": "imgui_te_engine:97",
+        "ImGuiTestRunFlags_": "imgui_te_engine:141",
         "ImGuiTestCoroutineInterface": "imgui_te_coroutine:34",
-        "ImGuiTestGenericItemStatus": "imgui_te_context:157"
+        "ImOsConsoleTextColor": "imgui_te_utils:104",
+        "ImGuiTestOpFlags_": "imgui_te_context:122",
+        "ImGuiTestVerboseLevel": "imgui_te_engine:85"
     },
-    "enum_comments": {
-        "ImGuiTestStatus": {
-            "above": "// Test status (stored in ImGuiTest)"
-        },
-        "ImGuiTestLogFlags_": {
-            "above": "// Flags for ImGuiTestContext::Log* functions."
-        },
-        "ImGuiTestCheckFlags_": {
-            "above": "// Flags for IM_CHECK* macros."
-        },
-        "ImGuiTestAction": {
-            "above": "// Named actions. Generally you will call the named helpers e.g. ItemClick(). This is used by shared/low-level functions such as ItemAction()."
-        },
-        "ImGuiTestActiveFunc": {
-            "above": "// Stored in ImGuiTestContext: where we are currently running GuiFunc or TestFunc"
-        },
-        "ImGuiTestOpFlags_": {
-            "above": "// Generic flags for many ImGuiTestContext functions\n// Some flags are only supported by a handful of functions. Check function headers for list of supported flags."
-        },
-        "ImGuiTestFlags_": {
-            "above": "// Flags (stored in ImGuiTest)"
-        },
-        "ImGuiTestGroup": {
-            "above": "// Test group: this is mostly used to categorize tests in our testing UI. (Stored in ImGuiTest)"
-        }
+    "enums": {
+        "ImGuiCaptureStatus": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiCaptureStatus_InProgress",
+                "value": ""
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiCaptureStatus_Done",
+                "value": ""
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiCaptureStatus_Error",
+                "value": ""
+            }
+        ],
+        "ImGuiTestAction": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestAction_Unknown",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestAction_Hover",
+                "comment": "// Move mouse",
+                "value": ""
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestAction_Click",
+                "comment": "// Move mouse and click",
+                "value": ""
+            },
+            {
+                "calc_value": 3,
+                "name": "ImGuiTestAction_DoubleClick",
+                "comment": "// Move mouse and double-click",
+                "value": ""
+            },
+            {
+                "calc_value": 4,
+                "name": "ImGuiTestAction_Check",
+                "comment": "// Check item if unchecked (Checkbox, MenuItem or any widget reporting ImGuiItemStatusFlags_Checkable)",
+                "value": ""
+            },
+            {
+                "calc_value": 5,
+                "name": "ImGuiTestAction_Uncheck",
+                "comment": "// Uncheck item if checked",
+                "value": ""
+            },
+            {
+                "calc_value": 6,
+                "name": "ImGuiTestAction_Open",
+                "comment": "// Open item if closed (TreeNode, BeginMenu or any widget reporting ImGuiItemStatusFlags_Openable)",
+                "value": ""
+            },
+            {
+                "calc_value": 7,
+                "name": "ImGuiTestAction_Close",
+                "comment": "// Close item if opened",
+                "value": ""
+            },
+            {
+                "calc_value": 8,
+                "name": "ImGuiTestAction_Input",
+                "comment": "// Start text inputing into a field (e.g. CTRL+Click on Drags/Slider, click on InputText etc.)",
+                "value": ""
+            },
+            {
+                "calc_value": 9,
+                "name": "ImGuiTestAction_NavActivate",
+                "comment": "// Activate item with navigation",
+                "value": ""
+            },
+            {
+                "calc_value": 10,
+                "name": "ImGuiTestAction_COUNT",
+                "value": ""
+            }
+        ],
+        "ImGuiPerfToolReportType": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiPerfToolReportType_Details",
+                "comment": "// Show tests and batches as rows, details in columns.",
+                "value": ""
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiPerfToolReportType_Batches",
+                "comment": "// Show test as rows, batches in columns.",
+                "value": ""
+            }
+        ],
+        "ImOsConsoleStream": [
+            {
+                "calc_value": 0,
+                "name": "ImOsConsoleStream_StandardOutput",
+                "value": ""
+            },
+            {
+                "calc_value": 1,
+                "name": "ImOsConsoleStream_StandardError",
+                "value": ""
+            }
+        ],
+        "ImGuiTestLogFlags_": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestLogFlags_None",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestLogFlags_NoHeader",
+                "comment": "// Do not display frame count and depth padding",
+                "value": "1 << 0"
+            }
+        ],
+        "ImGuiTestInputType": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestInputType_None",
+                "value": ""
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestInputType_Key",
+                "value": ""
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestInputType_Char",
+                "value": ""
+            },
+            {
+                "calc_value": 3,
+                "name": "ImGuiTestInputType_ViewportFocus",
+                "value": ""
+            },
+            {
+                "calc_value": 4,
+                "name": "ImGuiTestInputType_ViewportSetPos",
+                "value": ""
+            },
+            {
+                "calc_value": 5,
+                "name": "ImGuiTestInputType_ViewportSetSize",
+                "value": ""
+            },
+            {
+                "calc_value": 6,
+                "name": "ImGuiTestInputType_ViewportClose",
+                "value": ""
+            }
+        ],
+        "ImGuiTestFlags_": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestFlags_None",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestFlags_NoGuiWarmUp",
+                "comment": "// Disable running the GUI func for 2 frames before starting test code. For tests which absolutely need to start before GuiFunc.",
+                "value": "1 << 0"
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestFlags_NoAutoFinish",
+                "comment": "// By default, tests with no TestFunc (only a GuiFunc) will end after warmup. Setting this require test to call ctx->Finish().",
+                "value": "1 << 1"
+            },
+            {
+                "calc_value": 4,
+                "name": "ImGuiTestFlags_NoRecoveryWarnings",
+                "comment": "// Error/recovery warnings (missing End/Pop calls etc.) will be displayed as normal debug entries, for tests which may rely on those.",
+                "value": "1 << 2"
+            }
+        ],
+        "ImGuiTestStatus": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestStatus_Unknown",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestStatus_Success",
+                "value": "1"
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestStatus_Queued",
+                "value": "2"
+            },
+            {
+                "calc_value": 3,
+                "name": "ImGuiTestStatus_Running",
+                "value": "3"
+            },
+            {
+                "calc_value": 4,
+                "name": "ImGuiTestStatus_Error",
+                "value": "4"
+            },
+            {
+                "calc_value": 5,
+                "name": "ImGuiTestStatus_Suspended",
+                "value": "5"
+            },
+            {
+                "calc_value": 6,
+                "name": "ImGuiTestStatus_COUNT",
+                "value": ""
+            }
+        ],
+        "ImGuiTestEngineExportFormat": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestEngineExportFormat_None",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestEngineExportFormat_JUnitXml",
+                "value": ""
+            }
+        ],
+        "ImGuiTestRunFlags_": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestRunFlags_None",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestRunFlags_GuiFuncDisable",
+                "comment": "// Used internally to temporarily disable the GUI func (at the end of a test, etc)",
+                "value": "1 << 0"
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestRunFlags_GuiFuncOnly",
+                "comment": "// Set when user selects \"Run GUI func\"",
+                "value": "1 << 1"
+            },
+            {
+                "calc_value": 4,
+                "name": "ImGuiTestRunFlags_NoSuccessMsg",
+                "value": "1 << 2"
+            },
+            {
+                "calc_value": 8,
+                "name": "ImGuiTestRunFlags_EnableRawInputs",
+                "comment": "// Disable input submission to let test submission raw input event (in order to test e.g. IO queue)",
+                "value": "1 << 3"
+            },
+            {
+                "calc_value": 16,
+                "name": "ImGuiTestRunFlags_RunFromGui",
+                "comment": "// Test ran manually from GUI, will disable watchdog.",
+                "value": "1 << 4"
+            },
+            {
+                "calc_value": 32,
+                "name": "ImGuiTestRunFlags_RunFromCommandLine",
+                "comment": "// Test queued from command-line.",
+                "value": "1 << 5"
+            },
+            {
+                "calc_value": 1024,
+                "name": "ImGuiTestRunFlags_NoError",
+                "value": "1 << 10"
+            },
+            {
+                "calc_value": 2048,
+                "name": "ImGuiTestRunFlags_ShareVars",
+                "comment": "// Share generic vars and custom vars between child and parent tests (custom vars need to be same type)",
+                "value": "1 << 11"
+            },
+            {
+                "calc_value": 4096,
+                "name": "ImGuiTestRunFlags_ShareTestContext",
+                "comment": "// Share ImGuiTestContext instead of creating a new one (unsure what purpose this may be useful for yet)",
+                "value": "1 << 12"
+            }
+        ],
+        "ImGuiTestCheckFlags_": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestCheckFlags_None",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestCheckFlags_SilentSuccess",
+                "value": "1 << 0"
+            }
+        ],
+        "ImGuiTestActiveFunc": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestActiveFunc_None",
+                "value": ""
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestActiveFunc_GuiFunc",
+                "comment": "// == GuiFunc() handler",
+                "value": ""
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestActiveFunc_TestFunc",
+                "comment": "// == TestFunc() handler",
+                "value": ""
+            },
+            {
+                "calc_value": 3,
+                "name": "ImGuiTestActiveFunc_TeardownFunc",
+                "comment": "// == TeardownFunc() handler",
+                "value": ""
+            }
+        ],
+        "ImGuiPerfToolDisplayType": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiPerfToolDisplayType_Simple",
+                "comment": "// Each run will be displayed individually.",
+                "value": ""
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiPerfToolDisplayType_PerBranchColors",
+                "comment": "// Use one bar color per branch.",
+                "value": ""
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiPerfToolDisplayType_CombineByBuildInfo",
+                "comment": "// Entries with same build information will be averaged.",
+                "value": ""
+            }
+        ],
+        "ImGuiCaptureFlags_": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiCaptureFlags_None",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiCaptureFlags_StitchAll",
+                "comment": "// Capture entire window scroll area (by scrolling and taking multiple screenshot). Only works for a single window.",
+                "value": "1 << 0"
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiCaptureFlags_IncludeOtherWindows",
+                "comment": "// Disable hiding other windows (when CaptureAddWindow has been called by default other windows are hidden)",
+                "value": "1 << 1"
+            },
+            {
+                "calc_value": 4,
+                "name": "ImGuiCaptureFlags_IncludePopups",
+                "comment": "// Expand capture area to automatically include visible popups (Unused if ImGuiCaptureFlags_IncludeOtherWindows is set)",
+                "value": "1 << 2"
+            },
+            {
+                "calc_value": 8,
+                "name": "ImGuiCaptureFlags_HideMouseCursor",
+                "comment": "// Hide render software mouse cursor during capture.",
+                "value": "1 << 3"
+            },
+            {
+                "calc_value": 16,
+                "name": "ImGuiCaptureFlags_Instant",
+                "comment": "// Perform capture on very same frame. Only works when capturing a rectangular region. Unsupported features: content stitching, window hiding, window relocation.",
+                "value": "1 << 4"
+            },
+            {
+                "calc_value": 32,
+                "name": "ImGuiCaptureFlags_NoSave",
+                "comment": "// Do not save output image.",
+                "value": "1 << 5"
+            }
+        ],
+        "ImGuiTestGroup": [
+            {
+                "calc_value": 4294967295,
+                "name": "ImGuiTestGroup_Unknown",
+                "value": "-1"
+            },
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestGroup_Tests",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestGroup_Perfs",
+                "value": "1"
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestGroup_COUNT",
+                "value": ""
+            }
+        ],
+        "ImGuiTestRunSpeed": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestRunSpeed_Fast",
+                "comment": "// Run tests as fast as possible (teleport mouse, skip delays, etc.)",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestRunSpeed_Normal",
+                "comment": "// Run tests at human watchable speed (for debugging)",
+                "value": "1"
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestRunSpeed_Cinematic",
+                "comment": "// Run tests with pauses between actions (for e.g. tutorials)",
+                "value": "2"
+            },
+            {
+                "calc_value": 3,
+                "name": "ImGuiTestRunSpeed_COUNT",
+                "value": ""
+            }
+        ],
+        "ImOsConsoleTextColor": [
+            {
+                "calc_value": 0,
+                "name": "ImOsConsoleTextColor_Black",
+                "value": ""
+            },
+            {
+                "calc_value": 1,
+                "name": "ImOsConsoleTextColor_White",
+                "value": ""
+            },
+            {
+                "calc_value": 2,
+                "name": "ImOsConsoleTextColor_BrightWhite",
+                "value": ""
+            },
+            {
+                "calc_value": 3,
+                "name": "ImOsConsoleTextColor_BrightRed",
+                "value": ""
+            },
+            {
+                "calc_value": 4,
+                "name": "ImOsConsoleTextColor_BrightGreen",
+                "value": ""
+            },
+            {
+                "calc_value": 5,
+                "name": "ImOsConsoleTextColor_BrightBlue",
+                "value": ""
+            },
+            {
+                "calc_value": 6,
+                "name": "ImOsConsoleTextColor_BrightYellow",
+                "value": ""
+            }
+        ],
+        "ImGuiTestOpFlags_": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestOpFlags_None",
+                "value": "0"
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestOpFlags_NoCheckHoveredId",
+                "comment": "// Don't check for HoveredId after aiming for a widget. This is automatic when there's an active item, typically in drag and drop operation. Otherwise, a few situations may want this e.g. for items that don't use ItemHoverable(), or when intently aiming for an item behind a popup/modal inhibition layer.",
+                "value": "1 << 1"
+            },
+            {
+                "calc_value": 4,
+                "name": "ImGuiTestOpFlags_NoError",
+                "comment": "// Don't abort/error e.g. if the item cannot be found or the operation doesn't succeed.",
+                "value": "1 << 2"
+            },
+            {
+                "calc_value": 8,
+                "name": "ImGuiTestOpFlags_NoFocusWindow",
+                "comment": "// Don't focus window when aiming at an item",
+                "value": "1 << 3"
+            },
+            {
+                "calc_value": 16,
+                "name": "ImGuiTestOpFlags_NoAutoUncollapse",
+                "comment": "// Disable automatically uncollapsing windows (useful when specifically testing Collapsing behaviors)",
+                "value": "1 << 4"
+            },
+            {
+                "calc_value": 32,
+                "name": "ImGuiTestOpFlags_NoAutoOpenFullPath",
+                "comment": "// Disable automatically opening intermediaries (e.g. ItemClick(\"Hello/OK\") will automatically first open \"Hello\" if \"OK\" isn't found. Only works if ref is a string path.",
+                "value": "1 << 5"
+            },
+            {
+                "calc_value": 64,
+                "name": "ImGuiTestOpFlags_NoYield",
+                "comment": "// Don't yield (only supported by a few functions), in case you need to manage rigorous per-frame timing.",
+                "value": "1 << 6"
+            },
+            {
+                "calc_value": 128,
+                "name": "ImGuiTestOpFlags_IsSecondAttempt",
+                "comment": "// Used by recursing functions to indicate a second attempt",
+                "value": "1 << 7"
+            },
+            {
+                "calc_value": 256,
+                "name": "ImGuiTestOpFlags_MoveToEdgeL",
+                "comment": "// Simple Dumb aiming helpers to test widget that care about clicking position. May need to replace will better functionalities.",
+                "value": "1 << 8"
+            },
+            {
+                "calc_value": 512,
+                "name": "ImGuiTestOpFlags_MoveToEdgeR",
+                "value": "1 << 9"
+            },
+            {
+                "calc_value": 1024,
+                "name": "ImGuiTestOpFlags_MoveToEdgeU",
+                "value": "1 << 10"
+            },
+            {
+                "calc_value": 2048,
+                "name": "ImGuiTestOpFlags_MoveToEdgeD",
+                "value": "1 << 11"
+            },
+            {
+                "calc_value": 4096,
+                "name": "ImGuiTestOpFlags_NoScroll",
+                "comment": "// Disable automatically scrolling to reach an item.",
+                "value": "1 << 12"
+            }
+        ],
+        "ImGuiTestVerboseLevel": [
+            {
+                "calc_value": 0,
+                "name": "ImGuiTestVerboseLevel_Silent",
+                "comment": "// -v0",
+                "value": "0"
+            },
+            {
+                "calc_value": 1,
+                "name": "ImGuiTestVerboseLevel_Error",
+                "comment": "// -v1",
+                "value": "1"
+            },
+            {
+                "calc_value": 2,
+                "name": "ImGuiTestVerboseLevel_Warning",
+                "comment": "// -v2",
+                "value": "2"
+            },
+            {
+                "calc_value": 3,
+                "name": "ImGuiTestVerboseLevel_Info",
+                "comment": "// -v3",
+                "value": "3"
+            },
+            {
+                "calc_value": 4,
+                "name": "ImGuiTestVerboseLevel_Debug",
+                "comment": "// -v4",
+                "value": "4"
+            },
+            {
+                "calc_value": 5,
+                "name": "ImGuiTestVerboseLevel_Trace",
+                "value": "5"
+            },
+            {
+                "calc_value": 6,
+                "name": "ImGuiTestVerboseLevel_COUNT",
+                "value": ""
+            }
+        ]
     },
     "struct_comments": {
-        "ImGuiTestEngine": {
-            "above": "// [Internal] Test Engine Context"
-        },
-        "ImGuiCaptureContext": {
-            "above": "// Implements functionality for capturing images"
-        },
-        "ImGuiCaptureImageBuf": {
-            "above": "// [Internal]\n// Helper class for simple bitmap manipulation (not particularly efficient!)"
-        },
-        "ImGuiTestInfoTask": {
-            "above": "// Query item position/window/state given ID."
-        },
-        "ImGuiCaptureToolUI": {
-            "above": "// Implements UI for capturing images\n// (when using ImGuiTestEngine scripting API you may not need to use this at all)"
-        },
-        "ImGuiTestRef": {
-            "above": "// Weak reference to an Item/Window given an hashed ID _or_ a string path ID.\n// This is most often passed as argument to function and generally has a very short lifetime.\n// Documentation: https://github.com/ocornut/imgui_test_engine/wiki/Named-References\n// (SUGGESTION: add those constructors to \"VA Step Filter\" (Visual Assist) or a .natstepfilter file (Visual Studio) so they are skipped by F11 (StepInto)"
-        },
-        "ImGuiPerfToolEntry": {
-            "above": "// [Internal] Perf log entry. Changes to this struct should be reflected in ImGuiTestContext::PerfCapture() and ImGuiTestEngine_Start().\n// This struct assumes strings stored here will be available until next ImGuiPerfTool::Clear() call. Fortunately we do not have to actively\n// manage lifetime of these strings. New entries are created only in two cases:\n// 1. ImGuiTestEngine_PerfToolAppendToCSV() call after perf test has run. This call receives ImGuiPerfToolEntry with const strings stored indefinitely by application.\n// 2. As a consequence of ImGuiPerfTool::LoadCSV() call, we persist the ImGuiCSVParser instance, which keeps parsed CSV text, from which strings are referenced.\n// As a result our solution also doesn't make many allocations."
-        },
-        "ImGuiTestGatherTask": {
-            "above": "// Gather item list in given parent ID."
-        },
-        "ImGuiCaptureArgs": {
-            "above": "// Defines input and output arguments for capture process.\n// When capturing from tests you can usually use the ImGuiTestContext::CaptureXXX() helpers functions."
-        },
         "ImGuiTestRefDesc": {
             "above": "// Debug helper to output a string showing the Path, ID or Debug Label based on what is available (some items only have ID as we couldn't find/store a Path)\n// (The size is arbitrary, this is only used for logging info the user/debugger)"
         },
-        "ImGuiTestRunTask": {
-            "above": "// Stored in test queue"
-        },
         "ImGuiTestOutput": {
             "above": "// Storage for the output of a test run"
-        },
-        "ImGuiTest": {
-            "above": "// Storage for one test"
-        },
-        "ImGuiTestGenericVars": {
-            "above": "// Generic structure with various storage fields.\n// This is useful for tests to quickly share data between GuiFunc and TestFunc without creating custom data structure.\n// If those fields are not enough: using test->SetVarsDataType<>() + ctx->GetVars<>() it is possible to store custom data."
-        },
-        "ImBuildInfo": {
-            "above": "// All the pointers are expect to be literals/persistent"
         },
         "ImGuiPerfToolBatch": {
             "above": "// [Internal] Perf log batch."
@@ -129,2755 +662,2299 @@
         "ImGuiTestItemList": {
             "above": "// Result of an GatherItems() query"
         },
-        "ImGuiTestActionFilter": {
-            "above": "// Advanced filtering for ItemActionAll()"
-        },
         "ImGuiTestInput": {
             "above": "// FIXME: May want to strip further now that core imgui is using its own input queue"
         },
-        "ImGuiTestCoroutineInterface": {
-            "above": "// Coroutine support interface\n// Your app needs to return and implement this.\n// You can '#define IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL 1' in your imconfig file to use a default implementation using std::thread\n// Documentation: https://github.com/ocornut/imgui_test_engine/wiki/Setting-Up"
+        "ImGuiCaptureImageBuf": {
+            "above": "// [Internal]\n// Helper class for simple bitmap manipulation (not particularly efficient!)"
+        },
+        "ImGuiCaptureToolUI": {
+            "above": "// Implements UI for capturing images\n// (when using ImGuiTestEngine scripting API you may not need to use this at all)"
         },
         "ImGuiTestItemInfo": {
             "above": "// Information about a given item or window, result of an ItemInfo() or WindowInfo() query"
         },
-        "ImGuiTestFindByLabelTask": {
-            "above": "// Find item ID given a label and a parent id\n// Usually used by queries with wildcards such as ItemInfo(\"hello/**/foo/bar\")"
+        "ImGuiTestRef": {
+            "above": "// Weak reference to an Item/Window given an hashed ID _or_ a string path ID.\n// This is most often passed as argument to function and generally has a very short lifetime.\n// Documentation: https://github.com/ocornut/imgui_test_engine/wiki/Named-References\n// (SUGGESTION: add those constructors to \"VA Step Filter\" (Visual Assist) or a .natstepfilter file (Visual Studio) so they are skipped by F11 (StepInto)"
+        },
+        "ImGuiTestActionFilter": {
+            "above": "// Advanced filtering for ItemActionAll()"
         },
         "ImGuiTestGenericItemStatus": {
             "above": "// Helper struct to store various query-able state of an item.\n// This facilitate interactions between GuiFunc and TestFunc, since those state are frequently used."
+        },
+        "ImGuiPerfToolEntry": {
+            "above": "// [Internal] Perf log entry. Changes to this struct should be reflected in ImGuiTestContext::PerfCapture() and ImGuiTestEngine_Start().\n// This struct assumes strings stored here will be available until next ImGuiPerfTool::Clear() call. Fortunately we do not have to actively\n// manage lifetime of these strings. New entries are created only in two cases:\n// 1. ImGuiTestEngine_PerfToolAppendToCSV() call after perf test has run. This call receives ImGuiPerfToolEntry with const strings stored indefinitely by application.\n// 2. As a consequence of ImGuiPerfTool::LoadCSV() call, we persist the ImGuiCSVParser instance, which keeps parsed CSV text, from which strings are referenced.\n// As a result our solution also doesn't make many allocations."
+        },
+        "ImGuiTest": {
+            "above": "// Storage for one test"
+        },
+        "ImGuiTestCoroutineInterface": {
+            "above": "// Coroutine support interface\n// Your app needs to return and implement this.\n// You can '#define IMGUI_TEST_ENGINE_ENABLE_COROUTINE_STDTHREAD_IMPL 1' in your imconfig file to use a default implementation using std::thread\n// Documentation: https://github.com/ocornut/imgui_test_engine/wiki/Setting-Up"
+        },
+        "ImGuiCaptureArgs": {
+            "above": "// Defines input and output arguments for capture process.\n// When capturing from tests you can usually use the ImGuiTestContext::CaptureXXX() helpers functions."
+        },
+        "ImGuiTestFindByLabelTask": {
+            "above": "// Find item ID given a label and a parent id\n// Usually used by queries with wildcards such as ItemInfo(\"hello/**/foo/bar\")"
+        },
+        "ImGuiTestGenericVars": {
+            "above": "// Generic structure with various storage fields.\n// This is useful for tests to quickly share data between GuiFunc and TestFunc without creating custom data structure.\n// If those fields are not enough: using test->SetVarsDataType<>() + ctx->GetVars<>() it is possible to store custom data."
+        },
+        "ImGuiTestEngine": {
+            "above": "// [Internal] Test Engine Context"
+        },
+        "ImGuiTestGatherTask": {
+            "above": "// Gather item list in given parent ID."
+        },
+        "ImGuiTestRunTask": {
+            "above": "// Stored in test queue"
+        },
+        "ImGuiCaptureContext": {
+            "above": "// Implements functionality for capturing images"
+        },
+        "ImBuildInfo": {
+            "above": "// All the pointers are expect to be literals/persistent"
+        },
+        "ImGuiTestInfoTask": {
+            "above": "// Query item position/window/state given ID."
+        }
+    },
+    "enum_comments": {
+        "ImGuiTestCheckFlags_": {
+            "above": "// Flags for IM_CHECK* macros."
+        },
+        "ImGuiTestGroup": {
+            "above": "// Test group: this is mostly used to categorize tests in our testing UI. (Stored in ImGuiTest)"
+        },
+        "ImGuiTestAction": {
+            "above": "// Named actions. Generally you will call the named helpers e.g. ItemClick(). This is used by shared/low-level functions such as ItemAction()."
+        },
+        "ImGuiTestFlags_": {
+            "above": "// Flags (stored in ImGuiTest)"
+        },
+        "ImGuiTestOpFlags_": {
+            "above": "// Generic flags for many ImGuiTestContext functions\n// Some flags are only supported by a handful of functions. Check function headers for list of supported flags."
+        },
+        "ImGuiTestStatus": {
+            "above": "// Test status (stored in ImGuiTest)"
+        },
+        "ImGuiTestLogFlags_": {
+            "above": "// Flags for ImGuiTestContext::Log* functions."
+        },
+        "ImGuiTestActiveFunc": {
+            "above": "// Stored in ImGuiTestContext: where we are currently running GuiFunc or TestFunc"
         }
     },
     "structs": {
-        "ImGuiTestEngine": [
-            {
-                "name": "IO",
-                "type": "ImGuiTestEngineIO"
-            },
-            {
-                "name": "UiContextTarget",
-                "type": "ImGuiContext*",
-                "comment": {
-                    "sameline": "// imgui context for testing"
-                }
-            },
-            {
-                "name": "UiContextActive",
-                "type": "ImGuiContext*",
-                "comment": {
-                    "sameline": "// imgui context for testing == UiContextTarget or nullptr"
-                }
-            },
-            {
-                "name": "Started",
-                "type": "bool"
-            },
-            {
-                "name": "UiContextHasHooks",
-                "type": "bool"
-            },
-            {
-                "name": "BatchStartTime",
-                "type": "unsigned long long"
-            },
-            {
-                "name": "BatchEndTime",
-                "type": "unsigned long long"
-            },
-            {
-                "name": "FrameCount",
-                "type": "int"
-            },
-            {
-                "name": "OverrideDeltaTime",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Inject custom delta time into imgui context to simulate clock passing faster than wall clock time."
-                }
-            },
-            {
-                "name": "TestsAll",
-                "type": "ImVector_ImGuiTest_Ptr"
-            },
-            {
-                "name": "TestsQueue",
-                "type": "ImVector_ImGuiTestRunTask"
-            },
-            {
-                "name": "TestContext",
-                "type": "ImGuiTestContext*",
-                "comment": {
-                    "sameline": "// Running test context"
-                }
-            },
-            {
-                "name": "TestsSourceLinesDirty",
-                "type": "bool"
-            },
-            {
-                "name": "InfoTasks",
-                "type": "ImVector_ImGuiTestInfoTask_Ptr"
-            },
-            {
-                "name": "GatherTask",
-                "type": "ImGuiTestGatherTask"
-            },
-            {
-                "name": "FindByLabelTask",
-                "type": "ImGuiTestFindByLabelTask"
-            },
-            {
-                "name": "TestQueueCoroutine",
-                "type": "void*",
-                "comment": {
-                    "sameline": "// Coroutine to run the test queue"
-                }
-            },
-            {
-                "name": "TestQueueCoroutineShouldExit",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Flag to indicate that we are shutting down and the test queue coroutine should stop"
-                }
-            },
-            {
-                "name": "StringBuilderForChecks",
-                "type": "ImGuiTextBuffer"
-            },
-            {
-                "name": "Inputs",
-                "type": "ImGuiTestInputs"
-            },
-            {
-                "name": "Abort",
-                "type": "bool"
-            },
-            {
-                "name": "UiSelectAndScrollToTest",
-                "type": "ImGuiTest*"
-            },
-            {
-                "name": "UiSelectedTest",
-                "type": "ImGuiTest*"
-            },
-            {
-                "name": "UiFilterTests",
-                "type": "Str*"
-            },
-            {
-                "name": "UiFilterPerfs",
-                "type": "Str*"
-            },
-            {
-                "name": "UiFilterByStatusMask",
-                "type": "unsigned int"
-            },
-            {
-                "name": "UiMetricsOpen",
-                "type": "bool"
-            },
-            {
-                "name": "UiDebugLogOpen",
-                "type": "bool"
-            },
-            {
-                "name": "UiCaptureToolOpen",
-                "type": "bool"
-            },
-            {
-                "name": "UiStackToolOpen",
-                "type": "bool"
-            },
-            {
-                "name": "UiPerfToolOpen",
-                "type": "bool"
-            },
-            {
-                "name": "UiLogHeight",
-                "type": "float"
-            },
-            {
-                "name": "PerfRefDeltaTime",
-                "type": "double"
-            },
-            {
-                "name": "PerfDeltaTime100",
-                "type": "ImMovingAverage_double"
-            },
-            {
-                "name": "PerfDeltaTime500",
-                "type": "ImMovingAverage_double"
-            },
-            {
-                "name": "PerfTool",
-                "type": "ImGuiPerfTool*"
-            },
-            {
-                "name": "CaptureTool",
-                "type": "ImGuiCaptureToolUI",
-                "comment": {
-                    "sameline": "// Capture tool UI"
-                }
-            },
-            {
-                "name": "CaptureContext",
-                "type": "ImGuiCaptureContext",
-                "comment": {
-                    "sameline": "// Capture context used in tests"
-                }
-            },
-            {
-                "name": "CaptureCurrentArgs",
-                "type": "ImGuiCaptureArgs*"
-            },
-            {
-                "name": "PostSwapCalled",
-                "type": "bool"
-            },
-            {
-                "name": "ToolDebugRebootUiContext",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Completely shutdown and recreate the dear imgui context in place"
-                }
-            },
-            {
-                "name": "ToolSlowDown",
-                "type": "bool"
-            },
-            {
-                "name": "ToolSlowDownMs",
-                "type": "int"
-            },
-            {
-                "name": "BackupConfigRunSpeed",
-                "type": "ImGuiTestRunSpeed"
-            },
-            {
-                "name": "BackupConfigNoThrottle",
-                "type": "bool"
-            }
-        ],
-        "ImGuiCaptureContext": [
-            {
-                "name": "ScreenCaptureFunc",
-                "type": "ImGuiScreenCaptureFunc *",
-                "comment": {
-                    "sameline": "// Graphics backend specific function that captures specified portion of framebuffer and writes RGBA data to `pixels` buffer."
-                }
-            },
-            {
-                "name": "ScreenCaptureUserData",
-                "type": "void*",
-                "comment": {
-                    "sameline": "// Custom user pointer which is passed to ScreenCaptureFunc. (Optional)"
-                }
-            },
-            {
-                "name": "VideoCaptureEncoderPath",
-                "type": "char*",
-                "comment": {
-                    "sameline": "// Video encoder path (not owned, stored externally)."
-                }
-            },
-            {
-                "name": "VideoCaptureEncoderPathSize",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Optional. Set in order to edit this parameter from UI."
-                }
-            },
-            {
-                "name": "VideoCaptureEncoderParams",
-                "type": "char*",
-                "comment": {
-                    "sameline": "// Video encoder params (not owned, stored externally)."
-                }
-            },
-            {
-                "name": "VideoCaptureEncoderParamsSize",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Optional. Set in order to edit this parameter from UI."
-                }
-            },
-            {
-                "name": "GifCaptureEncoderParams",
-                "type": "char*",
-                "comment": {
-                    "sameline": "// Video encoder params for GIF output (not owned, stored externally)."
-                }
-            },
-            {
-                "name": "GifCaptureEncoderParamsSize",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Optional. Set in order to edit this parameter from UI."
-                }
-            },
-            {
-                "name": "_CaptureRect",
-                "type": "ImRect",
-                "comment": {
-                    "sameline": "// Viewport rect that is being captured."
-                }
-            },
-            {
-                "name": "_CapturedWindowRect",
-                "type": "ImRect",
-                "comment": {
-                    "sameline": "// Top-left corner of region that covers all windows included in capture. This is not same as _CaptureRect.Min when capturing explicitly specified rect."
-                }
-            },
-            {
-                "name": "_ChunkNo",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Number of chunk that is being captured when capture spans multiple frames."
-                }
-            },
-            {
-                "name": "_FrameNo",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Frame number during capture process that spans multiple frames."
-                }
-            },
-            {
-                "name": "_MouseRelativeToWindowPos",
-                "type": "ImVec2",
-                "comment": {
-                    "sameline": "// Mouse cursor position relative to captured window (when _StitchAll is in use)."
-                }
-            },
-            {
-                "name": "_HoveredWindow",
-                "type": "ImGuiWindow*",
-                "comment": {
-                    "sameline": "// Window which was hovered at capture start."
-                }
-            },
-            {
-                "name": "_CaptureBuf",
-                "type": "ImGuiCaptureImageBuf",
-                "comment": {
-                    "sameline": "// Output image buffer."
-                }
-            },
-            {
-                "name": "_CaptureArgs",
-                "type": "const ImGuiCaptureArgs*",
-                "comment": {
-                    "sameline": "// Current capture args. Set only if capture is in progress."
-                }
-            },
-            {
-                "name": "_WindowsData",
-                "type": "ImVector_ImGuiCaptureWindowData",
-                "comment": {
-                    "sameline": "// Backup windows that will have their rect modified and restored. args->InCaptureWindows can not be used because popups may get closed during capture and no longer appear in that list."
-                }
-            },
-            {
-                "name": "_VideoRecording",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Flag indicating that video recording is in progress."
-                }
-            },
-            {
-                "name": "_VideoLastFrameTime",
-                "type": "double",
-                "comment": {
-                    "sameline": "// Time when last video frame was recorded."
-                }
-            },
-            {
-                "name": "_VideoEncoderPipe",
-                "type": "FILE*",
-                "comment": {
-                    "sameline": "// File writing to stdin of video encoder process."
-                }
-            },
-            {
-                "name": "_BackupMouseDrawCursor",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Initial value of g.IO.MouseDrawCursor"
-                }
-            },
-            {
-                "name": "_BackupDisplayWindowPadding",
-                "type": "ImVec2",
-                "comment": {
-                    "sameline": "// Backup padding. We set it to {0, 0} during capture."
-                }
-            },
-            {
-                "name": "_BackupDisplaySafeAreaPadding",
-                "type": "ImVec2",
-                "comment": {
-                    "sameline": "// Backup padding. We set it to {0, 0} during capture."
-                }
-            }
-        ],
-        "ImGuiCaptureImageBuf": [
-            {
-                "name": "Width",
-                "type": "int"
-            },
-            {
-                "name": "Height",
-                "type": "int"
-            },
-            {
-                "name": "Data",
-                "type": "unsigned int*",
-                "comment": {
-                    "sameline": "// RGBA8"
-                }
-            }
-        ],
-        "ImGuiTestInfoTask": [
-            {
-                "name": "ID",
-                "type": "unsigned int"
-            },
-            {
-                "name": "FrameCount",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Timestamp of request"
-                }
-            },
-            {
-                "name": "DebugName[64]",
-                "size": 64,
-                "type": "char",
-                "comment": {
-                    "sameline": "// Debug string representing the queried ID"
-                }
-            },
-            {
-                "name": "Result",
-                "type": "ImGuiTestItemInfo"
-            }
-        ],
-        "ImGuiCaptureToolUI": [
-            {
-                "name": "SnapGridSize",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Size of the grid cell for \"snap to grid\" functionality."
-                }
-            },
-            {
-                "name": "OutputLastFilename[256]",
-                "size": 256,
-                "type": "char",
-                "comment": {
-                    "sameline": "// File name of last captured file."
-                }
-            },
-            {
-                "name": "VideoCaptureExtension",
-                "type": "char*",
-                "comment": {
-                    "sameline": "// Video file extension (e.g. \".gif\" or \".mp4\")"
-                }
-            },
-            {
-                "name": "VideoCaptureExtensionSize",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Optional. Set in order to edit this parameter from UI."
-                }
-            },
-            {
-                "name": "_CaptureArgs",
-                "type": "ImGuiCaptureArgs",
-                "comment": {
-                    "sameline": "// Capture args"
-                }
-            },
-            {
-                "name": "_StateIsPickingWindow",
-                "type": "bool"
-            },
-            {
-                "name": "_StateIsCapturing",
-                "type": "bool"
-            },
-            {
-                "name": "_SelectedWindows",
-                "type": "ImVector_Uint"
-            },
-            {
-                "name": "_OutputFileTemplate[256]",
-                "size": 256,
-                "type": "char",
-                "comment": {
-                    "sameline": "//"
-                }
-            },
-            {
-                "name": "_FileCounter",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Counter which may be appended to file name when saving. By default, counting starts from 1. When done this field holds number of saved files."
-                }
-            }
-        ],
-        "ImGuiTestInputs": [
-            {
-                "name": "MousePosValue",
-                "type": "ImVec2",
-                "comment": {
-                    "sameline": "// Own non-rounded copy of MousePos in order facilitate simulating mouse movement very slow speed and high-framerate"
-                }
-            },
-            {
-                "name": "MouseWheel",
-                "type": "ImVec2"
-            },
-            {
-                "name": "MouseHoveredViewport",
-                "type": "unsigned int"
-            },
-            {
-                "name": "MouseButtonsValue",
-                "type": "int",
-                "comment": {
-                    "sameline": "// FIXME-TESTS: Use simulated_io.MouseDown[] ?"
-                }
-            },
-            {
-                "name": "Queue",
-                "type": "ImVector_ImGuiTestInput"
-            },
-            {
-                "name": "HostEscDown",
-                "type": "bool"
-            },
-            {
-                "name": "HostEscDownDuration",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Maintain our own DownDuration for host/backend ESC key so we can abort."
-                }
-            },
-            {
-                "name": "HostMousePos",
-                "type": "ImVec2"
-            }
-        ],
-        "ImGuiTestRef": [
-            {
-                "name": "ID",
-                "type": "unsigned int",
-                "comment": {
-                    "sameline": "// Pre-hashed ID"
-                }
-            },
-            {
-                "name": "Path",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "// Relative or absolute path (string pointed to, not owned, as our lifetime is very short)"
-                }
-            }
-        ],
-        "ImGuiPerfToolEntry": [
-            {
-                "name": "Timestamp",
-                "type": "unsigned long long",
-                "comment": {
-                    "sameline": "// Title of a particular batch of perftool entries."
-                }
-            },
-            {
-                "name": "Category",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "// Name of category perf test is in."
-                }
-            },
-            {
-                "name": "TestName",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "// Name of perf test."
-                }
-            },
-            {
-                "name": "DtDeltaMs",
-                "type": "double",
-                "comment": {
-                    "sameline": "// Result of perf test."
-                }
-            },
-            {
-                "name": "DtDeltaMsMin",
-                "type": "double",
-                "comment": {
-                    "sameline": "// May be used by perftool."
-                }
-            },
-            {
-                "name": "DtDeltaMsMax",
-                "type": "double",
-                "comment": {
-                    "sameline": "// May be used by perftool."
-                }
-            },
-            {
-                "name": "NumSamples",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Number aggregated samples."
-                }
-            },
-            {
-                "name": "PerfStressAmount",
-                "type": "int",
-                "comment": {
-                    "sameline": "//"
-                }
-            },
-            {
-                "name": "GitBranchName",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "// Build information."
-                }
-            },
-            {
-                "name": "BuildType",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "//"
-                }
-            },
-            {
-                "name": "Cpu",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "//"
-                }
-            },
-            {
-                "name": "OS",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "//"
-                }
-            },
-            {
-                "name": "Compiler",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "//"
-                }
-            },
-            {
-                "name": "Date",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "// Date of this entry or min date of combined entries."
-                }
-            },
-            {
-                "name": "VsBaseline",
-                "type": "double",
-                "comment": {
-                    "sameline": "// Percent difference vs baseline."
-                }
-            },
-            {
-                "name": "LabelIndex",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Index of TestName in ImGuiPerfTool::_LabelsVisible."
-                }
-            }
-        ],
-        "ImGuiTestGatherTask": [
-            {
-                "name": "InParentID",
-                "type": "unsigned int"
-            },
-            {
-                "name": "InMaxDepth",
-                "type": "int"
-            },
-            {
-                "name": "InLayerMask",
-                "type": "short"
-            },
-            {
-                "name": "OutList",
-                "type": "ImGuiTestItemList*"
-            },
-            {
-                "name": "LastItemInfo",
-                "type": "ImGuiTestItemInfo*"
-            }
-        ],
-        "ImGuiPerfTool": [
-            {
-                "name": "_SrcData",
-                "type": "ImVector_ImGuiPerfToolEntry",
-                "comment": {
-                    "sameline": "// Raw entries from CSV file (with string pointer into CSV data)."
-                }
-            },
-            {
-                "name": "_Labels",
-                "type": "ImVector_const_charPtr"
-            },
-            {
-                "name": "_LabelsVisible",
-                "type": "ImVector_const_charPtr",
-                "comment": {
-                    "sameline": "// ImPlot requires a pointer of all labels beforehand. Always contains a dummy \"\" entry at the end!"
-                }
-            },
-            {
-                "name": "_Batches",
-                "type": "ImVector_ImGuiPerfToolBatch"
-            },
-            {
-                "name": "_LabelBarCounts",
-                "type": "ImGuiStorage",
-                "comment": {
-                    "sameline": "// Number bars each label will render."
-                }
-            },
-            {
-                "name": "_NumVisibleBuilds",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Cached number of visible builds."
-                }
-            },
-            {
-                "name": "_NumUniqueBuilds",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Cached number of unique builds."
-                }
-            },
-            {
-                "name": "_DisplayType",
-                "type": "ImGuiPerfToolDisplayType"
-            },
-            {
-                "name": "_BaselineBatchIndex",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Index of baseline build."
-                }
-            },
-            {
-                "name": "_BaselineTimestamp",
-                "type": "unsigned long long"
-            },
-            {
-                "name": "_BaselineBuildId",
-                "type": "unsigned long long"
-            },
-            {
-                "name": "_Filter[128]",
-                "size": 128,
-                "type": "char",
-                "comment": {
-                    "sameline": "// Context menu filtering substring."
-                }
-            },
-            {
-                "name": "_FilterDateFrom[11]",
-                "size": 11,
-                "type": "char"
-            },
-            {
-                "name": "_FilterDateTo[11]",
-                "size": 11,
-                "type": "char"
-            },
-            {
-                "name": "_InfoTableHeight",
-                "type": "float"
-            },
-            {
-                "name": "_AlignStress",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Alignment values for build info components, so they look aligned in the legend."
-                }
-            },
-            {
-                "name": "_AlignType",
-                "type": "int"
-            },
-            {
-                "name": "_AlignOs",
-                "type": "int"
-            },
-            {
-                "name": "_AlignCpu",
-                "type": "int"
-            },
-            {
-                "name": "_AlignCompiler",
-                "type": "int"
-            },
-            {
-                "name": "_AlignBranch",
-                "type": "int"
-            },
-            {
-                "name": "_AlignSamples",
-                "type": "int"
-            },
-            {
-                "name": "_InfoTableSortDirty",
-                "type": "bool"
-            },
-            {
-                "name": "_InfoTableSort",
-                "type": "ImVector_Ulonglong",
-                "comment": {
-                    "sameline": "// _InfoTableSort[_LabelsVisible.Size * _Batches.Size]. Contains sorted batch indices for each label."
-                }
-            },
-            {
-                "name": "_InfoTableSortSpecs",
-                "type": "const ImGuiTableSortSpecs*",
-                "comment": {
-                    "sameline": "// Current table sort specs."
-                }
-            },
-            {
-                "name": "_TempSet",
-                "type": "ImGuiStorage",
-                "comment": {
-                    "sameline": "// Used as a set"
-                }
-            },
-            {
-                "name": "_TableHoveredTest",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Index within _VisibleLabelPointers array."
-                }
-            },
-            {
-                "name": "_TableHoveredBatch",
-                "type": "int"
-            },
-            {
-                "name": "_PlotHoverTest",
-                "type": "int"
-            },
-            {
-                "name": "_PlotHoverBatch",
-                "type": "int"
-            },
-            {
-                "name": "_PlotHoverTestLabel",
-                "type": "bool"
-            },
-            {
-                "name": "_ReportGenerating",
-                "type": "bool"
-            },
-            {
-                "name": "_Visibility",
-                "type": "ImGuiStorage"
-            },
-            {
-                "name": "_CsvParser",
-                "type": "ImGuiCsvParser*",
-                "comment": {
-                    "sameline": "// We keep this around and point to its fields"
-                }
-            }
-        ],
-        "ImGuiCaptureArgs": [
-            {
-                "name": "InFlags",
-                "type": "unsigned int",
-                "comment": {
-                    "sameline": "// Flags for customizing behavior of screenshot tool."
-                }
-            },
-            {
-                "name": "InCaptureWindows",
-                "type": "ImVector_ImGuiWindowPtr",
-                "comment": {
-                    "sameline": "// Windows to capture. All other windows will be hidden. May be used with InCaptureRect to capture only some windows in specified rect."
-                }
-            },
-            {
-                "name": "InCaptureRect",
-                "type": "ImRect",
-                "comment": {
-                    "sameline": "// Screen rect to capture. Does not include padding."
-                }
-            },
-            {
-                "name": "InPadding",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Extra padding at the edges of the screenshot. Ensure that there is available space around capture rect horizontally, also vertically if ImGuiCaptureFlags_StitchAll is not used."
-                }
-            },
-            {
-                "name": "InOutputFile[256]",
-                "size": 256,
-                "type": "char",
-                "comment": {
-                    "sameline": "// Output will be saved to a file if InOutputImageBuf is nullptr."
-                }
-            },
-            {
-                "name": "InOutputImageBuf",
-                "type": "ImGuiCaptureImageBuf*",
-                "comment": {
-                    "sameline": "// _OR_ Output will be saved to image buffer if specified."
-                }
-            },
-            {
-                "name": "InRecordFPSTarget",
-                "type": "int",
-                "comment": {
-                    "sameline": "// FPS target for recording videos."
-                }
-            },
-            {
-                "name": "InSizeAlign",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Resolution alignment (0 = auto, 1 = no alignment, >= 2 = align width/height to be multiple of given value)"
-                }
-            },
-            {
-                "name": "OutImageSize",
-                "type": "ImVec2",
-                "comment": {
-                    "sameline": "// Produced image size."
-                }
-            }
-        ],
-        "ImGuiCaptureWindowData": [
-            {
-                "name": "Window",
-                "type": "ImGuiWindow*"
-            },
-            {
-                "name": "BackupRect",
-                "type": "ImRect"
-            },
-            {
-                "name": "PosDuringCapture",
-                "type": "ImVec2"
-            }
-        ],
         "ImGuiTestRefDesc": [
             {
+                "type": "char",
                 "name": "Buf[80]",
-                "size": 80,
-                "type": "char"
-            }
-        ],
-        "ImGuiTestLog": [
-            {
-                "name": "Buffer",
-                "type": "ImGuiTextBuffer"
-            },
-            {
-                "name": "LineInfo",
-                "type": "ImVector_ImGuiTestLogLineInfo"
-            },
-            {
-                "name": "CountPerLevel[6]",
-                "size": 6,
-                "type": "int"
-            }
-        ],
-        "ImGuiTestRunTask": [
-            {
-                "name": "Test",
-                "type": "ImGuiTest*"
-            },
-            {
-                "name": "RunFlags",
-                "type": "int"
+                "size": 80
             }
         ],
         "ImGuiTestOutput": [
             {
-                "name": "Status",
-                "type": "ImGuiTestStatus"
+                "type": "ImGuiTestStatus",
+                "name": "Status"
             },
             {
-                "name": "Log",
-                "type": "ImGuiTestLog"
+                "type": "ImGuiTestLog",
+                "name": "Log"
             },
             {
-                "name": "StartTime",
-                "type": "unsigned long long"
+                "type": "unsigned long long",
+                "name": "StartTime"
             },
             {
-                "name": "EndTime",
-                "type": "unsigned long long"
+                "type": "unsigned long long",
+                "name": "EndTime"
             }
         ],
-        "ImGuiTest": [
+        "ImGuiTestLogLineInfo": [
             {
-                "name": "Category",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "// Literal, not owned"
-                }
+                "type": "ImGuiTestVerboseLevel",
+                "name": "Level"
             },
             {
-                "name": "Name",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "// Literal, generally not owned unless NameOwned=true"
-                }
-            },
-            {
-                "name": "Group",
-                "type": "ImGuiTestGroup",
-                "comment": {
-                    "sameline": "// Coarse groups: 'Tests' or 'Perf'"
-                }
-            },
-            {
-                "name": "NameOwned",
-                "type": "bool",
-                "comment": {
-                    "sameline": "//"
-                }
-            },
-            {
-                "name": "ArgVariant",
                 "type": "int",
-                "comment": {
-                    "sameline": "// User parameter. Generally we use it to run variations of a same test by sharing GuiFunc/TestFunc"
-                }
-            },
-            {
-                "name": "Flags",
-                "type": "int",
-                "comment": {
-                    "sameline": "// See ImGuiTestFlags_"
-                }
-            },
-            {
-                "name": "GuiFunc",
-                "type": "ImGuiTestGuiFunc *",
-                "comment": {
-                    "sameline": "// GUI function (optional if your test are running over an existing GUI application)"
-                }
-            },
-            {
-                "name": "TestFunc",
-                "type": "ImGuiTestTestFunc *",
-                "comment": {
-                    "sameline": "// Test driving function"
-                }
-            },
-            {
-                "name": "TeardownFunc",
-                "type": "ImGuiTestTestFunc *",
-                "comment": {
-                    "sameline": "// Teardown driving function, executed after TestFunc _regardless_ of TestFunc failing."
-                }
-            },
-            {
-                "name": "UserData",
-                "type": "void*",
-                "comment": {
-                    "sameline": "// General purpose user data (if assigning capturing lambdas on GuiFunc/TestFunc you may not need to use this)"
-                }
-            },
-            {
-                "name": "SourceFile",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "// __FILE__"
-                }
-            },
-            {
-                "name": "SourceLine",
-                "type": "int",
-                "comment": {
-                    "sameline": "// __LINE__"
-                }
-            },
-            {
-                "name": "SourceLineEnd",
-                "type": "int",
-                "comment": {
-                    "sameline": "// end of line (when calculated by ImGuiTestEngine_StartCalcSourceLineEnds())"
-                }
-            },
-            {
-                "name": "Output",
-                "type": "ImGuiTestOutput"
-            },
-            {
-                "name": "VarsSize",
-                "type": "unsigned long"
-            },
-            {
-                "name": "VarsConstructor",
-                "type": "ImGuiTestVarsConstructor *"
-            },
-            {
-                "name": "VarsPostConstructor",
-                "type": "ImGuiTestVarsPostConstructor *",
-                "comment": {
-                    "sameline": "// To override constructor default (in case the default are problematic on the first GuiFunc frame)"
-                }
-            },
-            {
-                "name": "VarsPostConstructorUserFn",
-                "type": "void*"
-            },
-            {
-                "name": "VarsDestructor",
-                "type": "ImGuiTestVarsDestructor *"
-            }
-        ],
-        "ImGuiTestGenericVars": [
-            {
-                "name": "Step",
-                "type": "int"
-            },
-            {
-                "name": "Count",
-                "type": "int"
-            },
-            {
-                "name": "DockId",
-                "type": "unsigned int"
-            },
-            {
-                "name": "OwnerId",
-                "type": "unsigned int"
-            },
-            {
-                "name": "WindowSize",
-                "type": "ImVec2"
-            },
-            {
-                "name": "WindowFlags",
-                "type": "int"
-            },
-            {
-                "name": "TableFlags",
-                "type": "int"
-            },
-            {
-                "name": "PopupFlags",
-                "type": "int"
-            },
-            {
-                "name": "InputTextFlags",
-                "type": "int"
-            },
-            {
-                "name": "Status",
-                "type": "ImGuiTestGenericItemStatus"
-            },
-            {
-                "name": "ShowWindow1",
-                "type": "bool"
-            },
-            {
-                "name": "ShowWindow2",
-                "type": "bool"
-            },
-            {
-                "name": "UseClipper",
-                "type": "bool"
-            },
-            {
-                "name": "UseViewports",
-                "type": "bool"
-            },
-            {
-                "name": "Width",
-                "type": "float"
-            },
-            {
-                "name": "Pos",
-                "type": "ImVec2"
-            },
-            {
-                "name": "Pivot",
-                "type": "ImVec2"
-            },
-            {
-                "name": "ItemSize",
-                "type": "ImVec2"
-            },
-            {
-                "name": "Color1",
-                "type": "ImVec4"
-            },
-            {
-                "name": "Color2",
-                "type": "ImVec4"
-            },
-            {
-                "name": "Int1",
-                "type": "int"
-            },
-            {
-                "name": "Int2",
-                "type": "int"
-            },
-            {
-                "name": "IntArray[10]",
-                "size": 10,
-                "type": "int"
-            },
-            {
-                "name": "Float1",
-                "type": "float"
-            },
-            {
-                "name": "Float2",
-                "type": "float"
-            },
-            {
-                "name": "FloatArray[10]",
-                "size": 10,
-                "type": "float"
-            },
-            {
-                "name": "Bool1",
-                "type": "bool"
-            },
-            {
-                "name": "Bool2",
-                "type": "bool"
-            },
-            {
-                "name": "BoolArray[10]",
-                "size": 10,
-                "type": "bool"
-            },
-            {
-                "name": "Id",
-                "type": "unsigned int"
-            },
-            {
-                "name": "IdArray[10]",
-                "size": 10,
-                "type": "unsigned int"
-            },
-            {
-                "name": "Str1[256]",
-                "size": 256,
-                "type": "char"
-            },
-            {
-                "name": "Str2[256]",
-                "size": 256,
-                "type": "char"
-            }
-        ],
-        "ImGuiTestEngineIO": [
-            {
-                "name": "CoroutineFuncs",
-                "type": "ImGuiTestCoroutineInterface*",
-                "comment": {
-                    "sameline": "// (Required) Coroutine functions (see imgui_te_coroutines.h)"
-                }
-            },
-            {
-                "name": "SrcFileOpenFunc",
-                "type": "ImGuiTestEngineSrcFileOpenFunc *",
-                "comment": {
-                    "sameline": "// (Optional) To open source files from test engine UI (otherwise default to open file in shell)"
-                }
-            },
-            {
-                "name": "ScreenCaptureFunc",
-                "type": "ImGuiScreenCaptureFunc *",
-                "comment": {
-                    "sameline": "// (Optional) To capture graphics output (application _MUST_ call ImGuiTestEngine_PostSwap() function after swapping is framebuffer)"
-                }
-            },
-            {
-                "name": "SrcFileOpenUserData",
-                "type": "void*",
-                "comment": {
-                    "sameline": "// (Optional) User data for SrcFileOpenFunc"
-                }
-            },
-            {
-                "name": "ScreenCaptureUserData",
-                "type": "void*",
-                "comment": {
-                    "sameline": "// (Optional) User data for ScreenCaptureFunc"
-                }
-            },
-            {
-                "name": "ConfigSavedSettings",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Load/Save settings in main context .ini file."
-                }
-            },
-            {
-                "name": "ConfigRunSpeed",
-                "type": "ImGuiTestRunSpeed",
-                "comment": {
-                    "sameline": "// Run tests in fast/normal/cinematic mode"
-                }
-            },
-            {
-                "name": "ConfigStopOnError",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Stop queued tests on test error"
-                }
-            },
-            {
-                "name": "ConfigBreakOnError",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Break debugger on test error by calling IM_DEBUG_BREAK()"
-                }
-            },
-            {
-                "name": "ConfigKeepGuiFunc",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Keep test GUI running at the end of the test"
-                }
-            },
-            {
-                "name": "ConfigRestoreFocusAfterTests",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Restore focus back after running tests"
-                }
-            },
-            {
-                "name": "ConfigCaptureEnabled",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Master enable flags for capturing and saving captures. Disable to avoid e.g. lengthy saving of large PNG files."
-                }
-            },
-            {
-                "name": "ConfigCaptureOnError",
-                "type": "bool"
-            },
-            {
-                "name": "ConfigNoThrottle",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Disable vsync for performance measurement or fast test running"
-                }
-            },
-            {
-                "name": "ConfigMouseDrawCursor",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Enable drawing of Dear ImGui software mouse cursor when running tests"
-                }
-            },
-            {
-                "name": "ConfigFixedDeltaTime",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Use fixed delta time instead of calculating it from wall clock"
-                }
-            },
-            {
-                "name": "PerfStressAmount",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Integer to scale the amount of items submitted in test"
-                }
-            },
-            {
-                "name": "GitBranchName[64]",
-                "size": 64,
-                "type": "char",
-                "comment": {
-                    "sameline": "// e.g. fill in branch name (e.g. recorded in perf samples .csv)"
-                }
-            },
-            {
-                "name": "ConfigVerboseLevel",
-                "type": "ImGuiTestVerboseLevel"
-            },
-            {
-                "name": "ConfigVerboseLevelOnError",
-                "type": "ImGuiTestVerboseLevel"
-            },
-            {
-                "name": "ConfigLogToTTY",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Output log entries to TTY (in addition to Test Engine UI)"
-                }
-            },
-            {
-                "name": "ConfigLogToDebugger",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Output log entries to Debugger (in addition to Test Engine UI)"
-                }
-            },
-            {
-                "name": "ConfigLogToFunc",
-                "type": "ImGuiTestEngineLogFunc *",
-                "comment": {
-                    "sameline": "// Hook for logging of full serial log (vs peeking into ImGuiTest->Output.Log for a single test)"
-                }
-            },
-            {
-                "name": "ConfigLogToFuncUserData",
-                "type": "void*"
-            },
-            {
-                "name": "MouseSpeed",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Mouse speed (pixel/second) when not running in fast mode"
-                }
-            },
-            {
-                "name": "MouseWobble",
-                "type": "float",
-                "comment": {
-                    "sameline": "// (0.0f..1.0f) How much wobble to apply to the mouse (pixels per pixel of move distance) when not running in fast mode"
-                }
-            },
-            {
-                "name": "ScrollSpeed",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Scroll speed (pixel/second) when not running in fast mode"
-                }
-            },
-            {
-                "name": "TypingSpeed",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Char input speed (characters/second) when not running in fast mode"
-                }
-            },
-            {
-                "name": "ActionDelayShort",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Time between short actions"
-                }
-            },
-            {
-                "name": "ActionDelayStandard",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Time between most actions"
-                }
-            },
-            {
-                "name": "VideoCaptureEncoderPath[256]",
-                "size": 256,
-                "type": "char",
-                "comment": {
-                    "sameline": "// Video encoder executable path, e.g. \"path/to/ffmpeg.exe\"."
-                }
-            },
-            {
-                "name": "VideoCaptureEncoderParams[256]",
-                "size": 256,
-                "type": "char",
-                "comment": {
-                    "sameline": "// Video encoder parameters for .MP4 captures, e.g. see IMGUI_CAPTURE_DEFAULT_VIDEO_PARAMS_FOR_FFMPEG"
-                }
-            },
-            {
-                "name": "GifCaptureEncoderParams[512]",
-                "size": 512,
-                "type": "char",
-                "comment": {
-                    "sameline": "// Video encoder parameters for .GIF captures, e.g. see IMGUI_CAPTURE_DEFAULT_GIF_PARAMS_FOR_FFMPEG"
-                }
-            },
-            {
-                "name": "VideoCaptureExtension[8]",
-                "size": 8,
-                "type": "char",
-                "comment": {
-                    "sameline": "// Video file extension (default, may be overridden by test)."
-                }
-            },
-            {
-                "name": "ConfigWatchdogWarning",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Warn when a test exceed this time (in second)"
-                }
-            },
-            {
-                "name": "ConfigWatchdogKillTest",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Attempt to stop running a test when exceeding this time (in second)"
-                }
-            },
-            {
-                "name": "ConfigWatchdogKillApp",
-                "type": "float",
-                "comment": {
-                    "sameline": "// Stop application when exceeding this time (in second)"
-                }
-            },
-            {
-                "name": "ExportResultsFilename",
-                "type": "const char*"
-            },
-            {
-                "name": "ExportResultsFormat",
-                "type": "ImGuiTestEngineExportFormat"
-            },
-            {
-                "name": "CheckDrawDataIntegrity",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Check ImDrawData integrity (buffer count, etc.). Currently cheap but may become a slow operation."
-                }
-            },
-            {
-                "name": "IsRunningTests",
-                "type": "bool"
-            },
-            {
-                "name": "IsRequestingMaxAppSpeed",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// When running in fast mode: request app to skip vsync or even skip rendering if it wants"
-                }
-            },
-            {
-                "name": "IsCapturing",
-                "type": "bool",
-                "comment": {
-                    "sameline": "// Capture is in progress"
-                }
-            }
-        ],
-        "ImBuildInfo": [
-            {
-                "name": "Type",
-                "type": "const char*"
-            },
-            {
-                "name": "Cpu",
-                "type": "const char*"
-            },
-            {
-                "name": "OS",
-                "type": "const char*"
-            },
-            {
-                "name": "Compiler",
-                "type": "const char*"
-            },
-            {
-                "name": "Date[32]",
-                "size": 32,
-                "type": "char",
-                "comment": {
-                    "sameline": "// \"YYYY-MM-DD\""
-                }
-            },
-            {
-                "name": "Time",
-                "type": "const char*"
+                "name": "LineOffset"
             }
         ],
         "ImGuiPerfToolBatch": [
             {
-                "name": "BatchID",
                 "type": "unsigned long long",
+                "name": "BatchID",
                 "comment": {
                     "sameline": "// Timestamp of the batch, or unique ID of the build in combined mode."
                 }
             },
             {
-                "name": "NumSamples",
                 "type": "int",
+                "name": "NumSamples",
                 "comment": {
                     "sameline": "// A number of unique batches aggregated."
                 }
             },
             {
-                "name": "BranchIndex",
                 "type": "int",
+                "name": "BranchIndex",
                 "comment": {
                     "sameline": "// For per-branch color mapping."
                 }
             },
             {
-                "name": "Entries",
                 "type": "ImVector_ImGuiPerfToolEntry",
+                "name": "Entries",
                 "comment": {
                     "sameline": "// Aggregated perf test entries. Order follows ImGuiPerfTool::_LabelsVisible order."
                 }
             }
         ],
-        "ImGuiTestContext": [
+        "ImGuiTestInputs": [
             {
-                "name": "GenericVars",
-                "type": "ImGuiTestGenericVars",
+                "type": "ImVec2",
+                "name": "MousePosValue",
                 "comment": {
-                    "sameline": "// Generic variables holder for convenience."
+                    "sameline": "// Own non-rounded copy of MousePos in order facilitate simulating mouse movement very slow speed and high-framerate"
                 }
             },
             {
-                "name": "UserVars",
-                "type": "void*",
-                "comment": {
-                    "sameline": "// Access using ctx->GetVars<Type>(). Setup with test->SetVarsDataType<>()."
-                }
+                "type": "ImVec2",
+                "name": "MouseWheel"
             },
             {
-                "name": "UiContext",
-                "type": "ImGuiContext*",
-                "comment": {
-                    "sameline": "// UI context"
-                }
+                "type": "unsigned int",
+                "name": "MouseHoveredViewport"
             },
             {
-                "name": "EngineIO",
-                "type": "ImGuiTestEngineIO*",
-                "comment": {
-                    "sameline": "// Test Engine IO/settings"
-                }
-            },
-            {
-                "name": "Test",
-                "type": "ImGuiTest*",
-                "comment": {
-                    "sameline": "// Test currently running"
-                }
-            },
-            {
-                "name": "TestOutput",
-                "type": "ImGuiTestOutput*",
-                "comment": {
-                    "sameline": "// Test output (generally == &Test->Output while executing TestFunc)"
-                }
-            },
-            {
-                "name": "OpFlags",
                 "type": "int",
+                "name": "MouseButtonsValue",
                 "comment": {
-                    "sameline": "// Flags affecting all operation (supported: ImGuiTestOpFlags_NoAutoUncollapse)"
+                    "sameline": "// FIXME-TESTS: Use simulated_io.MouseDown[] ?"
                 }
             },
             {
-                "name": "PerfStressAmount",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Convenience copy of engine->IO.PerfStressAmount"
-                }
+                "type": "ImVector_ImGuiTestInput",
+                "name": "Queue"
             },
             {
-                "name": "FrameCount",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Test frame count (restarts from zero every time)"
-                }
-            },
-            {
-                "name": "FirstTestFrameCount",
-                "type": "int",
-                "comment": {
-                    "sameline": "// First frame where TestFunc is running (after warm-up frame). This is generally -1 or 0 depending on whether we have warm up enabled"
-                }
-            },
-            {
-                "name": "FirstGuiFrame",
-                "type": "bool"
-            },
-            {
-                "name": "HasDock",
                 "type": "bool",
+                "name": "HostEscDown"
+            },
+            {
+                "type": "float",
+                "name": "HostEscDownDuration",
                 "comment": {
-                    "sameline": "// #ifdef IMGUI_HAS_DOCK expressed in an easier to test value"
+                    "sameline": "// Maintain our own DownDuration for host/backend ESC key so we can abort."
                 }
             },
             {
-                "name": "CaptureArgs",
-                "type": "ImGuiCaptureArgs*",
-                "comment": {
-                    "sameline": "// Capture settings used by ctx->Capture*() functions"
-                }
-            },
-            {
-                "name": "Engine",
-                "type": "ImGuiTestEngine*"
-            },
-            {
-                "name": "Inputs",
-                "type": "ImGuiTestInputs*"
-            },
-            {
-                "name": "RunFlags",
-                "type": "int"
-            },
-            {
-                "name": "ActiveFunc",
-                "type": "ImGuiTestActiveFunc",
-                "comment": {
-                    "sameline": "// None/GuiFunc/TestFunc"
-                }
-            },
-            {
-                "name": "RunningTime",
-                "type": "double",
-                "comment": {
-                    "sameline": "// Amount of wall clock time the Test has been running. Used by safety watchdog."
-                }
-            },
-            {
-                "name": "ActionDepth",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Nested depth of ctx-> function calls (used to decorate log)"
-                }
-            },
-            {
-                "name": "CaptureCounter",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Number of captures"
-                }
-            },
-            {
-                "name": "ErrorCounter",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Number of errors (generally this maxxes at 1 as most functions will early out)"
-                }
-            },
-            {
-                "name": "Abort",
-                "type": "bool"
-            },
-            {
-                "name": "PerfRefDt",
-                "type": "double"
-            },
-            {
-                "name": "PerfIterations",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Number of frames for PerfCapture() measurements"
-                }
-            },
-            {
-                "name": "RefStr[256]",
-                "size": 256,
-                "type": "char",
-                "comment": {
-                    "sameline": "// Reference window/path over which all named references are based"
-                }
-            },
-            {
-                "name": "RefID",
-                "type": "unsigned int",
-                "comment": {
-                    "sameline": "// Reference ID over which all named references are based"
-                }
-            },
-            {
-                "name": "RefWindowID",
-                "type": "unsigned int",
-                "comment": {
-                    "sameline": "// ID of a window that contains RefID item"
-                }
-            },
-            {
-                "name": "InputMode",
-                "type": "ImGuiInputSource",
-                "comment": {
-                    "sameline": "// Prefer interacting with mouse/keyboard/gamepad"
-                }
-            },
-            {
-                "name": "TempString",
-                "type": "ImVector_char"
-            },
-            {
-                "name": "Clipboard",
-                "type": "ImVector_char",
-                "comment": {
-                    "sameline": "// Private clipboard for the test instance"
-                }
-            },
-            {
-                "name": "ForeignWindowsToHide",
-                "type": "ImVector_ImGuiWindowPtr"
-            },
-            {
-                "name": "DummyItemInfoNull",
-                "type": "ImGuiTestItemInfo",
-                "comment": {
-                    "sameline": "// Storage for ItemInfoNull()"
-                }
-            },
-            {
-                "name": "CachedLinesPrintedToTTY",
-                "type": "bool"
+                "type": "ImVec2",
+                "name": "HostMousePos"
             }
         ],
         "ImGuiTestItemList": [
             {
-                "name": "Pool",
-                "type": "ImPool_ImGuiTestItemInfo"
-            }
-        ],
-        "ImGuiTestEngineResultSummary": [
-            {
-                "name": "CountTested",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Number of tests executed"
-                }
-            },
-            {
-                "name": "CountSuccess",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Number of tests succeeded"
-                }
-            },
-            {
-                "name": "CountInQueue",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Number of tests remaining in queue (e.g. aborted, crashed)"
-                }
-            }
-        ],
-        "ImGuiTestActionFilter": [
-            {
-                "name": "MaxDepth",
-                "type": "int"
-            },
-            {
-                "name": "MaxPasses",
-                "type": "int"
-            },
-            {
-                "name": "MaxItemCountPerDepth",
-                "type": "const int*"
-            },
-            {
-                "name": "RequireAllStatusFlags",
-                "type": "int"
-            },
-            {
-                "name": "RequireAnyStatusFlags",
-                "type": "int"
-            }
-        ],
-        "ImGuiTestLogLineInfo": [
-            {
-                "name": "Level",
-                "type": "ImGuiTestVerboseLevel"
-            },
-            {
-                "name": "LineOffset",
-                "type": "int"
+                "type": "ImPool_ImGuiTestItemInfo",
+                "name": "Pool"
             }
         ],
         "ImGuiTestInput": [
             {
-                "name": "Type",
-                "type": "ImGuiTestInputType"
+                "type": "ImGuiTestInputType",
+                "name": "Type"
             },
             {
-                "name": "KeyChord",
-                "type": "int"
+                "type": "int",
+                "name": "KeyChord"
             },
             {
-                "name": "Char",
-                "type": "unsigned short"
+                "type": "unsigned short",
+                "name": "Char"
             },
             {
-                "name": "Down",
-                "type": "bool"
+                "type": "bool",
+                "name": "Down"
             },
             {
-                "name": "ViewportId",
-                "type": "unsigned int"
+                "type": "unsigned int",
+                "name": "ViewportId"
             },
             {
-                "name": "ViewportPosSize",
-                "type": "ImVec2"
+                "type": "ImVec2",
+                "name": "ViewportPosSize"
             }
         ],
-        "ImGuiTestCoroutineInterface": [
+        "ImGuiTestLog": [
             {
-                "name": "CreateFunc",
-                "type": "ImGuiTestCoroutineHandle (*)(ImGuiTestCoroutineMainFunc *, const char *, void *)"
+                "type": "ImGuiTextBuffer",
+                "name": "Buffer"
             },
             {
-                "name": "DestroyFunc",
-                "type": "void (*)(ImGuiTestCoroutineHandle)"
+                "type": "ImVector_ImGuiTestLogLineInfo",
+                "name": "LineInfo"
             },
             {
-                "name": "RunFunc",
-                "type": "bool (*)(ImGuiTestCoroutineHandle)"
+                "type": "int",
+                "name": "CountPerLevel[6]",
+                "size": 6
+            }
+        ],
+        "ImGuiCaptureToolUI": [
+            {
+                "type": "float",
+                "name": "SnapGridSize",
+                "comment": {
+                    "sameline": "// Size of the grid cell for \"snap to grid\" functionality."
+                }
             },
             {
-                "name": "YieldFunc",
-                "type": "void (*)()"
+                "type": "char",
+                "name": "OutputLastFilename[256]",
+                "size": 256,
+                "comment": {
+                    "sameline": "// File name of last captured file."
+                }
+            },
+            {
+                "type": "char*",
+                "name": "VideoCaptureExtension",
+                "comment": {
+                    "sameline": "// Video file extension (e.g. \".gif\" or \".mp4\")"
+                }
+            },
+            {
+                "type": "int",
+                "name": "VideoCaptureExtensionSize",
+                "comment": {
+                    "sameline": "// Optional. Set in order to edit this parameter from UI."
+                }
+            },
+            {
+                "type": "ImGuiCaptureArgs",
+                "name": "_CaptureArgs",
+                "comment": {
+                    "sameline": "// Capture args"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "_StateIsPickingWindow"
+            },
+            {
+                "type": "bool",
+                "name": "_StateIsCapturing"
+            },
+            {
+                "type": "ImVector_Uint",
+                "name": "_SelectedWindows"
+            },
+            {
+                "type": "char",
+                "name": "_OutputFileTemplate[256]",
+                "size": 256,
+                "comment": {
+                    "sameline": "//"
+                }
+            },
+            {
+                "type": "int",
+                "name": "_FileCounter",
+                "comment": {
+                    "sameline": "// Counter which may be appended to file name when saving. By default, counting starts from 1. When done this field holds number of saved files."
+                }
+            }
+        ],
+        "ImGuiCaptureImageBuf": [
+            {
+                "type": "int",
+                "name": "Width"
+            },
+            {
+                "type": "int",
+                "name": "Height"
+            },
+            {
+                "type": "unsigned int*",
+                "name": "Data",
+                "comment": {
+                    "sameline": "// RGBA8"
+                }
             }
         ],
         "ImGuiTestItemInfo": [
             {
-                "name": "ID",
                 "type": "unsigned int",
+                "name": "ID",
                 "comment": {
                     "sameline": "// Item ID"
                 }
             },
             {
+                "type": "char",
                 "name": "DebugLabel[32]",
                 "size": 32,
-                "type": "char",
                 "comment": {
                     "sameline": "// Shortened/truncated label for debugging and convenience purpose"
                 }
             },
             {
-                "name": "Window",
                 "type": "ImGuiWindow*",
+                "name": "Window",
                 "comment": {
                     "sameline": "// Item Window"
                 }
             },
             {
+                "type": "unsigned int",
                 "name": "NavLayer",
                 "bitfield": "1",
-                "type": "unsigned int",
                 "comment": {
                     "sameline": "// Nav layer of the item (ImGuiNavLayer)"
                 }
             },
             {
+                "type": "int",
                 "name": "Depth",
                 "bitfield": "16",
-                "type": "int",
                 "comment": {
                     "sameline": "// Depth from requested parent id. 0 == ID is immediate child of requested parent id."
                 }
             },
             {
-                "name": "TimestampMain",
                 "type": "int",
+                "name": "TimestampMain",
                 "comment": {
                     "sameline": "// Timestamp of main result (all fields)"
                 }
             },
             {
-                "name": "TimestampStatus",
                 "type": "int",
+                "name": "TimestampStatus",
                 "comment": {
                     "sameline": "// Timestamp of StatusFlags"
                 }
             },
             {
-                "name": "ParentID",
                 "type": "unsigned int",
+                "name": "ParentID",
                 "comment": {
                     "sameline": "// Item Parent ID (value at top of the ID stack)"
                 }
             },
             {
-                "name": "RectFull",
                 "type": "ImRect",
+                "name": "RectFull",
                 "comment": {
                     "sameline": "// Item Rectangle"
                 }
             },
             {
-                "name": "RectClipped",
                 "type": "ImRect",
+                "name": "RectClipped",
                 "comment": {
                     "sameline": "// Item Rectangle (clipped with window->ClipRect at time of item submission)"
                 }
             },
             {
-                "name": "ItemFlags",
                 "type": "int",
+                "name": "ItemFlags",
                 "comment": {
                     "sameline": "// Item flags"
                 }
             },
             {
-                "name": "StatusFlags",
                 "type": "int",
+                "name": "StatusFlags",
                 "comment": {
                     "sameline": "// Item Status flags (fully updated for some items only, compare TimestampStatus to FrameCount)"
                 }
             }
         ],
-        "ImGuiTestFindByLabelTask": [
+        "ImGuiTestRef": [
             {
-                "name": "InPrefixId",
                 "type": "unsigned int",
+                "name": "ID",
                 "comment": {
-                    "sameline": "// A known base ID which appears BEFORE the wildcard ID (for \"hello/**/foo/bar\" it would be hash of \"hello\")"
+                    "sameline": "// Pre-hashed ID"
                 }
             },
             {
-                "name": "InSuffixDepth",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Number of labels in a path, after unknown base ID (for \"hello/**/foo/bar\" it would be 2)"
-                }
-            },
-            {
-                "name": "InSuffix",
                 "type": "const char*",
+                "name": "Path",
                 "comment": {
-                    "sameline": "// A label string which appears on ID stack after unknown base ID (for \"hello/**/foo/bar\" it would be \"foo/bar\")"
-                }
-            },
-            {
-                "name": "InSuffixLastItem",
-                "type": "const char*",
-                "comment": {
-                    "sameline": "// A last label string (for \"hello/**/foo/bar\" it would be \"bar\")"
-                }
-            },
-            {
-                "name": "InSuffixLastItemHash",
-                "type": "unsigned int"
-            },
-            {
-                "name": "InFilterItemStatusFlags",
-                "type": "int",
-                "comment": {
-                    "sameline": "// Flags required for item to be returned"
-                }
-            },
-            {
-                "name": "OutItemId",
-                "type": "unsigned int",
-                "comment": {
-                    "sameline": "// Result item ID"
+                    "sameline": "// Relative or absolute path (string pointed to, not owned, as our lifetime is very short)"
                 }
             }
         ],
-        "ImGuiCsvParser": [
+        "ImGuiTestActionFilter": [
             {
-                "name": "Columns",
                 "type": "int",
-                "comment": {
-                    "sameline": "// Number of columns in CSV file."
-                }
+                "name": "MaxDepth"
             },
             {
-                "name": "Rows",
                 "type": "int",
-                "comment": {
-                    "sameline": "// Number of rows in CSV file."
-                }
+                "name": "MaxPasses"
             },
             {
-                "name": "_Data",
-                "type": "char*",
-                "comment": {
-                    "sameline": "// CSV file data."
-                }
+                "type": "const int*",
+                "name": "MaxItemCountPerDepth"
             },
             {
-                "name": "_Index",
-                "type": "ImVector_charPtr",
-                "comment": {
-                    "sameline": "// CSV table: _Index[row * _Columns + col]."
-                }
+                "type": "int",
+                "name": "RequireAllStatusFlags"
+            },
+            {
+                "type": "int",
+                "name": "RequireAnyStatusFlags"
             }
         ],
         "ImGuiTestGenericItemStatus": [
             {
-                "name": "RetValue",
                 "type": "int",
+                "name": "RetValue",
                 "comment": {
                     "sameline": "// return value"
                 }
             },
             {
-                "name": "Hovered",
                 "type": "int",
+                "name": "Hovered",
                 "comment": {
                     "sameline": "// result of IsItemHovered()"
                 }
             },
             {
-                "name": "HoveredAllowDisabled",
                 "type": "int",
+                "name": "HoveredAllowDisabled",
                 "comment": {
                     "sameline": "// result of IsItemHovered(ImGuiHoveredFlags_AllowWhenDisabled)"
                 }
             },
             {
-                "name": "Active",
                 "type": "int",
+                "name": "Active",
                 "comment": {
                     "sameline": "// result of IsItemActive()"
                 }
             },
             {
-                "name": "Focused",
                 "type": "int",
+                "name": "Focused",
                 "comment": {
                     "sameline": "// result of IsItemFocused()"
                 }
             },
             {
-                "name": "Clicked",
                 "type": "int",
+                "name": "Clicked",
                 "comment": {
                     "sameline": "// result of IsItemClicked()"
                 }
             },
             {
-                "name": "Visible",
                 "type": "int",
+                "name": "Visible",
                 "comment": {
                     "sameline": "// result of IsItemVisible()"
                 }
             },
             {
-                "name": "Edited",
                 "type": "int",
+                "name": "Edited",
                 "comment": {
                     "sameline": "// result of IsItemEdited()"
                 }
             },
             {
-                "name": "Activated",
                 "type": "int",
+                "name": "Activated",
                 "comment": {
                     "sameline": "// result of IsItemActivated()"
                 }
             },
             {
-                "name": "Deactivated",
                 "type": "int",
+                "name": "Deactivated",
                 "comment": {
                     "sameline": "// result of IsItemDeactivated()"
                 }
             },
             {
-                "name": "DeactivatedAfterEdit",
                 "type": "int",
+                "name": "DeactivatedAfterEdit",
                 "comment": {
                     "sameline": "// result of IsItemDeactivatedAfterEdit()"
                 }
             }
-        ]
-    },
-    "enums": {
-        "ImGuiTestVerboseLevel": [
+        ],
+        "ImGuiCsvParser": [
             {
-                "name": "ImGuiTestVerboseLevel_Silent",
-                "value": "0",
-                "calc_value": 0,
-                "comment": "// -v0"
+                "type": "int",
+                "name": "Columns",
+                "comment": {
+                    "sameline": "// Number of columns in CSV file."
+                }
             },
             {
-                "name": "ImGuiTestVerboseLevel_Error",
-                "value": "1",
-                "calc_value": 1,
-                "comment": "// -v1"
+                "type": "int",
+                "name": "Rows",
+                "comment": {
+                    "sameline": "// Number of rows in CSV file."
+                }
             },
             {
-                "name": "ImGuiTestVerboseLevel_Warning",
-                "value": "2",
-                "calc_value": 2,
-                "comment": "// -v2"
+                "type": "char*",
+                "name": "_Data",
+                "comment": {
+                    "sameline": "// CSV file data."
+                }
             },
             {
-                "name": "ImGuiTestVerboseLevel_Info",
-                "value": "3",
-                "calc_value": 3,
-                "comment": "// -v3"
-            },
-            {
-                "name": "ImGuiTestVerboseLevel_Debug",
-                "value": "4",
-                "calc_value": 4,
-                "comment": "// -v4"
-            },
-            {
-                "name": "ImGuiTestVerboseLevel_Trace",
-                "value": "5",
-                "calc_value": 5
-            },
-            {
-                "name": "ImGuiTestVerboseLevel_COUNT",
-                "value": "",
-                "calc_value": 6
+                "type": "ImVector_charPtr",
+                "name": "_Index",
+                "comment": {
+                    "sameline": "// CSV table: _Index[row * _Columns + col]."
+                }
             }
         ],
-        "ImGuiTestLogFlags_": [
+        "ImGuiPerfToolEntry": [
             {
-                "name": "ImGuiTestLogFlags_None",
-                "value": "0",
-                "calc_value": 0
+                "type": "unsigned long long",
+                "name": "Timestamp",
+                "comment": {
+                    "sameline": "// Title of a particular batch of perftool entries."
+                }
             },
             {
-                "name": "ImGuiTestLogFlags_NoHeader",
-                "value": "1 << 0",
-                "calc_value": 1,
-                "comment": "// Do not display frame count and depth padding"
+                "type": "const char*",
+                "name": "Category",
+                "comment": {
+                    "sameline": "// Name of category the test is in."
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "TestName",
+                "comment": {
+                    "sameline": "// Name of test."
+                }
+            },
+            {
+                "type": "double",
+                "name": "DtDeltaMs",
+                "comment": {
+                    "sameline": "// Result of perf test."
+                }
+            },
+            {
+                "type": "int",
+                "name": "PerfStressAmount",
+                "comment": {
+                    "sameline": "//"
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "GitBranchName",
+                "comment": {
+                    "sameline": "// e.g. \"master\""
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "BuildType",
+                "comment": {
+                    "sameline": "// e.g. \"Debug\""
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "Cpu",
+                "comment": {
+                    "sameline": "// e.g. \"X64\""
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "OS",
+                "comment": {
+                    "sameline": "// e.g. \"Windows\""
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "Compiler",
+                "comment": {
+                    "sameline": "// e.g. \"MSVC\""
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "Date",
+                "comment": {
+                    "sameline": "// e.g. \"2026-01-01\". Date of this entry or min date of combined entries."
+                }
+            },
+            {
+                "type": "double",
+                "name": "DtDeltaMsMin",
+                "comment": {
+                    "sameline": "// May be used by perftool."
+                }
+            },
+            {
+                "type": "double",
+                "name": "DtDeltaMsMax",
+                "comment": {
+                    "sameline": "// May be used by perftool."
+                }
+            },
+            {
+                "type": "int",
+                "name": "NumSamples",
+                "comment": {
+                    "sameline": "// Number aggregated samples."
+                }
+            },
+            {
+                "type": "double",
+                "name": "VsBaseline",
+                "comment": {
+                    "sameline": "// Percent difference vs baseline."
+                }
+            },
+            {
+                "type": "int",
+                "name": "LabelIndex",
+                "comment": {
+                    "sameline": "// Index of TestName in ImGuiPerfTool::_LabelsVisible."
+                }
             }
         ],
-        "ImGuiTestAction": [
+        "ImGuiTestContext": [
             {
-                "name": "ImGuiTestAction_Unknown",
-                "value": "0",
-                "calc_value": 0
+                "type": "ImGuiTestGenericVars",
+                "name": "GenericVars",
+                "comment": {
+                    "sameline": "// Generic variables holder for convenience."
+                }
             },
             {
-                "name": "ImGuiTestAction_Hover",
-                "value": "",
-                "calc_value": 1,
-                "comment": "// Move mouse"
+                "type": "void*",
+                "name": "UserVars",
+                "comment": {
+                    "sameline": "// Access using ctx->GetVars<Type>(). Setup with test->SetVarsDataType<>()."
+                }
             },
             {
-                "name": "ImGuiTestAction_Click",
-                "value": "",
-                "calc_value": 2,
-                "comment": "// Move mouse and click"
+                "type": "ImGuiContext*",
+                "name": "UiContext",
+                "comment": {
+                    "sameline": "// UI context"
+                }
             },
             {
-                "name": "ImGuiTestAction_DoubleClick",
-                "value": "",
-                "calc_value": 3,
-                "comment": "// Move mouse and double-click"
+                "type": "ImGuiTestEngineIO*",
+                "name": "EngineIO",
+                "comment": {
+                    "sameline": "// Test Engine IO/settings"
+                }
             },
             {
-                "name": "ImGuiTestAction_Check",
-                "value": "",
-                "calc_value": 4,
-                "comment": "// Check item if unchecked (Checkbox, MenuItem or any widget reporting ImGuiItemStatusFlags_Checkable)"
+                "type": "ImGuiTest*",
+                "name": "Test",
+                "comment": {
+                    "sameline": "// Test currently running"
+                }
             },
             {
-                "name": "ImGuiTestAction_Uncheck",
-                "value": "",
-                "calc_value": 5,
-                "comment": "// Uncheck item if checked"
+                "type": "ImGuiTestOutput*",
+                "name": "TestOutput",
+                "comment": {
+                    "sameline": "// Test output (generally == &Test->Output while executing TestFunc)"
+                }
             },
             {
-                "name": "ImGuiTestAction_Open",
-                "value": "",
-                "calc_value": 6,
-                "comment": "// Open item if closed (TreeNode, BeginMenu or any widget reporting ImGuiItemStatusFlags_Openable)"
+                "type": "int",
+                "name": "OpFlags",
+                "comment": {
+                    "sameline": "// Flags affecting all operation (supported: ImGuiTestOpFlags_NoAutoUncollapse)"
+                }
             },
             {
-                "name": "ImGuiTestAction_Close",
-                "value": "",
-                "calc_value": 7,
-                "comment": "// Close item if opened"
+                "type": "int",
+                "name": "PerfStressAmount",
+                "comment": {
+                    "sameline": "// Convenience copy of engine->IO.PerfStressAmount"
+                }
             },
             {
-                "name": "ImGuiTestAction_Input",
-                "value": "",
-                "calc_value": 8,
-                "comment": "// Start text inputing into a field (e.g. CTRL+Click on Drags/Slider, click on InputText etc.)"
+                "type": "int",
+                "name": "FrameCount",
+                "comment": {
+                    "sameline": "// Test frame count (restarts from zero every time)"
+                }
             },
             {
-                "name": "ImGuiTestAction_NavActivate",
-                "value": "",
-                "calc_value": 9,
-                "comment": "// Activate item with navigation"
+                "type": "int",
+                "name": "FirstTestFrameCount",
+                "comment": {
+                    "sameline": "// First frame where TestFunc is running (after warm-up frame). This is generally -1 or 0 depending on whether we have warm up enabled"
+                }
             },
             {
-                "name": "ImGuiTestAction_COUNT",
-                "value": "",
-                "calc_value": 10
+                "type": "bool",
+                "name": "FirstGuiFrame"
+            },
+            {
+                "type": "bool",
+                "name": "HasDock",
+                "comment": {
+                    "sameline": "// #ifdef IMGUI_HAS_DOCK expressed in an easier to test value"
+                }
+            },
+            {
+                "type": "ImGuiCaptureArgs*",
+                "name": "CaptureArgs",
+                "comment": {
+                    "sameline": "// Capture settings used by ctx->Capture*() functions"
+                }
+            },
+            {
+                "type": "ImGuiTestEngine*",
+                "name": "Engine"
+            },
+            {
+                "type": "ImGuiTestInputs*",
+                "name": "Inputs"
+            },
+            {
+                "type": "int",
+                "name": "RunFlags"
+            },
+            {
+                "type": "ImGuiTestActiveFunc",
+                "name": "ActiveFunc",
+                "comment": {
+                    "sameline": "// None/GuiFunc/TestFunc"
+                }
+            },
+            {
+                "type": "double",
+                "name": "RunningTime",
+                "comment": {
+                    "sameline": "// Amount of wall clock time the Test has been running. Used by safety watchdog."
+                }
+            },
+            {
+                "type": "int",
+                "name": "ActionDepth",
+                "comment": {
+                    "sameline": "// Nested depth of ctx-> function calls (used to decorate log)"
+                }
+            },
+            {
+                "type": "int",
+                "name": "CaptureCounter",
+                "comment": {
+                    "sameline": "// Number of captures"
+                }
+            },
+            {
+                "type": "int",
+                "name": "ErrorCounter",
+                "comment": {
+                    "sameline": "// Number of errors (generally this maxxes at 1 as most functions will early out)"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "Abort"
+            },
+            {
+                "type": "double",
+                "name": "PerfRefDt"
+            },
+            {
+                "type": "int",
+                "name": "PerfIterations",
+                "comment": {
+                    "sameline": "// Number of frames for PerfCapture() measurements"
+                }
+            },
+            {
+                "type": "char",
+                "name": "RefStr[256]",
+                "size": 256,
+                "comment": {
+                    "sameline": "// Reference window/path over which all named references are based"
+                }
+            },
+            {
+                "type": "unsigned int",
+                "name": "RefID",
+                "comment": {
+                    "sameline": "// Reference ID over which all named references are based"
+                }
+            },
+            {
+                "type": "unsigned int",
+                "name": "RefWindowID",
+                "comment": {
+                    "sameline": "// ID of a window that contains RefID item"
+                }
+            },
+            {
+                "type": "ImGuiInputSource",
+                "name": "InputMode",
+                "comment": {
+                    "sameline": "// Prefer interacting with mouse/keyboard/gamepad"
+                }
+            },
+            {
+                "type": "ImVector_char",
+                "name": "TempString"
+            },
+            {
+                "type": "ImVector_char",
+                "name": "Clipboard",
+                "comment": {
+                    "sameline": "// Private clipboard for the test instance"
+                }
+            },
+            {
+                "type": "ImVector_ImGuiWindowPtr",
+                "name": "ForeignWindowsToHide"
+            },
+            {
+                "type": "ImGuiTestItemInfo",
+                "name": "DummyItemInfoNull",
+                "comment": {
+                    "sameline": "// Storage for ItemInfoNull()"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "CachedLinesPrintedToTTY"
             }
         ],
-        "ImGuiCaptureFlags_": [
+        "ImGuiTest": [
             {
-                "name": "ImGuiCaptureFlags_None",
-                "value": "0",
-                "calc_value": 0
+                "type": "const char*",
+                "name": "Category",
+                "comment": {
+                    "sameline": "// Literal, not owned"
+                }
             },
             {
-                "name": "ImGuiCaptureFlags_StitchAll",
-                "value": "1 << 0",
-                "calc_value": 1,
-                "comment": "// Capture entire window scroll area (by scrolling and taking multiple screenshot). Only works for a single window."
+                "type": "const char*",
+                "name": "Name",
+                "comment": {
+                    "sameline": "// Literal, generally not owned unless NameOwned=true"
+                }
             },
             {
-                "name": "ImGuiCaptureFlags_IncludeOtherWindows",
-                "value": "1 << 1",
-                "calc_value": 2,
-                "comment": "// Disable hiding other windows (when CaptureAddWindow has been called by default other windows are hidden)"
+                "type": "ImGuiTestGroup",
+                "name": "Group",
+                "comment": {
+                    "sameline": "// Coarse groups: 'Tests' or 'Perf'"
+                }
             },
             {
-                "name": "ImGuiCaptureFlags_IncludePopups",
-                "value": "1 << 2",
-                "calc_value": 4,
-                "comment": "// Expand capture area to automatically include visible popups (Unused if ImGuiCaptureFlags_IncludeOtherWindows is set)"
+                "type": "bool",
+                "name": "NameOwned",
+                "comment": {
+                    "sameline": "//"
+                }
             },
             {
-                "name": "ImGuiCaptureFlags_HideMouseCursor",
-                "value": "1 << 3",
-                "calc_value": 8,
-                "comment": "// Hide render software mouse cursor during capture."
+                "type": "int",
+                "name": "ArgVariant",
+                "comment": {
+                    "sameline": "// User parameter. Generally we use it to run variations of a same test by sharing GuiFunc/TestFunc"
+                }
             },
             {
-                "name": "ImGuiCaptureFlags_Instant",
-                "value": "1 << 4",
-                "calc_value": 16,
-                "comment": "// Perform capture on very same frame. Only works when capturing a rectangular region. Unsupported features: content stitching, window hiding, window relocation."
+                "type": "int",
+                "name": "Flags",
+                "comment": {
+                    "sameline": "// See ImGuiTestFlags_"
+                }
             },
             {
-                "name": "ImGuiCaptureFlags_NoSave",
-                "value": "1 << 5",
-                "calc_value": 32,
-                "comment": "// Do not save output image."
+                "type": "ImGuiTestGuiFunc *",
+                "name": "GuiFunc",
+                "comment": {
+                    "sameline": "// GUI function (optional if your test are running over an existing GUI application)"
+                }
+            },
+            {
+                "type": "ImGuiTestTestFunc *",
+                "name": "TestFunc",
+                "comment": {
+                    "sameline": "// Test driving function"
+                }
+            },
+            {
+                "type": "ImGuiTestTestFunc *",
+                "name": "TeardownFunc",
+                "comment": {
+                    "sameline": "// Teardown driving function, executed after TestFunc _regardless_ of TestFunc failing."
+                }
+            },
+            {
+                "type": "void*",
+                "name": "UserData",
+                "comment": {
+                    "sameline": "// General purpose user data (if assigning capturing lambdas on GuiFunc/TestFunc you may not need to use this)"
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "SourceFile",
+                "comment": {
+                    "sameline": "// __FILE__"
+                }
+            },
+            {
+                "type": "int",
+                "name": "SourceLine",
+                "comment": {
+                    "sameline": "// __LINE__"
+                }
+            },
+            {
+                "type": "int",
+                "name": "SourceLineEnd",
+                "comment": {
+                    "sameline": "// end of line (when calculated by ImGuiTestEngine_StartCalcSourceLineEnds())"
+                }
+            },
+            {
+                "type": "ImGuiTestOutput",
+                "name": "Output"
+            },
+            {
+                "type": "unsigned long",
+                "name": "VarsSize"
+            },
+            {
+                "type": "ImGuiTestVarsConstructor *",
+                "name": "VarsConstructor"
+            },
+            {
+                "type": "ImGuiTestVarsPostConstructor *",
+                "name": "VarsPostConstructor",
+                "comment": {
+                    "sameline": "// To override constructor default (in case the default are problematic on the first GuiFunc frame)"
+                }
+            },
+            {
+                "type": "void*",
+                "name": "VarsPostConstructorUserFn"
+            },
+            {
+                "type": "ImGuiTestVarsDestructor *",
+                "name": "VarsDestructor"
             }
         ],
-        "ImGuiTestOpFlags_": [
+        "ImGuiTestCoroutineInterface": [
             {
-                "name": "ImGuiTestOpFlags_None",
-                "value": "0",
-                "calc_value": 0
+                "type": "ImGuiTestCoroutineHandle (*)(ImGuiTestCoroutineMainFunc *, const char *, void *)",
+                "name": "CreateFunc"
             },
             {
-                "name": "ImGuiTestOpFlags_NoCheckHoveredId",
-                "value": "1 << 1",
-                "calc_value": 2,
-                "comment": "// Don't check for HoveredId after aiming for a widget. This is automatic when there's an active item, typically in drag and drop operation. Otherwise, a few situations may want this e.g. for items that don't use ItemHoverable(), or when intently aiming for an item behind a popup/modal inhibition layer."
+                "type": "void (*)(ImGuiTestCoroutineHandle)",
+                "name": "DestroyFunc"
             },
             {
-                "name": "ImGuiTestOpFlags_NoError",
-                "value": "1 << 2",
-                "calc_value": 4,
-                "comment": "// Don't abort/error e.g. if the item cannot be found or the operation doesn't succeed."
+                "type": "bool (*)(ImGuiTestCoroutineHandle)",
+                "name": "RunFunc"
             },
             {
-                "name": "ImGuiTestOpFlags_NoFocusWindow",
-                "value": "1 << 3",
-                "calc_value": 8,
-                "comment": "// Don't focus window when aiming at an item"
-            },
-            {
-                "name": "ImGuiTestOpFlags_NoAutoUncollapse",
-                "value": "1 << 4",
-                "calc_value": 16,
-                "comment": "// Disable automatically uncollapsing windows (useful when specifically testing Collapsing behaviors)"
-            },
-            {
-                "name": "ImGuiTestOpFlags_NoAutoOpenFullPath",
-                "value": "1 << 5",
-                "calc_value": 32,
-                "comment": "// Disable automatically opening intermediaries (e.g. ItemClick(\"Hello/OK\") will automatically first open \"Hello\" if \"OK\" isn't found. Only works if ref is a string path."
-            },
-            {
-                "name": "ImGuiTestOpFlags_NoYield",
-                "value": "1 << 6",
-                "calc_value": 64,
-                "comment": "// Don't yield (only supported by a few functions), in case you need to manage rigorous per-frame timing."
-            },
-            {
-                "name": "ImGuiTestOpFlags_IsSecondAttempt",
-                "value": "1 << 7",
-                "calc_value": 128,
-                "comment": "// Used by recursing functions to indicate a second attempt"
-            },
-            {
-                "name": "ImGuiTestOpFlags_MoveToEdgeL",
-                "value": "1 << 8",
-                "calc_value": 256,
-                "comment": "// Simple Dumb aiming helpers to test widget that care about clicking position. May need to replace will better functionalities."
-            },
-            {
-                "name": "ImGuiTestOpFlags_MoveToEdgeR",
-                "value": "1 << 9",
-                "calc_value": 512
-            },
-            {
-                "name": "ImGuiTestOpFlags_MoveToEdgeU",
-                "value": "1 << 10",
-                "calc_value": 1024
-            },
-            {
-                "name": "ImGuiTestOpFlags_MoveToEdgeD",
-                "value": "1 << 11",
-                "calc_value": 2048
-            },
-            {
-                "name": "ImGuiTestOpFlags_NoScroll",
-                "value": "1 << 12",
-                "calc_value": 4096,
-                "comment": "// Disable automatically scrolling to reach an item."
+                "type": "void (*)()",
+                "name": "YieldFunc"
             }
         ],
-        "ImOsConsoleTextColor": [
+        "ImGuiCaptureArgs": [
             {
-                "name": "ImOsConsoleTextColor_Black",
-                "value": "",
-                "calc_value": 0
+                "type": "unsigned int",
+                "name": "InFlags",
+                "comment": {
+                    "sameline": "// Flags for customizing behavior of screenshot tool."
+                }
             },
             {
-                "name": "ImOsConsoleTextColor_White",
-                "value": "",
-                "calc_value": 1
+                "type": "ImVector_ImGuiWindowPtr",
+                "name": "InCaptureWindows",
+                "comment": {
+                    "sameline": "// Windows to capture. All other windows will be hidden. May be used with InCaptureRect to capture only some windows in specified rect."
+                }
             },
             {
-                "name": "ImOsConsoleTextColor_BrightWhite",
-                "value": "",
-                "calc_value": 2
+                "type": "ImRect",
+                "name": "InCaptureRect",
+                "comment": {
+                    "sameline": "// Screen rect to capture. Does not include padding."
+                }
             },
             {
-                "name": "ImOsConsoleTextColor_BrightRed",
-                "value": "",
-                "calc_value": 3
+                "type": "float",
+                "name": "InPadding",
+                "comment": {
+                    "sameline": "// Extra padding at the edges of the screenshot. Ensure that there is available space around capture rect horizontally, also vertically if ImGuiCaptureFlags_StitchAll is not used."
+                }
             },
             {
-                "name": "ImOsConsoleTextColor_BrightGreen",
-                "value": "",
-                "calc_value": 4
+                "type": "char",
+                "name": "InOutputFile[256]",
+                "size": 256,
+                "comment": {
+                    "sameline": "// Output will be saved to a file if InOutputImageBuf is nullptr."
+                }
             },
             {
-                "name": "ImOsConsoleTextColor_BrightBlue",
-                "value": "",
-                "calc_value": 5
+                "type": "ImGuiCaptureImageBuf*",
+                "name": "InOutputImageBuf",
+                "comment": {
+                    "sameline": "// _OR_ Output will be saved to image buffer if specified."
+                }
             },
             {
-                "name": "ImOsConsoleTextColor_BrightYellow",
-                "value": "",
-                "calc_value": 6
+                "type": "int",
+                "name": "InRecordFPSTarget",
+                "comment": {
+                    "sameline": "// FPS target for recording videos."
+                }
+            },
+            {
+                "type": "int",
+                "name": "InSizeAlign",
+                "comment": {
+                    "sameline": "// Resolution alignment (0 = auto, 1 = no alignment, >= 2 = align width/height to be multiple of given value)"
+                }
+            },
+            {
+                "type": "ImVec2",
+                "name": "OutImageSize",
+                "comment": {
+                    "sameline": "// Produced image size."
+                }
             }
         ],
-        "ImGuiTestCheckFlags_": [
+        "ImGuiTestFindByLabelTask": [
             {
-                "name": "ImGuiTestCheckFlags_None",
-                "value": "0",
-                "calc_value": 0
+                "type": "unsigned int",
+                "name": "InPrefixId",
+                "comment": {
+                    "sameline": "// A known base ID which appears BEFORE the wildcard ID (for \"hello/**/foo/bar\" it would be hash of \"hello\")"
+                }
             },
             {
-                "name": "ImGuiTestCheckFlags_SilentSuccess",
-                "value": "1 << 0",
-                "calc_value": 1
+                "type": "int",
+                "name": "InSuffixDepth",
+                "comment": {
+                    "sameline": "// Number of labels in a path, after unknown base ID (for \"hello/**/foo/bar\" it would be 2)"
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "InSuffix",
+                "comment": {
+                    "sameline": "// A label string which appears on ID stack after unknown base ID (for \"hello/**/foo/bar\" it would be \"foo/bar\")"
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "InSuffixLastItem",
+                "comment": {
+                    "sameline": "// A last label string (for \"hello/**/foo/bar\" it would be \"bar\")"
+                }
+            },
+            {
+                "type": "unsigned int",
+                "name": "InSuffixLastItemHash"
+            },
+            {
+                "type": "int",
+                "name": "InFilterItemStatusFlags",
+                "comment": {
+                    "sameline": "// Flags required for item to be returned"
+                }
+            },
+            {
+                "type": "unsigned int",
+                "name": "OutItemId",
+                "comment": {
+                    "sameline": "// Result item ID"
+                }
             }
         ],
-        "ImGuiTestActiveFunc": [
+        "ImGuiTestEnginePerfRecord": [
             {
-                "name": "ImGuiTestActiveFunc_None",
-                "value": "",
-                "calc_value": 0
+                "type": "double",
+                "name": "RawValueMs",
+                "comment": {
+                    "sameline": "// For current frame"
+                }
             },
             {
-                "name": "ImGuiTestActiveFunc_GuiFunc",
-                "value": "",
-                "calc_value": 1,
-                "comment": "// == GuiFunc() handler"
+                "type": "ImMovingAverage_double",
+                "name": "Average100"
             },
             {
-                "name": "ImGuiTestActiveFunc_TestFunc",
-                "value": "",
-                "calc_value": 2,
-                "comment": "// == TestFunc() handler"
-            },
-            {
-                "name": "ImGuiTestActiveFunc_TeardownFunc",
-                "value": "",
-                "calc_value": 3,
-                "comment": "// == TeardownFunc() handler"
+                "type": "ImMovingAverage_double",
+                "name": "Average500"
             }
         ],
-        "ImGuiTestRunSpeed": [
+        "ImGuiTestGenericVars": [
             {
-                "name": "ImGuiTestRunSpeed_Fast",
-                "value": "0",
-                "calc_value": 0,
-                "comment": "// Run tests as fast as possible (teleport mouse, skip delays, etc.)"
+                "type": "int",
+                "name": "Step"
             },
             {
-                "name": "ImGuiTestRunSpeed_Normal",
-                "value": "1",
-                "calc_value": 1,
-                "comment": "// Run tests at human watchable speed (for debugging)"
+                "type": "int",
+                "name": "Count"
             },
             {
-                "name": "ImGuiTestRunSpeed_Cinematic",
-                "value": "2",
-                "calc_value": 2,
-                "comment": "// Run tests with pauses between actions (for e.g. tutorials)"
+                "type": "unsigned int",
+                "name": "DockId"
             },
             {
-                "name": "ImGuiTestRunSpeed_COUNT",
-                "value": "",
-                "calc_value": 3
+                "type": "unsigned int",
+                "name": "OwnerId"
+            },
+            {
+                "type": "ImVec2",
+                "name": "WindowSize"
+            },
+            {
+                "type": "int",
+                "name": "WindowFlags"
+            },
+            {
+                "type": "int",
+                "name": "TableFlags"
+            },
+            {
+                "type": "int",
+                "name": "PopupFlags"
+            },
+            {
+                "type": "int",
+                "name": "InputTextFlags"
+            },
+            {
+                "type": "ImGuiTestGenericItemStatus",
+                "name": "Status"
+            },
+            {
+                "type": "bool",
+                "name": "ShowWindow1"
+            },
+            {
+                "type": "bool",
+                "name": "ShowWindow2"
+            },
+            {
+                "type": "bool",
+                "name": "UseClipper"
+            },
+            {
+                "type": "bool",
+                "name": "UseViewports"
+            },
+            {
+                "type": "float",
+                "name": "Width"
+            },
+            {
+                "type": "ImVec2",
+                "name": "Pos"
+            },
+            {
+                "type": "ImVec2",
+                "name": "Pivot"
+            },
+            {
+                "type": "ImVec2",
+                "name": "ItemSize"
+            },
+            {
+                "type": "ImVec4",
+                "name": "Color1"
+            },
+            {
+                "type": "ImVec4",
+                "name": "Color2"
+            },
+            {
+                "type": "int",
+                "name": "Int1"
+            },
+            {
+                "type": "int",
+                "name": "Int2"
+            },
+            {
+                "type": "int",
+                "name": "IntArray[10]",
+                "size": 10
+            },
+            {
+                "type": "float",
+                "name": "Float1"
+            },
+            {
+                "type": "float",
+                "name": "Float2"
+            },
+            {
+                "type": "float",
+                "name": "FloatArray[10]",
+                "size": 10
+            },
+            {
+                "type": "bool",
+                "name": "Bool1"
+            },
+            {
+                "type": "bool",
+                "name": "Bool2"
+            },
+            {
+                "type": "bool",
+                "name": "BoolArray[10]",
+                "size": 10
+            },
+            {
+                "type": "unsigned int",
+                "name": "Id"
+            },
+            {
+                "type": "unsigned int",
+                "name": "IdArray[10]",
+                "size": 10
+            },
+            {
+                "type": "char",
+                "name": "Str1[256]",
+                "size": 256
+            },
+            {
+                "type": "char",
+                "name": "Str2[256]",
+                "size": 256
             }
         ],
-        "ImGuiTestRunFlags_": [
+        "ImGuiCaptureWindowData": [
             {
-                "name": "ImGuiTestRunFlags_None",
-                "value": "0",
-                "calc_value": 0
+                "type": "ImGuiWindow*",
+                "name": "Window"
             },
             {
-                "name": "ImGuiTestRunFlags_GuiFuncDisable",
-                "value": "1 << 0",
-                "calc_value": 1,
-                "comment": "// Used internally to temporarily disable the GUI func (at the end of a test, etc)"
+                "type": "ImRect",
+                "name": "BackupRect"
             },
             {
-                "name": "ImGuiTestRunFlags_GuiFuncOnly",
-                "value": "1 << 1",
-                "calc_value": 2,
-                "comment": "// Set when user selects \"Run GUI func\""
-            },
-            {
-                "name": "ImGuiTestRunFlags_NoSuccessMsg",
-                "value": "1 << 2",
-                "calc_value": 4
-            },
-            {
-                "name": "ImGuiTestRunFlags_EnableRawInputs",
-                "value": "1 << 3",
-                "calc_value": 8,
-                "comment": "// Disable input submission to let test submission raw input event (in order to test e.g. IO queue)"
-            },
-            {
-                "name": "ImGuiTestRunFlags_RunFromGui",
-                "value": "1 << 4",
-                "calc_value": 16,
-                "comment": "// Test ran manually from GUI, will disable watchdog."
-            },
-            {
-                "name": "ImGuiTestRunFlags_RunFromCommandLine",
-                "value": "1 << 5",
-                "calc_value": 32,
-                "comment": "// Test queued from command-line."
-            },
-            {
-                "name": "ImGuiTestRunFlags_NoError",
-                "value": "1 << 10",
-                "calc_value": 1024
-            },
-            {
-                "name": "ImGuiTestRunFlags_ShareVars",
-                "value": "1 << 11",
-                "calc_value": 2048,
-                "comment": "// Share generic vars and custom vars between child and parent tests (custom vars need to be same type)"
-            },
-            {
-                "name": "ImGuiTestRunFlags_ShareTestContext",
-                "value": "1 << 12",
-                "calc_value": 4096,
-                "comment": "// Share ImGuiTestContext instead of creating a new one (unsure what purpose this may be useful for yet)"
+                "type": "ImVec2",
+                "name": "PosDuringCapture"
             }
         ],
-        "ImGuiCaptureStatus": [
+        "ImGuiTestEngineIO": [
             {
-                "name": "ImGuiCaptureStatus_InProgress",
-                "value": "",
-                "calc_value": 0
+                "type": "ImGuiTestCoroutineInterface*",
+                "name": "CoroutineFuncs",
+                "comment": {
+                    "sameline": "// (Required) Coroutine functions (see imgui_te_coroutines.h)"
+                }
             },
             {
-                "name": "ImGuiCaptureStatus_Done",
-                "value": "",
-                "calc_value": 1
+                "type": "ImGuiTestEngineSrcFileOpenFunc *",
+                "name": "SrcFileOpenFunc",
+                "comment": {
+                    "sameline": "// (Optional) To open source files from test engine UI (otherwise default to open file in shell)"
+                }
             },
             {
-                "name": "ImGuiCaptureStatus_Error",
-                "value": "",
-                "calc_value": 2
+                "type": "ImGuiScreenCaptureFunc *",
+                "name": "ScreenCaptureFunc",
+                "comment": {
+                    "sameline": "// (Optional) To capture graphics output (application _MUST_ call ImGuiTestEngine_PostSwap() function after swapping is framebuffer)"
+                }
+            },
+            {
+                "type": "void*",
+                "name": "SrcFileOpenUserData",
+                "comment": {
+                    "sameline": "// (Optional) User data for SrcFileOpenFunc"
+                }
+            },
+            {
+                "type": "void*",
+                "name": "ScreenCaptureUserData",
+                "comment": {
+                    "sameline": "// (Optional) User data for ScreenCaptureFunc"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ConfigSavedSettings",
+                "comment": {
+                    "sameline": "// Load/Save settings in main context .ini file."
+                }
+            },
+            {
+                "type": "ImGuiTestRunSpeed",
+                "name": "ConfigRunSpeed",
+                "comment": {
+                    "sameline": "// Run tests in fast/normal/cinematic mode"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ConfigStopOnError",
+                "comment": {
+                    "sameline": "// Stop queued tests on test error"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ConfigBreakOnError",
+                "comment": {
+                    "sameline": "// Break debugger on test error by calling IM_DEBUG_BREAK()"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ConfigKeepGuiFunc",
+                "comment": {
+                    "sameline": "// Keep test GUI running at the end of the test"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ConfigRestoreFocusAfterTests",
+                "comment": {
+                    "sameline": "// Restore focus back after running tests"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ConfigCaptureEnabled",
+                "comment": {
+                    "sameline": "// Master enable flags for capturing and saving captures. Disable to avoid e.g. lengthy saving of large PNG files."
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ConfigCaptureOnError"
+            },
+            {
+                "type": "bool",
+                "name": "ConfigNoThrottle",
+                "comment": {
+                    "sameline": "// Disable vsync for performance measurement or fast test running"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ConfigMouseDrawCursor",
+                "comment": {
+                    "sameline": "// Enable drawing of Dear ImGui software mouse cursor when running tests"
+                }
+            },
+            {
+                "type": "float",
+                "name": "ConfigFixedDeltaTime",
+                "comment": {
+                    "sameline": "// Use fixed delta time instead of calculating it from wall clock"
+                }
+            },
+            {
+                "type": "int",
+                "name": "PerfStressAmount",
+                "comment": {
+                    "sameline": "// Integer to scale the amount of items submitted in test"
+                }
+            },
+            {
+                "type": "char",
+                "name": "GitBranchName[64]",
+                "size": 64,
+                "comment": {
+                    "sameline": "// e.g. fill in branch name (e.g. recorded in perf samples .csv)"
+                }
+            },
+            {
+                "type": "ImGuiTestVerboseLevel",
+                "name": "ConfigVerboseLevel"
+            },
+            {
+                "type": "ImGuiTestVerboseLevel",
+                "name": "ConfigVerboseLevelOnError"
+            },
+            {
+                "type": "bool",
+                "name": "ConfigLogToTTY",
+                "comment": {
+                    "sameline": "// Output log entries to TTY (in addition to Test Engine UI)"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ConfigLogToDebugger",
+                "comment": {
+                    "sameline": "// Output log entries to Debugger (in addition to Test Engine UI)"
+                }
+            },
+            {
+                "type": "ImGuiTestEngineLogFunc *",
+                "name": "ConfigLogToFunc",
+                "comment": {
+                    "sameline": "// Hook for logging of full serial log (vs peeking into ImGuiTest->Output.Log for a single test)"
+                }
+            },
+            {
+                "type": "void*",
+                "name": "ConfigLogToFuncUserData"
+            },
+            {
+                "type": "float",
+                "name": "MouseSpeed",
+                "comment": {
+                    "sameline": "// Mouse speed (pixel/second) when not running in fast mode"
+                }
+            },
+            {
+                "type": "float",
+                "name": "MouseWobble",
+                "comment": {
+                    "sameline": "// (0.0f..1.0f) How much wobble to apply to the mouse (pixels per pixel of move distance) when not running in fast mode"
+                }
+            },
+            {
+                "type": "float",
+                "name": "ScrollSpeed",
+                "comment": {
+                    "sameline": "// Scroll speed (pixel/second) when not running in fast mode"
+                }
+            },
+            {
+                "type": "float",
+                "name": "TypingSpeed",
+                "comment": {
+                    "sameline": "// Char input speed (characters/second) when not running in fast mode"
+                }
+            },
+            {
+                "type": "float",
+                "name": "ActionDelayShort",
+                "comment": {
+                    "sameline": "// Time between short actions"
+                }
+            },
+            {
+                "type": "float",
+                "name": "ActionDelayStandard",
+                "comment": {
+                    "sameline": "// Time between most actions"
+                }
+            },
+            {
+                "type": "char",
+                "name": "VideoCaptureEncoderPath[256]",
+                "size": 256,
+                "comment": {
+                    "sameline": "// Video encoder executable path, e.g. \"path/to/ffmpeg.exe\"."
+                }
+            },
+            {
+                "type": "char",
+                "name": "VideoCaptureEncoderParams[256]",
+                "size": 256,
+                "comment": {
+                    "sameline": "// Video encoder parameters for .MP4 captures, e.g. see IMGUI_CAPTURE_DEFAULT_VIDEO_PARAMS_FOR_FFMPEG"
+                }
+            },
+            {
+                "type": "char",
+                "name": "GifCaptureEncoderParams[512]",
+                "size": 512,
+                "comment": {
+                    "sameline": "// Video encoder parameters for .GIF captures, e.g. see IMGUI_CAPTURE_DEFAULT_GIF_PARAMS_FOR_FFMPEG"
+                }
+            },
+            {
+                "type": "char",
+                "name": "VideoCaptureExtension[8]",
+                "size": 8,
+                "comment": {
+                    "sameline": "// Video file extension (default, may be overridden by test)."
+                }
+            },
+            {
+                "type": "float",
+                "name": "ConfigWatchdogWarning",
+                "comment": {
+                    "sameline": "// Warn when a test exceed this time (in second)"
+                }
+            },
+            {
+                "type": "float",
+                "name": "ConfigWatchdogKillTest",
+                "comment": {
+                    "sameline": "// Attempt to stop running a test when exceeding this time (in second)"
+                }
+            },
+            {
+                "type": "float",
+                "name": "ConfigWatchdogKillApp",
+                "comment": {
+                    "sameline": "// Stop application when exceeding this time (in second)"
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "ExportResultsFilename"
+            },
+            {
+                "type": "ImGuiTestEngineExportFormat",
+                "name": "ExportResultsFormat"
+            },
+            {
+                "type": "bool",
+                "name": "CheckDrawDataIntegrity",
+                "comment": {
+                    "sameline": "// Check ImDrawData integrity (buffer count, etc.). Currently cheap but may become a slow operation."
+                }
+            },
+            {
+                "type": "bool",
+                "name": "IsRunningTests"
+            },
+            {
+                "type": "bool",
+                "name": "IsRequestingMaxAppSpeed",
+                "comment": {
+                    "sameline": "// When running in fast mode: request app to skip vsync or even skip rendering if it wants"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "IsCapturing",
+                "comment": {
+                    "sameline": "// Capture is in progress"
+                }
             }
         ],
-        "ImGuiTestEngineExportFormat": [
+        "ImGuiTestEngine": [
             {
-                "name": "ImGuiTestEngineExportFormat_None",
-                "value": "0",
-                "calc_value": 0
+                "type": "ImGuiTestEngineIO",
+                "name": "IO"
             },
             {
-                "name": "ImGuiTestEngineExportFormat_JUnitXml",
-                "value": "",
-                "calc_value": 1
+                "type": "ImGuiContext*",
+                "name": "UiContextTarget",
+                "comment": {
+                    "sameline": "// imgui context for testing"
+                }
+            },
+            {
+                "type": "ImGuiContext*",
+                "name": "UiContextActive",
+                "comment": {
+                    "sameline": "// imgui context for testing == UiContextTarget or nullptr"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "Started"
+            },
+            {
+                "type": "bool",
+                "name": "UiContextHasHooks"
+            },
+            {
+                "type": "unsigned long long",
+                "name": "BatchStartTime"
+            },
+            {
+                "type": "unsigned long long",
+                "name": "BatchEndTime"
+            },
+            {
+                "type": "int",
+                "name": "FrameCount"
+            },
+            {
+                "type": "float",
+                "name": "OverrideDeltaTime",
+                "comment": {
+                    "sameline": "// Inject custom delta time into imgui context to simulate clock passing faster than wall clock time."
+                }
+            },
+            {
+                "type": "ImVector_ImGuiTest_Ptr",
+                "name": "TestsAll"
+            },
+            {
+                "type": "ImVector_ImGuiTestRunTask",
+                "name": "TestsQueue"
+            },
+            {
+                "type": "ImGuiTestContext*",
+                "name": "TestContext",
+                "comment": {
+                    "sameline": "// Running test context"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "TestsSourceLinesDirty"
+            },
+            {
+                "type": "ImVector_ImGuiTestInfoTask_Ptr",
+                "name": "InfoTasks"
+            },
+            {
+                "type": "ImGuiTestGatherTask",
+                "name": "GatherTask"
+            },
+            {
+                "type": "ImGuiTestFindByLabelTask",
+                "name": "FindByLabelTask"
+            },
+            {
+                "type": "void*",
+                "name": "TestQueueCoroutine",
+                "comment": {
+                    "sameline": "// Coroutine to run the test queue"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "TestQueueCoroutineShouldExit",
+                "comment": {
+                    "sameline": "// Flag to indicate that we are shutting down and the test queue coroutine should stop"
+                }
+            },
+            {
+                "type": "ImGuiTextBuffer",
+                "name": "StringBuilderForChecks"
+            },
+            {
+                "type": "ImGuiTestInputs",
+                "name": "Inputs"
+            },
+            {
+                "type": "bool",
+                "name": "Abort"
+            },
+            {
+                "type": "ImGuiTest*",
+                "name": "UiSelectAndScrollToTest"
+            },
+            {
+                "type": "ImGuiTest*",
+                "name": "UiSelectedTest"
+            },
+            {
+                "type": "Str*",
+                "name": "UiFilterTests"
+            },
+            {
+                "type": "Str*",
+                "name": "UiFilterPerfs"
+            },
+            {
+                "type": "unsigned int",
+                "name": "UiFilterByStatusMask"
+            },
+            {
+                "type": "bool",
+                "name": "UiMetricsOpen"
+            },
+            {
+                "type": "bool",
+                "name": "UiDebugLogOpen"
+            },
+            {
+                "type": "bool",
+                "name": "UiCaptureToolOpen"
+            },
+            {
+                "type": "bool",
+                "name": "UiStackToolOpen"
+            },
+            {
+                "type": "bool",
+                "name": "UiPerfToolOpen"
+            },
+            {
+                "type": "float",
+                "name": "UiLogHeight"
+            },
+            {
+                "type": "unsigned long long",
+                "name": "PerfTimestampPreNewFrame"
+            },
+            {
+                "type": "unsigned long long",
+                "name": "PerfTimestampPreRender"
+            },
+            {
+                "type": "unsigned long long",
+                "name": "PerfTimestampPreSwap"
+            },
+            {
+                "type": "unsigned long long",
+                "name": "PerfTimestampPostSwap"
+            },
+            {
+                "type": "ImGuiTestEnginePerfRecord",
+                "name": "PerfDtApp"
+            },
+            {
+                "type": "ImGuiTestEnginePerfRecord",
+                "name": "PerfDtPreNewFrameToPreRender"
+            },
+            {
+                "type": "ImGuiTestEnginePerfRecord",
+                "name": "PerfDtPreRenderToPreSwap"
+            },
+            {
+                "type": "ImGuiTestEnginePerfRecord",
+                "name": "PerfDtPreNewFrameToPreSwap"
+            },
+            {
+                "type": "ImGuiTestEnginePerfRecord",
+                "name": "PerfDtPreSwapToPostSwap"
+            },
+            {
+                "type": "ImGuiPerfTool*",
+                "name": "PerfTool"
+            },
+            {
+                "type": "ImGuiCaptureToolUI",
+                "name": "CaptureTool",
+                "comment": {
+                    "sameline": "// Capture tool UI"
+                }
+            },
+            {
+                "type": "ImGuiCaptureContext",
+                "name": "CaptureContext",
+                "comment": {
+                    "sameline": "// Capture context used in tests"
+                }
+            },
+            {
+                "type": "ImGuiCaptureArgs*",
+                "name": "CaptureCurrentArgs"
+            },
+            {
+                "type": "bool",
+                "name": "PreSwapCalled"
+            },
+            {
+                "type": "bool",
+                "name": "PostSwapCalled"
+            },
+            {
+                "type": "bool",
+                "name": "ToolDebugRebootUiContext",
+                "comment": {
+                    "sameline": "// Completely shutdown and recreate the dear imgui context in place"
+                }
+            },
+            {
+                "type": "bool",
+                "name": "ToolSlowDown"
+            },
+            {
+                "type": "int",
+                "name": "ToolSlowDownMs"
+            },
+            {
+                "type": "ImGuiTestRunSpeed",
+                "name": "BackupConfigRunSpeed"
+            },
+            {
+                "type": "bool",
+                "name": "BackupConfigNoThrottle"
             }
         ],
-        "ImGuiTestInputType": [
+        "ImGuiTestGatherTask": [
             {
-                "name": "ImGuiTestInputType_None",
-                "value": "",
-                "calc_value": 0
+                "type": "unsigned int",
+                "name": "InParentID"
             },
             {
-                "name": "ImGuiTestInputType_Key",
-                "value": "",
-                "calc_value": 1
+                "type": "int",
+                "name": "InMaxDepth"
             },
             {
-                "name": "ImGuiTestInputType_Char",
-                "value": "",
-                "calc_value": 2
+                "type": "short",
+                "name": "InLayerMask"
             },
             {
-                "name": "ImGuiTestInputType_ViewportFocus",
-                "value": "",
-                "calc_value": 3
+                "type": "ImGuiTestItemList*",
+                "name": "OutList"
             },
             {
-                "name": "ImGuiTestInputType_ViewportSetPos",
-                "value": "",
-                "calc_value": 4
-            },
-            {
-                "name": "ImGuiTestInputType_ViewportSetSize",
-                "value": "",
-                "calc_value": 5
-            },
-            {
-                "name": "ImGuiTestInputType_ViewportClose",
-                "value": "",
-                "calc_value": 6
+                "type": "ImGuiTestItemInfo*",
+                "name": "LastItemInfo"
             }
         ],
-        "ImGuiPerfToolDisplayType": [
+        "ImGuiTestRunTask": [
             {
-                "name": "ImGuiPerfToolDisplayType_Simple",
-                "value": "",
-                "calc_value": 0,
-                "comment": "// Each run will be displayed individually."
+                "type": "ImGuiTest*",
+                "name": "Test"
             },
             {
-                "name": "ImGuiPerfToolDisplayType_PerBranchColors",
-                "value": "",
-                "calc_value": 1,
-                "comment": "// Use one bar color per branch."
-            },
-            {
-                "name": "ImGuiPerfToolDisplayType_CombineByBuildInfo",
-                "value": "",
-                "calc_value": 2,
-                "comment": "// Entries with same build information will be averaged."
+                "type": "int",
+                "name": "RunFlags"
             }
         ],
-        "ImGuiTestGroup": [
+        "ImGuiCaptureContext": [
             {
-                "name": "ImGuiTestGroup_Unknown",
-                "value": "-1",
-                "calc_value": 4294967295
+                "type": "ImGuiScreenCaptureFunc *",
+                "name": "ScreenCaptureFunc",
+                "comment": {
+                    "sameline": "// Graphics backend specific function that captures specified portion of framebuffer and writes RGBA data to `pixels` buffer."
+                }
             },
             {
-                "name": "ImGuiTestGroup_Tests",
-                "value": "0",
-                "calc_value": 0
+                "type": "void*",
+                "name": "ScreenCaptureUserData",
+                "comment": {
+                    "sameline": "// Custom user pointer which is passed to ScreenCaptureFunc. (Optional)"
+                }
             },
             {
-                "name": "ImGuiTestGroup_Perfs",
-                "value": "1",
-                "calc_value": 1
+                "type": "char*",
+                "name": "VideoCaptureEncoderPath",
+                "comment": {
+                    "sameline": "// Video encoder path (not owned, stored externally)."
+                }
             },
             {
-                "name": "ImGuiTestGroup_COUNT",
-                "value": "",
-                "calc_value": 2
+                "type": "int",
+                "name": "VideoCaptureEncoderPathSize",
+                "comment": {
+                    "sameline": "// Optional. Set in order to edit this parameter from UI."
+                }
+            },
+            {
+                "type": "char*",
+                "name": "VideoCaptureEncoderParams",
+                "comment": {
+                    "sameline": "// Video encoder params (not owned, stored externally)."
+                }
+            },
+            {
+                "type": "int",
+                "name": "VideoCaptureEncoderParamsSize",
+                "comment": {
+                    "sameline": "// Optional. Set in order to edit this parameter from UI."
+                }
+            },
+            {
+                "type": "char*",
+                "name": "GifCaptureEncoderParams",
+                "comment": {
+                    "sameline": "// Video encoder params for GIF output (not owned, stored externally)."
+                }
+            },
+            {
+                "type": "int",
+                "name": "GifCaptureEncoderParamsSize",
+                "comment": {
+                    "sameline": "// Optional. Set in order to edit this parameter from UI."
+                }
+            },
+            {
+                "type": "ImRect",
+                "name": "_CaptureRect",
+                "comment": {
+                    "sameline": "// Viewport rect that is being captured."
+                }
+            },
+            {
+                "type": "ImRect",
+                "name": "_CapturedWindowRect",
+                "comment": {
+                    "sameline": "// Top-left corner of region that covers all windows included in capture. This is not same as _CaptureRect.Min when capturing explicitly specified rect."
+                }
+            },
+            {
+                "type": "int",
+                "name": "_ChunkNo",
+                "comment": {
+                    "sameline": "// Number of chunk that is being captured when capture spans multiple frames."
+                }
+            },
+            {
+                "type": "int",
+                "name": "_FrameNo",
+                "comment": {
+                    "sameline": "// Frame number during capture process that spans multiple frames."
+                }
+            },
+            {
+                "type": "ImVec2",
+                "name": "_MouseRelativeToWindowPos",
+                "comment": {
+                    "sameline": "// Mouse cursor position relative to captured window (when _StitchAll is in use)."
+                }
+            },
+            {
+                "type": "ImGuiWindow*",
+                "name": "_HoveredWindow",
+                "comment": {
+                    "sameline": "// Window which was hovered at capture start."
+                }
+            },
+            {
+                "type": "ImGuiCaptureImageBuf",
+                "name": "_CaptureBuf",
+                "comment": {
+                    "sameline": "// Output image buffer."
+                }
+            },
+            {
+                "type": "const ImGuiCaptureArgs*",
+                "name": "_CaptureArgs",
+                "comment": {
+                    "sameline": "// Current capture args. Set only if capture is in progress."
+                }
+            },
+            {
+                "type": "ImVector_ImGuiCaptureWindowData",
+                "name": "_WindowsData",
+                "comment": {
+                    "sameline": "// Backup windows that will have their rect modified and restored. args->InCaptureWindows can not be used because popups may get closed during capture and no longer appear in that list."
+                }
+            },
+            {
+                "type": "bool",
+                "name": "_VideoRecording",
+                "comment": {
+                    "sameline": "// Flag indicating that video recording is in progress."
+                }
+            },
+            {
+                "type": "double",
+                "name": "_VideoLastFrameTime",
+                "comment": {
+                    "sameline": "// Time when last video frame was recorded."
+                }
+            },
+            {
+                "type": "FILE*",
+                "name": "_VideoEncoderPipe",
+                "comment": {
+                    "sameline": "// File writing to stdin of video encoder process."
+                }
+            },
+            {
+                "type": "bool",
+                "name": "_BackupMouseDrawCursor",
+                "comment": {
+                    "sameline": "// Initial value of g.IO.MouseDrawCursor"
+                }
+            },
+            {
+                "type": "ImVec2",
+                "name": "_BackupDisplayWindowPadding",
+                "comment": {
+                    "sameline": "// Backup padding. We set it to {0, 0} during capture."
+                }
+            },
+            {
+                "type": "ImVec2",
+                "name": "_BackupDisplaySafeAreaPadding",
+                "comment": {
+                    "sameline": "// Backup padding. We set it to {0, 0} during capture."
+                }
             }
         ],
-        "ImGuiTestStatus": [
+        "ImGuiTestEngineResultSummary": [
             {
-                "name": "ImGuiTestStatus_Unknown",
-                "value": "0",
-                "calc_value": 0
+                "type": "int",
+                "name": "CountTested",
+                "comment": {
+                    "sameline": "// Number of tests executed"
+                }
             },
             {
-                "name": "ImGuiTestStatus_Success",
-                "value": "1",
-                "calc_value": 1
+                "type": "int",
+                "name": "CountSuccess",
+                "comment": {
+                    "sameline": "// Number of tests succeeded"
+                }
             },
             {
-                "name": "ImGuiTestStatus_Queued",
-                "value": "2",
-                "calc_value": 2
-            },
-            {
-                "name": "ImGuiTestStatus_Running",
-                "value": "3",
-                "calc_value": 3
-            },
-            {
-                "name": "ImGuiTestStatus_Error",
-                "value": "4",
-                "calc_value": 4
-            },
-            {
-                "name": "ImGuiTestStatus_Suspended",
-                "value": "5",
-                "calc_value": 5
-            },
-            {
-                "name": "ImGuiTestStatus_COUNT",
-                "value": "",
-                "calc_value": 6
+                "type": "int",
+                "name": "CountInQueue",
+                "comment": {
+                    "sameline": "// Number of tests remaining in queue (e.g. aborted, crashed)"
+                }
             }
         ],
-        "ImOsConsoleStream": [
+        "ImBuildInfo": [
             {
-                "name": "ImOsConsoleStream_StandardOutput",
-                "value": "",
-                "calc_value": 0
+                "type": "const char*",
+                "name": "Type"
             },
             {
-                "name": "ImOsConsoleStream_StandardError",
-                "value": "",
-                "calc_value": 1
+                "type": "const char*",
+                "name": "Cpu"
+            },
+            {
+                "type": "const char*",
+                "name": "OS"
+            },
+            {
+                "type": "const char*",
+                "name": "Compiler"
+            },
+            {
+                "type": "char",
+                "name": "Date[32]",
+                "size": 32,
+                "comment": {
+                    "sameline": "// \"YYYY-MM-DD\""
+                }
+            },
+            {
+                "type": "const char*",
+                "name": "Time"
             }
         ],
-        "ImGuiTestFlags_": [
+        "ImGuiPerfTool": [
             {
-                "name": "ImGuiTestFlags_None",
-                "value": "0",
-                "calc_value": 0
+                "type": "ImVector_ImGuiPerfToolEntry",
+                "name": "_SrcData",
+                "comment": {
+                    "sameline": "// Raw entries from CSV file (with string pointer into CSV data)."
+                }
             },
             {
-                "name": "ImGuiTestFlags_NoGuiWarmUp",
-                "value": "1 << 0",
-                "calc_value": 1,
-                "comment": "// Disable running the GUI func for 2 frames before starting test code. For tests which absolutely need to start before GuiFunc."
+                "type": "ImVector_const_charPtr",
+                "name": "_Labels"
             },
             {
-                "name": "ImGuiTestFlags_NoAutoFinish",
-                "value": "1 << 1",
-                "calc_value": 2,
-                "comment": "// By default, tests with no TestFunc (only a GuiFunc) will end after warmup. Setting this require test to call ctx->Finish()."
+                "type": "ImVector_const_charPtr",
+                "name": "_LabelsVisible",
+                "comment": {
+                    "sameline": "// ImPlot requires a pointer of all labels beforehand. Always contains a dummy \"\" entry at the end!"
+                }
             },
             {
-                "name": "ImGuiTestFlags_NoRecoveryWarnings",
-                "value": "1 << 2",
-                "calc_value": 4,
-                "comment": "// Error/recovery warnings (missing End/Pop calls etc.) will be displayed as normal debug entries, for tests which may rely on those."
+                "type": "ImVector_ImGuiPerfToolBatch",
+                "name": "_Batches"
+            },
+            {
+                "type": "ImGuiStorage",
+                "name": "_LabelBarCounts",
+                "comment": {
+                    "sameline": "// Number bars each label will render."
+                }
+            },
+            {
+                "type": "int",
+                "name": "_NumVisibleBuilds",
+                "comment": {
+                    "sameline": "// Cached number of visible builds."
+                }
+            },
+            {
+                "type": "int",
+                "name": "_NumUniqueBuilds",
+                "comment": {
+                    "sameline": "// Cached number of unique builds."
+                }
+            },
+            {
+                "type": "ImGuiPerfToolDisplayType",
+                "name": "_DisplayType"
+            },
+            {
+                "type": "ImGuiPerfToolReportType",
+                "name": "_ReportType"
+            },
+            {
+                "type": "int",
+                "name": "_BaselineBatchIndex",
+                "comment": {
+                    "sameline": "// Index of baseline build."
+                }
+            },
+            {
+                "type": "int",
+                "name": "_BaselineTestIndex",
+                "comment": {
+                    "sameline": "// Index of baseline test."
+                }
+            },
+            {
+                "type": "unsigned long long",
+                "name": "_BaselineTimestamp"
+            },
+            {
+                "type": "unsigned long long",
+                "name": "_BaselineBuildId"
+            },
+            {
+                "type": "char",
+                "name": "_BaselineTestName[128]",
+                "size": 128
+            },
+            {
+                "type": "char",
+                "name": "_Filter[128]",
+                "size": 128,
+                "comment": {
+                    "sameline": "// Context menu filtering substring."
+                }
+            },
+            {
+                "type": "char",
+                "name": "_FilterDateFrom[11]",
+                "size": 11
+            },
+            {
+                "type": "char",
+                "name": "_FilterDateTo[11]",
+                "size": 11
+            },
+            {
+                "type": "float",
+                "name": "_InfoTableHeight"
+            },
+            {
+                "type": "int",
+                "name": "_AlignStress",
+                "comment": {
+                    "sameline": "// Alignment values for build info components, so they look aligned in the legend."
+                }
+            },
+            {
+                "type": "int",
+                "name": "_AlignType"
+            },
+            {
+                "type": "int",
+                "name": "_AlignOs"
+            },
+            {
+                "type": "int",
+                "name": "_AlignCpu"
+            },
+            {
+                "type": "int",
+                "name": "_AlignCompiler"
+            },
+            {
+                "type": "int",
+                "name": "_AlignBranch"
+            },
+            {
+                "type": "int",
+                "name": "_AlignSamples"
+            },
+            {
+                "type": "bool",
+                "name": "_InfoTableSortDirty"
+            },
+            {
+                "type": "ImVector_Ulonglong",
+                "name": "_InfoTableSort",
+                "comment": {
+                    "sameline": "// _InfoTableSort[_LabelsVisible.Size * _Batches.Size]. Contains sorted batch indices for each label."
+                }
+            },
+            {
+                "type": "const ImGuiTableSortSpecs*",
+                "name": "_InfoTableSortSpecs",
+                "comment": {
+                    "sameline": "// Current table sort specs."
+                }
+            },
+            {
+                "type": "ImGuiStorage",
+                "name": "_TempSet",
+                "comment": {
+                    "sameline": "// Used as a set"
+                }
+            },
+            {
+                "type": "int",
+                "name": "_TableHoveredTest",
+                "comment": {
+                    "sameline": "// Index within _VisibleLabelPointers array."
+                }
+            },
+            {
+                "type": "int",
+                "name": "_TableHoveredBatch"
+            },
+            {
+                "type": "int",
+                "name": "_PlotHoverTest"
+            },
+            {
+                "type": "int",
+                "name": "_PlotHoverBatch"
+            },
+            {
+                "type": "bool",
+                "name": "_PlotHoverTestLabel"
+            },
+            {
+                "type": "bool",
+                "name": "_ReportGenerating"
+            },
+            {
+                "type": "ImGuiStorage",
+                "name": "_Visibility"
+            },
+            {
+                "type": "ImGuiCsvParser*",
+                "name": "_CsvParser",
+                "comment": {
+                    "sameline": "// We keep this around and point to its fields"
+                }
+            }
+        ],
+        "ImGuiTestInfoTask": [
+            {
+                "type": "unsigned int",
+                "name": "ID"
+            },
+            {
+                "type": "int",
+                "name": "FrameCount",
+                "comment": {
+                    "sameline": "// Timestamp of request"
+                }
+            },
+            {
+                "type": "char",
+                "name": "DebugName[64]",
+                "size": 64,
+                "comment": {
+                    "sameline": "// Debug string representing the queried ID"
+                }
+            },
+            {
+                "type": "ImGuiTestItemInfo",
+                "name": "Result"
             }
         ]
     }
