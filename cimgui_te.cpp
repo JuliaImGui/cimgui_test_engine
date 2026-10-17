@@ -1024,6 +1024,10 @@ CIMGUI_TE_API bool ImGuiTestContext_ItemIsVisible(ImGuiTestContext* self, ImGuiT
     return self->ItemIsVisible(ref);
 }
 
+CIMGUI_TE_API void ImGuiTestContext_ItemMakeVisible(ImGuiTestContext* self, ImGuiTestRef ref, int flags) {
+    self->ItemMakeVisible(ref, flags);
+}
+
 CIMGUI_TE_API void ImGuiTestContext_ItemVerifyCheckedIfAlive(ImGuiTestContext* self, ImGuiTestRef ref, bool checked) {
     self->ItemVerifyCheckedIfAlive(ref, checked);
 }
@@ -1046,8 +1050,13 @@ CIMGUI_TE_API void ImGuiTestContext_ItemDragAndDrop(ImGuiTestContext* self, ImGu
     self->ItemDragAndDrop(ref_src, ref_dst, button);
 }
 
-CIMGUI_TE_API void ImGuiTestContext_ItemDragWithDelta(ImGuiTestContext* self, ImGuiTestRef ref_src, ImVec2 pos_delta) {
-    self->ItemDragWithDelta(ref_src, pos_delta);
+CIMGUI_TE_API void ImGuiTestContext_ItemDragToPos(ImGuiTestContext* self, ImGuiTestRef ref_src, const ImVec2* pos) {
+    self->ItemDragToPos(ref_src, *pos);
+}
+
+CIMGUI_TE_API void ImGuiTestContext_ItemDragWithDelta(ImGuiTestContext* self, ImGuiTestRef ref_src,
+                                                      const ImVec2* pos_delta) {
+    self->ItemDragWithDelta(ref_src, *pos_delta);
 }
 
 CIMGUI_TE_API void ImGuiTestContext_TabClose(ImGuiTestContext* self, ImGuiTestRef ref) { self->TabClose(ref); }

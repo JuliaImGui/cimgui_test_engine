@@ -209,6 +209,7 @@ enum ImGuiTestOpFlags_
     ImGuiTestOpFlags_MoveToEdgeU        = 1 << 10,
     ImGuiTestOpFlags_MoveToEdgeD        = 1 << 11,
     ImGuiTestOpFlags_NoScroll           = 1 << 12,  // Disable automatically scrolling to reach an item.
+    ImGuiTestOpFlags_NoWaitWhenMoving   = 1 << 13,  // Avoid waiting for item to be stable, lock current position and aim.
 };
 
 typedef enum ImOsConsoleStream
@@ -420,6 +421,8 @@ struct ImGuiTestItemInfo {
     char DebugLabel[32]; // Shortened/truncated label for debugging and convenience purpose
     ImGuiWindow* Window; // Item Window
     unsigned int NavLayer : 1; // Nav layer of the item (ImGuiNavLayer)
+    unsigned int FramesMoving : 3;
+    unsigned int FramesNotMoving : 3;
     int Depth : 16; // Depth from requested parent id. 0 == ID is immediate child of requested parent id.
     int TimestampMain; // Timestamp of main result (all fields)
     int TimestampStatus; // Timestamp of StatusFlags
@@ -541,6 +544,7 @@ struct ImGuiTestGenericVars {
     bool ShowWindow2;
     bool UseClipper;
     bool UseViewports;
+    bool UseMixedValue;
     float Width;
     ImVec2 Pos;
     ImVec2 Pivot;
@@ -1218,12 +1222,14 @@ CIMGUI_TE_API bool ImGuiTestContext_ItemExists(ImGuiTestContext* self, ImGuiTest
 CIMGUI_TE_API bool ImGuiTestContext_ItemIsChecked(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API bool ImGuiTestContext_ItemIsOpened(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API bool ImGuiTestContext_ItemIsVisible(ImGuiTestContext* self, ImGuiTestRef ref);
+CIMGUI_TE_API void ImGuiTestContext_ItemMakeVisible(ImGuiTestContext* self, ImGuiTestRef ref, int flags);
 CIMGUI_TE_API void ImGuiTestContext_ItemVerifyCheckedIfAlive(ImGuiTestContext* self, ImGuiTestRef ref, bool checked);
 CIMGUI_TE_API void ImGuiTestContext_ItemHold(ImGuiTestContext* self, ImGuiTestRef ref, float time);
 CIMGUI_TE_API void ImGuiTestContext_ItemHoldForFrames(ImGuiTestContext* self, ImGuiTestRef ref, int frames);
 CIMGUI_TE_API void ImGuiTestContext_ItemDragOverAndHold(ImGuiTestContext* self, ImGuiTestRef ref_src, ImGuiTestRef ref_dst);
 CIMGUI_TE_API void ImGuiTestContext_ItemDragAndDrop(ImGuiTestContext* self, ImGuiTestRef ref_src, ImGuiTestRef ref_dst, int button);
-CIMGUI_TE_API void ImGuiTestContext_ItemDragWithDelta(ImGuiTestContext* self, ImGuiTestRef ref_src, ImVec2 pos_delta);
+CIMGUI_TE_API void ImGuiTestContext_ItemDragToPos(ImGuiTestContext* self, ImGuiTestRef ref_src, const ImVec2* pos);
+CIMGUI_TE_API void ImGuiTestContext_ItemDragWithDelta(ImGuiTestContext* self, ImGuiTestRef ref_src, const ImVec2* pos_delta);
 CIMGUI_TE_API void ImGuiTestContext_TabClose(ImGuiTestContext* self, ImGuiTestRef ref);
 CIMGUI_TE_API bool ImGuiTestContext_TabBarCompareOrder(ImGuiTestContext* self, ImGuiTabBar* tab_bar, const char ** tab_order);
 CIMGUI_TE_API void ImGuiTestContext_MenuAction(ImGuiTestContext* self, ImGuiTestAction action, ImGuiTestRef ref);
