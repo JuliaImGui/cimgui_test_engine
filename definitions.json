@@ -47,7 +47,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:384"
+            "location": "imgui_te_context:386"
         }
     ],
     "ImGuiTestContext_LogEx": [
@@ -84,7 +84,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:284"
+            "location": "imgui_te_context:286"
         }
     ],
     "ImGuiCaptureImageBuf_SaveFile": [
@@ -157,7 +157,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:299"
+            "location": "imgui_te_context:301"
         }
     ],
     "ImGuiTestContext_ItemHold": [
@@ -186,7 +186,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:462"
+            "location": "imgui_te_context:465"
         }
     ],
     "ImGuiTestContext_ViewportPlatform_CloseWindow": [
@@ -211,7 +211,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:503"
+            "location": "imgui_te_context:507"
         }
     ],
     "ImGuiPerfTool__UnpackSortedKey": [
@@ -274,7 +274,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:457"
+            "location": "imgui_te_context:459"
         }
     ],
     "ImGuiTestItemInfo_ImGuiTestItemInfo": [
@@ -292,7 +292,7 @@
             "stname": "ImGuiTestItemInfo",
             "defaults": {
             },
-            "location": "imgui_te_engine:345"
+            "location": "imgui_te_engine:347"
         }
     ],
     "ImGuiTestRef_ImGuiTestRef": [
@@ -392,7 +392,7 @@
             "defaults": {
                 "flags": "0"
             },
-            "location": "imgui_te_context:431"
+            "location": "imgui_te_context:433"
         }
     ],
     "ImGuiTestContext_ItemExists": [
@@ -417,7 +417,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:455"
+            "location": "imgui_te_context:457"
         }
     ],
     "ImGuiPerfTool_destroy": [
@@ -440,6 +440,35 @@
             "defaults": {
             },
             "location": ""
+        }
+    ],
+    "ImGuiTestContext_ItemDragToPos": [
+        {
+            "funcname": "ItemDragToPos",
+            "ov_cimguiname": "ImGuiTestContext_ItemDragToPos",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestContext*"
+                },
+                {
+                    "name": "ref_src",
+                    "type": "ImGuiTestRef"
+                },
+                {
+                    "name": "pos",
+                    "type": "const ImVec2*"
+                }
+            ],
+            "cimguiname": "ImGuiTestContext_ItemDragToPos",
+            "ret": "void",
+            "isvararg": false,
+            "retref": false,
+            "args": "(ImGuiTestContext* self, ImGuiTestRef ref_src, const ImVec2* pos)",
+            "stname": "ImGuiTestContext",
+            "defaults": {
+            },
+            "location": "imgui_te_context:469"
         }
     ],
     "ImGuiPerfToolEntry_ImGuiPerfToolEntry": [
@@ -545,7 +574,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:511"
+            "location": "imgui_te_context:515"
         }
     ],
     "ImGuiTestEnginePerfRecord_UpdateValueForCurrentFrame": [
@@ -596,7 +625,7 @@
             "defaults": {
                 "button": "0"
             },
-            "location": "imgui_te_context:357"
+            "location": "imgui_te_context:359"
         }
     ],
     "ImGuiTestContext_WindowFocus": [
@@ -626,7 +655,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:321"
+            "location": "imgui_te_context:323"
         }
     ],
     "ImGuiCaptureContext_PreNewFrame": [
@@ -676,7 +705,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:324"
+            "location": "imgui_te_context:326"
         }
     ],
     "ImGuiCsvParser_Load": [
@@ -733,7 +762,7 @@
             "defaults": {
                 "capture_flags": "0"
             },
-            "location": "imgui_te_context:348"
+            "location": "imgui_te_context:350"
         }
     ],
     "ImGuiTestContext_GetWindowByRef": [
@@ -758,7 +787,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:326"
+            "location": "imgui_te_context:328"
         }
     ],
     "ImGuiTestContext__ScrollVerifyScrollMax": [
@@ -783,7 +812,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:542"
+            "location": "imgui_te_context:546"
         }
     ],
     "ImGuiTestLog_ExtractLinesForVerboseLevels": [
@@ -816,7 +845,7 @@
             "stname": "ImGuiTestLog",
             "defaults": {
             },
-            "location": "imgui_te_engine:398"
+            "location": "imgui_te_engine:400"
         }
     ],
     "ImGuiTestContext_ItemInfoHandleWildcardSearch": [
@@ -849,7 +878,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:419"
+            "location": "imgui_te_context:421"
         }
     ],
     "ImGuiTestContext_CaptureAddWindow": [
@@ -875,7 +904,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:347"
+            "location": "imgui_te_context:349"
         }
     ],
     "ImGuiTestContext_TabClose": [
@@ -900,7 +929,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:469"
+            "location": "imgui_te_context:473"
         }
     ],
     "ImGuiTestContext_TabBarCompareOrder": [
@@ -929,7 +958,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:470"
+            "location": "imgui_te_context:474"
         }
     ],
     "cImGuiTestEngine_PerfToolAppendToCSV": [
@@ -1006,7 +1035,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:290"
+            "location": "imgui_te_context:292"
         }
     ],
     "ImGuiTest_SetOwnedName": [
@@ -1031,7 +1060,7 @@
             "stname": "ImGuiTest",
             "defaults": {
             },
-            "location": "imgui_te_engine:463"
+            "location": "imgui_te_engine:465"
         }
     ],
     "cImGuiTestEngine_RunTest": [
@@ -1086,7 +1115,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:398"
+            "location": "imgui_te_context:400"
         }
     ],
     "ImGuiPerfTool__IsVisibleBuild": [
@@ -1219,7 +1248,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:329"
+            "location": "imgui_te_context:331"
         }
     ],
     "cImGuiTestEngine_InstallDefaultCrashHandler": [
@@ -1364,7 +1393,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:463"
+            "location": "imgui_te_context:466"
         }
     ],
     "cImGuiTestEngine_Start": [
@@ -1415,7 +1444,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:404"
+            "location": "imgui_te_context:406"
         }
     ],
     "cImGuiTestEngine_PreSwap": [
@@ -1462,7 +1491,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:331"
+            "location": "imgui_te_context:333"
         }
     ],
     "cImGuiTestEngine_RegisterTest": [
@@ -1556,7 +1585,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:335"
+            "location": "imgui_te_context:337"
         },
         {
             "funcname": "GetID",
@@ -1583,7 +1612,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:336"
+            "location": "imgui_te_context:338"
         }
     ],
     "ImGuiTestContext_WindowMove": [
@@ -1622,7 +1651,7 @@
                 "flags": "ImGuiTestOpFlags_None",
                 "pivot": "ImVec2(0.0f, 0.0f)"
             },
-            "location": "imgui_te_context:323"
+            "location": "imgui_te_context:325"
         }
     ],
     "ImGuiTestContext_IsFirstTestFrame": [
@@ -1644,7 +1673,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:277"
+            "location": "imgui_te_context:279"
         }
     ],
     "cImGuiTestEngine_QueueTests": [
@@ -1709,7 +1738,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:289"
+            "location": "imgui_te_context:291"
         }
     ],
     "ImGuiTestContext_MenuUncheckAll": [
@@ -1734,7 +1763,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:481"
+            "location": "imgui_te_context:485"
         }
     ],
     "cImPathFindFilename": [
@@ -1779,18 +1808,18 @@
                 },
                 {
                     "name": "pos_delta",
-                    "type": "ImVec2"
+                    "type": "const ImVec2*"
                 }
             ],
             "cimguiname": "ImGuiTestContext_ItemDragWithDelta",
             "ret": "void",
             "isvararg": false,
             "retref": false,
-            "args": "(ImGuiTestContext* self, ImGuiTestRef ref_src, ImVec2 pos_delta)",
+            "args": "(ImGuiTestContext* self, ImGuiTestRef ref_src, const ImVec2* pos_delta)",
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:466"
+            "location": "imgui_te_context:470"
         }
     ],
     "ImGuiTestRef_destroy": [
@@ -1909,7 +1938,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:376"
+            "location": "imgui_te_context:378"
         }
     ],
     "ImGuiTestContext_IsWarmUpGuiFrame": [
@@ -1931,7 +1960,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:275"
+            "location": "imgui_te_context:277"
         }
     ],
     "ImGuiTestContext_TableOpenContextMenu": [
@@ -1961,7 +1990,7 @@
             "defaults": {
                 "column_n": "-1"
             },
-            "location": "imgui_te_context:488"
+            "location": "imgui_te_context:492"
         }
     ],
     "ImGuiTestContext_SleepShort": [
@@ -1983,7 +2012,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:298"
+            "location": "imgui_te_context:300"
         }
     ],
     "ImGuiTestContext_SuspendTestFunc": [
@@ -2015,7 +2044,7 @@
                 "line": "0",
                 "file": "nullptr"
             },
-            "location": "imgui_te_context:281"
+            "location": "imgui_te_context:283"
         }
     ],
     "cImGuiTestEngine_PostSwap": [
@@ -2096,7 +2125,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:544"
+            "location": "imgui_te_context:548"
         }
     ],
     "ImGuiTestContext_MouseWheelY": [
@@ -2122,7 +2151,36 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:366"
+            "location": "imgui_te_context:368"
+        }
+    ],
+    "ImGuiTestContext_ItemMakeVisible": [
+        {
+            "funcname": "ItemMakeVisible",
+            "ov_cimguiname": "ImGuiTestContext_ItemMakeVisible",
+            "argsT": [
+                {
+                    "name": "self",
+                    "type": "ImGuiTestContext*"
+                },
+                {
+                    "name": "ref",
+                    "type": "ImGuiTestRef"
+                },
+                {
+                    "name": "flags",
+                    "type": "int"
+                }
+            ],
+            "cimguiname": "ImGuiTestContext_ItemMakeVisible",
+            "ret": "void",
+            "isvararg": false,
+            "retref": false,
+            "args": "(ImGuiTestContext* self, ImGuiTestRef ref, int flags)",
+            "stname": "ImGuiTestContext",
+            "defaults": {
+            },
+            "location": "imgui_te_context:461"
         }
     ],
     "cImGuiTestEngine_AbortCurrentTest": [
@@ -2209,7 +2267,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:383"
+            "location": "imgui_te_context:385"
         }
     ],
     "ImGuiTestContext_ItemClick": [
@@ -2244,7 +2302,7 @@
                 "flags": "0",
                 "button": "0"
             },
-            "location": "imgui_te_context:425"
+            "location": "imgui_te_context:427"
         }
     ],
     "ImGuiTestContext_ItemOpen": [
@@ -2274,7 +2332,7 @@
             "defaults": {
                 "flags": "0"
             },
-            "location": "imgui_te_context:429"
+            "location": "imgui_te_context:431"
         }
     ],
     "ImGuiTestContext_MouseClickOnVoid": [
@@ -2305,7 +2363,7 @@
                 "button": "0",
                 "viewport": "nullptr"
             },
-            "location": "imgui_te_context:368"
+            "location": "imgui_te_context:370"
         }
     ],
     "cImBuildFindGitBranchName": [
@@ -2356,7 +2414,7 @@
             "defaults": {
                 "button": "0"
             },
-            "location": "imgui_te_context:362"
+            "location": "imgui_te_context:364"
         }
     ],
     "ImGuiTestContext_DockNodeHideTabBar": [
@@ -2385,7 +2443,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:514"
+            "location": "imgui_te_context:518"
         }
     ],
     "ImGuiCaptureToolUI_destroy": [
@@ -2477,7 +2535,7 @@
             "defaults": {
                 "status": "ImGuiTestStatus_Success"
             },
-            "location": "imgui_te_context:269"
+            "location": "imgui_te_context:271"
         }
     ],
     "ImGuiTestContext_MouseDragWithDelta": [
@@ -2507,7 +2565,7 @@
             "defaults": {
                 "button": "0"
             },
-            "location": "imgui_te_context:363"
+            "location": "imgui_te_context:365"
         }
     ],
     "ImGuiTestContext_TableClickHeader": [
@@ -2541,7 +2599,7 @@
             "defaults": {
                 "key_mods": "0"
             },
-            "location": "imgui_te_context:489"
+            "location": "imgui_te_context:493"
         }
     ],
     "ImGuiTestContext_ItemAction": [
@@ -2580,7 +2638,7 @@
                 "flags": "0",
                 "action_arg": "nullptr"
             },
-            "location": "imgui_te_context:424"
+            "location": "imgui_te_context:426"
         }
     ],
     "ImGuiTestContext_ItemReadAsScalar": [
@@ -2618,7 +2676,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:450"
+            "location": "imgui_te_context:452"
         }
     ],
     "ImGuiTestContext_RunChildTest": [
@@ -2649,7 +2707,7 @@
             "defaults": {
                 "flags": "0"
             },
-            "location": "imgui_te_context:270"
+            "location": "imgui_te_context:272"
         }
     ],
     "cImTimeGetInMicroseconds": [
@@ -2749,7 +2807,7 @@
             "stname": "ImGuiTestGenericItemStatus",
             "defaults": {
             },
-            "location": "imgui_te_context:172"
+            "location": "imgui_te_context:173"
         }
     ],
     "cImGuiTestEngineHook_ItemInfo": [
@@ -2811,7 +2869,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:320"
+            "location": "imgui_te_context:322"
         }
     ],
     "ImGuiPerfTool_Clear": [
@@ -2891,7 +2949,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:402"
+            "location": "imgui_te_context:404"
         }
     ],
     "cImGuiTestEngine_Yield": [
@@ -2975,7 +3033,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:418"
+            "location": "imgui_te_context:420"
         }
     ],
     "ImGuiTestContext_ItemCheck": [
@@ -3005,7 +3063,7 @@
             "defaults": {
                 "flags": "0"
             },
-            "location": "imgui_te_context:427"
+            "location": "imgui_te_context:429"
         }
     ],
     "ImGuiTestContext_LogError": [
@@ -3035,7 +3093,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:291"
+            "location": "imgui_te_context:293"
         }
     ],
     "cImFileCreateDirectoryChain": [
@@ -3116,7 +3174,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:385"
+            "location": "imgui_te_context:387"
         }
     ],
     "cImGuiTestEngine_BindImGuiContext": [
@@ -3159,7 +3217,7 @@
             "stname": "ImGuiTestActionFilter",
             "defaults": {
             },
-            "location": "imgui_te_context:148"
+            "location": "imgui_te_context:149"
         }
     ],
     "ImGuiTestLog_destroy": [
@@ -3233,7 +3291,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:370"
+            "location": "imgui_te_context:372"
         }
     ],
     "ImGuiTestContext_GetRef": [
@@ -3258,7 +3316,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:313"
+            "location": "imgui_te_context:315"
         }
     ],
     "ImGuiCaptureToolUI_ShowCaptureToolWindow": [
@@ -3472,7 +3530,7 @@
             "stname": "ImGuiTestLog",
             "defaults": {
             },
-            "location": "imgui_te_engine:383"
+            "location": "imgui_te_engine:385"
         }
     ],
     "ImGuiTestContext_WindowTeleportToMakePosVisible": [
@@ -3501,7 +3559,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:325"
+            "location": "imgui_te_context:327"
         }
     ],
     "ImGuiTestEnginePerfRecord_destroy": [
@@ -3572,7 +3630,7 @@
             "defaults": {
                 "capture_flags": "0"
             },
-            "location": "imgui_te_context:349"
+            "location": "imgui_te_context:351"
         }
     ],
     "ImGuiPerfToolEntry_Set": [
@@ -3623,7 +3681,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:346"
+            "location": "imgui_te_context:348"
         }
     ],
     "cImGuiTestEngine_Error": [
@@ -3685,7 +3743,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:276"
+            "location": "imgui_te_context:278"
         }
     ],
     "cImBuildGetCompilationInfo": [
@@ -3727,7 +3785,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:405"
+            "location": "imgui_te_context:407"
         }
     ],
     "ImGuiTestContext_FindHoveredWindowAtPos": [
@@ -3752,7 +3810,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:369"
+            "location": "imgui_te_context:371"
         }
     ],
     "cImGuiTestEngine_GetVerboseLevelName": [
@@ -3827,7 +3885,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:490"
+            "location": "imgui_te_context:494"
         },
         {
             "funcname": "TableSetColumnEnabled",
@@ -3858,7 +3916,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:491"
+            "location": "imgui_te_context:495"
         }
     ],
     "ImGuiTestContext_ScrollToPos": [
@@ -3896,7 +3954,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:406"
+            "location": "imgui_te_context:408"
         }
     ],
     "cImGuiTestEngine_IsTestQueueEmpty": [
@@ -3961,7 +4019,7 @@
                 "split_dir": "ImGuiDir_None",
                 "is_outer_docking": "false"
             },
-            "location": "imgui_te_context:509"
+            "location": "imgui_te_context:513"
         }
     ],
     "ImGuiTestItemList_begin": [
@@ -3982,7 +4040,7 @@
             "stname": "ImGuiTestItemList",
             "defaults": {
             },
-            "location": "imgui_te_engine:361"
+            "location": "imgui_te_engine:363"
         }
     ],
     "ImGuiTestContext_MenuAction": [
@@ -4011,7 +4069,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:475"
+            "location": "imgui_te_context:479"
         }
     ],
     "ImGuiCsvParser_ImGuiCsvParser": [
@@ -4055,7 +4113,7 @@
             "stname": "ImGuiTestLog",
             "defaults": {
             },
-            "location": "imgui_te_engine:386"
+            "location": "imgui_te_engine:388"
         }
     ],
     "ImGuiTestGenericItemStatus_QueryInc": [
@@ -4081,7 +4139,7 @@
             "defaults": {
                 "ret_val": "false"
             },
-            "location": "imgui_te_context:174"
+            "location": "imgui_te_context:175"
         }
     ],
     "ImGuiTestGenericItemStatus_ImGuiTestGenericItemStatus": [
@@ -4099,7 +4157,7 @@
             "stname": "ImGuiTestGenericItemStatus",
             "defaults": {
             },
-            "location": "imgui_te_context:171"
+            "location": "imgui_te_context:172"
         }
     ],
     "cImOsPOpen": [
@@ -4185,7 +4243,7 @@
             "stname": "ImGuiTestLog",
             "defaults": {
             },
-            "location": "imgui_te_engine:384"
+            "location": "imgui_te_engine:386"
         }
     ],
     "ImGuiCaptureContext_IsCapturing": [
@@ -4224,7 +4282,7 @@
             "stname": "ImGuiTest",
             "defaults": {
             },
-            "location": "imgui_te_engine:460"
+            "location": "imgui_te_engine:462"
         }
     ],
     "ImGuiTestContext_ComboClick": [
@@ -4249,7 +4307,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:484"
+            "location": "imgui_te_context:488"
         }
     ],
     "ImGuiTestContext_MouseMoveToPos": [
@@ -4274,7 +4332,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:355"
+            "location": "imgui_te_context:357"
         }
     ],
     "ImGuiTestContext_ItemReadAsInt": [
@@ -4299,7 +4357,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:448"
+            "location": "imgui_te_context:450"
         }
     ],
     "ImGuiTestEngine_ImGuiTestEngine": [
@@ -4342,7 +4400,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:477"
+            "location": "imgui_te_context:481"
         }
     ],
     "cImGuiTestEngine_CrashHandler": [
@@ -4423,7 +4481,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:543"
+            "location": "imgui_te_context:547"
         }
     ],
     "ImGuiTestContext_GetWindowTitlebarPoint": [
@@ -4453,7 +4511,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:340"
+            "location": "imgui_te_context:342"
         }
     ],
     "ImGuiTestContext_WindowInfo": [
@@ -4487,7 +4545,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:318"
+            "location": "imgui_te_context:320"
         }
     ],
     "ImGuiPerfTool__ShowEntriesTable": [
@@ -4533,7 +4591,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:364"
+            "location": "imgui_te_context:366"
         }
     ],
     "ImGuiPerfTool_ShowPerfToolWindow": [
@@ -4587,7 +4645,7 @@
             "stname": "ImGuiTestItemList",
             "defaults": {
             },
-            "location": "imgui_te_engine:357"
+            "location": "imgui_te_engine:359"
         }
     ],
     "ImGuiCaptureContext_CaptureUpdate": [
@@ -4633,7 +4691,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:292"
+            "location": "imgui_te_context:294"
         }
     ],
     "ImGuiTestContext_TableGetSortSpecs": [
@@ -4658,7 +4716,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:494"
+            "location": "imgui_te_context:498"
         }
     ],
     "ImGuiCsvParser_destroy": [
@@ -4741,7 +4799,7 @@
                 "test_name": "nullptr",
                 "category": "nullptr"
             },
-            "location": "imgui_te_context:520"
+            "location": "imgui_te_context:524"
         }
     ],
     "cImFindNextDecoratedPartInPath": [
@@ -4800,7 +4858,7 @@
             "stname": "ImGuiTestLog",
             "defaults": {
             },
-            "location": "imgui_te_engine:401"
+            "location": "imgui_te_engine:403"
         }
     ],
     "ImGuiTestContext_ItemDragAndDrop": [
@@ -4834,7 +4892,7 @@
             "defaults": {
                 "button": "0"
             },
-            "location": "imgui_te_context:465"
+            "location": "imgui_te_context:468"
         }
     ],
     "ImGuiTestContext_ItemDragOverAndHold": [
@@ -4863,7 +4921,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:464"
+            "location": "imgui_te_context:467"
         }
     ],
     "ImGuiTestContext_ViewportPlatform_SetWindowSize": [
@@ -4892,7 +4950,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:501"
+            "location": "imgui_te_context:505"
         }
     ],
     "ImGuiTestContext_LogToDebugger": [
@@ -4921,7 +4979,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:287"
+            "location": "imgui_te_context:289"
         }
     ],
     "ImGuiTestContext_ScrollToPosY": [
@@ -4950,7 +5008,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:408"
+            "location": "imgui_te_context:410"
         }
     ],
     "ImGuiTestContext_IsGuiFuncOnly": [
@@ -4971,7 +5029,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:278"
+            "location": "imgui_te_context:280"
         }
     ],
     "ImGuiTestContext_MouseUp": [
@@ -4997,7 +5055,7 @@
             "defaults": {
                 "button": "0"
             },
-            "location": "imgui_te_context:361"
+            "location": "imgui_te_context:363"
         }
     ],
     "ImGuiTestContext_ItemInfoNull": [
@@ -5022,7 +5080,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:420"
+            "location": "imgui_te_context:422"
         }
     ],
     "ImGuiTestContext_ItemCloseAll": [
@@ -5057,7 +5115,7 @@
                 "depth": "-1",
                 "passes": "-1"
             },
-            "location": "imgui_te_context:437"
+            "location": "imgui_te_context:439"
         }
     ],
     "ImGuiTestContext_ViewportPlatform_SetWindowFocus": [
@@ -5082,7 +5140,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:502"
+            "location": "imgui_te_context:506"
         }
     ],
     "cImGuiTestEngine_GetTestList": [
@@ -5188,7 +5246,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:407"
+            "location": "imgui_te_context:409"
         }
     ],
     "ImGuiTestContext_GetPosOnVoid": [
@@ -5218,7 +5276,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:339"
+            "location": "imgui_te_context:341"
         }
     ],
     "ImGuiTestInput_ForViewportSetSize": [
@@ -5285,7 +5343,7 @@
             "defaults": {
                 "message_end": "nullptr"
             },
-            "location": "imgui_te_context:286"
+            "location": "imgui_te_context:288"
         }
     ],
     "ImGuiTestContext_IsError": [
@@ -5306,7 +5364,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:274"
+            "location": "imgui_te_context:276"
         }
     ],
     "ImGuiCaptureContext_ClearState": [
@@ -5356,7 +5414,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:300"
+            "location": "imgui_te_context:302"
         }
     ],
     "ImGuiTestContext_ItemOpenAll": [
@@ -5391,7 +5449,7 @@
                 "depth": "-1",
                 "passes": "-1"
             },
-            "location": "imgui_te_context:436"
+            "location": "imgui_te_context:438"
         }
     ],
     "ImGuiTestContext_LogDebug": [
@@ -5421,7 +5479,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:288"
+            "location": "imgui_te_context:290"
         }
     ],
     "cImGuiTestEngine_GetFrameCount": [
@@ -5488,7 +5546,7 @@
             "stname": "ImGuiTestItemList",
             "defaults": {
             },
-            "location": "imgui_te_engine:355"
+            "location": "imgui_te_engine:357"
         }
     ],
     "cImGuiTestEngine_QueueTest": [
@@ -5596,7 +5654,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:297"
+            "location": "imgui_te_context:299"
         }
     ],
     "ImGuiPerfTool_ViewOnly": [
@@ -5678,7 +5736,7 @@
             "defaults": {
                 "filter": "nullptr"
             },
-            "location": "imgui_te_context:435"
+            "location": "imgui_te_context:437"
         }
     ],
     "cImTimestampToISO8601": [
@@ -5882,7 +5940,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:513"
+            "location": "imgui_te_context:517"
         }
     ],
     "ImGuiCaptureToolUI__CaptureWindowsSelector": [
@@ -5965,7 +6023,7 @@
             "defaults": {
                 "flags": "0"
             },
-            "location": "imgui_te_context:430"
+            "location": "imgui_te_context:432"
         }
     ],
     "ImGuiTestContext__ForeignWindowsUnhideAll": [
@@ -5987,7 +6045,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:545"
+            "location": "imgui_te_context:549"
         }
     ],
     "ImGuiTestItemInfo_destroy": [
@@ -6036,7 +6094,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:386"
+            "location": "imgui_te_context:388"
         }
     ],
     "ImGuiTestGenericVars_ImGuiTestGenericVars": [
@@ -6054,7 +6112,7 @@
             "stname": "ImGuiTestGenericVars",
             "defaults": {
             },
-            "location": "imgui_te_context:210"
+            "location": "imgui_te_context:212"
         }
     ],
     "ImGuiCaptureToolUI__CaptureWindowPicker": [
@@ -6110,7 +6168,7 @@
             "defaults": {
                 "flags": "0"
             },
-            "location": "imgui_te_context:428"
+            "location": "imgui_te_context:430"
         }
     ],
     "ImGuiTestContext_KeyPress": [
@@ -6140,7 +6198,7 @@
             "defaults": {
                 "count": "1"
             },
-            "location": "imgui_te_context:381"
+            "location": "imgui_te_context:383"
         }
     ],
     "ImGuiCaptureContext_RestoreBackedUpData": [
@@ -6211,7 +6269,7 @@
             "stname": "ImGuiTestItemList",
             "defaults": {
             },
-            "location": "imgui_te_engine:353"
+            "location": "imgui_te_engine:355"
         }
     ],
     "cImGuiTestEngine_PrintResultSummary": [
@@ -6350,7 +6408,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:485"
+            "location": "imgui_te_context:489"
         }
     ],
     "cImFileDelete": [
@@ -6460,7 +6518,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:510"
+            "location": "imgui_te_context:514"
         }
     ],
     "ImGuiTestContext_ItemIsChecked": [
@@ -6485,7 +6543,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:456"
+            "location": "imgui_te_context:458"
         }
     ],
     "ImGuiTestContext_MouseWheelX": [
@@ -6510,7 +6568,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:365"
+            "location": "imgui_te_context:367"
         }
     ],
     "ImGuiTestContext_TableResizeColumn": [
@@ -6543,7 +6601,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:492"
+            "location": "imgui_te_context:496"
         },
         {
             "funcname": "TableResizeColumn",
@@ -6574,7 +6632,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:493"
+            "location": "imgui_te_context:497"
         }
     ],
     "cImOsIsDebuggerPresent": [
@@ -6616,7 +6674,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:379"
+            "location": "imgui_te_context:381"
         }
     ],
     "ImGuiTestContext_ItemInfo": [
@@ -6650,7 +6708,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:417"
+            "location": "imgui_te_context:419"
         }
     ],
     "cTableDiscardInstance": [
@@ -6697,7 +6755,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:395"
+            "location": "imgui_te_context:397"
         }
     ],
     "ImGuiTestGenericItemStatus_QuerySet": [
@@ -6723,7 +6781,7 @@
             "defaults": {
                 "ret_val": "false"
             },
-            "location": "imgui_te_context:173"
+            "location": "imgui_te_context:174"
         }
     ],
     "ImGuiTestLog_GetText": [
@@ -6744,7 +6802,7 @@
             "stname": "ImGuiTestLog",
             "defaults": {
             },
-            "location": "imgui_te_engine:385"
+            "location": "imgui_te_engine:387"
         }
     ],
     "cSaveIniSettingsToVector": [
@@ -6824,7 +6882,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:409"
+            "location": "imgui_te_context:411"
         }
     ],
     "cImGuiTestEngine_SetDeltaTime": [
@@ -6879,7 +6937,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:356"
+            "location": "imgui_te_context:358"
         }
     ],
     "ImGuiTestContext_CaptureReset": [
@@ -6901,7 +6959,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:345"
+            "location": "imgui_te_context:347"
         }
     ],
     "ImGuiTestContext_CaptureBeginVideo": [
@@ -6923,7 +6981,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:350"
+            "location": "imgui_te_context:352"
         }
     ],
     "ImGuiTestContext_ScrollToY": [
@@ -6952,7 +7010,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:403"
+            "location": "imgui_te_context:405"
         }
     ],
     "ImGuiPerfTool__CalculateLegendAlignment": [
@@ -6998,7 +7056,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:512"
+            "location": "imgui_te_context:516"
         }
     ],
     "ImGuiTestContext_ItemReadAsString": [
@@ -7023,7 +7081,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:451"
+            "location": "imgui_te_context:453"
         },
         {
             "funcname": "ItemReadAsString",
@@ -7054,7 +7112,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:452"
+            "location": "imgui_te_context:454"
         }
     ],
     "cImGuiTestEngineHook_ItemAdd": [
@@ -7108,7 +7166,7 @@
             "stname": "ImGuiTestItemList",
             "defaults": {
             },
-            "location": "imgui_te_engine:362"
+            "location": "imgui_te_engine:364"
         }
     ],
     "ImGuiTestContext_ItemReadAsFloat": [
@@ -7133,7 +7191,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:449"
+            "location": "imgui_te_context:451"
         }
     ],
     "ImGuiTestContext_MenuUncheck": [
@@ -7158,7 +7216,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:479"
+            "location": "imgui_te_context:483"
         }
     ],
     "ImGuiTestContext_SetRef": [
@@ -7183,7 +7241,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:311"
+            "location": "imgui_te_context:313"
         },
         {
             "funcname": "SetRef",
@@ -7207,7 +7265,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:312"
+            "location": "imgui_te_context:314"
         }
     ],
     "ImGuiPerfTool__AddSettingsHandler": [
@@ -7253,7 +7311,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:480"
+            "location": "imgui_te_context:484"
         }
     ],
     "ImGuiTestContext_KeyCharsReplaceEnter": [
@@ -7279,7 +7337,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:388"
+            "location": "imgui_te_context:390"
         }
     ],
     "ImGuiPerfTool_AddEntry": [
@@ -7354,7 +7412,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:459"
+            "location": "imgui_te_context:462"
         }
     ],
     "cImOsOutputDebugString": [
@@ -7404,7 +7462,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:382"
+            "location": "imgui_te_context:384"
         }
     ],
     "ImGuiTestContext_GatherItems": [
@@ -7438,7 +7496,7 @@
             "defaults": {
                 "depth": "-1"
             },
-            "location": "imgui_te_context:421"
+            "location": "imgui_te_context:423"
         }
     ],
     "ImGuiTestContext_ItemIsVisible": [
@@ -7463,7 +7521,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:458"
+            "location": "imgui_te_context:460"
         }
     ],
     "ImGuiTestGenericVars_Clear": [
@@ -7484,7 +7542,7 @@
             "stname": "ImGuiTestGenericVars",
             "defaults": {
             },
-            "location": "imgui_te_context:211"
+            "location": "imgui_te_context:213"
         }
     ],
     "ImGuiTestRef_IsEmpty": [
@@ -7526,7 +7584,7 @@
             "stname": "ImGuiTestItemList",
             "defaults": {
             },
-            "location": "imgui_te_engine:360"
+            "location": "imgui_te_engine:362"
         }
     ],
     "cImGuiTestEngine_GetStatusName": [
@@ -7619,7 +7677,7 @@
             "defaults": {
                 "button": "0"
             },
-            "location": "imgui_te_context:360"
+            "location": "imgui_te_context:362"
         }
     ],
     "cImGuiTestEngine_Stop": [
@@ -7666,7 +7724,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:411"
+            "location": "imgui_te_context:413"
         }
     ],
     "ImGuiPerfToolEntry_destroy": [
@@ -7718,7 +7776,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:440"
+            "location": "imgui_te_context:442"
         },
         {
             "funcname": "ItemInputValue",
@@ -7745,7 +7803,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:441"
+            "location": "imgui_te_context:443"
         },
         {
             "funcname": "ItemInputValue",
@@ -7772,7 +7830,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:442"
+            "location": "imgui_te_context:444"
         }
     ],
     "ImGuiTestContext_MouseMoveToVoid": [
@@ -7798,7 +7856,7 @@
             "defaults": {
                 "viewport": "nullptr"
             },
-            "location": "imgui_te_context:367"
+            "location": "imgui_te_context:369"
         }
     ],
     "ImGuiTestContext_ViewportPlatform_SetWindowPos": [
@@ -7827,7 +7885,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:500"
+            "location": "imgui_te_context:504"
         }
     ],
     "ImGuiCsvParser_Clear": [
@@ -7990,7 +8048,7 @@
             "defaults": {
                 "count": "1"
             },
-            "location": "imgui_te_context:296"
+            "location": "imgui_te_context:298"
         }
     ],
     "ImGuiPerfToolBatch_destroy": [
@@ -8067,7 +8125,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:519"
+            "location": "imgui_te_context:523"
         }
     ],
     "cImGuiTestEngine_RebootUiContext": [
@@ -8113,7 +8171,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:478"
+            "location": "imgui_te_context:482"
         }
     ],
     "cTableDiscardSettings": [
@@ -8185,7 +8243,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:341"
+            "location": "imgui_te_context:343"
         }
     ],
     "ImGuiTestContext_GetMainMonitorWorkSize": [
@@ -8210,7 +8268,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:342"
+            "location": "imgui_te_context:344"
         }
     ],
     "cImStrXmlEscape": [
@@ -8252,7 +8310,7 @@
             "stname": "ImGuiTestGenericItemStatus",
             "defaults": {
             },
-            "location": "imgui_te_context:175"
+            "location": "imgui_te_context:176"
         }
     ],
     "ImGuiTestContext_MouseDoubleClick": [
@@ -8278,7 +8336,7 @@
             "defaults": {
                 "button": "0"
             },
-            "location": "imgui_te_context:359"
+            "location": "imgui_te_context:361"
         }
     ],
     "ImGuiTestItemList_Reserve": [
@@ -8303,7 +8361,7 @@
             "stname": "ImGuiTestItemList",
             "defaults": {
             },
-            "location": "imgui_te_engine:354"
+            "location": "imgui_te_engine:356"
         }
     ],
     "ImGuiTestGenericVars_destroy": [
@@ -8351,7 +8409,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:375"
+            "location": "imgui_te_context:377"
         }
     ],
     "ImGuiPerfTool__SetBaseline": [
@@ -8550,7 +8608,7 @@
             "defaults": {
                 "flags": "0"
             },
-            "location": "imgui_te_context:432"
+            "location": "imgui_te_context:434"
         }
     ],
     "cImGuiTestEngine_Export": [
@@ -8600,7 +8658,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:508"
+            "location": "imgui_te_context:512"
         }
     ],
     "ImGuiCaptureImageBuf_CreateEmpty": [
@@ -8684,7 +8742,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:410"
+            "location": "imgui_te_context:412"
         }
     ],
     "ImGuiTestContext_MouseMove": [
@@ -8714,7 +8772,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:354"
+            "location": "imgui_te_context:356"
         }
     ],
     "ImGuiTestContext_NavActivate": [
@@ -8736,7 +8794,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:397"
+            "location": "imgui_te_context:399"
         }
     ],
     "ImGuiTestContext_CaptureEndVideo": [
@@ -8757,7 +8815,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:351"
+            "location": "imgui_te_context:353"
         }
     ],
     "ImGuiTestLog_Clear": [
@@ -8778,7 +8836,7 @@
             "stname": "ImGuiTestLog",
             "defaults": {
             },
-            "location": "imgui_te_engine:387"
+            "location": "imgui_te_engine:389"
         }
     ],
     "ImGuiTestContext_NavMoveTo": [
@@ -8803,7 +8861,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:396"
+            "location": "imgui_te_context:398"
         }
     ],
     "ImGuiTestItemList_GetByIndex": [
@@ -8828,7 +8886,7 @@
             "stname": "ImGuiTestItemList",
             "defaults": {
             },
-            "location": "imgui_te_engine:356"
+            "location": "imgui_te_engine:358"
         }
     ],
     "ImGuiCaptureContext_PreRender": [
@@ -8895,7 +8953,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:293"
+            "location": "imgui_te_context:295"
         }
     ],
     "ImGuiTestContext_KeyCharsReplace": [
@@ -8921,7 +8979,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:387"
+            "location": "imgui_te_context:389"
         }
     ],
     "cImGuiTestEngine_CreateContext": [
@@ -8968,7 +9026,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:476"
+            "location": "imgui_te_context:480"
         }
     ],
     "ImGuiTestContext_WindowClose": [
@@ -8993,7 +9051,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:319"
+            "location": "imgui_te_context:321"
         }
     ],
     "ImGuiTestContext_MouseClickMulti": [
@@ -9022,7 +9080,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:358"
+            "location": "imgui_te_context:360"
         }
     ],
     "ImGuiTestContext_ScrollTo": [
@@ -9060,7 +9118,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:401"
+            "location": "imgui_te_context:403"
         }
     ],
     "ImGuiPerfTool__IsVisibleTest": [
@@ -9114,7 +9172,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:412"
+            "location": "imgui_te_context:414"
         }
     ],
     "cImThreadSleepInMilliseconds": [
@@ -9271,7 +9329,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:285"
+            "location": "imgui_te_context:287"
         }
     ],
     "cImStrTrimTrailingZeroesFromFloat": [
@@ -9379,7 +9437,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:380"
+            "location": "imgui_te_context:382"
         }
     ],
     "ImGuiTestGenericItemStatus_destroy": [
@@ -9432,7 +9490,7 @@
             "defaults": {
                 "flags": "ImGuiTestOpFlags_None"
             },
-            "location": "imgui_te_context:322"
+            "location": "imgui_te_context:324"
         }
     ],
     "ImGuiTestContext_PopupCloseAll": [
@@ -9453,7 +9511,7 @@
             "stname": "ImGuiTestContext",
             "defaults": {
             },
-            "location": "imgui_te_context:330"
+            "location": "imgui_te_context:332"
         }
     ],
     "ImGuiTestGatherTask_Clear": [
@@ -9555,7 +9613,7 @@
             "defaults": {
                 "flags": "0"
             },
-            "location": "imgui_te_context:426"
+            "location": "imgui_te_context:428"
         }
     ]
 }

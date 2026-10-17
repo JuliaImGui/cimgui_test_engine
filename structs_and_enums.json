@@ -1,11 +1,11 @@
 {
     "locations": {
-        "ImGuiTestOutput": "imgui_te_engine:417",
+        "ImGuiTestOutput": "imgui_te_engine:419",
         "ImGuiCaptureStatus": "imgui_capture_tool:78",
         "ImGuiTestAction": "imgui_te_context:105",
         "ImGuiPerfToolBatch": "imgui_te_perftool:57",
         "ImOsConsoleStream": "imgui_te_utils:98",
-        "ImGuiTestItemList": "imgui_te_engine:349",
+        "ImGuiTestItemList": "imgui_te_engine:351",
         "ImGuiCsvParser": "imgui_te_utils:167",
         "ImGuiTestActiveFunc": "imgui_te_engine:69",
         "ImGuiCaptureFlags_": "imgui_capture_tool:49",
@@ -13,21 +13,21 @@
         "ImGuiTestFindByLabelTask": "imgui_te_internal:53",
         "ImGuiTestEnginePerfRecord": "imgui_te_internal:152",
         "ImGuiPerfTool": "imgui_te_perftool:80",
-        "ImGuiTestRunTask": "imgui_te_engine:480",
+        "ImGuiTestRunTask": "imgui_te_engine:482",
         "ImGuiCaptureContext": "imgui_capture_tool:93",
         "ImBuildInfo": "imgui_te_utils:81",
         "ImGuiTestRefDesc": "imgui_te_context:91",
-        "ImGuiTestLogLineInfo": "imgui_te_engine:370",
+        "ImGuiTestLogLineInfo": "imgui_te_engine:372",
         "ImGuiTestInput": "imgui_te_internal:79",
         "ImGuiTestItemInfo": "imgui_te_engine:329",
-        "ImGuiTestGenericItemStatus": "imgui_te_context:157",
+        "ImGuiTestGenericItemStatus": "imgui_te_context:158",
         "ImGuiPerfToolEntry": "imgui_te_perftool:27",
         "ImGuiTestEngineExportFormat": "imgui_te_exporters:49",
         "ImGuiTestCheckFlags_": "imgui_te_engine:128",
         "ImGuiPerfToolDisplayType": "imgui_te_perftool:66",
-        "ImGuiTest": "imgui_te_engine:426",
+        "ImGuiTest": "imgui_te_engine:428",
         "ImGuiTestRunSpeed": "imgui_te_engine:77",
-        "ImGuiTestGenericVars": "imgui_te_context:181",
+        "ImGuiTestGenericVars": "imgui_te_context:182",
         "ImGuiCaptureWindowData": "imgui_capture_tool:85",
         "ImGuiTestEngineIO": "imgui_te_engine:250",
         "ImGuiTestEngine": "imgui_te_internal:172",
@@ -35,15 +35,15 @@
         "ImGuiTestEngineResultSummary": "imgui_te_engine:158",
         "ImGuiTestInputs": "imgui_te_internal:140",
         "ImGuiTestLogFlags_": "imgui_te_engine:135",
-        "ImGuiTestActionFilter": "imgui_te_context:140",
+        "ImGuiTestActionFilter": "imgui_te_context:141",
         "ImGuiTestFlags_": "imgui_te_engine:118",
-        "ImGuiTestContext": "imgui_te_context:220",
+        "ImGuiTestContext": "imgui_te_context:222",
         "ImGuiTestGroup": "imgui_te_engine:109",
         "ImGuiTestInfoTask": "imgui_te_internal:25",
         "ImGuiPerfToolReportType": "imgui_te_perftool:73",
         "ImGuiCaptureImageBuf": "imgui_capture_tool:34",
         "ImGuiCaptureToolUI": "imgui_capture_tool:156",
-        "ImGuiTestLog": "imgui_te_engine:376",
+        "ImGuiTestLog": "imgui_te_engine:378",
         "ImGuiTestInputType": "imgui_te_internal:67",
         "ImGuiTestRef": "imgui_te_context:78",
         "ImGuiTestStatus": "imgui_te_engine:97",
@@ -604,6 +604,12 @@
                 "name": "ImGuiTestOpFlags_NoScroll",
                 "comment": "// Disable automatically scrolling to reach an item.",
                 "value": "1 << 12"
+            },
+            {
+                "calc_value": 8192,
+                "name": "ImGuiTestOpFlags_NoWaitWhenMoving",
+                "comment": "// Avoid waiting for item to be stable, lock current position and aim.",
+                "value": "1 << 13"
             }
         ],
         "ImGuiTestVerboseLevel": [
@@ -1014,6 +1020,16 @@
                 "comment": {
                     "sameline": "// Nav layer of the item (ImGuiNavLayer)"
                 }
+            },
+            {
+                "type": "unsigned int",
+                "name": "FramesMoving",
+                "bitfield": "3"
+            },
+            {
+                "type": "unsigned int",
+                "name": "FramesNotMoving",
+                "bitfield": "3"
             },
             {
                 "type": "int",
@@ -1866,6 +1882,10 @@
             {
                 "type": "bool",
                 "name": "UseViewports"
+            },
+            {
+                "type": "bool",
+                "name": "UseMixedValue"
             },
             {
                 "type": "float",
